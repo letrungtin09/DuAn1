@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 html{
+    font-size: $fs-html;
     scroll-behavior: smooth;
 }
 body{
     font-family: 'Open Sans', sans-serif;
+    font-size: $fs-2;
+    font-weight: $fw-0;
+    line-height: $line-height-0;
+    color: $color-black-1;
 }

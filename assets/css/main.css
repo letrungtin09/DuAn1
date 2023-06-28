@@ -5,9 +5,14 @@
 }
 
 html {
+  font-size: 10px;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #1c1d1f;
 }/*# sourceMappingURL=main.css.map */
