@@ -49,11 +49,14 @@ body {
 .nav_header .container_header .kind_menu:hover .dropdown-menu {
   display: block;
 }
+.nav_header .container_header .kind_menu .kind_menu_item {
+  width: 200px;
+}
 .nav_header .container_header .header_search {
   border: 1px solid gray;
   margin: 0 1.2rem;
   height: 48px;
-  width: 666px;
+  flex: 1;
   border-radius: 24px;
 }
 .nav_header .container_header .header_search form {
@@ -80,10 +83,38 @@ body {
   margin: 0 1.2rem;
 }
 .nav_header .container_header .header_cart {
-  margin: 0 1.2rem;
+  padding: 0 1.2rem;
+  position: relative;
+}
+.nav_header .container_header .header_cart .header_cart_link {
+  font-size: 20px;
 }
 .nav_header .container_header .header_cart:hover .header_cart_detail-bill {
   display: block;
+  width: 250px;
+  height: 70px;
+  border-radius: 0;
+  box-shadow: 0px 0px 9px 0px #a38e8e;
+  position: absolute;
+  top: 54px;
+  right: -16px;
+  border: none;
+}
+.nav_header .container_header .header_cart:hover .header_cart_detail-bill::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 31px;
+  right: 0;
+  top: -28px;
+  background-color: transparent;
+}
+.nav_header .container_header .header_cart:hover .header_cart_detail-bill li {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 16px;
+  color: #6a6f73;
+  font-weight: 900;
 }
 .nav_header .container_header .header_login {
   margin: 0 1.2rem;

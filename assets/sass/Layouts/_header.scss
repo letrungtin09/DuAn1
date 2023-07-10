@@ -19,12 +19,15 @@
                     display: block;
                 }
             }
+            .kind_menu_item{
+                width: 200px;
+            }
         }
         .header_search{
             border: 1px solid gray;
             margin: 0 $mg-0;
             height: 48px;
-            width: 666px;
+            flex: 1;
             border-radius: 24px;
             form{
                 align-items: center;
@@ -51,10 +54,38 @@
             margin: 0 $mg-0;
         }
         .header_cart{
-            margin: 0 $mg-0;
+            padding: 0 $pd-1;
+            position: relative;
+            .header_cart_link{
+                font-size: 20px;
+            }
             &:hover {
                 .header_cart_detail-bill{
                     display: block;
+                    width: 250px;
+                    height: 70px;
+                    border-radius: 0;
+                    box-shadow: 0px 0px 9px 0px #a38e8e;
+                    position: absolute;
+                    top: 54px;
+                    right: -16px;
+                    border: none;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 250px;
+                        height: 31px;
+                        right: 0;
+                        top: -28px;
+                        background-color: transparent;
+                    }
+                    li{
+                        text-align: center;
+                        font-size: 14px;
+                        margin-top: 16px;
+                        color: $color-gray-0;
+                        font-weight: 900;
+                    }
                 }
             }
         }
