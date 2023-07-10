@@ -6,7 +6,7 @@
 }
 
 .button-black-medium{
-    @include styleButton($color-white-0, $color-black-1, none, $fs-0, $pd-1, $pd-1);
+    @include styleButton($color-white-0, $color-black-1, $color-black-1, $fs-0, $pd-1, $pd-1);
     &:hover{
         background-color: $color-gray-1;
     }

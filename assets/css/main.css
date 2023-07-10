@@ -96,7 +96,7 @@ body {
   letter-spacing: -0.02rem;
   color: #fff;
   background-color: #1c1d1f;
-  border: 1px solid none;
+  border: 1px solid #1c1d1f;
   font-size: 1.4rem;
   padding: 1.2rem 1.2rem;
 }
