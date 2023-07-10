@@ -8,9 +8,18 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: $fs-2;
-    font-weight: $fw-0;
+    font-weight: $fw-1;
     line-height: $line-height-0;
     color: $color-black-1;
+    margin: 0;
+}
+.td-container{
+    width: 100%;
+    max-width: 134rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
 }

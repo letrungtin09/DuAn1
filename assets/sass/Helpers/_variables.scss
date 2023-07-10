@@ -30,18 +30,23 @@ $fs-2: 1.6rem;
 $fs-3: 1.9rem;
 $fs-4: 2.4rem;
 $fs-5: 1.2rem;
+$fs-6: 3rem;
 
 //FONT WEIGHT
-$fw-0: 400;
-$fw-1: 700;
+$fw-0: 300;
+$fw-1: 400;
+$fw-2: 500;
+$fw-3: 600;
+$fw-4: 700;
 
 //LINE HEIGHT
 $line-height-0: 1.4;
 $line-height-1: 1.2;
+$line-height-2: 1.25;
 
 //LETTER SPACING
-$letter-spacing-0: -0.5rem;
-$letter-spacing-1: -0.2rem;
+$letter-spacing-0: -.05rem;
+$letter-spacing-1: -.02rem;
 $letter-spacing-2: normal;
 
 //MARGIN
@@ -65,6 +70,8 @@ $pd-6: 6.4rem;
 $pd-7: 1.6rem;
 $pd-8: 4.8rem;
 $pd-9: 4rem;
+$pd-10: 2rem;
+$pd-11: 1.4rem;
 
 //BOX SHADOW
 $box-shadow-1: 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);

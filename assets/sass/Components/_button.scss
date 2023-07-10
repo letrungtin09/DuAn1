@@ -1,0 +1,55 @@
+.button-white-medium{
+    @include styleButton($color-black-1, $color-white-0, $color-black-1, $fs-0, $pd-1, $pd-1);
+    &:hover{
+        background-color: $color-black-2;
+    }
+}
+
+.button-black-medium{
+    @include styleButton($color-white-0, $color-black-1, none, $fs-0, $pd-1, $pd-1);
+    &:hover{
+        background-color: $color-gray-1;
+    }
+}
+
+.button-white-large{
+    @include styleButton($color-black-1, $color-white-0, $color-black-1, $fs-2, $pd-1, $pd-11);
+    &:hover{
+        background-color: $color-black-2;
+    }
+}
+
+.button-black-large{
+    @include styleButton($color-white-0, $color-black-1, $color-black-1, $fs-2, $pd-1, $pd-11);
+    &:hover{
+        background-color: $color-gray-1;
+    }
+}
+
+.button-next-medium{
+    @include styleButtonControl(40px, 40px, 40px, 18rem, none, 1.6rem);
+    &:hover{
+        background-color: $color-gray-1;
+    }
+}
+
+.button-prev-medium{
+    @include styleButtonControl(40px, 40px, 40px, 18rem, 1.6rem, none);
+    &:hover{
+        background-color: $color-gray-1;
+    }
+}
+
+.button-next-large{
+    @include styleButtonControl(48px, 48px, 48px, 25%, none, -2.4rem);
+    &:hover{
+        background-color: $color-gray-1;
+    }
+}
+
+.button-prev-large{
+    @include styleButtonControl(48px, 48px, 48px, 25%, -2.4rem, none);
+    &:hover{
+        background-color: $color-gray-1;
+    }
+}
