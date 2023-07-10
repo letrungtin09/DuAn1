@@ -27,6 +27,22 @@ body {
   padding-left: 2.4rem;
 }
 
+.nav_header {
+  background-color: #fff;
+  box-shadow: 12px 0px 11px -4px #252525;
+  height: 72px;
+  z-index: 1;
+}
+
+.logo_img {
+  width: 100px;
+  height: 36px;
+}
+
+.container_header {
+  margin: 0 2rem;
+}
+
 .carousel {
   width: 1340px;
   height: 400px;
@@ -186,19 +202,4 @@ body {
 }
 .button-prev-large:hover {
   background-color: #3e4143;
-}
-
-.nav_header {
-  background-color: #fff;
-  box-shadow: 12px 0px 11px -4px #252525;
-  height: 72px;
-}
-
-.logo_img {
-  width: 100px;
-  height: 36px;
-}
-
-.container_header {
-  margin: 0 2rem;
 }/*# sourceMappingURL=main.css.map */
