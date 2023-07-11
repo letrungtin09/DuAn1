@@ -44,13 +44,34 @@ body {
   height: 34px;
 }
 .nav_header .container_header .kind_menu {
-  margin: 0 1.2rem;
+  padding: 0 1.2rem;
+  position: relative;
 }
 .nav_header .container_header .kind_menu:hover .dropdown-menu {
   display: block;
 }
 .nav_header .container_header .kind_menu .kind_menu_item {
-  width: 200px;
+  width: 222px;
+  height: 300px;
+  position: absolute;
+  top: 50px;
+  left: 14px;
+  box-shadow: 0px 0px 9px 0px #a38e8e;
+  border-radius: 0;
+  border: none;
+}
+.nav_header .container_header .kind_menu .kind_menu_item::after {
+  content: "";
+  position: absolute;
+  width: 95px;
+  height: 40px;
+  right: 150px;
+  top: -33px;
+  background-color: transparent;
+}
+.nav_header .container_header .kind_menu .kind_menu_item li {
+  font-size: 14px;
+  line-height: 30px;
 }
 .nav_header .container_header .header_search {
   border: 1px solid gray;
@@ -141,6 +162,66 @@ body {
 }
 .nav_header .container_header .nav-link {
   font-size: 1.4rem;
+}
+
+.footer_content {
+  background-color: #252525;
+  padding: 0 46px;
+}
+.footer_content .footer_content_header {
+  align-items: center;
+  border-bottom: 1px solid #6a6f73;
+  height: 96px;
+}
+.footer_content .footer_content_header .footer_content_header-text {
+  color: #f7f9fa;
+  font-weight: 600;
+  padding: 0;
+}
+.footer_content .footer_content_header .footer_content_header-text a {
+  color: #cec0fc;
+  text-decoration: none;
+  font-size: 1.9rem;
+}
+.footer_content .footer_content_header .footer_content_header-logo {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+.footer_content .footer_content_header .footer_content_header-logo li {
+  padding-left: 2.4rem;
+}
+.footer_content .footer_content_container {
+  display: flex;
+}
+.footer_content .footer_content_container .footer_content_container-list {
+  list-style-type: none;
+  padding: 3rem 9rem 0 0;
+}
+.footer_content .footer_content_container .footer_content_container-list .footer_content_container-item {
+  line-height: 2;
+}
+.footer_content .footer_content_container .footer_content_container-list .footer_content_container-item a {
+  text-decoration: none;
+  color: #f7f9fa;
+}
+.footer_content .footer_content_container .footer_content_container-list .footer_content_container-item a:hover {
+  text-decoration: underline;
+}
+.footer_content .footer_content_end {
+  display: flex;
+  padding: 2.4rem 0;
+}
+.footer_content .footer_content_end img {
+  width: 116px;
+  height: 100%;
+}
+.footer_content .footer_content_end p {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  color: #f7f9fa;
+  font-size: 1.2rem;
 }
 
 .carousel {
