@@ -16,7 +16,21 @@ $('.courses__item').owlCarousel({
         }
     }
 });
-
+$('.feedback__item').owlCarousel({
+    loop:true,
+    nav:true,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+});
 function showCard(){
     document.querySelector('.card-popup').style.opacity = '1';
 }

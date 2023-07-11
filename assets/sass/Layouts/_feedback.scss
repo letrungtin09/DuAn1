@@ -1,19 +1,50 @@
 .feedback{
     background-color: $color-white-1;
     .feedback_container{
-        padding: $pd-14 0;
+        padding: $pd-14 $mg-5;
         .feedback_title{
             font-size: $fs-4;
             margin-bottom: $mg-5;
         }
-        .feedback_carousel{
+        #feedback_carousel-id{
             display: flex;
             justify-content: space-between;
+            height: 404px;
+            .owl-nav{
+                button{
+                    &:hover{
+                        background-color: $color-gray-1;
+                    }
+                    span{
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        color: $color-white-0;
+                        font-size: $fs-7;
+                    }
+                }
+                .owl-next{
+                    @include styleButtonControl(48px, 48px, 45px, 40%, none, -3rem);
+                    span{
+                        padding-left: $pd-2;
+                    }
+                }
+                .owl-prev{
+                    @include styleButtonControl(48px, 48px, 45px, 40%, -3rem, none);
+                    
+                    span{
+                        padding-right: $pd-2;
+                    }
+                }
+            }
             .feedback_carousel-list{
                 box-shadow: 0px 0px 1px 1px #1c1d1f;
-                width: 416px;
+                width: 396px;
                 border-radius: 6px;
-                padding: 30px 40px;
+                padding: 25px 40px;
+                margin: 10px 20px 0 20px;
+                height: 392px;
+                
                 .feedback_carousel-list-head{
                     font-size: $fs-6;
                     margin-bottom: $mg-1;
@@ -51,5 +82,6 @@
                 }
             }
         }
+        
     }
 }
