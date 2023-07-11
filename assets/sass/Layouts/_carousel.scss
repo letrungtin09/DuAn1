@@ -28,5 +28,6 @@
     }
     .carousel-control-next, .carousel-control-prev{
         opacity: 1;
+        z-index: unset;
     }
 }

@@ -1,6 +1,6 @@
 .nav_header{
     background-color: $color-white-0;
-    box-shadow: 12px 0px 11px -4px $color-black-0;
+    box-shadow: $box-shadow-1;
     height: 72px;
     z-index: 1;
     .container_header{
@@ -104,9 +104,16 @@
             }
         }
         .header_dark{
-            width: 44px;
-            height: 42px;
-            border: 2px solid gray;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: $color-white-0;
+            i{
+                font-size: $fs-1;
+            }
+        }
+        .nav-link{
+            font-size: $fs-0;
         }
     }
 }

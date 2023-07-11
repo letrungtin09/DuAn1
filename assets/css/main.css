@@ -29,7 +29,7 @@ body {
 
 .nav_header {
   background-color: #fff;
-  box-shadow: 12px 0px 11px -4px #252525;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
   height: 72px;
   z-index: 1;
 }
@@ -131,9 +131,16 @@ body {
   cursor: pointer;
 }
 .nav_header .container_header .header_dark {
-  width: 44px;
-  height: 42px;
-  border: 2px solid gray;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #fff;
+}
+.nav_header .container_header .header_dark i {
+  font-size: 3.2rem;
+}
+.nav_header .container_header .nav-link {
+  font-size: 1.4rem;
 }
 
 .carousel {
@@ -167,6 +174,7 @@ body {
 }
 .carousel .carousel-control-next, .carousel .carousel-control-prev {
   opacity: 1;
+  z-index: unset;
 }
 
 .button-white-medium {
