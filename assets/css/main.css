@@ -222,6 +222,8 @@ body {
   width: 100%;
   color: #f7f9fa;
   font-size: 1.2rem;
+  margin: 0;
+  align-items: flex-end;
 }
 
 .carousel {
@@ -256,6 +258,60 @@ body {
 .carousel .carousel-control-next, .carousel .carousel-control-prev {
   opacity: 1;
   z-index: unset;
+}
+
+.feedback {
+  background-color: #f7f9fa;
+}
+.feedback .feedback_container {
+  padding: 7rem 0;
+}
+.feedback .feedback_container .feedback_title {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+.feedback .feedback_container .feedback_carousel {
+  display: flex;
+  justify-content: space-between;
+}
+.feedback .feedback_container .feedback_carousel .feedback_carousel-list {
+  box-shadow: 0px 0px 1px 1px #1c1d1f;
+  width: 416px;
+  border-radius: 6px;
+  padding: 30px 40px;
+}
+.feedback .feedback_container .feedback_carousel .feedback_carousel-list .feedback_carousel-list-head {
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
+.feedback .feedback_container .feedback_carousel .feedback_carousel-list .feedback_carousel-list-text {
+  margin-bottom: 4rem;
+}
+.feedback .feedback_container .feedback_carousel .feedback_carousel-list .feedback_carousel-list-user {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d5dbdf;
+  padding-bottom: 1.4rem;
+}
+.feedback .feedback_container .feedback_carousel .feedback_carousel-list .feedback_carousel-list-user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+}
+.feedback .feedback_container .feedback_carousel .feedback_carousel-list .feedback_carousel-list-user p {
+  font-weight: 600;
+  margin: 0;
+}
+.feedback .feedback_container .feedback_carousel .feedback_carousel-list .feedback_carousel-list-end {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.feedback .feedback_container .feedback_carousel .feedback_carousel-list .feedback_carousel-list-end a {
+  text-decoration: none;
+  color: #177e5e;
+  font-weight: 600;
 }
 
 .button-white-medium {
