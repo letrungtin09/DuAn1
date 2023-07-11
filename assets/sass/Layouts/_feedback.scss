@@ -24,13 +24,13 @@
                     }
                 }
                 .owl-next{
-                    @include styleButtonControl(48px, 48px, 45px, 40%, none, -3rem);
+                    @include styleButtonControl(48px, 48px, 45px, 40%, none, -2rem);
                     span{
                         padding-left: $pd-2;
                     }
                 }
                 .owl-prev{
-                    @include styleButtonControl(48px, 48px, 45px, 40%, -3rem, none);
+                    @include styleButtonControl(48px, 48px, 45px, 40%, -2rem, none);
                     
                     span{
                         padding-right: $pd-2;

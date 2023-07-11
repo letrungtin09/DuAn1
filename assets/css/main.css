@@ -394,7 +394,7 @@ body {
   position: absolute;
   top: 40%;
   left: none;
-  right: -3rem;
+  right: -2rem;
 }
 .feedback .feedback_container #feedback_carousel-id .owl-nav .owl-next span {
   padding-left: 0.4rem;
@@ -410,7 +410,7 @@ body {
   line-height: 45px;
   position: absolute;
   top: 40%;
-  left: -3rem;
+  left: -2rem;
   right: none;
 }
 .feedback .feedback_container #feedback_carousel-id .owl-nav .owl-prev span {
