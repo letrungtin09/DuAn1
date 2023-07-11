@@ -11,12 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/main.css">
-    <script href="/assets/js/main.js" ></script>
 </head>
 
 <body>
@@ -29,7 +33,7 @@
                 </a>
                 <div class="nav-item dropdown kind_menu">
                     <a class="nav-link" href="#" role="button">
-                    Thể loại
+                        Thể loại
                     </a>
                     <ul class="dropdown-menu kind_menu_item">
                         <li><a class="dropdown-item" href="#">Action</a></li>
@@ -150,7 +154,544 @@
         </div>
     </section>
     <!-- COURSES -->
-    <section class="courses"></section>
+    <section class="courses">
+        <div class="courses__content td-container">
+            <div class="courses__text">
+                <h2>A broad selection of courses</h2>
+                <p>Choose from over 210,000 online video courses with new additions published every month</p>
+            </div>
+            <div class="courses__list">
+                <ul class="nav nav-tabs" id="tdTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane"
+                            type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true">Tất cả các khóa
+                            học</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="fe-tab" data-bs-toggle="tab" data-bs-target="#fe-tab-pane"
+                            type="button" role="tab" aria-controls="fe-tab-pane"
+                            aria-selected="false">Front-end</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="be-tab" data-bs-toggle="tab" data-bs-target="#be-tab-pane"
+                            type="button" role="tab" aria-controls="be-tab-pane" aria-selected="false">Back-end</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="java-tab" data-bs-toggle="tab" data-bs-target="#java-tab-pane"
+                            type="button" role="tab" aria-controls="java-tab-pane" aria-selected="false">Java</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="mobile-tab" data-bs-toggle="tab" data-bs-target="#mobile-tab-pane"
+                            type="button" role="tab" aria-controls="mobile-tab-pane"
+                            aria-selected="false">Mobile</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="python-tab" data-bs-toggle="tab" data-bs-target="#python-tab-pane"
+                            type="button" role="tab" aria-controls="python-tab-pane"
+                            aria-selected="false">Python</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="php-tab" data-bs-toggle="tab" data-bs-target="#php-tab-pane"
+                            type="button" role="tab" aria-controls="php-tab-pane" aria-selected="false">PHP</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="sql-tab" data-bs-toggle="tab" data-bs-target="#sql-tab-pane"
+                            type="button" role="tab" aria-controls="sql-tab-pane" aria-selected="false">SQL</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="tdTabContent">
+                    <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab"
+                        tabindex="0">
+                        <div class="courses__des">
+                            <h3>Expand your career opportunities with Python</h3>
+                            <p>Take one of Udemy's range of Python courses and learn how to code using this incredibly
+                                useful language. Its simple syntax and readability makes Python perfect for Flask,
+                                Django, data science, and machine learning. You'll learn how to build everything from
+                                games to sites to apps. Choose from a range of courses that will appeal to</p>
+                            <button class="button-white-medium">Read more</button>
+                        </div>
+                        <div class="card-popup" onmouseover="showCard();" onmouseout="hideCard();">
+                            <a href="#">
+                                <h3>Tên khóa học</h3>
+                            </a>
+                            <div class="section-first">
+                                <span class="best-seller">Bán chạy nhất</span>
+                                <span>Đăng ngày <span class="date">11/07/2023</span></span>
+                            </div>
+                            <div class="section-second">
+                                <span>Tổng số 36 giờ</span>
+                                <span class="dot"></span>
+                                <span>Tất cả trình độ</span>
+                            </div>
+                            <p>React.JS là một thư viện, framework giúp xây dựng một website hiện đại, có tính
+                                mở rộng và hiệu năng cực lớn. Các sản phẩm tiêu biểu sử dụng React có thể kể đến
+                                như Facebook và Instagram.</p>
+                            <div class="card-btn row">
+                                <button class="add-cart col-9">Thêm vào giỏ hàng</button>
+                                <button class="add-like col-2">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="owl-carousel owl-theme courses__item">
+                            <div class="card" onmouseover="showCard();">
+                                <a href="#"><img src="./img/courses/fe1.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học FE</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                    <div class="card-stars">
+                                        <span class="card-rate">4.5</span>
+                                        <span class="card-icon">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span class="card-total">(17,915)</span>
+                                    </div>
+                                    <div class="card-price">
+                                        <span>799,000<span class="vnd">đ</span></span>
+                                        <span class="sale">2,990,000<span class="vnd">đ</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/be1.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học BE</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                    <div class="card-stars">
+                                        <span class="card-rate">4.5</span>
+                                        <span class="card-icon">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span class="card-total">(17.915)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/java1.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học Java</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                    <div class="card-stars">
+                                        <span class="card-rate">4.5</span>
+                                        <span class="card-icon">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span class="card-total">(17.915)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/mobile1.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học Mobile</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                    <div class="card-stars">
+                                        <span class="card-rate">4.5</span>
+                                        <span class="card-icon">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span class="card-total">(17.915)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/python1.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học Python</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                    <div class="card-stars">
+                                        <span class="card-rate">4.5</span>
+                                        <span class="card-icon">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span class="card-total">(17.915)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/sql1.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học SQL</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                    <div class="card-stars">
+                                        <span class="card-rate">4.5</span>
+                                        <span class="card-icon">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span class="card-total">(17.915)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/php1.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học PHP</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                    <div class="card-stars">
+                                        <span class="card-rate">4.5</span>
+                                        <span class="card-icon">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span class="card-total">(17.915)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="fe-tab-pane" role="tabpanel" aria-labelledby="fe-tab" tabindex="0">
+                        <div class="courses__des">
+                            <h3>Expand your career opportunities with Python</h3>
+                            <p>Take one of Udemy's range of Python courses and learn how to code using this incredibly
+                                useful language. Its simple syntax and readability makes Python perfect for Flask,
+                                Django, data science, and machine learning. You'll learn how to build everything from
+                                games to sites to apps. Choose from a range of courses that will appeal to</p>
+                            <button class="btn btn-primary">Read more</button>
+                        </div>
+                        <div class="owl-carousel owl-theme courses__item">
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/fe1.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học FE 1</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/fe2.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học FE 2</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/fe3.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học FE 3</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/fe4.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học FE 4</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/fe5.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học FE 5</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/fe6.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học FE 6</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/fe7.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học FE 7</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="be-tab-pane" role="tabpanel" aria-labelledby="be-tab" tabindex="0">
+                        <div class="courses__des">
+                            <h3>Expand your career opportunities with Python</h3>
+                            <p>Take one of Udemy's range of Python courses and learn how to code using this incredibly
+                                useful language. Its simple syntax and readability makes Python perfect for Flask,
+                                Django, data science, and machine learning. You'll learn how to build everything from
+                                games to sites to apps. Choose from a range of courses that will appeal to</p>
+                            <button class="btn btn-primary">Read more</button>
+                        </div>
+                        <div class="owl-carousel owl-theme courses__item">
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/be1.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học BE 1</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/be2.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học BE 2</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/be3.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học BE 3</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/be4.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học BE 4</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/be5.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học BE 5</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/be6.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học BE 6</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/be7.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học BE 7</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="java-tab-pane" role="tabpanel" aria-labelledby="java-tab"
+                        tabindex="0">
+                        <div class="courses__des">
+                            <h3>Expand your career opportunities with Python</h3>
+                            <p>Take one of Udemy's range of Python courses and learn how to code using this incredibly
+                                useful language. Its simple syntax and readability makes Python perfect for Flask,
+                                Django, data science, and machine learning. You'll learn how to build everything from
+                                games to sites to apps. Choose from a range of courses that will appeal to</p>
+                            <button class="btn btn-primary">Read more</button>
+                        </div>
+                        <div class="owl-carousel owl-theme courses__item">
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/java1.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học Java 1</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/java2.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học Java 2</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/java3.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học Java 3</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/java4.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học Java 4</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/java5.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học Java 5</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/java6.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học Java 6</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/java7.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học java 7</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="mobile-tab-pane" role="tabpanel" aria-labelledby="mobile-tab"
+                        tabindex="0">
+                        <div class="courses__des">
+                            <h3>Expand your career opportunities with Python</h3>
+                            <p>Take one of Udemy's range of Python courses and learn how to code using this incredibly
+                                useful language. Its simple syntax and readability makes Python perfect for Flask,
+                                Django, data science, and machine learning. You'll learn how to build everything from
+                                games to sites to apps. Choose from a range of courses that will appeal to</p>
+                            <button class="btn btn-primary">Read more</button>
+                        </div>
+                        <div class="owl-carousel owl-theme courses__item">
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/mobile1.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học mobile 1</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/mobile2.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học mobile 2</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/mobile3.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học mobile 3</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/mobile4.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học Mobile 4</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/mobile5.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học mobile 5</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/mobile6.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học mobile 6</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="#"><img src="./img/courses/mobile7.jpg" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="#">
+                                        <h5 class="card-title">Tên khóa học mobile 7</h5>
+                                    </a>
+                                    <p class="card-teacher">Giảng viên</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="python-tab-pane" role="tabpanel" aria-labelledby="python-tab"
+                        tabindex="0">python</div>
+                    <div class="tab-pane fade" id="php-tab-pane" role="tabpanel" aria-labelledby="php-tab" tabindex="0">
+                        php</div>
+                    <div class="tab-pane fade" id="sql-tab-pane" role="tabpanel" aria-labelledby="sql-tab" tabindex="0">
+                        sql</div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- FEEDBACK -->
     <section class="feedback">
         <div class="feedback_container td-container">
@@ -308,6 +849,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <!-- BS5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- OWL CAROUSEL JS -->
+    <script src="./js/owl.carousel.min.js"></script>
     <!-- MAIN JS -->
     <script src="./js/main.js"></script>
 </body>

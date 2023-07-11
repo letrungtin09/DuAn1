@@ -260,6 +260,101 @@ body {
   z-index: unset;
 }
 
+.courses__content {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+.courses__content .courses__text {
+  margin-bottom: 1.6rem;
+}
+.courses__content .courses__text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.05rem;
+}
+.courses__content .courses__text p {
+  font-size: 1.9rem;
+  width: 80rem;
+  margin-bottom: 1.6rem;
+}
+.courses__content #tdTabContent {
+  padding: 0 3rem 3rem;
+  border: 1px solid #d1d7dc;
+  position: relative;
+}
+.courses__content #tdTabContent .courses__item .owl-nav button:hover {
+  background-color: #3e4143;
+}
+.courses__content #tdTabContent .courses__item .owl-nav button span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 3.5rem;
+}
+.courses__content #tdTabContent .courses__item .owl-nav .owl-next {
+  border-radius: 50%;
+  text-align: center;
+  background-color: #1c1d1f;
+  border: 1px solid #6a6f73;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 48px;
+  height: 48px;
+  line-height: 45px;
+  position: absolute;
+  top: 25%;
+  left: none;
+  right: -3rem;
+}
+.courses__content #tdTabContent .courses__item .owl-nav .owl-next span {
+  padding-left: 0.4rem;
+}
+.courses__content #tdTabContent .courses__item .owl-nav .owl-prev {
+  border-radius: 50%;
+  text-align: center;
+  background-color: #1c1d1f;
+  border: 1px solid #6a6f73;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 48px;
+  height: 48px;
+  line-height: 45px;
+  position: absolute;
+  top: 25%;
+  left: -3rem;
+  right: none;
+}
+.courses__content #tdTabContent .courses__item .owl-nav .owl-prev span {
+  padding-right: 0.4rem;
+}
+.courses__content #tdTabContent .courses__des {
+  margin: 3rem 0;
+}
+.courses__content #tdTabContent .courses__des h3 {
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02rem;
+}
+.courses__content #tdTabContent .courses__des p {
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+  width: 80rem;
+}
+.courses__content #tdTab {
+  margin: 0 0 1rem;
+  border: none;
+}
+.courses__content #tdTab .nav-item .nav-link {
+  color: #6a6f73;
+  font-weight: 700;
+  border: none;
+  padding-left: 0px;
+  padding-right: 3rem;
+}
+.courses__content #tdTab .nav-item .nav-link.active {
+  color: #1c1d1f;
 .feedback {
   background-color: #f7f9fa;
 }
@@ -440,4 +535,154 @@ body {
 }
 .button-prev-large:hover {
   background-color: #3e4143;
+}
+
+.card {
+  border: none;
+}
+.card .card-body {
+  padding: 0;
+}
+.card .card-body a {
+  text-decoration: none;
+  color: #1c1d1f;
+}
+.card .card-body a h5 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0.8rem 0 0.4rem;
+}
+.card .card-body p {
+  color: #6a6f73;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+.card .card-body .card-stars {
+  margin-bottom: 0.4rem;
+}
+.card .card-body .card-stars span i {
+  color: #e59819;
+  font-size: 1.2rem;
+}
+.card .card-body .card-stars .card-icon {
+  margin: 0 0.3rem;
+  letter-spacing: -0.1rem;
+}
+.card .card-body .card-stars .card-rate {
+  color: #b4690e;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.card .card-body .card-stars .card-total {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #6a6f73;
+}
+.card .card-body .card-price span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+.card .card-body .card-price span .vnd {
+  text-decoration: underline;
+}
+.card .card-body .card-price .sale {
+  color: #6a6f73;
+  font-size: 1.4rem;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.card .card-body .card-price .sale span {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.card-popup {
+  transition: all 0.3s;
+  opacity: 0;
+  position: absolute;
+  top: 17rem;
+  left: 28.5rem;
+  z-index: 10;
+  width: 35rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2.4rem;
+}
+.card-popup a {
+  text-decoration: none;
+  color: #1c1d1f;
+}
+.card-popup a h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.card-popup a:hover {
+  color: #177e5e;
+}
+.card-popup .section-first {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #113731;
+}
+.card-popup .section-first .best-seller {
+  background-color: #eceb98;
+  color: #3d3c0a;
+  padding: 0.4rem 0.8rem;
+  font-weight: 700;
+  margin-right: 0.8rem;
+}
+.card-popup .section-first .date {
+  font-weight: 700;
+}
+.card-popup .section-second {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #6a6f73;
+}
+.card-popup .section-second .dot {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  line-height: 3px;
+  background-color: #6a6f73;
+  border-radius: 50%;
+  margin: 0 0.8rem;
+}
+.card-popup p {
+  font-size: 1.4rem;
+}
+.card-popup .card-btn {
+  justify-content: center;
+}
+.card-popup .card-btn .add-cart {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  color: #fff;
+  background-color: #15AD7D;
+  border: 1px solid #15AD7D;
+  font-size: 1.6rem;
+  padding: 1.4rem 2.4rem;
+  margin-right: 1.2rem;
+}
+.card-popup .card-btn .add-cart:hover {
+  background-color: #177e5e;
+}
+.card-popup .card-btn .add-like {
+  background-color: #fff;
+  border: 1px solid #3e4143;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-popup .card-btn .add-like i {
+  font-size: 2.4rem;
+}
+.card-popup .card-btn .add-like:hover {
+  background-color: rgba(0, 0, 0, 0.04);
 }/*# sourceMappingURL=main.css.map */

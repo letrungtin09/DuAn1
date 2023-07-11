@@ -1,0 +1,82 @@
+.courses__content{
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    .courses__text{
+        margin-bottom: $mg-2;
+        h2{
+            font-family: 'Playfair Display', serif;
+            font-size: $fs-1;
+            font-weight: $fw-4;
+            margin-bottom: $mg-1;
+            letter-spacing: 0.05rem;
+        }
+        p{
+            font-size: $fs-3;
+            width: 80rem;
+            margin-bottom: $mg-2;
+        }
+    }
+    #tdTabContent{
+        padding: 0 $pd-12 $pd-12;
+        border: 1px solid $color-gray-2;
+        position: relative;
+        .courses__item{
+            .owl-nav{
+                button{
+                    &:hover{
+                        background-color: $color-gray-1;
+                    }
+                    span{
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        color: $color-white-0;
+                        font-size: $fs-7;
+                    }
+                }
+                .owl-next{
+                    @include styleButtonControl(48px, 48px, 45px, 25%, none, -3rem);
+                    span{
+                        padding-left: $pd-2;
+                    }
+                }
+                .owl-prev{
+                    @include styleButtonControl(48px, 48px, 45px, 25%, -3rem, none);
+                    span{
+                        padding-right: $pd-2;
+                    }
+                }
+            }
+        }
+        .courses__des{
+            margin: $mg-7 - 0.2 0;
+            h3{
+                font-size: $fs-4;
+                margin-bottom: $mg-1;
+                font-weight: $fw-4;
+                letter-spacing: $letter-spacing-1;
+            }
+            p{
+                font-size: $fs-2;
+                margin-bottom: $mg-2;
+                width: 80rem;
+            }
+        }
+    }
+    #tdTab{
+        margin: 0 0 1rem;
+        border: none;
+        .nav-item{
+            .nav-link{
+                color: $color-gray-0;
+                font-weight: $fw-4;
+                border: none;
+                padding-left: 0px;
+                padding-right: $pd-12;
+                &.active{
+                    color: $color-black-1;
+                }
+            }
+        }
+    }
+}
