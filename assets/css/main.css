@@ -284,6 +284,9 @@ body {
   border: 1px solid #d1d7dc;
   position: relative;
 }
+.courses__content #tdTabContent .courses__item .owl-item, .courses__content #tdTabContent .courses__item .owl-wrapper {
+  -webkit-transform: unset !important;
+}
 .courses__content #tdTabContent .courses__item .owl-nav button:hover {
   background-color: #3e4143;
 }
@@ -458,6 +461,59 @@ body {
   font-weight: 600;
 }
 
+.bestseller {
+  padding: 6.4rem 0 0;
+}
+.bestseller h2 {
+  margin-bottom: 1.6rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.bestseller .bestseller__item .owl-nav button:hover {
+  background-color: #3e4143;
+}
+.bestseller .bestseller__item .owl-nav button span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 2.6rem;
+}
+.bestseller .bestseller__item .owl-nav .owl-next {
+  border-radius: 50%;
+  text-align: center;
+  background-color: #1c1d1f;
+  border: 1px solid #6a6f73;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 48px;
+  height: 48px;
+  line-height: 45px;
+  position: absolute;
+  top: 25%;
+  left: none;
+  right: -3rem;
+}
+.bestseller .bestseller__item .owl-nav .owl-next span {
+  padding-left: 0.4rem;
+}
+.bestseller .bestseller__item .owl-nav .owl-prev {
+  border-radius: 50%;
+  text-align: center;
+  background-color: #1c1d1f;
+  border: 1px solid #6a6f73;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 48px;
+  height: 48px;
+  line-height: 45px;
+  position: absolute;
+  top: 25%;
+  left: -3rem;
+  right: none;
+}
+.bestseller .bestseller__item .owl-nav .owl-prev span {
+  padding-right: 0.4rem;
+}
+
 .button-white-medium {
   font-weight: 700;
   line-height: 1.2;
@@ -627,6 +683,9 @@ body {
   font-weight: 400;
   color: #6a6f73;
 }
+.card .card-body .card-price {
+  margin-bottom: 0.4rem;
+}
 .card .card-body .card-price span {
   font-size: 1.6rem;
   font-weight: 700;
@@ -645,54 +704,61 @@ body {
   font-weight: 400;
   font-size: 1.4rem;
 }
-
-.card-popup {
+.card .card-body .card-sell {
+  font-size: 1.2rem;
+  background-color: #eceb98;
+  color: #3d3c0a;
+  padding: 0.4rem 0.8rem;
+  font-weight: 700;
+}
+.card .card-popover {
   transition: all 0.3s;
   opacity: 0;
   position: absolute;
-  top: 17rem;
-  left: 28.5rem;
+  top: 0.5rem;
+  left: 25.5rem;
   z-index: 10;
   width: 35rem;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 2.4rem;
+  height: 95%;
 }
-.card-popup a {
+.card .card-popover a {
   text-decoration: none;
   color: #1c1d1f;
 }
-.card-popup a h3 {
+.card .card-popover a h3 {
   font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
 }
-.card-popup a:hover {
+.card .card-popover a:hover {
   color: #177e5e;
 }
-.card-popup .section-first {
+.card .card-popover .section-first {
   font-size: 1.2rem;
   margin-bottom: 1.2rem;
   color: #113731;
 }
-.card-popup .section-first .best-seller {
+.card .card-popover .section-first .best-seller {
   background-color: #eceb98;
   color: #3d3c0a;
   padding: 0.4rem 0.8rem;
   font-weight: 700;
   margin-right: 0.8rem;
 }
-.card-popup .section-first .date {
+.card .card-popover .section-first .date {
   font-weight: 700;
 }
-.card-popup .section-second {
+.card .card-popover .section-second {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
   margin-bottom: 0.8rem;
   color: #6a6f73;
 }
-.card-popup .section-second .dot {
+.card .card-popover .section-second .dot {
   display: inline-block;
   width: 3px;
   height: 3px;
@@ -701,13 +767,13 @@ body {
   border-radius: 50%;
   margin: 0 0.8rem;
 }
-.card-popup p {
+.card .card-popover p {
   font-size: 1.4rem;
 }
-.card-popup .card-btn {
+.card .card-popover .card-btn {
   justify-content: center;
 }
-.card-popup .card-btn .add-cart {
+.card .card-popover .card-btn .add-cart {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02rem;
@@ -715,13 +781,13 @@ body {
   background-color: #15AD7D;
   border: 1px solid #15AD7D;
   font-size: 1.6rem;
-  padding: 1.4rem 2.4rem;
+  padding: 1rem 2.4rem;
   margin-right: 1.2rem;
 }
-.card-popup .card-btn .add-cart:hover {
+.card .card-popover .card-btn .add-cart:hover {
   background-color: #177e5e;
 }
-.card-popup .card-btn .add-like {
+.card .card-popover .card-btn .add-like {
   background-color: #fff;
   border: 1px solid #3e4143;
   border-radius: 50%;
@@ -729,9 +795,9 @@ body {
   align-items: center;
   justify-content: center;
 }
-.card-popup .card-btn .add-like i {
+.card .card-popover .card-btn .add-like i {
   font-size: 2.4rem;
 }
-.card-popup .card-btn .add-like:hover {
+.card .card-popover .card-btn .add-like:hover {
   background-color: rgba(0, 0, 0, 0.04);
 }/*# sourceMappingURL=main.css.map */

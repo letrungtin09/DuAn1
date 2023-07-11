@@ -16,6 +16,7 @@ $('.courses__item').owlCarousel({
         }
     }
 });
+
 $('.feedback__item').owlCarousel({
     loop:true,
     nav:true,
@@ -31,9 +32,33 @@ $('.feedback__item').owlCarousel({
         }
     }
 });
+
+$('.bestseller__item').owlCarousel({
+    loop:true,
+    margin:15,
+    nav:false,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:5
+        },
+        1000:{
+            items:5
+        }
+    }
+});
+
+$('.bestseller__item').find('.owl-nav').removeClass('disabled');
+$('.bestseller__item').on('changed.owl.carousel', function(event) {
+	$(this).find('.owl-nav').removeClass('disabled');
+});
+
 function showCard(){
-    document.querySelector('.card-popup').style.opacity = '1';
+    document.querySelector('.card-popover').style.opacity = '1';
 }
 function hideCard(){
-    document.querySelector('.card-popup').style.opacity = '0';
+    document.querySelector('.card-popover').style.opacity = '0';
 }

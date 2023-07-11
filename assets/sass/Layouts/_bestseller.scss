@@ -1,0 +1,36 @@
+.bestseller{
+    padding: $pd-6 0 0;
+    h2{
+        margin-bottom: $mg-2;
+        font-size: $fs-4;
+        font-weight: $fw-4;
+    }
+    .bestseller__item{
+        .owl-nav{
+            button{
+                &:hover{
+                    background-color: $color-gray-1;
+                }
+                span{
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    color: $color-white-0;
+                    font-size: $fs-7;
+                }
+            }
+            .owl-next{
+                @include styleButtonControl(48px, 48px, 45px, 25%, none, -3rem);
+                span{
+                    padding-left: $pd-2;
+                }
+            }
+            .owl-prev{
+                @include styleButtonControl(48px, 48px, 45px, 25%, -3rem, none);
+                span{
+                    padding-right: $pd-2;
+                }
+            }
+        }
+    }
+}

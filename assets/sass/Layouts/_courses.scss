@@ -21,6 +21,9 @@
         border: 1px solid $color-gray-2;
         position: relative;
         .courses__item{
+            .owl-item, .owl-wrapper{
+                -webkit-transform: unset!important;
+            }
             .owl-nav{
                 button{
                     &:hover{
