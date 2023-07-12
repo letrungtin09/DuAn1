@@ -928,6 +928,73 @@ body {
 }
 .card:hover .card-popover {
   opacity: 1;
-}/*# sourceMappingURL=main.css.map */
-}/*# sourceMappingURL=main.css.map */
+}
+
+.login_container {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_container .login_content {
+  width: 350px;
+}
+.login_container .login_content .login_content-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+.login_container .login_content .login_content-login input {
+  width: 100%;
+  margin-bottom: 1.2rem;
+  height: 46px;
+  padding-left: 1.6rem;
+}
+.login_container .login_content .login_content-remember {
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.login_container .login_content .login_content-remember input {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.4rem;
+  cursor: pointer;
+}
+.login_container .login_content .login_content-remember label {
+  font-weight: 500;
+}
+.login_container .login_content .login_content-submit button {
+  width: 100%;
+  height: 46px;
+  border: none;
+  background-color: #15AD7D;
+  color: #fff;
+  font-weight: 500;
+}
+.login_container .login_content .login_content-submit button:hover {
+  opacity: 0.8;
+}
+.login_container .login_content .login_content-forgot-pass {
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #d1d7dc;
+}
+.login_container .login_content .login_content-forgot-pass a {
+  color: #177e5e;
+  font-weight: 500;
+  margin-left: 0.4rem;
+}
+.login_container .login_content .login_content-forgot-register {
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_container .login_content .login_content-forgot-register a {
+  color: #177e5e;
+  font-weight: 500;
+  margin-left: 0.4rem;
 }/*# sourceMappingURL=main.css.map */
