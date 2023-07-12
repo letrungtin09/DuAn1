@@ -27,6 +27,11 @@ body {
   padding-left: 2.4rem;
 }
 
+.detail-container {
+  max-width: 118.4rem;
+  margin: 0 auto;
+}
+
 .nav_header {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -997,4 +1002,162 @@ body {
   color: #177e5e;
   font-weight: 500;
   margin-left: 0.4rem;
+}
+
+.detail__content .detail__top {
+  color: #fff;
+  background-color: #1c1d1f;
+  padding: 3.2rem 0;
+}
+.detail__content .detail__top .detail__main {
+  max-width: 70rem;
+  margin: 0 4.8rem;
+}
+.detail__content .detail__top .detail__main .detail__cate {
+  display: flex;
+  margin-bottom: 1.2rem;
+}
+.detail__content .detail__top .detail__main .detail__cate a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #acd2cc;
+}
+.detail__content .detail__top .detail__main h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+.detail__content .detail__top .detail__main h3 {
+  font-size: 1.9rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+.detail__content .detail__top .detail__main .detail__sub {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+.detail__content .detail__top .detail__main .detail__sub .detail__rate {
+  color: #f3ca8c;
+  margin-right: 0.4rem;
+  font-weight: 700;
+}
+.detail__content .detail__top .detail__main .detail__sub .detail__icon {
+  letter-spacing: -0.1rem;
+  margin-right: 0.4rem;
+}
+.detail__content .detail__top .detail__main .detail__sub .detail__icon i {
+  font-size: 1.2rem;
+  color: #f3ca8c;
+}
+.detail__content .detail__top .detail__main .detail__sub .detail__total {
+  margin-right: 0.4rem;
+}
+.detail__content .detail__top .detail__main .detail__sub .detail__total a {
+  color: #acd2cc;
+}
+.detail__content .detail__top .detail__main p {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+.detail__content .detail__top .detail__main p a {
+  color: #acd2cc;
+}
+.detail__content .detail__top .detail__main .detail__date {
+  font-size: 1.4rem;
+}
+.detail__content .detail__top .detail__main .detail__date i {
+  margin-right: 0.8rem;
+}
+.detail__content .detail__bottom {
+  padding: 3.2rem 0;
+}
+.detail__content .detail__bottom .detail__bottom-content {
+  max-width: 70rem;
+  margin: 0 4.8rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detai__companies {
+  padding: 1.6rem;
+  border: 1px solid #d1d7dc;
+}
+.detail__content .detail__bottom .detail__bottom-content .detai__companies h5 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detai__companies p {
+  font-size: 1.4rem;
+  color: #6a6f73;
+  margin-bottom: 0;
+}
+.detail__content .detail__bottom .detail__bottom-content .detai__companies .detail__img {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail__content .detail__bottom .detail__bottom-content .detai__companies .detail__img img {
+  height: 38px;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter {
+  margin-top: 2.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter h2 {
+  margin-bottom: 1.6rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__statistic {
+  margin-bottom: 0.8rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__statistic span {
+  font-size: 1.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion {
+  --bs-accordion-color: $color-black-1;
+  --bs-accordion-border-radius: 0;
+  --bs-accordion-inner-border-radius: 0;
+  --bs-accordion-btn-focus-border-color: $color-gray-2;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-btn-color:$color-black-1;
+  --bs-accordion-active-color:$color-black-1;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-header {
+  background-color: #acd2cc;
+  border-bottom: 1px solid #d1d7dc;
+  margin-bottom: 0;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-header .accordion-button {
+  background-color: #f7f9fa;
+  padding: 1.6rem 2.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-header .accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-header .accordion-button .detail__title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1.2rem;
+  font-size: 1.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-header .accordion-button .detail__title .title-chapter {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-body {
+  padding: 1.6rem 2.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-body .detail__source {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  font-size: 1.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-body .detail__source .detail__doc i {
+  margin-right: 1.6rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-body .detail__source .detail__doc a {
+  color: #177e5e;
 }/*# sourceMappingURL=main.css.map */

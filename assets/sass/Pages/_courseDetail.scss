@@ -1,0 +1,165 @@
+.detail__content {
+    .detail__sidebar {
+    }
+    .detail__top {
+        color: $color-white-0;
+        background-color: $color-black-1;
+        padding: $pd-5 0;
+        .detail__main {
+            max-width: 70rem;
+            margin: 0 4.8rem;
+            .detail__cate {
+                display: flex;
+                margin-bottom: $mg-0;
+                a{
+                    font-size: $fs-0;
+                    font-weight: $fw-4;
+                    text-decoration: none;
+                    color: $color-green-2;
+                }
+            }
+            h1{
+                font-size: $fs-1;
+                margin-bottom: $mg-1;
+                font-weight: $fw-4;
+                letter-spacing: $letter-spacing-0 * (-1);
+            }
+            h3{
+                font-size: $fs-3;
+                font-weight: $fw-1;
+                margin-bottom: $mg-2;
+            }
+            .detail__sub{
+                margin-bottom: $mg-1;
+                font-size: $fs-0;
+                .detail__rate{
+                    color: $color-yellow-3;
+                    margin-right: $mg-4;
+                    font-weight: $fw-4;
+                }
+                .detail__icon{
+                    letter-spacing: -0.1rem;
+                    margin-right: $mg-4;
+                    i{
+                        font-size: $fs-5;
+                        color: $color-yellow-3;
+                    }
+                }
+                .detail__total{
+                    margin-right: $mg-4;
+                    a{
+                        color: $color-green-2;
+                    }
+                }
+            }
+            p{
+                font-size: $fs-0;
+                margin-bottom: $mg-1;
+                a{
+                    color: $color-green-2;
+                }
+            }
+            .detail__date{
+                font-size: $fs-0;
+                i{
+                    margin-right: $mg-1;
+                }
+            }
+        }
+    }
+    .detail__bottom{
+        padding: $pd-5 0;
+        .detail__bottom-content{
+            max-width: 70rem;
+            margin: 0 4.8rem;
+            .detai__companies{
+                padding: $pd-7;
+                border: 1px solid $color-gray-2;
+                h5{
+                    font-size: $fs-2;
+                    font-weight: $fw-4;
+                    margin-bottom: $mg-4;
+                }
+                p{
+                    font-size: $fs-0;
+                    color: $color-gray-0;
+                    margin-bottom: 0;
+                }
+                .detail__img{
+                    margin-top: $mg-5;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    img{
+                        height: 38px;
+                    }
+                }
+            }
+            .detail__chapter{
+                margin-top: $mg-5;
+                h2{
+                    margin-bottom: $mg-2;
+                    font-size: $fs-4;
+                    font-weight: $fw-4;
+                }
+                .detail__statistic{
+                    margin-bottom: $mg-1;
+                    span{
+                        font-size: $fs-0;
+                    }
+                }
+                .detail__lesson{
+                    .accordion{
+                        --bs-accordion-color: $color-black-1;
+                        --bs-accordion-border-radius: 0;
+                        --bs-accordion-inner-border-radius: 0;
+                        --bs-accordion-btn-focus-border-color: $color-gray-2;
+                        --bs-accordion-btn-focus-box-shadow: none;
+                        --bs-accordion-btn-color:$color-black-1;
+                        --bs-accordion-active-color:$color-black-1;
+                        .accordion-header{
+                            background-color: $color-green-2;
+                            border-bottom: 1px solid $color-gray-2;
+                            margin-bottom: 0;
+                            .accordion-button{
+                                &:not(.collapsed){
+                                    box-shadow: none;
+                                }
+                                background-color: $color-white-1;
+                                padding: $pd-7 $pd-0;
+                                .detail__title{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    padding-right: $pd-1;
+                                    font-size: $fs-0;
+                                    .title-chapter{
+                                        font-size: $fs-2;
+                                        font-weight: $fw-4;
+                                    }
+                                }
+                            }
+                        }
+                        .accordion-body{
+                            padding: $pd-7 $pd-0;
+                            .detail__source{
+                                display: flex;
+                                justify-content: space-between;
+                                padding: $pd-4 0;
+                                font-size: $fs-0;
+                                .detail__doc{
+                                    i{
+                                        margin-right: $mg-2;
+                                    }
+                                    a{
+                                        color: $color-green-1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
