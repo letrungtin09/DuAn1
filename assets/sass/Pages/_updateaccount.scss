@@ -1,0 +1,73 @@
+.updateaccount_container{
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center ;
+    .updateaccount_container-img{
+        width: 450px;
+        height: 400px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-position: 0px -14px;
+            object-fit: cover;
+        }
+    }
+    form{
+        width: 640px;
+        .updateaccount_content-title{
+            font-size: $fs-4;
+            font-weight: $fw-3;
+            margin-bottom: $mg-5-2;
+            text-align: center;
+        }
+        .updateaccount_content{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .updateaccount_content-login{
+                flex: 1;
+                &:first-child{
+                    margin-right: $mg-10;
+                }
+                p{
+                    margin-bottom: $mg-1;
+                    font-weight: $fw-2;
+                }
+                input{
+                    width: 100%;
+                    margin-bottom: $mg-0;
+                    height: 46px;
+                    padding-left: $pd-7;
+                }
+                div{
+                    height: 46px;
+                    border: 1px solid $color-gray-1;
+                    display: flex;
+                    align-items: center;
+                    input{
+                        height: 28px;
+                        margin-bottom: 0;
+                    }
+                }
+                textarea{
+                    width: 100%;
+                    padding: $pd-2;
+                }
+            }
+        }
+        button{
+            width: 100%;
+                height: 46px;
+                border: none;
+                background-color: $color-green-0;
+                color: $color-white-0;
+                font-weight: $fw-2;
+                margin-bottom: $mg-0;
+                &:hover{
+                    opacity: 0.8;
+                }
+        }
+    }
+    
+}   
