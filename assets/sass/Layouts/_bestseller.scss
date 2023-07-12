@@ -6,6 +6,9 @@
         font-weight: $fw-4;
     }
     .bestseller__item{
+        .owl-item, .owl-wrapper{
+            -webkit-transform: unset!important;
+        }
         .owl-nav{
             button{
                 &:hover{

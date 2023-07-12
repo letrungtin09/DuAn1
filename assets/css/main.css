@@ -513,6 +513,10 @@ body {
   font-size: 2.4rem;
   font-weight: 700;
 }
+
+.bestseller .bestseller__item .owl-item, .bestseller .bestseller__item .owl-wrapper {
+  -webkit-transform: unset !important;
+}
 .bestseller .bestseller__item .owl-nav button:hover {
   background-color: #3e4143;
 }
@@ -625,12 +629,16 @@ body {
   font-family: "Playfair Display", serif;
   font-weight: bold;
   padding-bottom: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem 9rem;
 }
 
 .button-white-medium {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02rem;
+  transition: all 0.3s;
   color: #1c1d1f;
   background-color: #fff;
   border: 1px solid #1c1d1f;
@@ -645,6 +653,7 @@ body {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02rem;
+  transition: all 0.3s;
   color: #fff;
   background-color: #1c1d1f;
   border: 1px solid #1c1d1f;
@@ -659,6 +668,7 @@ body {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02rem;
+  transition: all 0.3s;
   color: #1c1d1f;
   background-color: #fff;
   border: 1px solid #1c1d1f;
@@ -673,6 +683,7 @@ body {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02rem;
+  transition: all 0.3s;
   color: #fff;
   background-color: #1c1d1f;
   border: 1px solid #1c1d1f;
@@ -757,6 +768,7 @@ body {
 
 .card {
   border: none;
+  overflow: hidden;
 }
 .card .card-body {
   padding: 0;
@@ -828,8 +840,8 @@ body {
   transition: all 0.3s;
   opacity: 0;
   position: absolute;
-  top: 0.5rem;
-  left: 25.5rem;
+  top: 0.3rem;
+  left: 24.98rem;
   z-index: 10;
   width: 35rem;
   background-color: #fff;
@@ -890,6 +902,7 @@ body {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02rem;
+  transition: all 0.3s;
   color: #fff;
   background-color: #15AD7D;
   border: 1px solid #15AD7D;
@@ -913,4 +926,12 @@ body {
 }
 .card .card-popover .card-btn .add-like:hover {
   background-color: rgba(0, 0, 0, 0.04);
+}
+/*# sourceMappingURL=main.css.map */
+.card:hover {
+  overflow: visible;
+}
+.card:hover .card-popover {
+  opacity: 1;
+}/*# sourceMappingURL=main.css.map */
 }/*# sourceMappingURL=main.css.map */
