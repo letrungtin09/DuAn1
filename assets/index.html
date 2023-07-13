@@ -26,7 +26,8 @@
 <body>
     <!-- HEADER -->
     <header>
-        <nav class="navbar navbar-expand-lg nav_header">
+        <!-- nav khi chưa đăng nhập -->
+        <!-- <nav class="navbar navbar-expand-lg nav_header">
             <div class="container_header">
                 <a class="navbar-brand" href="#">
                     <img class="logo_img" src="./img/logo.png" alt="">
@@ -75,6 +76,210 @@
                 <button class="header_dark">
                     <i class="fa-regular fa-moon"></i>
                 </button>
+            </div>
+        </nav> -->
+        <!-- nav đăng nhập tài khoản admin -->
+        <nav class="navbar navbar-expand-lg nav_header">
+            <div class="container_header">
+                <a class="navbar-brand" href="#">
+                    <img class="logo_img" src="./img/logo.png" alt="">
+                </a>
+                <div class="nav-item dropdown kind_menu">
+                    <a class="nav-link" href="#" role="button">
+                        Thể loại
+                    </a>
+                    <ul class="dropdown-menu kind_menu_item">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+
+                    </ul>
+                </div>
+                <div class="header_search">
+                    <form class="d-flex" role="search">
+                        <button class="btn btn-outline-success header_search_btn" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input class="header_search_input me-2" placeholder="Tìm kiếm nội dung bất kì">
+                    </form>
+                </div>
+                <div class="nav-item header_teaching">
+                    <a class="nav-link" aria-current="page" href="#">Giảng dạy trên T-demy</a>
+                </div>
+                <div class="nav-item header_teaching">
+                    <a class="nav-link" aria-current="page" href="#">Khóa học của tôi</a>
+                </div>
+                <div class="nav-item dropdown header_cart">
+                    <a class="nav-link header_cart_link" href="#" role="button">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div><span class="">3</span></div>
+                    </a>
+                    <ul class="dropdown-menu header_cart_bill-purchar">
+                        <li>
+                            <a href="" class="header_cart_bill-purchar-link">
+                                <img src="/assets/img/courses/be5.jpg">
+                                <div>
+                                    <div class="header_cart_bill-title">Tên khóa học</div>
+                                    <p>Tường duy</p>
+                                    <div class="header_cart_bill-price">
+                                        <h5>499.000đ</h5><span>2.491.000đ</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="header_cart_bill-purchar-link">
+                                <img src="/assets/img/courses/be5.jpg">
+                                <div>
+                                    <div class="header_cart_bill-title">Tên khóa học</div>
+                                    <p>Tường duy</p>
+                                    <div class="header_cart_bill-price">
+                                        <h5>499.000đ</h5><span>2.491.000đ</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="header_cart_bill-purchar-link">
+                                <img src="/assets/img/courses/be5.jpg">
+                                <div>
+                                    <div class="header_cart_bill-title">Thiết kế web cơ bản HTML/ CSS cho người mới bắt đầu học lập trình</div>
+                                    <p>Tường duy</p>
+                                    <div class="header_cart_bill-price">
+                                        <h5>499.000đ</h5><span>2.491.000đ</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <div class="header_cart_bill-sum">
+                            Tổng: <div class="">1.493.000đ</div>
+                            <span>7.354.000đ</span>
+                        </div>
+                        <div class="header_cart_bill-submit">
+                            <a href="#">Đến giỏ hàng</a>
+                        </div>
+                    </ul>
+                </div>
+                <div class="dropdown header_favorite">
+                    <a class="header_dark header_favorite-icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                  
+                    <ul class="dropdown-menu header_favorite_bill-purchar">
+                        <li>
+                            <a href="#" class="header_favorite_bill-tem">
+                                <img src="/assets/img/courses/be5.jpg">
+                                <div>
+                                    <div class="header_favorite_bill-title">Khoá học cơ bản với HTML/ CSS dành cho người mới học lập trình</div>
+                                    <p>Tường duy</p>
+                                    <div class="header_favorite_bill-price">
+                                        <h5>499.000đ</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="header_cart_favorite_bill-submit">
+                                <button>Thêm vào giỏ hàng</button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="header_favorite_bill-tem">
+                                <img src="/assets/img/courses/be5.jpg">
+                                <div>
+                                    <div class="header_favorite_bill-title">Khoá học cơ bản với HTML/ CSS dành cho người mới học lập trình</div>
+                                    <p>Tường duy</p>
+                                    <div class="header_favorite_bill-price">
+                                        <h5>499.000đ</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="header_cart_favorite_bill-submit">
+                                <button>Thêm vào giỏ hàng</button>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="header_favorite_bill-tem">
+                                <img src="/assets/img/courses/be5.jpg">
+                                <div>
+                                    <div class="header_favorite_bill-title">Khoá học cơ bản với HTML/ CSS dành cho người mới học lập trình</div>
+                                    <p>Tường duy</p>
+                                    <div class="header_favorite_bill-price">
+                                        <h5>499.000đ</h5>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="header_cart_favorite_bill-submit">
+                                <button>Thêm vào giỏ hàng</button>
+                            </div>
+                        </li>
+                        <div class="header_favorite_bill-submit">
+                            <a >Xem danh sách yêu thích</a>
+                        </div>
+                    </ul>
+                </div>
+                <button class="header_dark">
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+                <div class="dropdown dropdown_nav_user">
+                    <!-- modal của admin -->
+                    <!-- <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="/assets/img/users/admin.jpg" alt="">
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/assets/img/users/admin.jpg" alt="">
+                            </a>
+                            <div>
+                                <h6>Lê Trung Tín</h6>
+                                <p>duytt18897@gmail.com</p>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu-mid">
+                            <li><a href="" class="">Cập nhập tài khoản</a></li>
+                            <li><a href="" class="">Đổi mật khẩu</a></li>
+                            <li><a href="" class="">Quản trị website</a></li>
+                        </ul>
+                        <div class="dropdown-menu-end">
+                            <a href="" class="">Đăng xuất</a>
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </div>
+                    </div> -->
+                    <!-- modal của giảng viên -->
+                    <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/assets/img/users/teacher.jpg" alt="">
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/assets/img/users/teacher.jpg" alt="">
+                            </a>
+                            <div>
+                                <h6>Lê Trung Tín</h6>
+                                <p>duytt18897@gmail.com</p>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu-mid">
+                            <li><a href="" class="">Quá trình học tập của tôi</a></li>
+                            <li><a href="" class="">Giỏ hàng của tôi</a></li>
+                            <li><a href="" class="">Danh sách yêu thích</a></li>
+                            <li><a href="" class="">Bảng điều khiển của giảng viên</a></li>
+                        </ul>
+                        <ul class="dropdown-menu-mid">
+                            <li><a href="" class="">Cập nhập tài khoản</a></li>
+                            <li><a href="" class="">Đổi mật khẩu</a></li>
+                            <li><a href="" class="">Lịch sử mua</a></li>
+                        </ul>
+                        <div class="dropdown-menu-end">
+                            <a href="" class="">Đăng xuất</a>
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
