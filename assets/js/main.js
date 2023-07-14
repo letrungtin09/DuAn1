@@ -55,10 +55,3 @@ $('.bestseller__item').find('.owl-nav').removeClass('disabled');
 $('.bestseller__item').on('changed.owl.carousel', function(event) {
 	$(this).find('.owl-nav').removeClass('disabled');
 });
-
-function showCard(){
-    document.querySelector('.card-popover').style.opacity = '1';
-}
-function hideCard(){
-    document.querySelector('.card-popover').style.opacity = '0';
-}

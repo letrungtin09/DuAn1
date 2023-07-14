@@ -1,5 +1,93 @@
 .detail__content {
     .detail__sidebar {
+        .detail__sidebarMain{
+            margin-left: 79.6rem;
+            position: absolute;
+            top: 10.2rem;
+            .detail__sidebarContent{
+                width: 34rem;
+                box-shadow: $box-shadow-1;
+                .detail__sidebarImg{
+                    img{
+                        width: 100%;
+                        border: 1px solid $color-gray-2;
+                    }
+                }
+                .detail__sidebarInfo{
+                    background-color: $color-white-0;
+                    padding: $pd-0;
+                    .price-sale{
+                        display: flex;
+                        align-items: center;
+                        .cur-vnd{
+                            text-decoration: underline;
+                        }
+                        .sale-detail{
+                            font-size: $fs-1;
+                            font-weight: $fw-4;
+                            margin-right: $mg-2;
+                        }
+                        .price-detail{
+                            font-size: $fs-3;
+                            color: $color-gray-0;
+                            text-decoration: line-through;
+                        }
+                    }
+                    .sale-rating{
+                        margin-bottom: $mg-0;
+                    }
+                    .info-btn{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: $mg-1;
+                        .add-to-cart{
+                            @include styleButton($color-white-0, $color-green-0, $color-green-0, $fs-2, 4.5rem, $pd-1);
+                        }
+                        .add-wishlist{
+                            padding: $pd-1 $pd-7;
+                            background-color: $color-white-0;
+                            border: 1px solid $color-black-1;
+                            i{
+                                font-size: $fs-3 + 0.2;
+                            }
+                        }
+                    }
+                    .buy-now{
+                        width: 100%;
+                        padding: $pd-1 0;
+                        font-weight: $fw-4;
+                        background-color: $color-white-0;
+                        border: 1px solid $color-black-1;
+                        margin-bottom: $mg-2;
+                    }
+                    .info-detail{
+                        h3{
+                            font-size: $fs-2;
+                            font-weight: $fw-4;
+                        }
+                        ul{
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                            li{
+                                padding: $pd-2 0;
+                                display: flex;
+                                align-items: center;
+                                i{
+                                    font-size: $fs-0;
+                                    width: 23px;
+                                    text-align: center;
+                                }
+                                span{
+                                    margin-left: $mg-0;
+                                    font-size: $fs-0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     .detail__top {
         color: $color-white-0;
@@ -30,8 +118,11 @@
                 margin-bottom: $mg-2;
             }
             .detail__sub{
-                margin-bottom: $mg-1;
+                margin-bottom: $mg-1 + 0.2;
                 font-size: $fs-0;
+                .button-best-seller{
+                    margin-right: $mg-1 - 0.2;
+                }
                 .detail__rate{
                     color: $color-yellow-3;
                     margin-right: $mg-4;
@@ -72,6 +163,11 @@
         .detail__bottom-content{
             max-width: 70rem;
             margin: 0 4.8rem;
+            h2{
+                margin-bottom: $mg-2;
+                font-size: $fs-4;
+                font-weight: $fw-4;
+            }
             .detai__companies{
                 padding: $pd-7;
                 border: 1px solid $color-gray-2;
@@ -97,11 +193,6 @@
             }
             .detail__chapter{
                 margin-top: $mg-5;
-                h2{
-                    margin-bottom: $mg-2;
-                    font-size: $fs-4;
-                    font-weight: $fw-4;
-                }
                 .detail__statistic{
                     margin-bottom: $mg-1;
                     span{
@@ -131,11 +222,13 @@
                                     width: 100%;
                                     display: flex;
                                     justify-content: space-between;
+                                    align-items: center;
                                     padding-right: $pd-1;
                                     font-size: $fs-0;
                                     .title-chapter{
                                         font-size: $fs-2;
                                         font-weight: $fw-4;
+                                        flex: 1;
                                     }
                                 }
                             }
@@ -148,14 +241,311 @@
                                 padding: $pd-4 0;
                                 font-size: $fs-0;
                                 .detail__doc{
+                                    flex: 1;
+                                    display: flex;
+                                    justify-content:flex-start;
+                                    align-items: center;
                                     i{
-                                        margin-right: $mg-2;
+                                        width: 3%;
+                                        text-align: center;
                                     }
                                     a{
                                         color: $color-green-1;
+                                        margin-left: $mg-2;
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+            }
+            .detail__des{
+                margin-top: $mg-5;
+                p{
+                    font-size: $fs-0;
+                }
+            }
+            .detail__kind{
+                margin-top: $mg-5;
+                h2{
+                    margin-bottom: 0;
+                }
+                .detail__sameKind{
+                    .detail__item{
+                        border-bottom: 1px solid $color-gray-2;
+                        display: flex;
+                        flex-direction: row;
+                        padding: $pd-7 0;
+                        .kind-img{
+                            height: 100%;
+                            img{
+                                border: 1px solid $color-gray-2;
+                                width: 6.24rem;
+                                height: 6.24rem;
+                                object-fit: cover;
+                            }
+                        }
+                        .kind-content{
+                            flex: 4;
+                            display: flex;
+                            flex-direction: column;
+                            height: 100%;
+                            min-width: 18rem;
+                            margin-left: $mg-1;
+                            a{
+                                font-size: $fs-2;
+                                font-weight: $fw-4;
+                                color: $color-black-1;
+                                text-decoration: none;
+                                line-height: 1.2;
+                            }
+                            .kind-bottom{
+                                margin-top: $mg-1;
+                                display: flex;
+                                span{
+                                    font-size: $fs-0;
+                                    &:last-child{
+                                        margin-left: $mg-4;
+                                    }
+                                }
+                                .kind-sell{
+                                    display: flex;
+                                    align-items: center;
+                                    margin-right: $mg-1;
+                                }
+                                .kind-time{
+                                    color: $color-green-1;
+                                    font-weight: $fw-4;
+                                    margin-right: $mg-4;
+                                }
+                            }
+                        }
+                        .kind-number{
+                            flex: 3;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items:flex-start;
+                            font-size: $fs-0;
+                            span{
+                                i{
+                                    font-size: $fs-5;
+                                }
+                            }
+                            .kind-rate{
+                                margin-right: $mg-1;
+                                span{
+                                    &:first-child{
+                                        font-weight: $fw-4;
+                                        color: $color-orange-0;
+                                    }
+                                    i{
+                                        color: $color-yellow-0;
+                                    }
+                                }
+                            }
+                            .kind-price{
+                                display: flex;
+                                flex-direction: column;
+                                text-align: right;
+                                letter-spacing: $letter-spacing-1;
+                                p{
+                                    margin-bottom: 0;
+                                    font-weight: $fw-4;
+                                    span{
+                                        text-decoration: underline;
+                                        font-size: $fs-5 + 0.1;
+                                        font-weight: $fw-2;
+                                    }
+                                }
+                                .kind-sale{
+                                    font-size: $fs-5;
+                                    font-weight: $fw-1;
+                                    color: $color-gray-0;
+                                    text-decoration: line-through;
+                                    span{
+                                        font-weight: $fw-1;
+                                    }
+                                }
+                            }
+                        }
+                        .kind-button{
+                            margin-left: $mg-2;
+                            button{
+                                width: 40px;
+                                height: 40px;
+                                line-height: 40px;
+                                border-radius: 50%;
+                                border: 1px solid $color-gray-0;
+                                background-color: $color-white-0;
+                                &:hover{
+                                    background-color: $color-black-2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .detail__teacher{
+                margin-top: $mg-5;
+                .detail__info{
+                    a{
+                        display: inline-block;
+                        font-size: $fs-3;
+                        color: $color-green-1;
+                        font-weight: $fw-4;
+                        margin-bottom: $mg-4;
+                        text-underline-offset: 0.4rem;
+                    }
+                    p{
+                        &:last-child{
+                            margin-top: $mg-2;
+                            margin-bottom: 0;
+                            font-size: $fs-0;
+                        }
+                    }
+                    .detail__career{
+                        color: $color-gray-0;
+                        margin-bottom: $mg-1;
+                    }
+                    .detail__avatar{
+                        display: flex;
+                        img{
+                            width: 11.2rem;
+                            height: 11.2rem;
+                            border-radius: 50%;
+                            border: 1px solid $color-gray-2;
+                            margin-right: $mg-2;
+                        }
+                        ul{
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            li{
+                                padding: $pd-2 - 0.1 0;
+                                i{
+                                    font-size: $fs-5;
+                                }
+                                span{
+                                    font-size: $fs-0;
+                                    margin-left: $mg-0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .detail__evaluate{
+                margin-top: $mg-7;
+                h2{
+                    margin-bottom: $mg-5;
+                    i{
+                        color: $color-yellow-0;
+                        font-size: $fs-3;
+                    }
+                }
+                .detail__allEvaluate{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .item-odd{
+                        margin-right: $mg-2;
+                    }
+                    .item-even{
+                        margin-left: $mg-2;
+                    }
+                    .detail__itemEvaluate{
+                        width: 33.4rem;
+                        padding: $pd-0 0 $pd-5 0;
+                        border-top: 1px solid $color-gray-2;
+                        .detail__user{
+                            display: flex;
+                            justify-content: flex-start;
+                            margin-bottom: $mg-2;
+                            img{
+                                width: 4rem;
+                                height: 4rem;
+                                object-fit: cover;
+                                border: 1px solid $color-gray-2;
+                                border-radius: 50%;
+                                margin-right: $mg-2;
+                            }
+                            .detail__name{
+                                display: flex;
+                                flex-direction: column;
+                                p{
+                                    margin-bottom: 0;
+                                    font-weight: $fw-4;
+                                }
+                                .detail__stars{
+                                    display: flex;
+                                    align-items: center;
+                                    font-size: $fs-5;
+                                    margin-top: $mg-4;
+                                    .stars-rating{
+                                        letter-spacing: $letter-spacing-0;
+                                        margin-right: $mg-1;
+                                        i{
+                                            color: $color-yellow-0;
+                                        }
+                                    }
+                                    .date-rating{
+                                        font-weight: $fw-4;
+                                        color: $color-gray-0;
+                                    }
+                                }
+                            }
+                        }
+                        .detail__contentEvaluate{
+                            p{
+                                margin-bottom: $mg-2;
+                            }
+                        }
+                        .detail__review{
+                            display: flex;
+                            align-items: center;
+                            span{
+                                color: $color-gray-0;
+                                font-size: $fs-5;
+                                margin-right: $mg-1;
+                            }
+                            i{
+                                font-size: $fs-3;
+                            }
+                            .up, .up-like{
+                                margin-right: $mg-2;
+                            }
+                            .up-like, .down-like{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .detail__courseTeacher{
+                margin: $mg-2 0;
+                h2{
+                    a{
+                        text-decoration: none;
+                        color: $color-green-1;
+                    }
+                }
+                .detail__allCourse{
+                    display: flex;
+                    justify-content: space-between;
+                    .card{
+                        width: 31.5%;
+                        overflow: visible;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .card-time{
+                        margin-bottom: $mg-4;
+                        display: flex;
+                        font-size: $fs-5;
+                        align-items: center;
+                        color: $color-gray-0;
+                        .card-dot{
+                            margin: 0 $mg-4;
                         }
                     }
                 }
