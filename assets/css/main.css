@@ -767,6 +767,18 @@ body {
   background-color: #3e4143;
 }
 
+.button-best-seller {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  transition: all 0.3s;
+  color: #3d3c0a;
+  background-color: #eceb98;
+  border: 1px solid #eceb98;
+  font-size: 1.2rem !important;
+  padding: 0.4rem 0.8rem;
+}
+
 .card {
   border: none;
   overflow: hidden;
@@ -1225,6 +1237,98 @@ body {
   margin-left: 0.4rem;
 }
 
+.detail__content .detail__sidebar .detail__sidebarMain {
+  margin-left: 79.6rem;
+  position: absolute;
+  top: 10.2rem;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent {
+  width: 34rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarImg img {
+  width: 100%;
+  border: 1px solid #d1d7dc;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo {
+  background-color: #fff;
+  padding: 2.4rem;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .price-sale {
+  display: flex;
+  align-items: center;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .price-sale .cur-vnd {
+  text-decoration: underline;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .price-sale .sale-detail {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-right: 1.6rem;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .price-sale .price-detail {
+  font-size: 1.9rem;
+  color: #6a6f73;
+  text-decoration: line-through;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .sale-rating {
+  margin-bottom: 1.2rem;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .info-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .info-btn .add-to-cart {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  transition: all 0.3s;
+  color: #fff;
+  background-color: #15AD7D;
+  border: 1px solid #15AD7D;
+  font-size: 1.6rem;
+  padding: 1.2rem 4.5rem;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .info-btn .add-wishlist {
+  padding: 1.2rem 1.6rem;
+  background-color: #fff;
+  border: 1px solid #1c1d1f;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .info-btn .add-wishlist i {
+  font-size: 2.1rem;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .buy-now {
+  width: 100%;
+  padding: 1.2rem 0;
+  font-weight: 700;
+  background-color: #fff;
+  border: 1px solid #1c1d1f;
+  margin-bottom: 1.6rem;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .info-detail h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .info-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .info-detail ul li {
+  padding: 0.4rem 0;
+  display: flex;
+  align-items: center;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .info-detail ul li i {
+  font-size: 1.4rem;
+  width: 23px;
+  text-align: center;
+}
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .info-detail ul li span {
+  margin-left: 1.2rem;
+  font-size: 1.4rem;
+}
 .detail__content .detail__top {
   color: #fff;
   background-color: #1c1d1f;
@@ -1256,8 +1360,11 @@ body {
   margin-bottom: 1.6rem;
 }
 .detail__content .detail__top .detail__main .detail__sub {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   font-size: 1.4rem;
+}
+.detail__content .detail__top .detail__main .detail__sub .button-best-seller {
+  margin-right: 0.6rem;
 }
 .detail__content .detail__top .detail__main .detail__sub .detail__rate {
   color: #f3ca8c;
@@ -1298,6 +1405,11 @@ body {
   max-width: 70rem;
   margin: 0 4.8rem;
 }
+.detail__content .detail__bottom .detail__bottom-content h2 {
+  margin-bottom: 1.6rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
 .detail__content .detail__bottom .detail__bottom-content .detai__companies {
   padding: 1.6rem;
   border: 1px solid #d1d7dc;
@@ -1323,11 +1435,6 @@ body {
 }
 .detail__content .detail__bottom .detail__bottom-content .detail__chapter {
   margin-top: 2.4rem;
-}
-.detail__content .detail__bottom .detail__bottom-content .detail__chapter h2 {
-  margin-bottom: 1.6rem;
-  font-size: 2.4rem;
-  font-weight: 700;
 }
 .detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__statistic {
   margin-bottom: 0.8rem;
@@ -1360,12 +1467,14 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-right: 1.2rem;
   font-size: 1.4rem;
 }
 .detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-header .accordion-button .detail__title .title-chapter {
   font-size: 1.6rem;
   font-weight: 700;
+  flex: 1;
 }
 .detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-body {
   padding: 1.6rem 2.4rem;
@@ -1376,9 +1485,294 @@ body {
   padding: 0.8rem 0;
   font-size: 1.4rem;
 }
+.detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-body .detail__source .detail__doc {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 .detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-body .detail__source .detail__doc i {
-  margin-right: 1.6rem;
+  width: 3%;
+  text-align: center;
 }
 .detail__content .detail__bottom .detail__bottom-content .detail__chapter .detail__lesson .accordion .accordion-body .detail__source .detail__doc a {
   color: #177e5e;
+  margin-left: 1.6rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__des {
+  margin-top: 2.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__des p {
+  font-size: 1.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind {
+  margin-top: 2.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind h2 {
+  margin-bottom: 0;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item {
+  border-bottom: 1px solid #d1d7dc;
+  display: flex;
+  flex-direction: row;
+  padding: 1.6rem 0;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-img {
+  height: 100%;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-img img {
+  border: 1px solid #d1d7dc;
+  width: 6.24rem;
+  height: 6.24rem;
+  object-fit: cover;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-content {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 18rem;
+  margin-left: 0.8rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-content a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1c1d1f;
+  text-decoration: none;
+  line-height: 1.2;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-content .kind-bottom {
+  margin-top: 0.8rem;
+  display: flex;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-content .kind-bottom span {
+  font-size: 1.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-content .kind-bottom span:last-child {
+  margin-left: 0.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-content .kind-bottom .kind-sell {
+  display: flex;
+  align-items: center;
+  margin-right: 0.8rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-content .kind-bottom .kind-time {
+  color: #177e5e;
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-number {
+  flex: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-number span i {
+  font-size: 1.2rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-number .kind-rate {
+  margin-right: 0.8rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-number .kind-rate span:first-child {
+  font-weight: 700;
+  color: #b4690e;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-number .kind-rate span i {
+  color: #e59819;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-number .kind-price {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  letter-spacing: -0.02rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-number .kind-price p {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-number .kind-price p span {
+  text-decoration: underline;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-number .kind-price .kind-sale {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #6a6f73;
+  text-decoration: line-through;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-number .kind-price .kind-sale span {
+  font-weight: 400;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-button {
+  margin-left: 1.6rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-button button {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 1px solid #6a6f73;
+  background-color: #fff;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__kind .detail__sameKind .detail__item .kind-button button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__teacher {
+  margin-top: 2.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__teacher .detail__info a {
+  display: inline-block;
+  font-size: 1.9rem;
+  color: #177e5e;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  text-underline-offset: 0.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__teacher .detail__info p:last-child {
+  margin-top: 1.6rem;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__teacher .detail__info .detail__career {
+  color: #6a6f73;
+  margin-bottom: 0.8rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__teacher .detail__info .detail__avatar {
+  display: flex;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__teacher .detail__info .detail__avatar img {
+  width: 11.2rem;
+  height: 11.2rem;
+  border-radius: 50%;
+  border: 1px solid #d1d7dc;
+  margin-right: 1.6rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__teacher .detail__info .detail__avatar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__teacher .detail__info .detail__avatar ul li {
+  padding: 0.3rem 0;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__teacher .detail__info .detail__avatar ul li i {
+  font-size: 1.2rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__teacher .detail__info .detail__avatar ul li span {
+  font-size: 1.4rem;
+  margin-left: 1.2rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate {
+  margin-top: 3.2rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate h2 {
+  margin-bottom: 2.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate h2 i {
+  color: #e59819;
+  font-size: 1.9rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate {
+  display: flex;
+  flex-wrap: wrap;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .item-odd {
+  margin-right: 1.6rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .item-even {
+  margin-left: 1.6rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate {
+  width: 33.4rem;
+  padding: 2.4rem 0 3.2rem 0;
+  border-top: 1px solid #d1d7dc;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__user {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1.6rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__user img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border: 1px solid #d1d7dc;
+  border-radius: 50%;
+  margin-right: 1.6rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__user .detail__name {
+  display: flex;
+  flex-direction: column;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__user .detail__name p {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__user .detail__name .detail__stars {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-top: 0.4rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__user .detail__name .detail__stars .stars-rating {
+  letter-spacing: -0.05rem;
+  margin-right: 0.8rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__user .detail__name .detail__stars .stars-rating i {
+  color: #e59819;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__user .detail__name .detail__stars .date-rating {
+  font-weight: 700;
+  color: #6a6f73;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__contentEvaluate p {
+  margin-bottom: 1.6rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__review {
+  display: flex;
+  align-items: center;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__review span {
+  color: #6a6f73;
+  font-size: 1.2rem;
+  margin-right: 0.8rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__review i {
+  font-size: 1.9rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__review .up, .detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__review .up-like {
+  margin-right: 1.6rem;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__review .up-like, .detail__content .detail__bottom .detail__bottom-content .detail__evaluate .detail__allEvaluate .detail__itemEvaluate .detail__review .down-like {
+  display: none;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__courseTeacher {
+  margin: 1.6rem 0;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__courseTeacher h2 a {
+  text-decoration: none;
+  color: #177e5e;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__courseTeacher .detail__allCourse {
+  display: flex;
+  justify-content: space-between;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__courseTeacher .detail__allCourse .card {
+  width: 31.5%;
+  overflow: visible;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__courseTeacher .detail__allCourse .card img {
+  width: 100%;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__courseTeacher .detail__allCourse .card-time {
+  margin-bottom: 0.4rem;
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  color: #6a6f73;
+}
+.detail__content .detail__bottom .detail__bottom-content .detail__courseTeacher .detail__allCourse .card-time .card-dot {
+  margin: 0 0.4rem;
 }/*# sourceMappingURL=main.css.map */
