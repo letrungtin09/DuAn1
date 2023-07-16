@@ -1,0 +1,232 @@
+.searchCourse_container{
+    margin: $mg-6;
+    .searchCourse_header{
+        .searchCourse_header-title{
+            font-size: $fs-3-0;
+        }
+        .searchCourse_header-infor{
+            display: flex;
+            justify-content: space-between;
+            .searchCourse_header-infor-team{
+                display: flex;
+                margin-top: $mg-10;
+                position: relative;
+                
+                &::after{
+                    content: "Sắp xếp theo";
+                    position: absolute;
+                    width: 100px;
+                    height: 22px;
+                    top: 8px;
+                    right: 78px;
+                    display: block;
+                    font-size: $fs-5;
+                    font-weight: $fw-3;
+                }
+                .searchCourse_header-infor-filter{
+                    width: 150px;
+                    line-height: $line-height-6-2;
+                    padding: 0 $pd-7;
+                }
+                select{
+                    margin-left: $mg-2;
+                    border: 2px solid $color-black-0;
+                    border-radius: 0;
+                    font-size: $fs-2;
+                    padding-top: $pd-20;
+                    cursor: pointer;
+                    padding-left: $pd-21;
+                }
+                
+            }
+            .searchCourse_header-infor-quantity{
+                display: flex;
+                align-items: flex-end;
+                p{
+                    margin-bottom: 0;
+                    font-weight: $fw-3;
+                    color: $color-gray-4;
+                }
+            }
+        }
+    }
+    .searchCourse_content{
+        margin-top: 20px;
+        .searchCourse_content-filter{
+            .searchCourse_content-filter-item{
+                .accordion{
+                    .accordion-item{
+                        border: none;
+                        border-bottom: 1px solid $color-gray-2;
+                        &:first-child{
+                            border: none;
+                            border-bottom: 1px solid $color-gray-2;
+                            border-top: 1px solid $color-gray-2;
+                        }
+                        #panelsStayOpen-collapseOne{
+                            .accordion-body{
+                                padding: 0;
+                                ul{
+                                    list-style-type: none;
+                                    margin-top: $mg-2-6;
+                                    padding: 0;
+                                    margin-bottom: $mg-10;
+                                    li{
+                                        display: flex;
+                                        align-items: center;
+                                        margin-bottom: $mg-1-0;
+                                        input{
+                                            width: 18px;
+                                            height: 18px;
+                                            margin-right: $mg-0-6;
+                                        }
+                                        label{
+                                            cursor: pointer;
+                                            i{
+                                                color: $color-yellow-4;
+                                                width: 12px;
+                                                font-size: $fs-1-0;
+                                                margin-left: 1px;
+                                            }
+                                            .searchCourse_content-filter-star{
+                                                margin-left: $mg-4;
+                                            }
+                                            .searchCourse_content-filter-quantity{
+                                                margin-left: $mg-4;
+                                                color: $color-gray-4;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        #panelsStayOpen-collapseTwo{
+                            .accordion-body{
+                                padding: 0;
+                                ul{
+                                    list-style-type: none;
+                                    margin-top: $mg-2-6;
+                                    padding: 0;
+                                    margin-bottom: $mg-10;
+                                    li{
+                                        display: flex;
+                                        align-items: center;
+                                        margin-bottom: $mg-1-0;
+                                        input{
+                                            width: 18px;
+                                            height: 18px;
+                                            margin-right: $mg-0-6;
+                                        }
+                                        label{
+                                            cursor: pointer;
+                                            .searchCourse_content-filter-star{
+                                                margin-left: $mg-4;
+                                            }
+                                            .searchCourse_content-filter-quantity{
+                                                margin-left: $mg-4;
+                                                color: $color-gray-4;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .searchCourse_content-product{
+            .searchCourse_content-product-div{
+                border-bottom: 1px solid $color-gray-2;
+                padding-bottom: $mg-10;
+                margin-bottom: 20px;
+                .searchCourse_content-product-cart{
+                    display: flex;
+                    text-decoration: none;
+                    color: $color-black-0;
+                    img{
+                        width: 250px;
+                        height: 150px;
+                        margin-right: $mg-10;
+                    }
+                    .searchCourse_content-product-cart-infor{
+                        flex: 1;
+                        h3{
+                            width: 574px;
+                        }
+                        p{
+                            width: 574px;
+                        }
+                        .searchCourse_content-product-cart-infor-nameuser{
+                            font-size: $fs-1-0;
+                            color: $color-gray-4;
+                        }
+                        .searchCourse_content-product-cart-infor-rate{
+                            display: flex;
+                            .searchCourse_content-product-cart-infor-point{
+                                font-weight: $fw-3;
+                                color: $color-yellow-5;
+                            }
+                            .classification{
+                                position: relative;
+                                width: 46px;
+                                height: 18px;
+                                margin: 0 $mg-0-6;
+                                .cover{
+                                    position: absolute;
+                                    display: block;
+                                    top: 0px;
+                                    left: 0px;
+                                    width: 91px;
+                                    height: 17px;
+                                    z-index: 101;
+                                    img{
+                                        width: 46px;
+                                        height: 12px;
+                                        background-color: white;
+                                        margin: 0;
+                                    }
+                                }
+                                .progress{
+                                    position: absolute;
+                                    display: block;
+                                    top: 6px;
+                                    left: 0px;
+                                    height: 17px;
+                                    z-index: 102;
+                                    background-color: white;
+                                    img{
+                                        width: 46px;
+                                        height: 12px;
+                                        background-color: white;
+                                    }
+                                }
+                            }
+                            .searchCourse_content-product-cart-infor-quantity{
+                                font-size: $fs-1-0;
+                                display: flex;
+                                align-items: center;
+                                color: $color-gray-4;
+                            }
+                        }
+                        .searchCourse_content-product-cart-infor-lever{
+                            ul{
+                                display: flex;
+                                padding: 0;
+                                font-size: $fs-1-0;
+                                color: $color-gray-4;
+                                span{
+                                   margin-right: $mg-1-8;
+
+                                }
+                                li{
+                                   margin-right: $mg-1-8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

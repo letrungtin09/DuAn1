@@ -28,12 +28,16 @@
             border: none;
             
             li{
-                padding: $pd-10 0;
+                padding: $pd-3 0;
                 border-bottom: 1px solid gray;
                 .header_cart_bill-purchar-link{
                     display: flex;
                     text-decoration: none;
                     color: $color-black-0;
+                    padding: $pd-3 0;
+                    &:hover{
+                        background-color: $color-gray-3;
+                    }
                     img{
                         width: 110px;
                         height: 70px;
@@ -131,6 +135,10 @@
                 display: flex;
                 text-decoration: none;
                 color: $color-black-1;
+                padding: $pd-4 0;
+                &:hover{
+                    background-color: $color-gray-2;
+                }
                 img{
                     width: 110px;
                     height: 70px;
