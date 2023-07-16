@@ -83,7 +83,7 @@
             <h2 class="searchCourse_header-title">6.480 kết quả cho "Back"</h2>
             <div class="searchCourse_header-infor">
                 <div class="searchCourse_header-infor-team">
-                    <button class="searchCourse_header-infor-filter">
+                    <button class="searchCourse_header-infor-filter" onclick="anhien()">
                         <i class="fa-solid fa-filter"></i>
                         Bộ lọc
                     </button>
@@ -98,7 +98,7 @@
             </div>
         </div>
         <div class="searchCourse_content row">
-            <div class="searchCourse_content-filter col-3">
+            <div id="searchCourse_content-filter-id" class="searchCourse_content-filter col-3">
                 <div class="searchCourse_content-filter-item">
                     <form action="">
                         <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -180,7 +180,7 @@
                     </form>
                 </div>
             </div>
-            <div class="searchCourse_content-product col-9">
+            <div class="searchCourse_content-product">
                 <div class="searchCourse_content-product-div">
                     <a href="#" class="searchCourse_content-product-cart">
                         <img src="/assets/img/courses/be5.jpg" alt="" class="">

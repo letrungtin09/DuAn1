@@ -55,3 +55,9 @@ $('.bestseller__item').find('.owl-nav').removeClass('disabled');
 $('.bestseller__item').on('changed.owl.carousel', function(event) {
 	$(this).find('.owl-nav').removeClass('disabled');
 });
+
+function anhien(){
+    var fillter = document.getElementById("searchCourse_content-filter-id");
+    if(fillter.style.display == "none") fillter.style.display = "block";
+    else fillter.style.display = "none";
+}

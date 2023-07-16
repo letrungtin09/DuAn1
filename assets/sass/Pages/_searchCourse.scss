@@ -136,6 +136,8 @@
             }
         }
         .searchCourse_content-product{
+            flex: 1;
+            display: block;
             .searchCourse_content-product-div{
                 border-bottom: 1px solid $color-gray-2;
                 padding-bottom: $mg-10;

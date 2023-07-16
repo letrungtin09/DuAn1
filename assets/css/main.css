@@ -2180,6 +2180,115 @@ body {
   line-height: 3rem;
 }
 
+.feeback {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #F7F9FA;
+}
+.feeback .carousel {
+  height: 410px;
+  display: flex;
+  justify-content: center;
+}
+.feeback .carousel .carousel-inner {
+  width: 65%;
+  height: 100%;
+}
+.feeback .carousel .carousel-inner .carousel-item-child {
+  display: flex;
+  justify-content: flex-start;
+}
+.feeback .carousel .carousel-inner .carousel-item-child .carousel-img {
+  width: 47%;
+}
+.feeback .carousel .carousel-inner .carousel-item-child .carousel-img img {
+  height: 100%;
+}
+.feeback .carousel .carousel-inner .carousel-item-child .carousel-txt {
+  padding: 3rem 4rem;
+  padding-right: 4rem;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  line-height: 2.9rem;
+  width: 53%;
+}
+.feeback .carousel .carousel-inner .carousel-item-child .carousel-txt .sub {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.feeback .carousel .carousel-control-prev {
+  left: 10%;
+}
+.feeback .carousel .carousel-control-next {
+  right: 10%;
+}
+
+.together {
+  padding: 16rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+.together .container-together {
+  width: 100%;
+}
+.together .container-together .row {
+  width: 100%;
+  display: flex;
+  margin: 0;
+}
+.together .container-together .row .col-1 img {
+  position: relative;
+  left: -90px;
+}
+.together .container-together .row .col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.together .container-together .row .col-2 h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+}
+.together .container-together .row .col-2 a {
+  letter-spacing: 1.2px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  color: #177e5e;
+}
+.together .container-together .row .col-3 img {
+  position: relative;
+  right: -80px;
+}
+
+.resisterNow {
+  padding: 8rem 0;
+  background-color: #f7f9fa;
+}
+.resisterNow .container-resisterNow {
+  text-align: center;
+}
+.resisterNow .container-resisterNow .col h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+}
+.resisterNow .container-resisterNow .col p {
+  margin-top: 2rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+  font-size: 2.4rem;
+}
+.resisterNow .container-resisterNow .col .button-black-large {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
 .searchCourse_container {
   margin: 6.4rem;
 }
@@ -2305,6 +2414,10 @@ body {
   margin-left: 0.4rem;
   color: #6a6f7c;
 }
+.searchCourse_container .searchCourse_content .searchCourse_content-product {
+  flex: 1;
+  display: block;
+}
 .searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div {
   border-bottom: 1px solid #d1d7dc;
   padding-bottom: 2rem;
@@ -2393,153 +2506,3 @@ body {
 .searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-lever ul li {
   margin-right: 1.8rem;
 }/*# sourceMappingURL=main.css.map */
-.feeback {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #F7F9FA;
-}
-
-.feeback .carousel {
-  height: 410px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.feeback .carousel .carousel-inner {
-  width: 65%;
-  height: 100%;
-}
-
-.feeback .carousel .carousel-inner .carousel-item-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.feeback .carousel .carousel-inner .carousel-item-child .carousel-img {
-  width: 47%;
-}
-
-.feeback .carousel .carousel-inner .carousel-item-child .carousel-img img {
-  height: 100%;
-}
-
-.feeback .carousel .carousel-inner .carousel-item-child .carousel-txt {
-  padding: 3rem 4rem;
-  padding-right: 4rem;
-  font-size: 2rem;
-  letter-spacing: 1.5px;
-  line-height: 2.9rem;
-  width: 53%;
-}
-
-.feeback .carousel .carousel-inner .carousel-item-child .carousel-txt .sub {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.feeback .carousel .carousel-control-prev {
-  left: 10%;
-}
-
-.feeback .carousel .carousel-control-next {
-  right: 10%;
-}
-
-.together {
-  padding: 16rem 0;
-  width: 100%;
-  overflow: hidden;
-}
-
-.together .container-together {
-  width: 100%;
-}
-
-.together .container-together .row {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-}
-
-.together .container-together .row .col-1 img {
-  position: relative;
-  left: -90px;
-}
-
-.together .container-together .row .col-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-}
-
-.together .container-together .row .col-2 h1 {
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
-  font-size: 3rem;
-  text-align: center;
-}
-
-.together .container-together .row .col-2 a {
-  letter-spacing: 1.2px;
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin-top: 2rem;
-  color: #177e5e;
-}
-
-.together .container-together .row .col-3 img {
-  position: relative;
-  right: -80px;
-}
-
-.resisterNow {
-  padding: 8rem 0;
-  background-color: #f7f9fa;
-}
-
-.resisterNow .container-resisterNow {
-  text-align: center;
-}
-
-.resisterNow .container-resisterNow .col h1 {
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
-  font-size: 3rem;
-  text-align: center;
-}
-
-.resisterNow .container-resisterNow .col p {
-  margin-top: 2rem;
-  font-weight: 400;
-  line-height: 3.5rem;
-  font-size: 2.4rem;
-}
-
-.resisterNow .container-resisterNow .col .button-black-large {
-  padding-left: 10rem;
-  padding-right: 10rem;
-}
-/*# sourceMappingURL=main.css.map */
