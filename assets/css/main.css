@@ -2505,4 +2505,305 @@ body {
 }
 .searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-lever ul li {
   margin-right: 1.8rem;
+}
+.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor-price {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor-price .searchCourse_content-product-cart-infor-d {
+  font-size: 1.4rem;
+}
+
+.coursekind_container {
+  margin: 4rem 0;
+  padding: 0 6rem;
+}
+.coursekind_container .coursekind_container-header {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.coursekind_container .coursekind_container-header .coursekind_container-header-title {
+  margin-bottom: 2.6rem;
+}
+.coursekind_container .coursekind_container-header #tdTabContent {
+  position: relative;
+}
+.coursekind_container .coursekind_container-header #tdTabContent .courses__item .owl-item, .coursekind_container .coursekind_container-header #tdTabContent .courses__item .owl-wrapper {
+  -webkit-transform: unset !important;
+}
+.coursekind_container .coursekind_container-header #tdTabContent .courses__item .owl-nav button:hover {
+  background-color: #3e4143;
+}
+.coursekind_container .coursekind_container-header #tdTabContent .courses__item .owl-nav button span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 3.5rem;
+}
+.coursekind_container .coursekind_container-header #tdTabContent .courses__item .owl-nav .owl-next {
+  border-radius: 50%;
+  text-align: center;
+  background-color: #1c1d1f;
+  border: 1px solid #6a6f73;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 48px;
+  height: 48px;
+  line-height: 45px;
+  position: absolute;
+  top: 16%;
+  left: none;
+  right: -3rem;
+}
+.coursekind_container .coursekind_container-header #tdTabContent .courses__item .owl-nav .owl-next span {
+  padding-left: 0.4rem;
+}
+.coursekind_container .coursekind_container-header #tdTabContent .courses__item .owl-nav .owl-prev {
+  border-radius: 50%;
+  text-align: center;
+  background-color: #1c1d1f;
+  border: 1px solid #6a6f73;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 48px;
+  height: 48px;
+  line-height: 45px;
+  position: absolute;
+  top: 16%;
+  left: -3rem;
+  right: none;
+}
+.coursekind_container .coursekind_container-header #tdTabContent .courses__item .owl-nav .owl-prev span {
+  padding-right: 0.4rem;
+}
+.coursekind_container .coursekind_container-header #tdTab {
+  margin: 0 0 1rem;
+  border: none;
+}
+.coursekind_container .coursekind_container-header #tdTab .nav-item .nav-link {
+  color: #6a6f73;
+  font-weight: 700;
+  border: none;
+  padding-left: 0px;
+  padding-right: 3rem;
+}
+.coursekind_container .coursekind_container-header #tdTab .nav-item .nav-link.active {
+  color: #1c1d1f;
+}
+.coursekind_container .searchCourse_header .searchCourse_header-infor {
+  display: flex;
+  justify-content: space-between;
+}
+.coursekind_container .searchCourse_header .searchCourse_header-infor .searchCourse_header-infor-team {
+  display: flex;
+  margin-top: 2rem;
+  position: relative;
+}
+.coursekind_container .searchCourse_header .searchCourse_header-infor .searchCourse_header-infor-team::after {
+  content: "Sắp xếp theo";
+  position: absolute;
+  width: 100px;
+  height: 22px;
+  top: 8px;
+  right: 78px;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.coursekind_container .searchCourse_header .searchCourse_header-infor .searchCourse_header-infor-team .searchCourse_header-infor-filter {
+  width: 150px;
+  line-height: 62px;
+  padding: 0 1.6rem;
+}
+.coursekind_container .searchCourse_header .searchCourse_header-infor .searchCourse_header-infor-team select {
+  margin-left: 1.6rem;
+  border: 2px solid #252525;
+  border-radius: 0;
+  font-size: 1.6rem;
+  padding-top: 2.2rem;
+  cursor: pointer;
+  padding-left: 1.8rem;
+}
+.coursekind_container .searchCourse_header .searchCourse_header-infor .searchCourse_header-infor-quantity {
+  display: flex;
+  align-items: flex-end;
+}
+.coursekind_container .searchCourse_header .searchCourse_header-infor .searchCourse_header-infor-quantity p {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #6a6f7c;
+}
+.coursekind_container .searchCourse_content {
+  margin-top: 20px;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item {
+  border: none;
+  border-bottom: 1px solid #d1d7dc;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item:first-child {
+  border: none;
+  border-bottom: 1px solid #d1d7dc;
+  border-top: 1px solid #d1d7dc;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseOne .accordion-body {
+  padding: 0;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseOne .accordion-body ul {
+  list-style-type: none;
+  margin-top: 2.6rem;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseOne .accordion-body ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseOne .accordion-body ul li input {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.6rem;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseOne .accordion-body ul li label {
+  cursor: pointer;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseOne .accordion-body ul li label i {
+  color: #e9c714;
+  width: 12px;
+  font-size: 1rem;
+  margin-left: 1px;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseOne .accordion-body ul li label .searchCourse_content-filter-star {
+  margin-left: 0.4rem;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseOne .accordion-body ul li label .searchCourse_content-filter-quantity {
+  margin-left: 0.4rem;
+  color: #6a6f7c;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseTwo .accordion-body {
+  padding: 0;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseTwo .accordion-body ul {
+  list-style-type: none;
+  margin-top: 2.6rem;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseTwo .accordion-body ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseTwo .accordion-body ul li input {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.6rem;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseTwo .accordion-body ul li label {
+  cursor: pointer;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseTwo .accordion-body ul li label .searchCourse_content-filter-star {
+  margin-left: 0.4rem;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseTwo .accordion-body ul li label .searchCourse_content-filter-quantity {
+  margin-left: 0.4rem;
+  color: #6a6f7c;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product {
+  flex: 1;
+  display: block;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div {
+  border-bottom: 1px solid #d1d7dc;
+  padding-bottom: 2rem;
+  margin-bottom: 20px;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart {
+  display: flex;
+  text-decoration: none;
+  color: #252525;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart img {
+  width: 250px;
+  height: 150px;
+  margin-right: 2rem;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor {
+  flex: 1;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor h3 {
+  width: 574px;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor p {
+  width: 574px;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-nameuser {
+  font-size: 1rem;
+  color: #6a6f7c;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate {
+  display: flex;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .searchCourse_content-product-cart-infor-point {
+  font-weight: 600;
+  color: #c9852b;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification {
+  position: relative;
+  width: 46px;
+  height: 18px;
+  margin: 0 0.6rem;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification .cover {
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 91px;
+  height: 17px;
+  z-index: 101;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification .cover img {
+  width: 46px;
+  height: 12px;
+  background-color: white;
+  margin: 0;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification .progress {
+  position: absolute;
+  display: block;
+  top: 6px;
+  left: 0px;
+  height: 17px;
+  z-index: 102;
+  background-color: white;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification .progress img {
+  width: 46px;
+  height: 12px;
+  background-color: white;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .searchCourse_content-product-cart-infor-quantity {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: #6a6f7c;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-lever ul {
+  display: flex;
+  padding: 0;
+  font-size: 1rem;
+  color: #6a6f7c;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-lever ul span {
+  margin-right: 1.8rem;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-lever ul li {
+  margin-right: 1.8rem;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor-price {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor-price .searchCourse_content-product-cart-infor-d {
+  font-size: 1.4rem;
 }/*# sourceMappingURL=main.css.map */

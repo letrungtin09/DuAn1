@@ -1,8 +1,68 @@
-.searchCourse_container{
-    margin: $mg-6;
+.coursekind_container{
+    margin: $mg-8 0;
+    padding: 0 $pd-19;
+    .coursekind_container_title{
+
+    }
+    .coursekind_container-header{
+        margin-top: $mg-8;
+        margin-bottom: 4rem;
+        .coursekind_container-header-title{
+            margin-bottom: $mg-2-6;
+        }
+        #tdTabContent{
+            position: relative;
+            .courses__item{
+                .owl-item, .owl-wrapper{
+                    -webkit-transform: unset!important;
+                }
+                .owl-nav{
+                    button{
+                        &:hover{
+                            background-color: $color-gray-1;
+                        }
+                        span{
+                            display: inline-block;
+                            width: 100%;
+                            height: 100%;
+                            color: $color-white-0;
+                            font-size: $fs-7;
+                        }
+                    }
+                    .owl-next{
+                        @include styleButtonControl(48px, 48px, 45px, 16%, none, -3rem);
+                        span{
+                            padding-left: $pd-2;
+                        }
+                    }
+                    .owl-prev{
+                        @include styleButtonControl(48px, 48px, 45px, 16%, -3rem, none);
+                        span{
+                            padding-right: $pd-2;
+                        }
+                    }
+                }
+            }
+        }
+        #tdTab{
+            margin: 0 0 1rem;
+            border: none;
+            .nav-item{
+                .nav-link{
+                    color: $color-gray-0;
+                    font-weight: $fw-4;
+                    border: none;
+                    padding-left: 0px;
+                    padding-right: $pd-12;
+                    &.active{
+                        color: $color-black-1;
+                    }
+                }
+            }
+        }
+    }
     .searchCourse_header{
         .searchCourse_header-title{
-            font-size: $fs-3-0;
         }
         .searchCourse_header-infor{
             display: flex;
@@ -238,4 +298,5 @@
             }
         }
     }
+
 }
