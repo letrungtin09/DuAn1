@@ -1,0 +1,20 @@
+.header-infor {
+    margin: 3rem 15.5rem;
+    .header-infor-cart {
+        .cart-title {
+            color: $color-black-0;
+        }
+        .cart-filters{
+            margin-top: 2rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    .body-info-cart{
+        display: flex;
+        .cart-info{
+            border-top: 1px solid $color-gray-1;
+        }
+        
+    }
+}
