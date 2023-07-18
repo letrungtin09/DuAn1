@@ -1,0 +1,156 @@
+.myLearning{
+    background-color: $color-black-1;
+    color: $color-white-0;
+    padding-top: $pd-8;
+    .td-container{
+        width: 101.6rem;
+    }
+    .myLearning__title{
+        h1{
+            font-family: 'Playfair Display', serif;
+            font-size: $fs-7;
+            font-weight: $fw-4;
+            margin-bottom: $mg-5;
+        }
+    }
+    .myLearning__detail{
+        .myLearning__tab{
+            border: none;
+            .nav-item{
+                .nav-link{
+                    color: $color-gray-2;
+                    background-color: $color-black-1;
+                    border: none;
+                    margin-right: $mg-5;
+                    margin-bottom: 0;
+                    padding: $pd-7 $pd-2;
+                    font-size: $fs-2;
+                    font-weight: $fw-4;
+                    &.active{
+                        color: $color-white-0;
+                        box-shadow: 0 -6px $color-white-1 inset;
+                    }
+                }
+            }
+        }
+        .myLearning__content{
+            background-color: $color-white-0;
+            color: $color-black-1;
+            padding-bottom: $pd-7;
+            .myLearning__courses{
+                padding-bottom: $pd-8;
+                padding-top: $pd-4;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .card{
+                    margin-right: 1.25rem;
+                    padding-top: $pd-0;
+                    width: 23.7%;
+                    overflow: hidden;
+                    position: relative;
+                    img{
+                        width: 100%;
+                    }
+                    .overlay{
+                        background-color: rgba(0, 0, 0, 0.5);
+                        color: $color-white-0;
+                        position: absolute;
+                        top: 24px;
+                        left: 0;
+                        width: 100%;
+                        height: 12.9038rem;
+                        opacity: 0;
+                        transition: all .3s;
+                        a{
+                            color: $color-black-1;
+                        }
+                        .overlay__delete{
+                            padding: $pd-4;
+                            display: flex;
+                            justify-content: flex-end;
+                            a{
+                                width: 25px;
+                                height: 25px;
+                                line-height: 27px;
+                                text-align: center;
+                                border-radius: 50%;
+                                background-color: $color-white-0;
+                            }
+                        }
+                        .overlay__play{
+                            display: flex;
+                            justify-content: center;
+                            height: 5.6rem;
+                            align-items: center;
+                            a{
+                                width: 50px;
+                                height: 50px;
+                                line-height: 59px;
+                                text-align: center;
+                                border-radius: 50%;
+                                background-color: $color-white-0;
+                                i{
+                                    font-size: $fs-4;
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        .overlay{
+                            opacity: 1;
+                        }
+                    }
+                }
+                .card-time{
+                    border-bottom: 1px solid $color-gray-2;
+                    padding-bottom: $pd-4;
+                    margin-bottom: $mg-4;
+                    display: flex;
+                    font-size: $fs-5;
+                    align-items: center;
+                    color: $color-gray-0;
+                    .card-dot{
+                        margin: 0 $mg-4;
+                    }
+                }
+                .card-result{
+                    color: $color-green-3;
+                    span{
+                        font-size: $fs-0;
+                        i{
+                            margin-left: $mg-4;
+                        }
+                    }
+                }
+            }
+            .myLearning__liked{
+                padding-bottom: $pd-8;
+                padding-top: $pd-4;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .card{
+                    margin-right: 1.25rem;
+                    padding-top: $pd-0;
+                    width: 23.7%;
+                    overflow: hidden;
+                    position: relative;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .card-time{
+                    margin-bottom: $mg-4;
+                    display: flex;
+                    font-size: $fs-5;
+                    align-items: center;
+                    color: $color-gray-0;
+                    .card-dot{
+                        margin: 0 $mg-4;
+                    }
+                }
+            }
+        }
+    }
+}
