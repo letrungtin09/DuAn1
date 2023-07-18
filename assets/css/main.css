@@ -2806,4 +2806,166 @@ body {
 }
 .coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor-price .searchCourse_content-product-cart-infor-d {
   font-size: 1.4rem;
+}
+
+.nav_coursecontent {
+  background-color: #1c1d1f;
+  border-bottom: 1px solid #d5dbdf;
+}
+.nav_coursecontent .container_header a img {
+  display: block;
+  border-right: 1px solid white;
+  padding-right: 2rem;
+}
+.nav_coursecontent .container_header .kind_menu {
+  padding: 0 1.6rem;
+}
+.nav_coursecontent .container_header .kind_menu p {
+  color: #f7f9fa;
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.coursecontent_container .coursecontent_container-content {
+  padding-right: 0;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor {
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__des {
+  margin-top: 2.4rem;
+  position: relative;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__des h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__des p {
+  font-size: 1.4rem;
+  height: 250px;
+  overflow: hidden;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__des #coursecontent_container-content-shadow {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  background-image: linear-gradient(transparent, white);
+  height: 150px;
+  top: 152px;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__des button {
+  border: none;
+  background-color: white;
+  margin-top: 10px;
+  color: #401b9c;
+  font-weight: 600;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__des button:hover {
+  color: #5624d0;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__teacher {
+  margin-top: 2.4rem;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__teacher .detail__info a {
+  display: inline-block;
+  font-size: 1.9rem;
+  color: #177e5e;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  text-underline-offset: 0.4rem;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__teacher .detail__info p:last-child {
+  margin-top: 1.6rem;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__teacher .detail__info .detail__career {
+  color: #6a6f73;
+  margin-bottom: 0.8rem;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__teacher .detail__info .detail__avatar {
+  display: flex;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__teacher .detail__info .detail__avatar img {
+  width: 11.2rem;
+  height: 11.2rem;
+  border-radius: 50%;
+  border: 1px solid #d1d7dc;
+  margin-right: 1.6rem;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__teacher .detail__info .detail__avatar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__teacher .detail__info .detail__avatar ul li {
+  padding: 0.3rem 0;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__teacher .detail__info .detail__avatar ul li i {
+  font-size: 1.2rem;
+}
+.coursecontent_container .coursecontent_container-content .coursecontent_container-content-infor .detail__teacher .detail__info .detail__avatar ul li span {
+  font-size: 1.4rem;
+  margin-left: 1.2rem;
+}
+.coursecontent_container .coursecontent_container-menu {
+  padding-left: 0;
+}
+.coursecontent_container .coursecontent_container-menu .detail__lesson .accordion {
+  --bs-accordion-color: $color-black-1;
+  --bs-accordion-border-radius: 0;
+  --bs-accordion-inner-border-radius: 0;
+  --bs-accordion-btn-focus-border-color: $color-gray-2;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-btn-color:$color-black-1;
+  --bs-accordion-active-color:$color-black-1;
+}
+.coursecontent_container .coursecontent_container-menu .detail__lesson .accordion .accordion-header {
+  background-color: #acd2cc;
+  border-bottom: 1px solid #d1d7dc;
+  margin-bottom: 0;
+}
+.coursecontent_container .coursecontent_container-menu .detail__lesson .accordion .accordion-header .accordion-button {
+  background-color: #f7f9fa;
+  padding: 1.6rem 2.4rem;
+}
+.coursecontent_container .coursecontent_container-menu .detail__lesson .accordion .accordion-header .accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+.coursecontent_container .coursecontent_container-menu .detail__lesson .accordion .accordion-header .accordion-button .detail__title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1.2rem;
+  font-size: 1.4rem;
+}
+.coursecontent_container .coursecontent_container-menu .detail__lesson .accordion .accordion-header .accordion-button .detail__title .title-chapter {
+  font-size: 1.6rem;
+  font-weight: 700;
+  flex: 1;
+}
+.coursecontent_container .coursecontent_container-menu .detail__lesson .accordion .accordion-body {
+  padding: 1.6rem 2.4rem;
+}
+.coursecontent_container .coursecontent_container-menu .detail__lesson .accordion .accordion-body .detail__source {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  font-size: 1.4rem;
+}
+.coursecontent_container .coursecontent_container-menu .detail__lesson .accordion .accordion-body .detail__source .detail__doc {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.coursecontent_container .coursecontent_container-menu .detail__lesson .accordion .accordion-body .detail__source .detail__doc i {
+  width: 3%;
+  text-align: center;
+}
+.coursecontent_container .coursecontent_container-menu .detail__lesson .accordion .accordion-body .detail__source .detail__doc a {
+  color: #177e5e;
+  margin-left: 1.6rem;
 }/*# sourceMappingURL=main.css.map */

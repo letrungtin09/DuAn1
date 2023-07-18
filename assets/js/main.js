@@ -61,3 +61,18 @@ function anhien(){
     if(fillter.style.display == "none") fillter.style.display = "block";
     else fillter.style.display = "none";
 }
+function hienthem(){
+    var detailText = document.getElementById("coursecontent_container-content-text");
+    var buttonText = document.getElementById("coursecontent_container-content-button-text");
+    var shadowText = document.getElementById("coursecontent_container-content-shadow");
+    if(detailText.style.height == "100%") {
+        detailText.style.height = "250px";
+        buttonText.innerText = "Hiện thêm"
+        shadowText.style.display = "block";
+    }else {
+        detailText.style.height = "100%";
+        buttonText.innerText = "Ẩn bớt"
+        shadowText.style.display = "none";
+    }
+    
+}
