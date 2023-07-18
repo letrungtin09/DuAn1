@@ -9,12 +9,55 @@
             font-size: 1.8rem;
         }
     }
-
-    .body-info-cart{
+    .all-body-cart{
         display: flex;
-        .cart-info{
-            border-top: 1px solid $color-gray-1;
+        .body-info-cart{
+            display: flex;
+            flex-direction: column;
+            .cart-info{
+                border-top: 1px solid $color-gray-1;
+                margin-top: 1rem;
+                display: flex;
+                .cart-info-img{
+                    margin-top: 3rem;
+                }
+                .cart-info-details{
+                    margin-top: 3rem;
+                    margin-left: 1rem;
+                    .cart-info-rate{
+                        .detail_icon{
+                            i {
+                                .fa-star {
+                                    color: $color-yellow-1;
+                                }
+                            }
+                        }
+                    }
+                    .cart-info-course{
+                        display: flex;
+                        margin-top: 1rem;
+                        .course{
+                            margin-left: 2rem;
+                        }
+                        .time {
+                            list-style-type: none;
+                            margin-left: -2rem;
+                        }
+                    }
+                }
+            }
+           .cart-info-price{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                margin-left: 30rem;
+           }
         }
-        
+        .cart-price{
+            margin-left: 3rem;
+            .discount-price {
+                text-decoration: line-through;
+            }
+       } 
     }
 }
