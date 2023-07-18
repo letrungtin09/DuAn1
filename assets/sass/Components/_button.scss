@@ -19,6 +19,13 @@
     }
 }
 
+.button-purple-large{
+    @include styleButton($color-white-0, $color-purple-1, $color-black-1, $fs-2, $pd-19, $pd-11);
+    &:hover{
+        background-color: $color-gray-1;
+    }
+}
+
 .button-black-large{
     @include styleButton($color-white-0, $color-black-1, $color-black-1, $fs-2, $pd-1, $pd-11);
     &:hover{

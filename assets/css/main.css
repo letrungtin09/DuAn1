@@ -681,6 +681,21 @@ body {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
+.button-purple-large {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  transition: all 0.3s;
+  color: #fff;
+  background-color: #8710d8;
+  border: 1px solid #1c1d1f;
+  font-size: 1.6rem;
+  padding: 1.4rem 6rem;
+}
+.button-purple-large:hover {
+  background-color: #3e4143;
+}
+
 .button-black-large {
   font-weight: 700;
   line-height: 1.2;
@@ -2806,4 +2821,60 @@ body {
 }
 .coursekind_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor-price .searchCourse_content-product-cart-infor-d {
   font-size: 1.4rem;
+}
+
+.header-infor {
+  margin: 3rem 15.5rem;
+}
+.header-infor .header-infor-cart .cart-title {
+  color: #252525;
+}
+.header-infor .header-infor-cart .cart-filters {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+.header-infor .all-body-cart {
+  display: flex;
+}
+.header-infor .all-body-cart .body-info-cart {
+  display: flex;
+  flex-direction: column;
+}
+.header-infor .all-body-cart .body-info-cart .cart-info {
+  border-top: 1px solid #3e4143;
+  margin-top: 1rem;
+  display: flex;
+}
+.header-infor .all-body-cart .body-info-cart .cart-info .cart-info-img {
+  margin-top: 3rem;
+}
+.header-infor .all-body-cart .body-info-cart .cart-info .cart-info-details {
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+.header-infor .all-body-cart .body-info-cart .cart-info .cart-info-details .cart-info-rate .detail_icon i .fa-star {
+  color: #eceb98;
+}
+.header-infor .all-body-cart .body-info-cart .cart-info .cart-info-details .cart-info-course {
+  display: flex;
+  margin-top: 1rem;
+}
+.header-infor .all-body-cart .body-info-cart .cart-info .cart-info-details .cart-info-course .course {
+  margin-left: 2rem;
+}
+.header-infor .all-body-cart .body-info-cart .cart-info .cart-info-details .cart-info-course .time {
+  list-style-type: none;
+  margin-left: -2rem;
+}
+.header-infor .all-body-cart .body-info-cart .cart-info-price {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 30rem;
+}
+.header-infor .all-body-cart .cart-price {
+  margin-left: 3rem;
+}
+.header-infor .all-body-cart .cart-price .discount-price {
+  text-decoration: line-through;
 }/*# sourceMappingURL=main.css.map */
