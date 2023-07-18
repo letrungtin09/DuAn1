@@ -1,0 +1,16 @@
+header {
+    width: 85%;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    left: 15%;
+    .nav_header{
+        background: none;
+        box-shadow: none;
+        width: 100%;
+        .container_header {
+            display: flex;
+            justify-content: end;
+        }
+    }
+}
