@@ -2877,6 +2877,8 @@ body {
 }
 .header-infor .all-body-cart .cart-price .discount-price {
   text-decoration: line-through;
+}
+
 .nav_coursecontent {
   background-color: #1c1d1f;
   border-bottom: 1px solid #d5dbdf;
@@ -2980,6 +2982,11 @@ body {
 }
 .coursecontent_container .coursecontent_container-menu {
   padding-left: 0;
+}
+.coursecontent_container .coursecontent_container-menu .detail__lesson {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 .coursecontent_container .coursecontent_container-menu .detail__lesson .accordion {
   --bs-accordion-color: $color-black-1;

@@ -112,6 +112,9 @@
     .coursecontent_container-menu{
         padding-left: 0;
         .detail__lesson{
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
             .accordion{
                 --bs-accordion-color: $color-black-1;
                 --bs-accordion-border-radius: 0;
