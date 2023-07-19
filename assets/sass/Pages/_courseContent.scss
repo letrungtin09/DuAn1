@@ -111,6 +111,44 @@ body{
             }
     
         }
+
+    }
+    .coursecontent_container-menu{
+        padding-left: 0;
+        padding-right: 0;
+        .detail__lesson{
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            .accordion{
+                --bs-accordion-color: $color-black-1;
+                --bs-accordion-border-radius: 0;
+                --bs-accordion-inner-border-radius: 0;
+                --bs-accordion-btn-focus-border-color: $color-gray-2;
+                --bs-accordion-btn-focus-box-shadow: none;
+                --bs-accordion-btn-color:$color-black-1;
+                --bs-accordion-active-color:$color-black-1;
+                .accordion-header{
+                    background-color: $color-green-2;
+                    border-bottom: 1px solid $color-gray-2;
+                    margin-bottom: 0;
+                    .accordion-button{
+                        &:not(.collapsed){
+                            box-shadow: none;
+                        }
+                        background-color: $color-white-1;
+                        padding: $pd-7 $pd-0;
+                        .detail__title{
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding-right: $pd-1;
+                            font-size: $fs-0;
+                            .title-chapter{
+                                font-size: $fs-2;
+                                font-weight: $fw-4;
+                                flex: 1;
         .coursecontent_container-menu{
             padding-left: 0;
             .detail__lesson{

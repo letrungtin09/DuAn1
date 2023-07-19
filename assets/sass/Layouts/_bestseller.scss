@@ -9,6 +9,11 @@
         .owl-item, .owl-wrapper{
             -webkit-transform: unset!important;
         }
+        .owl-item{
+            img{
+                border: 1px solid $color-gray-2;
+            }
+        }
         .owl-nav{
             button{
                 &:hover{

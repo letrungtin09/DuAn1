@@ -1,4 +1,4 @@
-@mixin styleButton($color, $bg-color, $border, $fs, $pd-x, $pd-y){
+@mixin styleButton($color, $bg-color, $border, $fs, $pd-x, $pd-y) {
     font-weight: $fw-4;
     line-height: $line-height-1;
     letter-spacing: $letter-spacing-1;
@@ -10,7 +10,7 @@
     padding: $pd-y $pd-x;
 }
 
-@mixin styleButtonControl($width, $height, $line-height, $top, $left, $right){
+@mixin styleButtonControl($width, $height, $line-height, $top, $left, $right) {
     border-radius: 50%;
     text-align: center;
     background-color: $color-black-1;
@@ -23,4 +23,23 @@
     top: $top;
     left: $left;
     right: $right;
+}
+
+@mixin arrow($size, $direction, $color) {
+    border-style: solid;
+    border-color: transparent;
+    display: inline-block;
+    border-width: $size;
+
+    @if $direction == up {
+        border-bottom-color: $color;
+    } @else if $direction == down {
+        border-top-color: $color;
+    } @else if $direction == left {
+        border-right-color: $color;
+    } @else if $direction == right {
+        border-left-color: $color;
+    } @else {
+        @error "Unknown direction: #{$direction}.";
+    }
 }

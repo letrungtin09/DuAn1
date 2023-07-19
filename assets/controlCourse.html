@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cập nhật tài khoản</title>
+    <title>T-Demy</title>
     <!-- BS5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- GG FONT -->
@@ -25,89 +25,108 @@
 
 <body>
     <!-- HEADER -->
-    <header>
+    <header class="header-controlCourse">
+        <!-- <nav class="navbar navbar-expand-lg nav-slidebar">
+            <div class="slidebar-logo">
+                <img src="./img/logo-white.png" alt="">
+            </div>
+            <div class="slidebar-content">
+
+            </div>
+        </nav> -->
         <nav class="navbar navbar-expand-lg nav_header">
             <div class="container_header">
-                <a class="navbar-brand" href="#">
-                    <img class="logo_img" src="./img/logo.png" alt="">
-                </a>
-                <div class="nav-item dropdown kind_menu">
-                    <a class="nav-link" href="#" role="button">
-                        Thể loại
-                    </a>
-                    <ul class="dropdown-menu kind_menu_item">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-
-                    </ul>
-                </div>
-                <div class="header_search">
-                    <form class="d-flex" role="search">
-                        <button class="btn btn-outline-success header_search_btn" type="submit">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                        <input class="header_search_input me-2" placeholder="Tìm kiếm nội dung bất kì">
-                    </form>
-                </div>
                 <div class="nav-item header_teaching">
-                    <a class="nav-link" aria-current="page" href="#">Giảng dạy trên T-demy</a>
+                    <a class="nav-link" aria-current="page" href="#">Học viên</a>
                 </div>
-                <div class="nav-item dropdown header_cart">
-                    <a class="nav-link header_cart_link" href="#" role="button">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-                    <ul class="dropdown-menu header_cart_detail-bill">
-                        <li>Giỏ hàng của bạn đang trống</li>
-                    </ul>
-                </div>
-                <div class="header_login">
-                    <a class="button-white-medium ">Đăng nhập</a>
-                </div>
-                <div class="header_regis">
-                    <a class="button-black-medium">Đăng ký</a>
-                </div>
+
                 <button class="header_dark">
                     <i class="fa-regular fa-moon"></i>
                 </button>
+                <div class="dropdown dropdown_nav_user">
+                    <!-- modal của giảng viên -->
+                    <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/assets/img/users/teacher.jpg" alt="">
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-menu-header">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/assets/img/users/teacher.jpg" alt="">
+                            </a>
+                            <div>
+                                <h6>Lê Trung Tín</h6>
+                                <p>duytt18897@gmail.com</p>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu-mid">
+                            <li><a href="" class="">Quá trình học tập của tôi</a></li>
+                            <li><a href="" class="">Giỏ hàng của tôi</a></li>
+                            <li><a href="" class="">Danh sách yêu thích</a></li>
+                            <li><a href="" class="">Bảng điều khiển của giảng viên</a></li>
+                        </ul>
+                        <ul class="dropdown-menu-mid">
+                            <li><a href="" class="">Cập nhập tài khoản</a></li>
+                            <li><a href="" class="">Đổi mật khẩu</a></li>
+                            <li><a href="" class="">Lịch sử mua</a></li>
+                        </ul>
+                        <div class="dropdown-menu-end">
+                            <a href="" class="">Đăng xuất</a>
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
-    <div class="updateaccount_container">
-        <div class="updateaccount_container-img">
-            <img src="/assets/img/users/Duy.jpg" alt="" class="">
-        </div>
-        <form action="">
-            <h3 class="updateaccount_content-title">Cập nhập thông tin tài khoản</h3>
-            <div class="updateaccount_content">
-                <div class="updateaccount_content-login">
-                    <p>Email</p>
-                    <input type="email" placeholder="email">
-                    <p>Họ và tên</p>
-                    <input type="password" placeholder="Họ và tên">
-                    <p>Số điện thoại</p>
-                    <input type="password" placeholder="Số điện thoại">
-                    <p>Nghề nghiệp</p>
-                    <input type="password" placeholder="Nghề nghiệp">
+    <section class="sidebar">
+        <div class="container container-sidebar">
+            <div class="row">
+                <div class="col-sm siderbar-logo">
+                    <img src="./img/logo-white.png" alt="">
                 </div>
-                <div class="updateaccount_content-login">
-                    <p>Ảnh đại diện</p>
-                    <div><input type="file" placeholder="email"></div>
-                    <p>Thông tin cá nhân</p>
-                    <textarea name="" id="" cols="30" rows="10">
-                        
-                    </textarea>
+                <div class="col-sm sidebar-content">
+                    <ul>
+                        <li>
+                            <div class="txt-sidebar">
+                                <img src="./img/controlCourses/icon1.png" alt="">
+                                <a href="">Khóa học</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="txt-sidebar">
+                                <img src="./img/controlCourses/icon2.png" alt="">
+                                <a href="">Đánh giá</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="txt-sidebar">
+                                <img src="./img/controlCourses/icon3.png" alt="">
+                                <a href="">Thống kê</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <button>Cập nhập tài khoản</button>
-        </form>
-    </div>
-    <!-- FOOTER -->
+        </div>
+    </section>
+    <div class="clear"></div>
+    <section class="control">
+        <div class="container container-control">
+            <div class="row">
+                <div class="col-sm col-1">
+                    <div class="col-1-left">
+                        <h1>QUẢN LÝ KHÓA HỌC CỦA BẠN</h1>
+                        
+                    </div>
+                    <div class="col-1-right"></div>
+                </div>
+                <div class="col-sm col-2"></div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="footer_content">
             <div class="footer_content_header row">

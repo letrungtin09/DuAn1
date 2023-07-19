@@ -20,9 +20,9 @@
 }
 
 .button-purple-large{
-    @include styleButton($color-white-0, $color-purple-1, $color-black-1, $fs-2, $pd-19, $pd-11);
+    @include styleButton($color-white-0, $color-green-1, $color-green-1, $fs-2, $pd-19, $pd-11);
     &:hover{
-        background-color: $color-gray-1;
+        opacity: 0.9;
     }
 }
 
