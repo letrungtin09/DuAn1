@@ -1,7 +1,7 @@
-header {
+.header-controlCourse {
     width: 85%;
     display: flex;
-    justify-content: end;
+    justify-content: space-around;
     position: relative;
     left: 15%;
     .nav_header{
@@ -12,5 +12,8 @@ header {
             display: flex;
             justify-content: end;
         }
+    }
+    .nav-slidebar{
+        background: black;
     }
 }
