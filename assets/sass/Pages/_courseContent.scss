@@ -1,20 +1,19 @@
-body{
+body {
     overflow-x: hidden;
-    .nav_coursecontent{
+    .nav_coursecontent {
         background-color: $color-black-1;
         border-bottom: 1px solid $color-gray-3;
-        .container_header{
-            a{
-                img{
+        .container_header {
+            a {
+                img {
                     display: block;
                     border-right: 1px solid white;
                     padding-right: $pd-10;
-    
                 }
             }
-            .kind_menu{
+            .kind_menu {
                 padding: 0 $pd-7;
-                p{
+                p {
                     color: $color-white-1;
                     margin: 0;
                     font-size: $fs-2;
@@ -22,25 +21,25 @@ body{
             }
         }
     }
-    .coursecontent_container{
-        .coursecontent_container-content{
+    .coursecontent_container {
+        .coursecontent_container-content {
             padding-right: 0;
-            .coursecontent_container-content-infor{
+            .coursecontent_container-content-infor {
                 margin-left: 50px;
                 margin-bottom: 100px;
-                .detail__des{
+                .detail__des {
                     margin-top: $mg-5;
                     position: relative;
-                    h2{
+                    h2 {
                         font-size: 26px;
                         margin-bottom: 16px;
                     }
-                    p{
+                    p {
                         font-size: $fs-0;
                         height: 250px;
                         overflow: hidden;
                     }
-                    #coursecontent_container-content-shadow{
+                    #coursecontent_container-content-shadow {
                         position: absolute;
                         width: 100%;
                         background-color: transparent;
@@ -48,21 +47,21 @@ body{
                         height: 150px;
                         top: 152px;
                     }
-                    button{
+                    button {
                         border: none;
                         background-color: white;
                         margin-top: 10px;
                         color: $color-blue-1;
                         font-weight: 600;
-                        &:hover{
+                        &:hover {
                             color: $color-blue-0;
                         }
                     }
                 }
-                .detail__teacher{
+                .detail__teacher {
                     margin-top: $mg-5;
-                    .detail__info{
-                        a{
+                    .detail__info {
+                        a {
                             display: inline-block;
                             font-size: $fs-3;
                             color: $color-green-1;
@@ -70,36 +69,36 @@ body{
                             margin-bottom: $mg-4;
                             text-underline-offset: 0.4rem;
                         }
-                        p{
-                            &:last-child{
+                        p {
+                            &:last-child {
                                 margin-top: $mg-2;
                                 margin-bottom: 0;
                                 font-size: $fs-0;
                             }
                         }
-                        .detail__career{
+                        .detail__career {
                             color: $color-gray-0;
                             margin-bottom: $mg-1;
                         }
-                        .detail__avatar{
+                        .detail__avatar {
                             display: flex;
-                            img{
+                            img {
                                 width: 11.2rem;
                                 height: 11.2rem;
                                 border-radius: 50%;
                                 border: 1px solid $color-gray-2;
                                 margin-right: $mg-2;
                             }
-                            ul{
+                            ul {
                                 list-style: none;
                                 margin: 0;
                                 padding: 0;
-                                li{
+                                li {
                                     padding: $pd-2 - 0.1 0;
-                                    i{
+                                    i {
                                         font-size: $fs-5;
                                     }
-                                    span{
+                                    span {
                                         font-size: $fs-0;
                                         margin-left: $mg-0;
                                     }
@@ -109,105 +108,67 @@ body{
                     }
                 }
             }
-    
         }
-
     }
-    .coursecontent_container-menu{
+    .coursecontent_container-menu {
         padding-left: 0;
         padding-right: 0;
-        .detail__lesson{
+        .detail__lesson {
             position: -webkit-sticky;
             position: sticky;
             top: 0;
-            .accordion{
+            .accordion {
                 --bs-accordion-color: $color-black-1;
                 --bs-accordion-border-radius: 0;
                 --bs-accordion-inner-border-radius: 0;
                 --bs-accordion-btn-focus-border-color: $color-gray-2;
                 --bs-accordion-btn-focus-box-shadow: none;
-                --bs-accordion-btn-color:$color-black-1;
-                --bs-accordion-active-color:$color-black-1;
-                .accordion-header{
+                --bs-accordion-btn-color: $color-black-1;
+                --bs-accordion-active-color: $color-black-1;
+                .accordion-header {
                     background-color: $color-green-2;
                     border-bottom: 1px solid $color-gray-2;
                     margin-bottom: 0;
-                    .accordion-button{
-                        &:not(.collapsed){
+                    .accordion-button {
+                        &:not(.collapsed) {
                             box-shadow: none;
                         }
                         background-color: $color-white-1;
                         padding: $pd-7 $pd-0;
-                        .detail__title{
+                        .detail__title {
                             width: 100%;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
                             padding-right: $pd-1;
                             font-size: $fs-0;
-                            .title-chapter{
+                            .title-chapter {
                                 font-size: $fs-2;
                                 font-weight: $fw-4;
                                 flex: 1;
-        .coursecontent_container-menu{
-            padding-left: 0;
-            .detail__lesson{
-                position: -webkit-sticky;
-                position: sticky;
-                top: 0;
-                .accordion{
-                    --bs-accordion-color: $color-black-1;
-                    --bs-accordion-border-radius: 0;
-                    --bs-accordion-inner-border-radius: 0;
-                    --bs-accordion-btn-focus-border-color: $color-gray-2;
-                    --bs-accordion-btn-focus-box-shadow: none;
-                    --bs-accordion-btn-color:$color-black-1;
-                    --bs-accordion-active-color:$color-black-1;
-                    .accordion-header{
-                        background-color: $color-green-2;
-                        border-bottom: 1px solid $color-gray-2;
-                        margin-bottom: 0;
-                        .accordion-button{
-                            &:not(.collapsed){
-                                box-shadow: none;
-                            }
-                            background-color: $color-white-1;
-                            padding: $pd-7 $pd-0;
-                            .detail__title{
-                                width: 100%;
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-                                padding-right: $pd-1;
-                                font-size: $fs-0;
-                                .title-chapter{
-                                    font-size: $fs-2;
-                                    font-weight: $fw-4;
-                                    flex: 1;
-                                }
                             }
                         }
                     }
-                    .accordion-body{
-                        padding: $pd-7 $pd-0;
-                        .detail__source{
+                }
+                .accordion-body {
+                    padding: $pd-7 $pd-0;
+                    .detail__source {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: $pd-4 0;
+                        font-size: $fs-0;
+                        .detail__doc {
+                            flex: 1;
                             display: flex;
-                            justify-content: space-between;
-                            padding: $pd-4 0;
-                            font-size: $fs-0;
-                            .detail__doc{
-                                flex: 1;
-                                display: flex;
-                                justify-content:flex-start;
-                                align-items: center;
-                                i{
-                                    width: 3%;
-                                    text-align: center;
-                                }
-                                a{
-                                    color: $color-green-1;
-                                    margin-left: $mg-2;
-                                }
+                            justify-content: flex-start;
+                            align-items: center;
+                            i {
+                                width: 3%;
+                                text-align: center;
+                            }
+                            a {
+                                color: $color-green-1;
+                                margin-left: $mg-2;
                             }
                         }
                     }
