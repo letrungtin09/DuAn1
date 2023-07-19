@@ -3069,7 +3069,7 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: relative;
-  left: 15%;
+  float: right;
 }
 
 .header-controlCourse .nav_header {
@@ -3088,8 +3088,69 @@ body {
           justify-content: end;
 }
 
-.header-controlCourse .nav-slidebar {
+.sidebar {
+  width: 15%;
   background: black;
+  margin: 0 !important;
+  position: relative;
+  left: 0;
+  top: 0;
+  float: left;
+}
+
+.sidebar .container-sidebar .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.sidebar .container-sidebar .row .siderbar-logo {
+  padding: 12%;
+}
+
+.sidebar .container-sidebar .row .siderbar-logo img {
+  width: 80%;
+}
+
+.sidebar .container-sidebar .row .col-sm.sidebar-content {
+  text-align: left;
+  margin: 0 -2%;
+}
+
+.sidebar .container-sidebar .row .col-sm.sidebar-content ul {
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar {
+  width: 100%;
+  padding-left: 20%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin: 4% 0;
+}
+
+.sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10%;
+}
+
+.sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover .txt-sidebar {
+  cursor: pointer;
+  border-left: 4px solid #15ad7d;
+}
+
+.clear {
+  clear: both;
 }
 
 .searchCourse_container {
