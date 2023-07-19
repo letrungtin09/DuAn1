@@ -1,7 +1,8 @@
+
 <?php
 	session_start();
 	date_default_timezone_set("Asia/Ho_Chi_Minh");
-	$base_url = "http://localhost/EzCode/";
+	$base_url = "http://localhost/duan1/";
 	include_once 'view/Template/header.php';
 
 	if(isset($_GET['mod'])){
@@ -24,6 +25,5 @@
 	}
 	
 	include_once 'view/Template/footer.php';
-
 ?>
 		
