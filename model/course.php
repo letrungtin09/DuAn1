@@ -1,10 +1,8 @@
 <?php
 require_once 'pdo.php';
-// Truy vấn tất cả khóa học và tên loại khóa học 
-function namecate_course_select_idcate(){
-    $sql = "SELECT courses.*, category.nameCate
-    FROM category, courses
-    WHERE category.cateId=courses.cateId";
+// Truy vấn tất cả khóa học
+function course_select_all(){
+    $sql = "SELECT * FROM courses";
     return pdo_query($sql);
 }
 // Truy vấn tất cả khóa học Theo idcate
