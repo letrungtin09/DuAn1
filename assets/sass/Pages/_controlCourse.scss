@@ -1,3 +1,7 @@
+.clear {
+    clear: both;
+}
+
 .header-controlCourse {
     width: 85%;
     display: flex;
@@ -66,20 +70,133 @@
                                 margin: 0 10%;
                             }
                         }
-                        &:hover{
-                            .txt-sidebar{
+
+                        &:hover {
+                            .txt-sidebar {
                                 cursor: pointer;
                                 border-left: 4px solid #15ad7d;
                             }
                         }
                     }
-                    
+
                 }
             }
         }
     }
 }
 
-.clear {
-    clear: both;
+.control {
+    width: 85%;
+    margin: 0;
+    float: left;
+    padding: 2%;
+
+    .container-control {
+        .row {
+            display: flex;
+            flex-direction: column;
+
+            .col-sm {
+                width: 100%;
+            }
+
+            .col-1 {
+                display: flex;
+                justify-content: space-between;
+
+                .col-1-left {
+                    h1 {
+                        color: black;
+                        font-weight: bold;
+                        font-size: 3.5rem;
+                        letter-spacing: 0.2rem;
+                        padding-bottom: 1%;
+                    }
+
+                    .form-search-ctr {
+                        width: 73%;
+                        margin: 0;
+                        float: left;
+
+                        .input-ctr-search {
+                            padding: 0.7rem 1rem;
+                            color: black;
+                            width: 95%;
+                            border: 2px solid black;
+                            margin: 0;
+                        }
+
+                        button {
+                            background: black;
+                            border: none;
+                            height: 39px;
+                            width: 39px;
+                            margin-left: -43px;
+                            position: relative;
+                            top: -1px;
+                        }
+                    }
+
+                    .form-filter-ctr {
+                        float: left;
+                        width: 25%;
+                        height: 38.6px;
+
+                        select {
+                            height: 100%;
+                            border: 2px solid black;
+                            padding: 0 2%;
+                        }
+                    }
+
+                }
+            }
+
+            .col-2 {
+                .td-container {
+                    padding: 0;
+
+                    .header-infor-cart {
+                        padding: 0;
+                    }
+
+                    .all-body-cart {
+                        padding: 0 !important;
+
+                        .body-info-cart {
+                            width: 90%;
+
+                            .cart-info {
+                                .cart-info-img {
+                                    width: 12%;
+                                }
+
+                                .cart-info-details {
+                                    width: 30%;
+                                }
+
+                                .cart-info-price {
+                                    width: 35%;
+                                }
+
+                                .cart-info-control {
+                                    width: 13%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin: 0 3%;
+
+                                    button {
+                                        margin: 5% 0;
+                                        padding: 7% 0 !important;
+                                        font-weight: bold !important;
+                                        font-size: 1.2rem !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
