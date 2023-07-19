@@ -3118,6 +3118,7 @@ body {
 }
 .coursecontent_container .coursecontent_container-menu {
   padding-left: 0;
+  padding-right: 0;
 }
 .coursecontent_container .coursecontent_container-menu .detail__lesson {
   position: -webkit-sticky;
