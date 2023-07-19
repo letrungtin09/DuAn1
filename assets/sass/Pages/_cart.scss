@@ -1,0 +1,166 @@
+.header-infor {
+    .header-infor-cart {
+        padding: 0 $pd-0;
+        .cart-title {
+            font-size: $fs-7;
+            margin-top: $mg-7;
+            color: $color-black-0;
+            margin-bottom: 0;
+            font-weight: $fw-4;
+        }
+        .cart-filters {
+            margin-top: $mg-5;
+            font-size: $fs-2;
+            margin-bottom: $mg-1;
+        }
+    }
+    .all-body-cart {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0 $pd-0;
+        .body-info-cart {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            .cart-info {
+                padding: $pd-7 0;
+                border-top: 1px solid $color-gray-2;
+                display: flex;
+                align-items: flex-start;
+                .cart-info-img {
+                    margin-right: $mg-2;
+                    img {
+                        width: 12rem;
+                        height: 7.8rem;
+                        object-fit: cover;
+                        border: 1px solid $color-gray-2;
+                    }
+                }
+                .cart-info-details {
+                    width: 45%;
+                    .cart-info-name {
+                        font-size: $fs-2;
+                        font-weight: $fw-4;
+                    }
+                    .cart-info-author {
+                        font-size: $fs-5;
+                        margin-top: $mg-4;
+                        margin-bottom: 0;
+                    }
+                    .cart-info-rate {
+                        font-size: $fs-0;
+                        display: flex;
+                        align-items: center;
+                        .button-best-seller {
+                            margin-right: $mg-1;
+                        }
+                        .detail__rate {
+                            font-weight: $fw-4;
+                            color: $color-orange-0;
+                            margin-right: $mg-4;
+                        }
+                        .detail__icon {
+                            font-size: $fs-5;
+                            letter-spacing: $letter-spacing-0;
+                            margin-right: $mg-4;
+                            i {
+                                font-size: $fs-5;
+                                color: $color-yellow-0;
+                            }
+                        }
+                        .detail__evaluate {
+                            font-size: $fs-5;
+                            color: $color-gray-0;
+                        }
+                    }
+                    .cart-info-course {
+                        display: flex;
+                        margin-top: $mg-1;
+                        margin-bottom: 0;
+                        font-size: $fs-5;
+                        color: $color-gray-0;
+                        .course {
+                            margin-left: 2rem;
+                        }
+                        .time {
+                            list-style-type: none;
+                            margin-left: -2rem;
+                        }
+                    }
+                }
+            }
+            .cart-info-price {
+                width: 40%;
+                display: flex;
+                justify-content: space-between;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                }
+                a {
+                    text-align: right;
+                    text-decoration: none;
+                    color: $color-green-3;
+                    font-size: $fs-0;
+                    font-weight: $fw-2;
+                    margin-bottom: $mg-0;
+                }
+                span {
+                    font-size: $fs-2;
+                    font-weight: $fw-4;
+                    color: $color-green-3;
+                    .vnd {
+                        text-decoration: underline;
+                        font-size: $fs-0;
+                        font-weight: $fw-2;
+                        margin-right: $mg-4;
+                    }
+                }
+                .price {
+                    text-decoration: line-through;
+                    font-weight: $fw-1;
+                    font-size: $fs-0;
+                }
+            }
+        }
+        .cart-price {
+            width: 25rem;
+            margin-left: $mg-6;
+            h1{
+                font-size: $fs-3;
+                color: $color-gray-0;
+                font-weight: $fw-4;
+                margin-bottom: $mg-1;
+            }
+            .total-price{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: $mg-0;
+                h2{
+                    span{
+                        text-decoration: underline;
+                    }
+                }
+                .discount-sale{
+                    font-size: $fs-1;
+                    margin-bottom: 0;
+                }
+                .discount-price{
+                    font-size: $fs-3;
+                    font-weight: $fw-1;
+                    text-decoration: line-through;
+                    color: $color-gray-4;
+                    margin-bottom: 0;
+                }
+            }
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.bestseller {
+    padding-top: $pd-8;
+    margin-bottom: $mg-6;
+}
