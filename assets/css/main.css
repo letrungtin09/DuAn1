@@ -595,45 +595,58 @@ body {
 .posts {
   background-color: #f7f9fa;
 }
+
 .posts .posts_container {
   padding: 7rem 2.4rem;
 }
+
 .posts .posts_container .posts_title {
   font-size: 2.4rem;
   margin-bottom: 1.6rem;
 }
+
 .posts .posts_container .posts_content .posts_content-list {
   padding-left: 0px;
   margin: 0 -2rem;
 }
+
 .posts .posts_container .posts_content .posts_content-list li {
   list-style-type: none;
   padding: 0 20px;
   margin-bottom: 2rem;
 }
+
 .posts .posts_container .posts_content .posts_content-list li a {
   text-decoration: none;
 }
+
 .posts .posts_container .posts_content .posts_content-list li a .posts_content-link-img {
   overflow: hidden;
   border-radius: 3px;
   margin-bottom: 1.2rem;
 }
+
 .posts .posts_container .posts_content .posts_content-list li a .posts_content-link-img img {
   width: 29.5rem;
   height: 16.5rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
+
 .posts .posts_container .posts_content .posts_content-list li a .posts_content-link-title p {
   color: #1c1d1f;
   font-weight: 500;
 }
+
 .posts .posts_container .posts_content .posts_content-list li a .posts_content-link-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .posts .posts_container .posts_content .posts_content-list li a .posts_content-link-user p {
   color: #3e4143;
 }
