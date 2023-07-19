@@ -1,0 +1,8 @@
+<?php
+    require_once 'model/course.php';
+    // Truy vấn tất cả khóa học
+    $Courses = course_select_all();
+    
+    include_once("view/Home/view.php");
+?>
+?>
