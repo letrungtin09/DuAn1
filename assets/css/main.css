@@ -592,62 +592,49 @@ body {
   font-weight: 600;
 }
 
-.featured {
+.posts {
   background-color: #f7f9fa;
 }
-
-.featured .featured_container {
+.posts .posts_container {
   padding: 7rem 2.4rem;
 }
-
-.featured .featured_container .featured_title {
+.posts .posts_container .posts_title {
   font-size: 2.4rem;
   margin-bottom: 1.6rem;
 }
-
-.featured .featured_container .featured_content .featured_content-list {
+.posts .posts_container .posts_content .posts_content-list {
   padding-left: 0px;
   margin: 0 -2rem;
 }
-
-.featured .featured_container .featured_content .featured_content-list li {
+.posts .posts_container .posts_content .posts_content-list li {
   list-style-type: none;
   padding: 0 20px;
   margin-bottom: 2rem;
 }
-
-.featured .featured_container .featured_content .featured_content-list li a {
+.posts .posts_container .posts_content .posts_content-list li a {
   text-decoration: none;
 }
-
-.featured .featured_container .featured_content .featured_content-list li a .featured_content-link-img {
+.posts .posts_container .posts_content .posts_content-list li a .posts_content-link-img {
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: 3px;
   margin-bottom: 1.2rem;
-  -webkit-box-shadow: 4px 6px 10px #6a6f73;
-          box-shadow: 4px 6px 10px #6a6f73;
 }
-
-.featured .featured_container .featured_content .featured_content-list li a .featured_content-link-img img {
-  width: 100%;
-  height: 100%;
+.posts .posts_container .posts_content .posts_content-list li a .posts_content-link-img img {
+  width: 29.5rem;
+  height: 16.5rem;
+  object-fit: cover;
 }
-
-.featured .featured_container .featured_content .featured_content-list li a .featured_content-link-title p {
+.posts .posts_container .posts_content .posts_content-list li a .posts_content-link-title p {
   color: #1c1d1f;
   font-weight: 500;
 }
-
-.featured .featured_container .featured_content .featured_content-list li a .featured_content-link-user {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.posts .posts_container .posts_content .posts_content-list li a .posts_content-link-user {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
-.featured .featured_container .featured_content .featured_content-list li a .featured_content-link-user p {
+.posts .posts_container .posts_content .posts_content-list li a .posts_content-link-user p {
   color: #3e4143;
 }
 
@@ -729,9 +716,10 @@ body {
 
 .categories .categories_content .row .card {
   border: none;
-  width: 29rem;
+  width: 97%;
   height: 29rem;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .categories .categories_content .row .card .card-img {
@@ -1077,7 +1065,7 @@ body {
   opacity: 0;
   position: absolute;
   top: 0.3rem;
-  left: 24.98rem;
+  left: 23.7rem;
   z-index: 10;
   width: 35rem;
   background-color: #fff;
