@@ -1,6 +1,8 @@
 <?php
     require_once 'model/course.php';
-    $all_course = namecate_course_select_idcate();
+    // Truy vấn tất cả khóa học
+    $Courses = course_select_all();
+    
     include_once("view/Home/view.php");
 ?>
 ?>
