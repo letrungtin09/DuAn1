@@ -40,7 +40,6 @@
                         </a>
                         <ul class="dropdown-menu kind_menu_item">
                         <?php
-                            require_once 'controller/kind/all-kind.php';
                             foreach ($allKind as $kh) {
                                 extract($kh); 
                             ?>
