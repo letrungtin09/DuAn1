@@ -13,7 +13,7 @@ if(exist_param("btn_register")){
     }
     else{
         try {
-            user_register($nameuser, $email, $password);
+            user_insert($nameuser, $email, $password);
             $MESSAGE = "Đăng ký thành viên thành công mời đăng nhập!";
             include_once("view/User/login.php");
         } 
