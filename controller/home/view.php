@@ -1,5 +1,5 @@
 <?php
-    require_once 'model/course.php';
+    require_once 'model/courses.php';
     // Truy vấn tất cả khóa học
     $Courses = course_select_all();
     
