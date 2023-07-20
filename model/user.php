@@ -56,12 +56,6 @@ function user_select_by_email($email){
     return pdo_query_one($sql, $email);
 }
 
-// Kiểm tra sự tồn tại của một tài khoản
-function user_exist($userId){
-    $sql = "SELECT count(*) FROM user WHERE $userId=?";
-    return pdo_query_value($sql, $userId) > 0;
-}
-
 // Lấy danh sách tài khoản theo vai trò
 function user_select_by_role($role){
     $sql = "SELECT * FROM user WHERE role=?";

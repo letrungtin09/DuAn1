@@ -45,12 +45,20 @@
                 margin: 10px 20px 0 20px;
                 height: 392px;
                 
+                
                 .feedback_carousel-list-head{
                     font-size: $fs-6;
                     margin-bottom: $mg-1;
                 }
                 .feedback_carousel-list-text{
                     margin-bottom: $mg-8;
+                    p{
+                        overflow: hidden; 
+                        width:100%; 
+                        display: -webkit-box; 
+                        -webkit-line-clamp: 7; 
+                        -webkit-box-orient: vertical;
+                    }
                 }
                 .feedback_carousel-list-user{
                     display: flex;
@@ -75,6 +83,11 @@
                     display: flex;
                     justify-content: center;
                     a{
+                        overflow: hidden; 
+                        width:100%; 
+                        display: -webkit-box; 
+                        -webkit-line-clamp: 1; 
+                        -webkit-box-orient: vertical;
                         
                         text-decoration: none;
                         color: $color-green-1;

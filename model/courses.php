@@ -29,7 +29,7 @@ function course_select_all(){
     return pdo_query($sql);
 }
 
-// Truy vấn tất cả khóa học theo mã khóa học
+// Truy vấn khóa học theo mã khóa học
 function course_select_by_id($courseId){
     $sql = "SELECT * FROM courses WHERE courseId=?";
     return pdo_query_one($sql, $courseId);
