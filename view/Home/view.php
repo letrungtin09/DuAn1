@@ -91,9 +91,9 @@
                                 extract($course); 
                             ?>
                             <div class="card">
-                                <a href="#"><img src="./assets/img/courses/<?=$image?>" alt="..."></a>
+                                <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseId?>"><img src="./assets/img/courses/<?=$image?>" alt="..."></a>
                                 <div class="card-body">
-                                    <a href="#">
+                                    <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseId?>">
                                         <h5 class="card-title"><?=$title?></h5>
                                     </a>
                                     <?php
@@ -165,9 +165,9 @@
                                 extract($course); 
                             ?>
                             <div class="card">
-                                <a href="#"><img src="./assets/img/courses/<?=$image?>" alt="..."></a>
+                                <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseId?>"><img src="./assets/img/courses/<?=$image?>" alt="..."></a>
                                 <div class="card-body">
-                                    <a href="#">
+                                    <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseId?>">
                                         <h5 class="card-title"><?=$title?></h5>
                                     </a>
                                     <p class="card-teacher"><?=$userId?></p>

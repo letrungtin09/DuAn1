@@ -42,7 +42,7 @@ function course_select_idcate($cateId){
 }
 
 // Kiểm tra sự tồn tại của khóa học
-function hang_hoa_exist($courseId){
+function course_exist($courseId){
     $sql = "SELECT count(*) FROM courses WHERE courseId=?";
     return pdo_query_value($sql, $courseId) > 0;
 }
