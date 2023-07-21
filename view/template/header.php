@@ -76,6 +76,8 @@
                         require_once 'model/detailBill.php';
                         require_once 'model/courses.php';
                         require_once 'model/user.php';
+                        $tongSale = 0;
+                        $tong = 0;
                             foreach ($_SESSION as $sec){
                             extract($sec);
                         }
@@ -86,7 +88,9 @@
                             foreach ($detailBillByIdBill as $detail){
                                 extract($detail);
                                 $course = course_select_by_id($courseId);
-                                extract($course);?>
+                                extract($course);
+                                $tong += $price;
+                                $tongSale += ($price - ($price *($sale/100)));?>
                                 <li>
                                     <a href="" class="header_cart_bill-purchar-link">
                                         <img src="./assets/img/courses/<?=$image?>">
@@ -98,7 +102,7 @@
                                             ?>
                                             <p><?=$fullName?></p>
                                             <div class="header_cart_bill-price">
-                                                <h5><?=$price?>đ</h5><span><?=$sale?>đ</span>
+                                                <h5><?=number_format($price - ($price *($sale/100)))?>đ</h5><span><?=number_format($price)?>đ</span>
                                             </div>
                                         </div>
                                     </a>
@@ -111,8 +115,8 @@
                         ?>
                         
                         <div class="header_cart_bill-sum">
-                            Tổng: <div class="">1.493.000đ</div>
-                            <span>7.354.000đ</span>
+                            <div class="">Tổng tiền: <?=number_format($tongSale)?> đ</div>
+                            <span><?=number_format($tong)?> đ</span>
                         </div>
                         <div class="header_cart_bill-submit">
                             <a href="#">Đến giỏ hàng</a>
@@ -182,16 +186,16 @@
                     <!-- modal của admin -->
                     <?php if($_SESSION["user"]["role"] == "admin"){ ?>
                         <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="./assets/img/users/admin.jpg" alt="">
+                            <img src="./assets/img/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
                         </a>
                         <div class="dropdown-menu">
                             <div class="dropdown-menu-header">
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="./assets/img/users/admin.jpg" alt="">
+                                    <img src="./assets/img/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
                                 </a>
                                 <div>
-                                    <h6>Lê Trung Tín</h6>
-                                    <p>duytt18897@gmail.com</p>
+                                    <h6><?=$_SESSION["user"]["fullName"]?></h6>
+                                    <p><?=$_SESSION["user"]["email"]?></p>
                                 </div>
                             </div>
                             <ul class="dropdown-menu-mid">
@@ -207,16 +211,16 @@
                         <!-- modal của teacher -->
                     <?php } elseif ($_SESSION["user"]["role"] == "teacher") { ?>
                         <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="./assets/img/users/teacher.jpg" alt="">
+                            <img src="./assets/img/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
                         </a>
                         <div class="dropdown-menu">
                             <div class="dropdown-menu-header">
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="./assets/img/users/teacher.jpg" alt="">
+                                    <img src="./assets/img/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
                                 </a>
                                 <div>
-                                    <h6>Lê Trung Tín</h6>
-                                    <p>duytt18897@gmail.com</p>
+                                    <h6><?=$_SESSION["user"]["fullName"]?></h6>
+                                    <p><?=$_SESSION["user"]["email"]?></p>
                                 </div>
                             </div>
                             <ul class="dropdown-menu-mid">
@@ -238,16 +242,16 @@
                         <!-- modal của student -->
                     <?php } else { ?>
                         <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="./assets/img/users/teacher.jpg" alt="">
+                            <img src="./assets/img/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
                         </a>
                         <div class="dropdown-menu">
                             <div class="dropdown-menu-header">
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="./assets/img/users/teacher.jpg" alt="">
+                                    <img src="./assets/img/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
                                 </a>
                                 <div>
-                                    <h6>Lê Trung Tín</h6>
-                                    <p>duytt18897@gmail.com</p>
+                                    <h6><?=$_SESSION["user"]["fullName"]?></h6>
+                                    <p><?=$_SESSION["user"]["email"]?></p>
                                 </div>
                             </div>
                             <ul class="dropdown-menu-mid">

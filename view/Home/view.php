@@ -83,7 +83,7 @@
                             useful language. Its simple syntax and readability makes Python perfect for Flask,
                             Django, data science, and machine learning. You'll learn how to build everything from
                             games to sites to apps. Choose from a range of courses that will appeal to</p>
-                        <button class="button-white-medium">Read more</button>
+                        <button class="button-white-medium">Tìm hiểu thêm</button>
                     </div>
                     <div class="owl-carousel owl-theme courses__item">
                     <?php 
@@ -113,8 +113,8 @@
                                         <span class="card-total">(17,915)</span>
                                     </div>
                                     <div class="card-price">
-                                        <span><?=$price?><span class="vnd">đ</span></span>
-                                        <span class="sale"><?=$sale?><span class="vnd">đ</span></span>
+                                        <span><?=number_format($price - ($price * ($sale/100)))?><span class="vnd">đ</span></span>
+                                        <span class="sale"><?=number_format($price)?><span class="vnd">đ</span></span>
                                     </div>
                                     <span class="card-sell">Bán chạy nhất</span>
                                 </div>
@@ -156,7 +156,7 @@
                                 useful language. Its simple syntax and readability makes Python perfect for Flask,
                                 Django, data science, and machine learning. You'll learn how to build everything from
                                 games to sites to apps. Choose from a range of courses that will appeal to</p>
-                            <button class="btn btn-primary">Read more</button>
+                                <button class="button-white-medium">Tìm hiểu thêm</button>
                         </div>
                         <div class="owl-carousel owl-theme courses__item">
                             <?php 
@@ -183,8 +183,8 @@
                                         <span class="card-total">(17,915)</span>
                                     </div>
                                     <div class="card-price">
-                                        <span><?=$price?><span class="vnd">đ</span></span>
-                                        <span class="sale"><?=$sale?><span class="vnd">đ</span></span>
+                                        <span><?=number_format($price - ($price * ($sale/100)))?><span class="vnd">đ</span></span>
+                                        <span class="sale"><?=number_format($price)?><span class="vnd">đ</span></span>
                                     </div>
                                     <span class="card-sell">Bán chạy nhất</span>
                                 </div>
@@ -289,8 +289,8 @@
                             <span class="card-total">(17,915)</span>
                         </div>
                         <div class="card-price">
-                            <span><?=$price?><span class="vnd">đ</span></span>
-                            <span class="sale"><?=$sale?><span class="vnd">đ</span></span>
+                            <span><?=number_format($price - ($price * ($sale/100)))?><span class="vnd">đ</span></span>
+                            <span class="sale"><?=number_format($price)?><span class="vnd">đ</span></span>
                         </div>
                         <span class="card-sell">Bán chạy nhất</span>
                     </div>
