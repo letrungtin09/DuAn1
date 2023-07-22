@@ -28,4 +28,9 @@ function detailBill_exist($idDetailBill){
     $sql = "SELECT count(*) FROM detail_bill WHERE idDetailBill=?";
     return pdo_query_value($sql, $idDetailBill) > 0;
 }
+// Đếm số lesson theo bill
+function detailBill_count_billId($idBill){
+    $sql = "SELECT count(idBill) FROM detail_bill WHERE idBill=?";
+    return pdo_query_value($sql, $idBill);
+}
 ?>

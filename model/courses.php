@@ -34,7 +34,11 @@ function course_select_by_id($courseId){
     $sql = "SELECT * FROM courses WHERE courseId=?";
     return pdo_query_one($sql, $courseId);
 }
-
+// Truy vấn 2 khóa học theo mã giảng viên
+function two_course_select_by_userId($userId){
+    $sql = "SELECT * FROM courses WHERE userId=? limit 3";
+    return pdo_query($sql, $userId);
+}
 // Truy vấn tất cả khóa học theo loại
 function course_select_idcate($cateId){
     $sql = "SELECT * FROM courses WHERE cateId=?";
@@ -64,5 +68,14 @@ function course_select_top10_best_seller(){
     $sql = "SELECT * FROM courses WHERE purchase > 0 ORDER BY purchase DESC LIMIT 0, 10";
     return pdo_query($sql);
 }
-
+// Truy vấn 2 tất cả khóa học theo loại
+function two_course_select_idcate($cateId){
+    $sql = "SELECT * FROM courses WHERE cateId=? limit 2";
+    return pdo_query($sql, $cateId);
+}
+// đếm số khóa học theo userId
+function course_count_userId($userId){
+    $sql = "SELECT count(userId) FROM courses WHERE userId=?";
+    return pdo_query_value($sql, $userId);
+}
 ?>

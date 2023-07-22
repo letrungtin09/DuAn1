@@ -4,18 +4,18 @@
             <div class="detail__sidebarMain">
                 <div class="detail__sidebarContent">
                     <div class="detail__sidebarImg">
-                        <img class="img-fluid" src="./assets/img/courses/<?=$image?>" alt="">
+                        <img class="img-fluid" src="./assets/img/courses/<?=$courseSlectbyid['image']?>" alt="">
                     </div>
                     <div class="detail__sidebarInfo">
                         <div class="info-price">
                             <div class="price-sale">
-                                <span class="sale-detail"><?=number_format($price - ($price *($sale/100)))?> <span class="cur-vnd">đ</span></span>
-                                <span class="price-detail"><?=number_format($price)?> <span class="cur-vnd">đ</span></span>
+                                <span class="sale-detail"><?=number_format($courseSlectbyid['price'] - ($courseSlectbyid['price'] *($courseSlectbyid['sale']/100)))?> <span class="cur-vnd">đ</span></span>
+                                <span class="price-detail"><?=number_format($courseSlectbyid['price'])?> <span class="cur-vnd">đ</span></span>
                             </div>
-                            <p class="sale-rating">Giảm <?=$sale?>%</p>
+                            <p class="sale-rating">Giảm <?=$courseSlectbyid['sale']?>%</p>
                         </div>
                         <div class="info-btn">
-                            <a href="<?=$base_url?>?mod=detailcourse&act=addBill&course=<?=$courseId?>" class="add-to-cart">Thêm vào giỏ hàng</a>
+                            <a href="<?=$base_url?>?mod=detailcourse&act=addBill&course=<?=$courseSlectbyid['courseId']?>" class="add-to-cart">Thêm vào giỏ hàng</a>
                             <button class="add-wishlist"><i class="fa-regular fa-heart"></i></button>
                         </div>
                         <div class="btn-buyNow">
@@ -39,10 +39,10 @@
             <div class="detail__text detail-container">
                 <div class="detail__main">
                     <div class="detail__cate">
-                        <a href="#"><?=$nameCate?></a>
+                        <a href="#"><?=$cate['nameCate']?></a>
                     </div>
-                    <h1><?=$title?></h1>
-                    <h3><?=$description?></h3>
+                    <h1><?=$courseSlectbyid['title']?></h1>
+                    <h3><?=$courseSlectbyid['description']?></h3>
                     <div class="detail__sub">
                         <span class="button-best-seller">Bán chạy nhất</span>
                         <span class="detail__rate">5,0</span>
@@ -56,10 +56,10 @@
                         <span class="detail__total"><a href="#">(17915 đánh giá)</a></span>
                         <span class="detail__student">20.000 học viên</span>
                     </div>
-                    <p>Được tạo bởi <a href="#"><?=$fullName?></a></p>
+                    <p>Được tạo bởi <a href="#"><?=$user['fullName']?></a></p>
                     <div class="detail__date">
                         <i class="fa-solid fa-square-pen"></i>
-                        <span>Khóa học đăng ngày <?=$date?></span>
+                        <span>Khóa học đăng ngày <?=$courseSlectbyid['date']?></span>
                     </div>
                 </div>
             </div>
@@ -83,15 +83,18 @@
                     <div class="detail__statistic">
                         <span><?=$countChapter?> chương</span>
                         <span> • </span>
-                        <span>51 bài giảng</span>
+                        <span><?=$countAllDetailChapter?> bài giảng</span>
                         <span> • </span>
                         <span>9 giờ 30 phút tổng thời lượng</span>
                     </div>
                     <div class="detail__lesson">
                         <div class="accordion" id="accordionPanelsStayOpenExample">
                             <?php
+                            $countAllDetailChapter = 0;
                             foreach ($chapter as $chap){
-                                extract($chap);?>
+                                extract($chap);
+                                $countSession = detailChapter_count_chapterId($chapterId);
+                            ?>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button"
@@ -99,7 +102,7 @@
                                             aria-expanded="false" aria-controls="panelsStayOpen-collapse<?=$numberOrder?>">
                                             <span class="detail__title">
                                                 <span class="title-chapter"><?=$title?></span>
-                                                <span>7 bài giảng • <span>1 giờ 27 phút</span></span>
+                                                <span><?=$countSession?> bài giảng • <span>1 giờ 27 phút</span></span>
                                             </span>
                                         </button>
                                     </h2>
@@ -109,7 +112,7 @@
                                         extract($les);?>
                                         <div id="panelsStayOpen-collapse<?=$numberOrder?>" class="accordion-collapse collapse">
                                             <div class="accordion-body">
-                                                <div class="detail__source">
+                                                <div class="detail__source">    
                                                     <div class="detail__doc">
                                                         <i class="fa-brands fa-youtube"></i>
                                                         <a href="#"><?=$title?></a>
@@ -132,83 +135,57 @@
                 </div>
                 <div class="detail__des">
                     <h2>Mô tả</h2>
-                    <p><?=$content?>
+                    <p><?=$courseSlectbyid['content']?>
                     </p>
                 </div>
                 <div class="detail__kind">
                     <h2>Khóa học cùng loại</h2>
                     <div class="detail__sameKind">
-                        <div class="detail__item">
-                            <div class="kind-img">
-                                <img src="./img/courses/python3.jpg" alt="">
-                            </div>
-                            <div class="kind-content">
-                                <a href="#">The Complete 2023 Web Development Bootcamp</a>
-                                <div class="kind-bottom">
-                                    <span class="kind-sell button-best-seller">Bán chạy nhất</span>
-                                    <span class="kind-time">Tổng số 112 giờ</span>
-                                    <span>•</span>
-                                    <span>Cập nhật 12/2023</span>
+                        <?php foreach($twoCourseSameType as $CourseSameType ){
+                            extract($CourseSameType);?>
+                            <div class="detail__item">
+                                <div class="kind-img">
+                                    <img src="./assets/img/courses/<?=$courseSlectbyid['image']?>" alt="">
+                                </div>
+                                <div class="kind-content">
+                                    <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseSlectbyid['courseId']?>"><?=$courseSlectbyid['title']?></a>
+                                    <div class="kind-bottom">
+                                        <span class="kind-time">Tổng số <?=$courseSlectbyid['allTime']?></span>
+                                        <span>•</span>
+                                        <span>Cập nhật <?=$courseSlectbyid['date']?></span>
+                                    </div>
+                                </div>
+                                <div class="kind-number">
+                                    <span class="kind-rate">
+                                        <span>4,7</span>
+                                        <span><i class="fa-solid fa-star"></i></span>
+                                    </span>
+                                    <span class="kind-total">
+                                        <span><i class="fa-solid fa-user-group"></i></span>
+                                        <span>1.000.230</span>
+                                    </span>
+                                    <div class="kind-price">
+                                        <p><?=number_format($courseSlectbyid['price'] - ($courseSlectbyid['price'] *($courseSlectbyid['sale']/100)))?> <span>đ</span></p>
+                                        <p class="kind-sale"><?=number_format($courseSlectbyid['price'])?> <span>đ</span></p>
+                                    </div>
+                                </div>
+                                <div class="kind-button">
+                                    <button><i class="fa-regular fa-heart"></i></button>
                                 </div>
                             </div>
-                            <div class="kind-number">
-                                <span class="kind-rate">
-                                    <span>4,7</span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                </span>
-                                <span class="kind-total">
-                                    <span><i class="fa-solid fa-user-group"></i></span>
-                                    <span>1.000.230</span>
-                                </span>
-                                <div class="kind-price">
-                                    <p>577.000 <span>đ</span></p>
-                                    <p class="kind-sale">3.577.000 <span>đ</span></p>
-                                </div>
-                            </div>
-                            <div class="kind-button">
-                                <button><i class="fa-regular fa-heart"></i></button>
-                            </div>
-                        </div>
-                        <div class="detail__item">
-                            <div class="kind-img">
-                                <img src="./img/courses/python5.jpg" alt="">
-                            </div>
-                            <div class="kind-content">
-                                <a href="#">The Complete 2023 Web Development Bootcamp</a>
-                                <div class="kind-bottom">
-                                    <!-- <span class="kind-sell button-best-seller">Bán chạy nhất</span> -->
-                                    <span class="kind-time">Tổng số 112 giờ</span>
-                                    <span>•</span>
-                                    <span>Cập nhật 12/2023</span>
-                                </div>
-                            </div>
-                            <div class="kind-number">
-                                <span class="kind-rate">
-                                    <span>4,7</span>
-                                    <span><i class="fa-solid fa-star"></i></span>
-                                </span>
-                                <span class="kind-total">
-                                    <span><i class="fa-solid fa-user-group"></i></span>
-                                    <span>1.000.230</span>
-                                </span>
-                                <div class="kind-price">
-                                    <p>577.000 <span>đ</span></p>
-                                    <p class="kind-sale">3.577.000 <span>đ</span></p>
-                                </div>
-                            </div>
-                            <div class="kind-button">
-                                <button><i class="fa-regular fa-heart"></i></button>
-                            </div>
-                        </div>
+                        <?php
+                        }
+                        ?>
+                        
                     </div>
                 </div>
                 <div class="detail__teacher">
                     <h2>Giảng viên</h2>
                     <div class="detail__info">
-                        <a href="#">Lê Trung Tín</a>
-                        <p class="detail__career">Senior Web Developer</p>
+                        <a href="#"><?=$user['fullName']?></a>
+                        <p class="detail__career"><?=$user['career']?></p>
                         <div class="detail__avatar">
-                            <a href="#" class="mb-0"><img class="img-fluid" src="./img/users/teacher.jpg"
+                            <a href="#" class="mb-0"><img class="img-fluid" src="./assets/img/users/<?=$user['avatar']?>"
                                     alt=""></a>
                             <ul>
                                 <li>
@@ -225,232 +202,92 @@
                                 </li>
                                 <li>
                                     <i class="fa-brands fa-youtube"></i>
-                                    <span>7 khóa học</span>
+                                    <span><?=$countCourseByTeacher?> khóa học</span>
                                 </li>
                             </ul>
                         </div>
-                        <p>I'm Angela, I'm a developer with a passion for teaching. I'm the lead instructor at the
-                            London App Brewery, London's leading Programming Bootcamp. I've helped hundreds of
-                            thousands of students learn to code and change their lives by becoming a developer. I've
-                            been invited by companies such as Twitter, Facebook and Google to teach their employees.
-                        </p>
+                        <p><?=$user['information']?></p>
                     </div>
                 </div>
                 <div class="detail__evaluate">
                     <h2><i class="fa-solid fa-star"></i> 4,7 xếp hạng khóa học • 654,817 đánh giá</h2>
                     <div class="detail__allEvaluate">
-                        <div class="detail__itemEvaluate item-odd">
-                            <div class="detail__user">
-                                <img class="img-fluid" src="./img/users/student.jpg" alt="">
-                                <div class="detail__name">
-                                    <p>Hà Trung Hiếu</p>
-                                    <div class="detail__stars">
-                                        <span class="stars-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="date-rating">13/07/2023</span>
+                        <?php 
+                        foreach($eluavateSelectByIdcourse as $eluavate){
+                            $userEluavate = user_select_by_id($eluavate['userId']);
+                            ?>
+                            <div class="detail__itemEvaluate item-odd">
+                                <div class="detail__user">
+                                    <img class="img-fluid" src="./assets/img/users/<?=$userEluavate['avatar']?>" alt="">
+                                    <div class="detail__name">
+                                        <p><?=$userEluavate['fullName']?></p>
+                                        <div class="detail__stars">
+                                            <span class="stars-rating">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </span>
+                                            <span class="date-rating"><?=$userEluavate['evaluateTime']?></span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="detail__contentEvaluate">
-                                <p>Pity the old html videos seem to have been taken down. In my opinion they were
-                                    better, especially the html personal website videos. Can these be put back up?
-                                    Would give 5 stars apart from this. Excellent course.</p>
-                            </div>
-                            <div class="detail__review">
-                                <span>Bạn thấy hữu ích?</span>
-                                <i class="fa-regular fa-thumbs-up up"></i>
-                                <i class="fa-solid fa-thumbs-up up d-none"></i>
-                                <i class="fa-regular fa-thumbs-down down"></i>
-                                <i class="fa-solid fa-thumbs-down down d-none"></i>
-                            </div>
-                        </div>
-                        <div class="detail__itemEvaluate item-even">
-                            <div class="detail__user">
-                                <img class="img-fluid" src="./img/users/student.jpg" alt="">
-                                <div class="detail__name">
-                                    <p>Hà Trung Hiếu</p>
-                                    <div class="detail__stars">
-                                        <span class="stars-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="date-rating">13/07/2023</span>
-                                    </div>
+                                <div class="detail__contentEvaluate">
+                                    <p><?=$userEluavate['content']?></p>
+                                </div>
+                                <div class="detail__review">
+                                    <span>Bạn thấy hữu ích?</span>
+                                    <i class="fa-regular fa-thumbs-up up"></i>
+                                    <i class="fa-solid fa-thumbs-up up d-none"></i>
+                                    <i class="fa-regular fa-thumbs-down down"></i>
+                                    <i class="fa-solid fa-thumbs-down down d-none"></i>
                                 </div>
                             </div>
-                            <div class="detail__contentEvaluate">
-                                <p>Pity the old html videos seem to have been taken down. In my opinion they were
-                                    better, especially the html personal website videos. Can these be put back up?
-                                    Would give 5 stars apart from this. Excellent course.</p>
-                            </div>
-                            <div class="detail__review">
-                                <span>Bạn thấy hữu ích?</span>
-                                <i class="fa-regular fa-thumbs-up up"></i>
-                                <i class="fa-solid fa-thumbs-up up d-none"></i>
-                                <i class="fa-regular fa-thumbs-down down"></i>
-                                <i class="fa-solid fa-thumbs-down down d-none"></i>
-                            </div>
-                        </div>
-                        <div class="detail__itemEvaluate item-odd">
-                            <div class="detail__user">
-                                <img class="img-fluid" src="./img/users/student.jpg" alt="">
-                                <div class="detail__name">
-                                    <p>Hà Trung Hiếu</p>
-                                    <div class="detail__stars">
-                                        <span class="stars-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="date-rating">13/07/2023</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="detail__contentEvaluate">
-                                <p>Pity the old html videos seem to have been taken down. In my opinion they were
-                                    better, especially the html personal website videos. Can these be put back up?
-                                    Would give 5 stars apart from this. Excellent course.</p>
-                            </div>
-                            <div class="detail__review">
-                                <span>Bạn thấy hữu ích?</span>
-                                <i class="fa-regular fa-thumbs-up up"></i>
-                                <i class="fa-solid fa-thumbs-up up d-none"></i>
-                                <i class="fa-regular fa-thumbs-down down"></i>
-                                <i class="fa-solid fa-thumbs-down down d-none"></i>
-                            </div>
-                        </div>
-                        <div class="detail__itemEvaluate item-even">
-                            <div class="detail__user">
-                                <img class="img-fluid" src="./img/users/student.jpg" alt="">
-                                <div class="detail__name">
-                                    <p>Hà Trung Hiếu</p>
-                                    <div class="detail__stars">
-                                        <span class="stars-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="date-rating">13/07/2023</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="detail__contentEvaluate">
-                                <p>Pity the old html videos seem to have been taken down. In my opinion they were
-                                    better, especially the html personal website videos. Can these be put back up?
-                                    Would give 5 stars apart from this. Excellent course.</p>
-                            </div>
-                            <div class="detail__review">
-                                <span>Bạn thấy hữu ích?</span>
-                                <i class="fa-regular fa-thumbs-up up"></i>
-                                <i class="fa-solid fa-thumbs-up up-like"></i>
-                                <i class="fa-regular fa-thumbs-down down"></i>
-                                <i class="fa-solid fa-thumbs-down down-like"></i>
-                            </div>
-                        </div>
+                        <?php
+                        }
+                        ?>
+                        
                     </div>
                 </div>
                 <div class="detail__courseTeacher">
-                    <h2>Các khóa học khác của <a href="#">Lê Trung Tín</a></h2>
+                    <h2>Các khóa học khác của <a href="#"><?=$user['fullName']?></a></h2>
                     <div class="detail__allCourse">
-                        <div class="card">
-                            <a href="#"><img src="./img/courses/fe1.jpg" alt="..."></a>
-                            <div class="card-body">
-                                <a href="#">
-                                    <h5 class="card-title">Tên khóa học FE</h5>
-                                </a>
-                                <p class="card-teacher">Giảng viên</p>
-                                <div class="card-stars">
-                                    <span class="card-rate">4.5</span>
-                                    <span class="card-icon">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span class="card-total">(17,915)</span>
-                                </div>
-                                <div class="card-time">
-                                    <span>Tổng số 117 giờ</span>
-                                    <span class="card-dot">•</span>
-                                    <span>Tất cả trình độ</span>
-                                </div>
-                                <div class="card-price">
-                                    <span>799,000<span class="vnd">đ</span></span>
-                                    <span class="sale">2,990,000<span class="vnd">đ</span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <a href="#"><img src="./img/courses/fe1.jpg" alt="..."></a>
-                            <div class="card-body">
-                                <a href="#">
-                                    <h5 class="card-title">Tên khóa học FE</h5>
-                                </a>
-                                <p class="card-teacher">Giảng viên</p>
-                                <div class="card-stars">
-                                    <span class="card-rate">4.5</span>
-                                    <span class="card-icon">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span class="card-total">(17,915)</span>
-                                </div>
-                                <div class="card-time">
-                                    <span>Tổng số 117 giờ</span>
-                                    <span class="card-dot">•</span>
-                                    <span>Tất cả trình độ</span>
-                                </div>
-                                <div class="card-price">
-                                    <span>799,000<span class="vnd">đ</span></span>
-                                    <span class="sale">2,990,000<span class="vnd">đ</span></span>
+                        <?php
+                        foreach($courseSelectByTeacher as $courseSameTeacher){?>
+                            <div class="card">
+                                <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseSameTeacher['courseId']?>"><img src="./assets/img/courses/<?=$courseSameTeacher['image']?>" alt="..."></a>
+                                <div class="card-body">
+                                    <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseSameTeacher['courseId']?>">
+                                        <h5 class="card-title"><?=$courseSameTeacher['title']?></h5>
+                                    </a>
+                                    <?php $user = user_select_by_id($userId); ?>
+                                    <p class="card-teacher"><?=$user['fullName']?></p>
+                                    <div class="card-stars">
+                                        <span class="card-rate">4.5</span>
+                                        <span class="card-icon">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span class="card-total">(17,915)</span>
+                                    </div>
+                                    <div class="card-time">
+                                        <span>Tổng số <?=$courseSameTeacher['allTime']?></span>
+                                        <span class="card-dot">•</span>
+                                        <span><?=$courseSameTeacher['level']?></span>
+                                    </div>
+                                    <div class="card-price">
+                                        <span><?=number_format($courseSameTeacher['price'] - ($courseSameTeacher['price'] *($courseSameTeacher['sale']/100)))?><span class="vnd">đ</span></span>
+                                        <span class="sale"><?=number_format($courseSameTeacher['price'])?><span class="vnd">đ</span></span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <a href="#"><img src="./img/courses/fe1.jpg" alt="..."></a>
-                            <div class="card-body">
-                                <a href="#">
-                                    <h5 class="card-title">Tên khóa học FE</h5>
-                                </a>
-                                <p class="card-teacher">Giảng viên</p>
-                                <div class="card-stars">
-                                    <span class="card-rate">4.5</span>
-                                    <span class="card-icon">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </span>
-                                    <span class="card-total">(17,915)</span>
-                                </div>
-                                <div class="card-time">
-                                    <span>Tổng số 117 giờ</span>
-                                    <span class="card-dot">•</span>
-                                    <span>Tất cả trình độ</span>
-                                </div>
-                                <div class="card-price">
-                                    <span>799,000<span class="vnd">đ</span></span>
-                                    <span class="sale">2,990,000<span class="vnd">đ</span></span>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>

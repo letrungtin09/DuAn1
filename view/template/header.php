@@ -52,11 +52,13 @@
                     </ul>
                 </div>
                 <div class="header_search">
-                    <form class="d-flex" role="search">
+                    <form  action="<?=$base_url?>?mod=search&act=showSearch" method="post">
+                    <div class="form_header_search" style="display:flex;height:100%;">
                         <button class="btn btn-outline-success header_search_btn" type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                        <input class="header_search_input me-2" placeholder="Tìm kiếm nội dung bất kì">
+                        <input name='searchInput' class="header_search_input me-2" placeholder="Tìm kiếm nội dung bất kì">
+                    </div>
                     </form>
                 </div>
                 <div class="nav-item header_teaching">
@@ -119,7 +121,7 @@
                             <span><?=number_format($tong)?> đ</span>
                         </div>
                         <div class="header_cart_bill-submit">
-                            <a href="#">Đến giỏ hàng</a>
+                            <a href="<?=$base_url?>?mod=bill&act=cartBill">Đến giỏ hàng</a>
                         </div>
                     </ul>
                 </div>
@@ -297,7 +299,7 @@
                     </ul>
                 </div>
                 <div class="header_search">
-                    <form class="d-flex" role="search">
+                    <form action="<?=$base_url?>?mod=search&act=showSearch" method="post">
                         <button class="btn btn-outline-success header_search_btn" type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
