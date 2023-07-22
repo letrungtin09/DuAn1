@@ -141,18 +141,17 @@
                 <div class="detail__kind">
                     <h2>Khóa học cùng loại</h2>
                     <div class="detail__sameKind">
-                        <?php foreach($twoCourseSameType as $CourseSameType ){
-                            extract($CourseSameType);?>
+                        <?php foreach($twoCourseSameType as $CourseSameType){?>
                             <div class="detail__item">
                                 <div class="kind-img">
-                                    <img src="./assets/img/courses/<?=$courseSlectbyid['image']?>" alt="">
+                                    <img src="./assets/img/courses/<?=$CourseSameType['image']?>" alt="">
                                 </div>
                                 <div class="kind-content">
-                                    <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseSlectbyid['courseId']?>"><?=$courseSlectbyid['title']?></a>
+                                    <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$CourseSameType['courseId']?>"><?=$courseSlectbyid['title']?></a>
                                     <div class="kind-bottom">
-                                        <span class="kind-time">Tổng số <?=$courseSlectbyid['allTime']?></span>
+                                        <span class="kind-time">Tổng số <?=$CourseSameType['allTime']?></span>
                                         <span>•</span>
-                                        <span>Cập nhật <?=$courseSlectbyid['date']?></span>
+                                        <span>Cập nhật <?=$CourseSameType['date']?></span>
                                     </div>
                                 </div>
                                 <div class="kind-number">
@@ -165,8 +164,8 @@
                                         <span>1.000.230</span>
                                     </span>
                                     <div class="kind-price">
-                                        <p><?=number_format($courseSlectbyid['price'] - ($courseSlectbyid['price'] *($courseSlectbyid['sale']/100)))?> <span>đ</span></p>
-                                        <p class="kind-sale"><?=number_format($courseSlectbyid['price'])?> <span>đ</span></p>
+                                        <p><?=number_format($CourseSameType['price'] - ($CourseSameType['price'] *($CourseSameType['sale']/100)))?> <span>đ</span></p>
+                                        <p class="kind-sale"><?=number_format($CourseSameType['price'])?> <span>đ</span></p>
                                     </div>
                                 </div>
                                 <div class="kind-button">
@@ -229,12 +228,12 @@
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
                                             </span>
-                                            <span class="date-rating"><?=$userEluavate['evaluateTime']?></span>
+                                            <span class="date-rating"><?=$eluavate['evaluateTime']?></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="detail__contentEvaluate">
-                                    <p><?=$userEluavate['content']?></p>
+                                    <p><?=$eluavate['content']?></p>
                                 </div>
                                 <div class="detail__review">
                                     <span>Bạn thấy hữu ích?</span>
