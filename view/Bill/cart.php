@@ -15,59 +15,61 @@ echo '<meta http-equiv="refresh" content="0;url=<?=$base_url?>?mod=bill&act=addB
             <?php 
             $totalBill = 0;
             $totalBillSale = 0;
-            foreach($detailBillByIdBill as $detail){
-                $courseinfo = course_select_by_id($detail['courseId']);
-                $totalBill += $courseinfo['price'];
-                $totalBillSale += $courseinfo['price'] - ($courseinfo['price'] *($courseinfo['sale']/100))?>
-                <div class="cart-info">
-                    <div class="cart-info-img">
-                        <img src="./assets/img/courses/<?=$courseinfo['image']?>" alt="">
-                    </div>
-                    <div class="cart-info-details">
-                        <h1 class="cart-info-name"><?=$courseinfo['title']?></h1>
-                        <?php
-                        $username = user_select_by_id($courseinfo['userId']);
-                        ?>
-                        <p class="cart-info-author"><?=$username['fullName']?></p>
-                        <div class="cart-info-rate">
-                            <span class="detail__rate">5,0</span>
-                            <span class="detail__icon">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </span>
-                            <span class="detail__evaluate">(17.000 đánh giá)</span>
+            if($detailBillByIdBill != ''){
+                foreach($detailBillByIdBill as $detail){
+                    $courseinfo = course_select_by_id($detail['courseId']);
+                    $totalBill += $courseinfo['price'];
+                    $totalBillSale += $courseinfo['price'] - ($courseinfo['price'] *($courseinfo['sale']/100))?>
+                    <div class="cart-info">
+                        <div class="cart-info-img">
+                            <img src="./assets/img/courses/<?=$courseinfo['image']?>" alt="">
                         </div>
-                        <ul class="cart-info-course">
-                            <li class="course time">Tổng số <?=$courseinfo['allTime']?></li>
+                        <div class="cart-info-details">
+                            <h1 class="cart-info-name"><?=$courseinfo['title']?></h1>
                             <?php
-                            require_once 'model/chapter.php';
-                            require_once 'model/detailChapter.php';
-                            $chapter = chapter_select_idcourse($courseinfo['courseId']);
-                            $countAllDetailChapter = 0;
-                            foreach($chapter as $chap){
-                                $countSession = detailChapter_count_chapterId($chap['chapterId']);
-                                $countAllDetailChapter += $countSession;
-                            }
+                            $username = user_select_by_id($courseinfo['userId']);
                             ?>
-                            <li class="course lessons"><?=$countAllDetailChapter?> bài giảng</li>
-                            <li class="course level"><?=$courseinfo['level']?></li>
-                        </ul>
-                    </div>
-                    <div class="cart-info-price">
-                        <div>
-                            <a href="#">Xóa</a>
-                            <a href="#">Yêu thích</a>
+                            <p class="cart-info-author"><?=$username['fullName']?></p>
+                            <div class="cart-info-rate">
+                                <span class="detail__rate">5,0</span>
+                                <span class="detail__icon">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </span>
+                                <span class="detail__evaluate">(17.000 đánh giá)</span>
+                            </div>
+                            <ul class="cart-info-course">
+                                <li class="course time">Tổng số <?=$courseinfo['allTime']?></li>
+                                <?php
+                                require_once 'model/chapter.php';
+                                require_once 'model/detailChapter.php';
+                                $chapter = chapter_select_idcourse($courseinfo['courseId']);
+                                $countAllDetailChapter = 0;
+                                foreach($chapter as $chap){
+                                    $countSession = detailChapter_count_chapterId($chap['chapterId']);
+                                    $countAllDetailChapter += $countSession;
+                                }
+                                ?>
+                                <li class="course lessons"><?=$countAllDetailChapter?> bài giảng</li>
+                                <li class="course level"><?=$courseinfo['level']?></li>
+                            </ul>
                         </div>
-                        <span class="price"><?=number_format($courseinfo['price'])?> <span class="vnd">đ</span></span>
-                        <span class="sale"><?=number_format($courseinfo['price'] - ($courseinfo['price'] *($courseinfo['sale']/100)))?> <span class="vnd">đ</span> <i class="fa-solid fa-tag"></i></span>
+                        <div class="cart-info-price">
+                            <div>
+                                <a href="<?=$base_url?>?mod=bill&act=deleteCourseInBill&del=<?=$detail['idDetailBill']?>">Xóa</a>
+                                <a href="#">Yêu thích</a>
+                            </div>
+                            <span class="price"><?=number_format($courseinfo['price'])?> <span class="vnd">đ</span></span>
+                            <span class="sale"><?=number_format($courseinfo['price'] - ($courseinfo['price'] *($courseinfo['sale']/100)))?> <span class="vnd">đ</span> <i class="fa-solid fa-tag"></i></span>
+                        </div>
                     </div>
-                </div>
-            <?php
-            }
-            ?>
+                <?php
+                }
+                }
+                ?>
             
         </div>
         <div class="cart-price">

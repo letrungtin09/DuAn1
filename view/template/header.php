@@ -52,7 +52,7 @@
                     </ul>
                 </div>
                 <div class="header_search">
-                    <form  action="<?=$base_url?>?mod=search&act=showSearch" method="post">
+                    <form  action="<?=$base_url?>?mod=search&act=showSearch" method="get">
                     <div class="form_header_search" style="display:flex;height:100%;">
                         <button class="btn btn-outline-success header_search_btn" type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -115,7 +115,8 @@
                             echo'Bạn chưa mua hàng';
                         }
                         ?>
-                        
+                        <?php
+                        if(bill_exist($_SESSION['user']['userId'])){?>
                         <div class="header_cart_bill-sum">
                             <div class="">Tổng tiền: <?=number_format($tongSale)?> đ</div>
                             <span><?=number_format($tong)?> đ</span>
@@ -123,6 +124,10 @@
                         <div class="header_cart_bill-submit">
                             <a href="<?=$base_url?>?mod=bill&act=cartBill">Đến giỏ hàng</a>
                         </div>
+                        <?php
+                        }
+                        ?>
+                        
                     </ul>
                 </div>
                 <div class="dropdown header_favorite">
@@ -276,7 +281,7 @@
                 </div>
             </div>
         </nav>
-    <?php }else{ ?>
+    <?php } else { ?>
         <nav class="navbar navbar-expand-lg nav_header">
             <div class="container_header">
                 <a class="navbar-brand" href="<?=$base_url?>">
@@ -299,11 +304,11 @@
                     </ul>
                 </div>
                 <div class="header_search">
-                    <form action="<?=$base_url?>?mod=search&act=showSearch" method="post">
+                    <form action="<?=$base_url?>?mod=search&act=showSearch" method="get">
                         <button class="btn btn-outline-success header_search_btn" type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                        <input class="header_search_input me-2" placeholder="Tìm kiếm nội dung bất kì">
+                        <input name='searchInput' class="header_search_input me-2" placeholder="Tìm kiếm nội dung bất kì">
                     </form>
                 </div>
                 <div class="nav-item header_teaching">

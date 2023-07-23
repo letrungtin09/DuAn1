@@ -33,4 +33,13 @@ function detailBill_count_billId($idBill){
     $sql = "SELECT count(idBill) FROM detail_bill WHERE idBill=?";
     return pdo_query_value($sql, $idBill);
 }
+// Xóa detailBill theo idDetailBill
+function detail_bill_delete($idDetailBill){
+    $sql = "DELETE FROM detail_bill WHERE idDetailBill=?";
+    if(is_array($idDetailBill)){
+        foreach ($idDetailBill as $detailbill) pdo_execute($sql, $detailbill);
+    } else {
+        pdo_execute($sql, $idDetailBill);
+    }
+}
 ?>

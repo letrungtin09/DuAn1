@@ -78,4 +78,5 @@ function course_count_userId($userId){
     $sql = "SELECT count(userId) FROM courses WHERE userId=?";
     return pdo_query_value($sql, $userId);
 }
+
 ?>
