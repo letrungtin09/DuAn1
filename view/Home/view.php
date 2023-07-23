@@ -86,61 +86,81 @@
                         <button class="button-white-medium">Tìm hiểu thêm</button>
                     </div>
                     <div class="owl-carousel owl-theme courses__item">
-                    <?php 
-                            foreach ($Courses as $courseal){
-                            ?>
-                            <div class="card">
-                                <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseal['courseId']?>"><img src="./assets/img/courses/<?=$courseal['image']?>" alt="..."></a>
-                                <div class="card-body">
-                                    <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseal['courseId']?>">
-                                        <h5 class="card-title"><?=$courseal['title']?></h5>
-                                    </a>
-                                    <?php
-                                    $nameTeacher = user_select_by_id($courseal['userId']);
-                                    ?>
-                                    <p class="card-teacher"><?=$nameTeacher['fullName']?></p>
-                                    <div class="card-stars">
-                                        <span class="card-rate">4.5</span>
-                                        <span class="card-icon">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </span>
-                                        <span class="card-total">(17,915)</span>
-                                    </div>
-                                    <div class="card-price">
-                                        <span><?=number_format($courseal['price'] - ($courseal['price'] * ($courseal['sale']/100)))?><span class="vnd">đ</span></span>
-                                        <span class="sale"><?=number_format($courseal['price'])?><span class="vnd">đ</span></span>
-                                    </div>
-                                    <span class="card-sell">Bán chạy nhất</span>
+                    <?php
+                        $billByUserId = bill_select_by_userId($_SESSION['user']['userId']);
+                        $detailBillByIdBill = detailBill_select_by_idBill($billByUserId['idBill']);
+                        foreach ($Courses as $courseal){
+                        ?>
+                        <div class="card">
+                            <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseal['courseId']?>"><img src="./assets/img/courses/<?=$courseal['image']?>" alt="..."></a>
+                            <div class="card-body">
+                                <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseal['courseId']?>">
+                                    <h5 class="card-title"><?=$courseal['title']?></h5>
+                                </a>
+                                <?php
+                                $nameTeacher = user_select_by_id($courseal['userId']);
+                                ?>
+                                <p class="card-teacher"><?=$nameTeacher['fullName']?></p>
+                                <div class="card-stars">
+                                    <span class="card-rate">4.5</span>
+                                    <span class="card-icon">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                    <span class="card-total">(17,915)</span>
                                 </div>
-                                <div class="card-popover">
-                                    <a href="#">
-                                        <h3><?=$courseal['title']?></h3>
-                                    </a>
-                                    <div class="section-first">
-                                        <span class="best-seller">Bán chạy nhất</span>
-                                        <span>Đăng ngày <span class="date"><?=$courseal['date']?></span></span>
-                                    </div>
-                                    <div class="section-second">
-                                        <span>Tổng số <?=$courseal['allTime']?></span>
-                                        <span class="dot"></span>
-                                        <span><?=$courseal['level']?></span>
-                                    </div>
-                                    <p><?=$courseal['description']?></p>
-                                    <div class="card-btn row">
-                                        <a href="<?=$base_url?>?mod=bill&act=addBill&course=<?=$courseal['courseId']?>" class="add-cart col-9 card-btn_addbill">Thêm vào giỏ hàng</a>
-                                        <button class="add-like col-2">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
+                                <div class="card-price">
+                                    <span><?=number_format($courseal['price'] - ($courseal['price'] * ($courseal['sale']/100)))?><span class="vnd">đ</span></span>
+                                    <span class="sale"><?=number_format($courseal['price'])?><span class="vnd">đ</span></span>
+                                </div>
+                                <span class="card-sell">Bán chạy nhất</span>
+                            </div>
+                            <div class="card-popover">
+                                <a href="#">
+                                    <h3><?=$courseal['title']?></h3>
+                                </a>
+                                <div class="section-first">
+                                    <span class="best-seller">Bán chạy nhất</span>
+                                    <span>Đăng ngày <span class="date"><?=$courseal['date']?></span></span>
+                                </div>
+                                <div class="section-second">
+                                    <span>Tổng số <?=$courseal['allTime']?></span>
+                                    <span class="dot"></span>
+                                    <span><?=$courseal['level']?></span>
+                                </div>
+                                <p><?=$courseal['description']?></p>
+                                <div class="card-btn row">
+                                    <?php
+                                    $checkBuy = "";
+                                    foreach($detailBillByIdBill as $coursebuied){
+                                        if($coursebuied['courseId'] == $courseal['courseId']){
+                                            $checkBuy = 1;
+                                            break;
+                                        }
+                                    }
+                                    if($checkBuy == 1){?>
+                                    <a id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
+                                    <button class="add-like col-2">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <?php
+                                    } else{?>
+                                    <a href="<?=$base_url?>?mod=bill&act=addBill&course=<?=$courseal['courseId']?>" class="add-cart col-9 card-btn_addbill">Thêm vào giỏ hàng</a>
+                                    <button class="add-like col-2">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <?php
+                                    }
+                                    ?>  
                                 </div>
                             </div>
-                            <?php
-                            }
-                            ?>
+                        </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
                 <?php

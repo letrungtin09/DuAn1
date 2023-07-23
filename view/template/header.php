@@ -80,31 +80,24 @@
                         require_once 'model/user.php';
                         $tongSale = 0;
                         $tong = 0;
-                            foreach ($_SESSION as $sec){
-                            extract($sec);
-                        }
-                        if(bill_exist($userId)){
-                            $billByUserId = bill_select_by_userId($userId);
-                            extract($billByUserId);
-                            $detailBillByIdBill = detailBill_select_by_idBill($idBill);
+                        if(bill_exist($_SESSION['user']['userId'])){
+                            $billByUserId = bill_select_by_userId($_SESSION['user']['userId']);
+                            $detailBillByIdBill = detailBill_select_by_idBill($billByUserId['idBill']);
                             foreach ($detailBillByIdBill as $detail){
-                                extract($detail);
-                                $course = course_select_by_id($courseId);
-                                extract($course);
-                                $tong += $price;
-                                $tongSale += ($price - ($price *($sale/100)));?>
+                                $course = course_select_by_id($detail['courseId']);
+                                $tong += $course['price'];
+                                $tongSale += ($course['price'] - ($course['price'] *($course['sale']/100)));?>
                                 <li>
                                     <a href="" class="header_cart_bill-purchar-link">
-                                        <img src="./assets/img/courses/<?=$image?>">
+                                        <img src="./assets/img/courses/<?=$course['image']?>">
                                         <div>
-                                            <div class="header_cart_bill-title"><?=$title?></div>
+                                            <div class="header_cart_bill-title"><?=$course['title']?></div>
                                             <?php
-                                            $user = user_select_by_id($userId);
-                                            extract($user);
+                                            $user = user_select_by_id($course['userId']);
                                             ?>
-                                            <p><?=$fullName?></p>
+                                            <p><?=$user['fullName']?></p>
                                             <div class="header_cart_bill-price">
-                                                <h5><?=number_format($price - ($price *($sale/100)))?>đ</h5><span><?=number_format($price)?>đ</span>
+                                                <h5><?=number_format($course['price'] - ($course['price'] *($course['sale']/100)))?>đ</h5><span><?=number_format($course['price'])?>đ</span>
                                             </div>
                                         </div>
                                     </a>
