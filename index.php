@@ -19,6 +19,9 @@
 		}else{
 			include_once($inclFile);
 		}
+	}elseif(isset($_GET['searchInput'])){?>
+		<meta http-equiv="refresh" content="0;url=<?=$base_url?>?mod=search&act=showSearch&search=<?=$_GET['searchInput']?>">;
+	<?php
 	}
     else{
 		include_once("controller/home/view.php");
