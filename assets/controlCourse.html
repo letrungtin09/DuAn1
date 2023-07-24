@@ -25,7 +25,7 @@
 
 <body>
     <!-- HEADER -->
-    <header class="header-controlCourse">
+    <header class="header-sideHead">
         <!-- <nav class="navbar navbar-expand-lg nav-slidebar">
             <div class="slidebar-logo">
                 <img src="./img/logo-white.png" alt="">
@@ -80,7 +80,7 @@
             </div>
         </nav>
     </header>
-    <section class="sidebar">
+    <section class="sidebar sidebar-controlCourse">
         <div class="container container-sidebar">
             <div class="row">
                 <div class="col-sm siderbar-logo">
@@ -111,8 +111,8 @@
             </div>
         </div>
     </section>
-    <section class="control">
-        <div class="container container-control">
+    <section class="content-qt control-controlCourse">
+        <div class="container container-qt">
             <div class="row">
                 <div class="col-sm col-1">
                     <div class="col-1-left">
@@ -293,8 +293,9 @@
                                         <button type="button" class="btn btn-danger">Xóa khóa học</button>
                                     </div>
                                 </div>
-                            </div>
+                                
 
+                            </div>
                             <!-- <div class="cart-price">
                                 <h1>Tổng:</h1>
                                 <div class="total-price">
@@ -309,6 +310,28 @@
             </div>
         </div>
     </section>
+    <section class="next-revious next-revious-controlCourse">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
     <div class="clear"></div>
     <footer>
         <div class="footer_content">
@@ -412,3 +435,14 @@
 </body>
 
 </html>
+<script>
+    // Lấy chiều cao của toàn bộ trang web
+    const fullHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight,
+        document.documentElement.clientHeight, document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight);
+    // Lấy chiều cao foooter
+    const footerHeight = document.querySelector('footer').offsetHeight;
+
+    // Gán chiều cao của website cho siderbar
+    document.querySelector('.sidebar').style.height = fullHeight - footerHeight + 'px';
+</script>
