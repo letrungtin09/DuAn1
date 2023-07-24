@@ -1,0 +1,232 @@
+.postDetail {
+    margin: $mg-7 0 $mg-8 + 0.8 0;
+    .postDetail__container {
+        padding: 0 $pd-8;
+        display: flex;
+        .postDetail__info {
+            width: 17%;
+            margin-left: 9%;
+            padding: 0 $pd-1;
+            .postDetail__aside {
+                padding-right: $pd-8;
+                h4 {
+                    font-size: $fs-2;
+                    font-weight: $fw-3;
+                }
+                p {
+                    font-size: $fs-0;
+                    margin-top: $mg-0-6;
+                    padding-bottom: $pd-1;
+                    margin-bottom: 0;
+                    border-bottom: 1px solid $color-gray-2;
+                    color: $color-gray-0;
+                }
+                .postDetail__cmt {
+                    margin-top: $mg-0;
+                    .postDetail__link {
+                        text-decoration: none;
+                        color: $color-gray-0;
+                        &:hover {
+                            color: $color-black-1;
+                        }
+                    }
+                }
+            }
+        }
+        .postDetail__text {
+            width: 50%;
+            padding: 0 $pd-1;
+            h1 {
+                font-size: $fs-7 + 0.5;
+                line-height: $line-height-0;
+                font-weight: $fw-4;
+                margin-bottom: $mg-5;
+            }
+            .postDetail__account {
+                margin-bottom: $mg-5;
+                display: flex;
+                .account-img {
+                    img {
+                        width: 7rem;
+                        height: 7rem;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        border: 1px solid $color-gray-2;
+                    }
+                }
+                .account-info {
+                    margin-left: $mg-0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    font-size: $fs-0;
+                    h4 {
+                        font-size: $fs-2;
+                        font-weight: $fw-3;
+                    }
+                    p {
+                        color: $color-gray-0;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .postDetail__content {
+                line-height: 1.6;
+                p {
+                    font-style: italic;
+                    margin-bottom: $mg-2;
+                }
+                pre {
+                    text-wrap: wrap;
+                    font-family: "Roboto", sans-serif;
+                    font-size: $fs-2;
+                    font-weight: $fw-1;
+                    color: $color-black-1;
+                    margin-bottom: 0;
+                }
+            }
+            .postDetail__cmt {
+                margin: $mg-7 0;
+                .postDetail__link {
+                    text-decoration: none;
+                    color: $color-gray-0;
+                    &:hover {
+                        color: $color-black-1;
+                    }
+                }
+            }
+            .postDetail__sameUser {
+                h3 {
+                    margin-bottom: $mg-2;
+                    font-size: $fs-3;
+                }
+                ul {
+                    li {
+                        margin-bottom: $mg-0;
+                        a {
+                            text-decoration: none;
+                            color: $color-black-1;
+                            &:hover {
+                                text-decoration: underline;
+                                text-underline-offset: 0.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .postDetail__cmt {
+            .offcanvas.offcanvas-end {
+                width: 70rem;
+                border-left: none;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+            .offcanvas-backdrop {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+            .offcanvas-header {
+                justify-content: flex-end;
+                padding: 0;
+                .btn-close {
+                    padding: $pd-10;
+                }
+            }
+            .offcanvas-body {
+                padding: 0 $pd-5 $pd-8;
+                h3 {
+                    font-size: $fs-2;
+                    margin-bottom: $mg-7;
+                }
+                form {
+                    margin-bottom: $mg-7;
+                    .cmt-form {
+                        display: flex;
+                        align-items: center;
+                        .cmt-img {
+                            width: 9%;
+                            img {
+                                width: 4.5rem;
+                                height: 4.5rem;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                border: 1px solid $color-gray-2;
+                            }
+                        }
+                        .cmt-input {
+                            width: 71%;
+                            padding: $pd-2;
+                            border: none;
+                            border-bottom: 1px solid $color-gray-2;
+                            transition: 0.3s;
+                            &:focus-visible {
+                                outline: none;
+                                border-bottom-color: $color-gray-0;
+                            }
+                            &::placeholder {
+                                color: #999;
+                                font-weight: 400;
+                                font-size: $fs-0;
+                            }
+                        }
+                        .cmt-btn {
+                            width: 20%;
+                            margin-left: $mg-5;
+                            padding: $pd-4 0;
+                            border: none;
+                            border-radius: 20px;
+                            font-size: $fs-0;
+                            background-color: $color-gray-3;
+                            color: $color-gray-0;
+                            &:hover {
+                                background-color: $color-gray-2;
+                            }
+                        }
+                    }
+                }
+                .show-cmt {
+                    margin-top: $mg-2;
+                    display: flex;
+                    .show-avatar {
+                        width: 10%;
+                        img {
+                            width: 5rem;
+                            height: 5rem;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            border: 3px solid $color-green-0;
+                        }
+                    }
+                    .show-content {
+                        width: 67%;
+                        .show-text {
+                            background-color: #f2f3f5;
+                            color: $color-black-1;
+                            padding: $pd-1;
+                            border-radius: 15px;
+                            h3{
+                                font-size: $fs-0;
+                                margin-bottom: $mg-0;
+                            }
+                            p{
+                                font-size: $fs-0;
+                                padding-bottom: $pd-1;
+                                border-bottom: none;
+                                color: $color-black-1;
+                                margin: 0;
+                            }
+                        }
+                        .show-date {
+                            margin-top: $mg-4;
+                            span{
+                                padding-left: $pd-4;
+                                font-size: $fs-5 + 0.1;
+                                color: $color-gray-0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
