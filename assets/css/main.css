@@ -5171,4 +5171,281 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
   font-weight: bold;
   border: 1px solid green;
 }
-/*# sourceMappingURL=main.css.map */
+
+.payCourse .payCourse__container {
+  display: flex;
+  justify-content: center;
+}
+.payCourse .payCourse__container .vnd {
+  text-decoration: underline;
+}
+.payCourse .payCourse__container h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+.payCourse .payCourse__container .payCourse__left {
+  width: 65%;
+  background-color: #fff;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content {
+  width: 70%;
+  margin-left: auto;
+  padding: 0 4.8rem 0 2.4rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content h1 {
+  font-family: "Playfair Display", serif;
+  margin: 3.2rem 0;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoUser form {
+  margin-bottom: 2.4rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoUser form label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoUser form label span {
+  color: red;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoUser form input {
+  width: 100%;
+  margin-bottom: 0.8rem;
+  padding: 1rem 0.8rem;
+  background-color: #f7f9fa;
+  border: 1px solid #1c1d1f;
+  color: #3e4143;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoUser form input:focus-visible {
+  outline: none;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay {
+  margin-bottom: 4.8rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion {
+  border-bottom: 1px solid #d1d7dc;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item {
+  border: none;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item h2 {
+  margin-bottom: 0;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button {
+  border: 1px solid #d1d7dc;
+  border-bottom: none;
+  background-color: #f7f9fa;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button:focus {
+  box-shadow: none;
+  border-bottom: 1px solid #d1d7dc;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button:not(.collapsed) {
+  color: #1c1d1f;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button::after {
+  display: none;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button .accordion-form {
+  width: 100%;
+  display: flex;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button .accordion-form input {
+  margin-right: 0.8rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button .accordion-form .form-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button .accordion-form .form-info img {
+  width: 4.2rem;
+  height: 2.8rem;
+  border: 1px solid #d1d7dc;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-right: 0.2rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button .accordion-form .form-info .form-card {
+  display: flex;
+  align-items: center;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button .accordion-form .form-info .form-card span {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button .accordion-form .form-info .form-card img {
+  margin-right: 0.8rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button .accordion-form .form-info .form-card i {
+  font-size: 2rem;
+  width: 4.2rem;
+  height: 2.8rem;
+  border: 1px solid #d1d7dc;
+  border-radius: 4px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 2.7rem;
+  margin-right: 0.8rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-button .accordion-form .form-info .form-img {
+  display: flex;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body {
+  border: 1px solid #d1d7dc;
+  border-top: none;
+  border-bottom: none;
+  padding: 3.2rem 2.4rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body form .form-item {
+  margin-bottom: 1.6rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body form .form-item label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body form .form-item label span {
+  color: red;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body form .form-item input {
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body form .form-item input::placeholder {
+  font-weight: 400;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body form .form-item input:focus {
+  outline: none;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body form .form-date {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body form .form-date .date {
+  width: 48.5%;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body form .form-date .code {
+  width: 48.5%;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body form .form-last {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body form .form-last label {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__methodPay .accordion .accordion-item .accordion-body form .form-last input {
+  width: 15px;
+  height: 15px;
+  margin-right: 0.8rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoBill {
+  margin-bottom: 4.8rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoBill ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoBill ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoBill ul li .payCourse__title {
+  display: flex;
+  width: 80%;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoBill ul li .payCourse__title img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  margin-right: 0.8rem;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoBill ul li .payCourse__title p {
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoBill ul li .payCourse__price {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.payCourse .payCourse__container .payCourse__left .payCourse__content .payCourse__infoBill ul li .payCourse__price .discount span {
+  font-size: 1.4rem;
+  text-decoration: line-through;
+}
+.payCourse .payCourse__container .payCourse__right {
+  width: 50%;
+  background-color: #f7f9fa;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary {
+  width: 57%;
+  margin-right: auto;
+  padding: 0 3.2rem 0 4.8rem;
+  margin-top: 10.4rem;
+  position: sticky;
+  top: 2rem;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary .payCourse__total span {
+  font-size: 1.4rem;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary .payCourse__total .price-total {
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary .payCourse__total .discount-total {
+  display: flex;
+  justify-content: space-between;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary .payCourse__total .line {
+  margin: 1.2rem 0;
+  border-bottom: 1px solid #d1d7dc;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary .payCourse__total .money-total {
+  display: flex;
+  justify-content: space-between;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary .payCourse__total .money-total span {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary .payCourse__checkout {
+  margin: 3.2rem 0;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary .payCourse__checkout p {
+  font-size: 1.2rem;
+  color: #6a6f73;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary .payCourse__checkout .p-first {
+  margin-bottom: 0.8rem;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary .payCourse__checkout .p-first a {
+  text-decoration: none;
+  color: #177e5e;
+  font-weight: 500;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary .payCourse__checkout .p-last {
+  margin-bottom: 0;
+  text-align: center;
+}
+.payCourse .payCourse__container .payCourse__right .payCourse__summary .payCourse__checkout button {
+  width: 100%;
+  padding: 1.9rem 0;
+  border: none;
+  background-color: #177e5e;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}/*# sourceMappingURL=main.css.map */

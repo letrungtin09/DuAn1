@@ -1,0 +1,287 @@
+.payCourse {
+    .payCourse__container {
+        display: flex;
+        justify-content: center;
+        .vnd{
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: $fs-4;
+            font-weight: $fw-4;
+            margin-bottom: $mg-2;
+        }
+        .payCourse__left {
+            width: 65%;
+            background-color: $color-white-0;
+            .payCourse__content {
+                width: 70%;
+                margin-left: auto;
+                padding: 0 $pd-8 0 $pd-0;
+                h1 {
+                    font-family: "Playfair Display", serif;
+                    margin: $mg-7 0;
+                    font-size: $fs-1;
+                    font-weight: $fw-4;
+                }
+                .payCourse__infoUser {
+                    form {
+                        margin-bottom: $mg-5;
+                        label {
+                            font-size: $fs-0;
+                            font-weight: $fw-4;
+                            margin-bottom: $mg-1;
+                            span {
+                                color: red;
+                            }
+                        }
+                        input {
+                            width: 100%;
+                            margin-bottom: $mg-1;
+                            padding: $pd-3 $pd-4;
+                            background-color: $color-white-1;
+                            border: 1px solid $color-black-1;
+                            color: $color-gray-1;
+                            &:focus-visible {
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+                .payCourse__methodPay {
+                    margin-bottom: $mg-5-2 - 0.4;
+                    .accordion {
+                        border-bottom: 1px solid $color-gray-2;
+                        .accordion-item {
+                            border: none;
+                            h2{
+                                margin-bottom: 0;
+                            }
+                            .accordion-button {
+                                border: 1px solid $color-gray-2;
+                                border-bottom: none;
+                                background-color: $color-white-1;
+                                &:focus{
+                                    box-shadow: none;
+                                    border-bottom: 1px solid $color-gray-2;
+                                }
+                                &:not(.collapsed){
+                                    color: $color-black-1;
+                                }
+                                &::after {
+                                    display: none;
+                                }
+                                .accordion-form {
+                                    width: 100%;
+                                    display: flex;
+                                    input {
+                                        margin-right: $mg-1;
+                                    }
+                                    .form-info {
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        img {
+                                            width: 4.2rem;
+                                            height: 2.8rem;
+                                            border: 1px solid $color-gray-2;
+                                            border-radius: 4px;
+                                            background-color: $color-white-0;
+                                            margin-right: 0.2rem;
+                                        }
+                                        .form-card {
+                                            display: flex;
+                                            align-items: center;
+                                            span{
+                                                font-size: $fs-2;
+                                                font-weight: $fw-4;
+                                            }
+                                            img{
+                                                margin-right: $mg-1;
+                                            }
+                                            i {
+                                                font-size: $fs-4 - 0.4;
+                                                width: 4.2rem;
+                                                height: 2.8rem;
+                                                border: 1px solid $color-gray-2;
+                                                border-radius: 4px;
+                                                background-color: $color-white-0;
+                                                text-align: center;
+                                                line-height: 2.7rem;
+                                                margin-right: $mg-1;
+                                            }
+                                        }
+                                        .form-img {
+                                            display: flex;
+                                        }
+                                    }
+                                }
+                            }
+                            .accordion-body{
+                                border: 1px solid $color-gray-2;
+                                border-top: none;
+                                border-bottom: none;
+                                padding: $pd-5 $pd-0;
+                                form{
+                                    .form-item{
+                                        margin-bottom: $mg-2;
+                                        label{
+                                            font-size: $fs-0;
+                                            font-weight: $fw-2;
+                                            margin-bottom: $mg-1;
+                                            span{
+                                                color: red;
+                                            }
+                                        }
+                                        input{
+                                            width: 100%;
+                                            padding: $pd-1 $pd-7;
+                                            &::placeholder{
+                                                font-weight: $fw-1;
+                                            }
+                                            &:focus{
+                                                outline: none;
+                                            }
+                                        }
+                                    }
+                                    .form-date{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        margin-bottom: $mg-5;
+                                        .date{
+                                            width: 48.5%;
+                                        }
+                                        .code{
+                                            width: 48.5%;
+                                        }
+                                    }
+                                    .form-last{
+                                        display: flex;
+                                        align-items: center;
+                                        margin-bottom: 0;
+                                        label{
+                                            margin-bottom: 0;
+                                            font-weight: $fw-1;
+                                        }
+                                        input{
+                                            width: 15px;
+                                            height: 15px;
+                                            margin-right: $mg-1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .payCourse__infoBill{
+                    margin-bottom: $mg-5-2 - 0.4;
+                    ul{
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        li{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: $pd-4 0;
+                            .payCourse__title{
+                                display: flex;
+                                width: 80%;
+                                img{
+                                    width: 3.5rem;
+                                    height: 3.5rem;
+                                    object-fit: cover;
+                                    margin-right: $mg-1;
+                                }
+                                p{
+                                    margin-bottom: 0;
+                                    font-size: $fs-0;
+                                    font-weight: $fw-4;
+                                }
+                            }
+                            .payCourse__price{
+                                width: 20%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: end;
+                                .discount{
+                                    span{
+                                        font-size: $fs-0;
+                                        text-decoration: line-through;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .payCourse__right {
+            width: 50%;
+            background-color: $color-white-1;
+            .payCourse__summary {
+                width: 57%;
+                margin-right: auto;
+                padding: 0 $pd-5 0 $pd-8;
+                margin-top: 10.4rem;
+                position: sticky;
+                top: 2rem;
+                .payCourse__total{
+                    span{
+                        font-size: $fs-0;
+                    }
+                    .price-total{
+                        margin-bottom: $mg-1;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .discount-total{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .line{
+                        margin: $mg-0 0;
+                        border-bottom: 1px solid $color-gray-2;
+                    }
+                    .money-total{
+                        display: flex;
+                        justify-content: space-between;
+                        span{
+                            font-size: $fs-2;
+                            font-weight: $fw-4;
+                        }
+                    }
+                }
+                .payCourse__checkout{
+                    margin: $mg-7 0;
+                    p{
+                        font-size: $fs-5;
+                        color: $color-gray-0;
+                    }
+                    .p-first{
+                        margin-bottom: $mg-1;
+                        a{
+                            text-decoration: none;
+                            color: $color-green-1;
+                            font-weight: $fw-2;
+                        }
+                    }
+                    .p-last{
+                        margin-bottom: 0;
+                        text-align: center;
+                    }
+                    button{
+                        width: 100%;
+                        padding: $pd-18 - 0.1 0;
+                        border: none;
+                        background-color: $color-green-1;
+                        color: $color-white-0;
+                        font-size: $fs-2;
+                        font-weight: $fw-4;
+                        margin-bottom: $mg-1;
+                    }
+                }
+            }
+        }
+    }
+}
