@@ -19,4 +19,3 @@ function evaluate_select_courseId($courseId){
 
 
 ?>
-?>

@@ -87,8 +87,12 @@
                     </div>
                     <div class="owl-carousel owl-theme courses__item">
                     <?php
-                        $billByUserId = bill_select_by_userId($_SESSION['user']['userId']);
-                        $detailBillByIdBill = detailBill_select_by_idBill($billByUserId['idBill']);
+                    if(isset($_SESSION['user'])){
+                        if(bill_exist($_SESSION['user']['userId'])){
+                            $billByUserId = bill_select_by_userId($_SESSION['user']['userId']);
+                            $detailBillByIdBill = detailBill_select_by_idBill($billByUserId['idBill']);
+                        }
+                    }
                         foreach ($Courses as $courseal){
                         ?>
                         <div class="card">
@@ -135,20 +139,47 @@
                                 <div class="card-btn row">
                                     <?php
                                     $checkBuy = "";
-                                    foreach($detailBillByIdBill as $coursebuied){
-                                        if($coursebuied['courseId'] == $courseal['courseId']){
-                                            $checkBuy = 1;
-                                            break;
+                                    $checkRegister = "";
+                                    if(isset($courseRegisted)){
+                                        foreach($courseRegisted as $courseRegis){
+                                            if($courseRegis['courseId'] == $courseal['courseId']){
+                                                $checkRegister = 1;
+                                                break;
+                                            }
                                         }
                                     }
-                                    if($checkBuy == 1){?>
-                                    <a id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
-                                    <button class="add-like col-2">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </button>
-                                    <?php
-                                    } else{?>
-                                    <a href="<?=$base_url?>?mod=bill&act=addBill&course=<?=$courseal['courseId']?>" class="add-cart col-9 card-btn_addbill">Thêm vào giỏ hàng</a>
+                                    if(isset($detailBillByIdBill)){
+                                        foreach($detailBillByIdBill as $coursebuied){
+                                            if($coursebuied['courseId'] == $courseal['courseId']){
+                                                $checkBuy = 1;
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    if(isset($_SESSION['user'])){
+                                        if($checkRegister == 1){?>
+                                            <a id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đang học</a>
+                                            <button class="add-like col-2">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </button>
+                                        <?php
+                                        } else{
+                                            if($checkBuy == 1){?>
+                                                <a href="<?=$base_url?>?mod=bill&act=cartBill" id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
+                                                <button class="add-like col-2">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </button>
+                                            <?php
+                                            } else{?>
+                                                <a href="<?=$base_url?>?mod=bill&act=addBill&course=<?=$courseal['courseId']?>" class="add-cart col-9 card-btn_addbill">Thêm vào giỏ hàng</a>
+                                                <button class="add-like col-2">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </button>
+                                            <?php
+                                            }
+                                        }
+                                    }else{?>
+                                    <a href="<?=$base_url?>?mod=user&act=login" class="add-cart col-9">Thêm vào giỏ hàng</a>
                                     <button class="add-like col-2">
                                         <i class="fa-regular fa-heart"></i>
                                     </button>
@@ -280,6 +311,12 @@
         <h2>Các khóa học bán chạy nhất</h2>
         <div class="owl-carousel owl-theme bestseller__item">
             <?php
+             if(isset($_SESSION['user'])){
+                 if(bill_exist($_SESSION['user']['userId'])){
+                     $billByUserId = bill_select_by_userId($_SESSION['user']['userId']);
+                     $detailBillByIdBilltop10 = detailBill_select_by_idBill($billByUserId['idBill']);
+                 }
+             }
                 foreach ($allCourseTop10 as $courseTop10) {
                 ?>
                 <div class="card">
@@ -321,10 +358,55 @@
                         </div>
                         <p><?=$courseTop10['description']?></p>
                         <div class="card-btn row">
-                            <a href="<?=$base_url?>?mod=bill&act=addBill&course=<?=$courseTop10['courseId']?>" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                        <?php
+                            $checkBuytop10 = "";
+                            $checkRegistertop10 = "";
+                            if(isset($courseRegisted)){
+                                foreach($courseRegisted as $courseRegis){
+                                    if($courseRegis['courseId'] == $courseTop10['courseId']){
+                                        $checkRegistertop10 = 1;
+                                        break;
+                                    }
+                                }
+                            }
+                            if(isset($detailBillByIdBilltop10)){
+                                foreach($detailBillByIdBilltop10 as $coursebuied){
+                                    if($coursebuied['courseId'] == $courseTop10['courseId']){
+                                        $checkBuytop10 = 1;
+                                        break;
+                                    }
+                                }
+                            }
+                            if(isset($_SESSION['user'])){
+                                if($checkRegistertop10 == 1){?>
+                                    <a id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đang học</a>
+                                    <button class="add-like col-2">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                <?php
+                                } else{
+                                    if($checkBuytop10 == 1){?>
+                                        <a href="<?=$base_url?>?mod=bill&act=cartBill" id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
+                                        <button class="add-like col-2">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    <?php
+                                    } else{?>
+                                        <a href="<?=$base_url?>?mod=bill&act=addBill&course=<?=$courseTop10['courseId']?>" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                                        <button class="add-like col-2">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    <?php
+                                    }
+                                }
+                            }else{?>
+                            <a href="<?=$base_url?>?mod=user&act=login" class="add-cart col-9">Thêm vào giỏ hàng</a>
                             <button class="add-like col-2">
                                 <i class="fa-regular fa-heart"></i>
                             </button>
+                            <?php
+                            }
+                            ?>  
                         </div>
                     </div>
                 </div>
