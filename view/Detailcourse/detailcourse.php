@@ -15,6 +15,7 @@
                             <p class="sale-rating">Giảm <?=$courseSlectbyid['sale']?>%</p>
                         </div>
                         <div class="info-btn">
+                            
                             <a href="<?=$base_url?>?mod=detailcourse&act=addBill&course=<?=$courseSlectbyid['courseId']?>" class="add-to-cart">Thêm vào giỏ hàng</a>
                             <button class="add-wishlist"><i class="fa-regular fa-heart"></i></button>
                         </div>
@@ -260,7 +261,7 @@
                                     <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseSameTeacher['courseId']?>">
                                         <h5 class="card-title"><?=$courseSameTeacher['title']?></h5>
                                     </a>
-                                    <?php $user = user_select_by_id($userId); ?>
+                                    <?php $user = user_select_by_id($courseSameTeacher['userId']); ?>
                                     <p class="card-teacher"><?=$user['fullName']?></p>
                                     <div class="card-stars">
                                         <span class="card-rate">4.5</span>

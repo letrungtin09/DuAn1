@@ -5,16 +5,14 @@
     require_once 'model/evaluate.php';
     require_once 'model/news.php';
     if(isset($_GET['course'])){
-        foreach ($_SESSION as $sec){
-        }
-        if(bill_exist($sec['userId'])){
-            $idBillByIdUser = bill_select_by_userId($sec['userId']);
+        if(bill_exist($_SESSION['user']['userId'])){
+            $idBillByIdUser = bill_select_by_userId($_SESSION['user']['userId']);
             extract($idBillByIdUser);
             detailBill_insert($idBill, $_GET['course']);
             include_once("view/Bill/cart.php");
         }else{
-            bill_insert($sec['userId']);
-            $idBillByIdUser = bill_select_by_userId($sec['userId']);
+            bill_insert($_SESSION['user']['userId']);
+            $idBillByIdUser = bill_select_by_userId($_SESSION['user']['userId']);
             extract($idBillByIdUser);
             detailBill_insert($idBill, $_GET['course']);
             include_once("view/Bill/cart.php");

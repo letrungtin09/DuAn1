@@ -120,7 +120,6 @@
                         <?php
                         }
                         ?>
-                        
                     </ul>
                 </div>
                 <div class="dropdown header_favorite">
