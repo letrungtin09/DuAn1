@@ -56,6 +56,7 @@ $('.bestseller__item').on('changed.owl.carousel', function(event) {
 	$(this).find('.owl-nav').removeClass('disabled');
 });
 
+// COURSE CONTENT
 function anhien(){
     var fillter = document.getElementById("searchCourse_content-filter-id");
     if(fillter.style.display == "none") fillter.style.display = "block";
@@ -75,4 +76,14 @@ function hienthem(){
         shadowText.style.display = "none";
     }
     
+}
+
+// PAY COURSE
+function checkedInput1(){
+    document.getElementById("check-1").checked = true;
+    document.getElementById("check-2").checked = false;
+}
+function checkedInput2(){
+    document.getElementById("check-1").checked = false;
+    document.getElementById("check-2").checked = true;
 }
