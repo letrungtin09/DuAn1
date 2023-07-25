@@ -52,14 +52,26 @@
 .content-qt-admin {
     .container-qt {
         padding: 2%;
-        .row{
-            .col-2{
+
+        .row {
+            .col-2 {
+
                 // padding: 1% 2%;
-                .table{
+                .table {
                     text-align: center;
-                    tbody{
-                        tr{
-                            td{
+
+                    thead {
+                        tr {
+                            th {
+                                background: #ebebeb !important;
+                                line-height: 54px;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            td {
                                 line-height: 54px;
                             }
                         }
@@ -67,5 +79,18 @@
                 }
             }
         }
+    }
+}
+
+.chart-admin-Sta {
+    width: 85%;
+    float: left;
+
+    #myChart {
+        display: block;
+        box-sizing: border-box;
+        height: 500px;
+        width: 500px;
+        margin: auto;
     }
 }

@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/main.css">
+    <!-- Canvas -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -168,50 +171,50 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td scope="row">Font-end</td>
-                                <td>7</td>
+                                <td scope="row" class="name-course">Font-end</td>
+                                <td class="so-luong">7</td>
                                 <td>950.000đ</td>
                                 <td>3.500.000đ</td>
                                 <td>2.270.000đ</td>
                             </tr>
                             <tr>
-                                <td scope="row">Font-end</td>
-                                <td>7</td>
+                                <td scope="row" class="name-course">Back-end</td>
+                                <td class="so-luong">7</td>
                                 <td>950.000đ</td>
                                 <td>3.500.000đ</td>
                                 <td>2.270.000đ</td>
                             </tr>
                             <tr>
-                                <td scope="row">Font-end</td>
-                                <td>7</td>
+                                <td scope="row" class="name-course">Java</td>
+                                <td class="so-luong">7</td>
                                 <td>950.000đ</td>
                                 <td>3.500.000đ</td>
                                 <td>2.270.000đ</td>
                             </tr>
                             <tr>
-                                <td scope="row">Font-end</td>
-                                <td>7</td>
+                                <td scope="row" class="name-course">Mobile</td>
+                                <td class="so-luong">7</td>
                                 <td>950.000đ</td>
                                 <td>3.500.000đ</td>
                                 <td>2.270.000đ</td>
                             </tr>
                             <tr>
-                                <td scope="row">Font-end</td>
-                                <td>7</td>
+                                <td scope="row" class="name-course">Python</td>
+                                <td class="so-luong">7</td>
                                 <td>950.000đ</td>
                                 <td>3.500.000đ</td>
                                 <td>2.270.000đ</td>
                             </tr>
                             <tr>
-                                <td scope="row">Font-end</td>
-                                <td>7</td>
+                                <td scope="row" class="name-course">PHP</td>
+                                <td class="so-luong">7</td>
                                 <td>950.000đ</td>
                                 <td>3.500.000đ</td>
                                 <td>2.270.000đ</td>
                             </tr>
                             <tr>
-                                <td scope="row">Font-end</td>
-                                <td>7</td>
+                                <td scope="row" class="name-course">SQL</td>
+                                <td class="so-luong">7</td>
                                 <td>950.000đ</td>
                                 <td>3.500.000đ</td>
                                 <td>2.270.000đ</td>
@@ -222,6 +225,10 @@
             </div>
         </div>
     </section>
+    <section class="chart-admin-Sta">
+        <canvas id="myChart" width="300" height="400"></canvas>
+    </section>
+
     <section class="next-revious next-revious-admin">
         <nav aria-label="Page navigation example">
             <ul class="pagination">
@@ -356,4 +363,42 @@
 
     // Gán chiều cao của website cho siderbar
     document.querySelector('.sidebar').style.height = fullHeight - footerHeight + 'px';
+</script>
+<script>
+
+    // Sử dụng querySelectorAll để lấy tất cả các phần tử có class "name-course"
+    const nameCourseElements = document.querySelectorAll('.name-course');
+    const soLuongCourseElements = document.querySelectorAll('.so-luong');
+
+    // Khai báo một mảng để lưu trữ các giá trị
+    const nameCourseValues = [];
+    const soLuongCourseValues = [];
+
+    // Lặp qua các phần tử và lấy giá trị từ mỗi phần tử
+    nameCourseElements.forEach((element) => {
+        nameCourseValues.push(element.textContent.trim());
+    });
+    soLuongCourseElements.forEach((element) => {
+        soLuongCourseValues.push(element.textContent.trim());
+    });
+
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: [nameCourseValues],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [parseInt(soLuongCourseValues)],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+                ],
+                hoverOffset: 4,
+                borderWidth: 1
+            }]
+        },
+    });
 </script>
