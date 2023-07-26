@@ -27,207 +27,212 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header class="header-sideHead header-sideHead-admin">
-        <nav class="navbar navbar-expand-lg nav-slidebar">
-            <div class="header_search">
-                <form class="d-flex" role="search">
-                    <button class="btn btn-outline-success header_search_btn" type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                    <input class="header_search_input me-2" placeholder="Tìm kiếm nội dung bất kì">
-                </form>
-            </div>
-        </nav>
-        <nav class="navbar navbar-expand-lg nav_header">
-            <div class="container_header">
-                <button class="header_dark">
-                    <i class="fa-regular fa-moon"></i>
-                </button>
-                <div class="dropdown dropdown_nav_user">
-                    <!-- modal của giảng viên -->
-                    <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="/assets/img/users/teacher.jpg" alt="">
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-menu-header">
-                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+    <div class="container-all">
+        <div class="col-left">
+            <section class="sidebar sidebar-qt-admin">
+                <div class="container container-sidebar">
+                    <div class="row">
+                        <div class="col-sm siderbar-logo">
+                            <img src="./img/logo-white.png" alt="">
+                        </div>
+                        <div class="col-sm siderbar-heading">
+                            <img src="./img/adminStatistical/admin.png" alt="">
+                            <h1>TRANG QUẢN TRỊ</h1>
+                        </div>
+                        <div class="col-sm sidebar-content">
+                            <ul>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon1.png" alt="">
+                                        <a href="">Thống kê</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon2.png" alt="">
+                                        <a href="">Loại khóa học</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon3.png" alt="">
+                                        <a href="">Khóa học</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon4.png" alt="">
+                                        <a href="">Tài khoản</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon5.png" alt="">
+                                        <a href="">Bài viết</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon6.png" alt="">
+                                        <a href="">Đơn hàng</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon7.png" alt="">
+                                        <a href="">Bình luận</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon8.png" alt="">
+                                        <a href="">Đánh giá</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button>Quay lại trang chủ</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-right">
+            <!-- HEADER -->
+            <header class="header-sideHead header-sideHead-admin">
+                <nav class="navbar navbar-expand-lg nav-slidebar">
+                    <div class="header_search">
+                        <form class="d-flex" role="search">
+                            <button class="btn btn-outline-success header_search_btn" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input class="header_search_input me-2" placeholder="Tìm kiếm nội dung bất kì">
+                        </form>
+                    </div>
+                </nav>
+                <nav class="navbar navbar-expand-lg nav_header">
+                    <div class="container_header">
+                        <button class="header_dark">
+                            <i class="fa-regular fa-moon"></i>
+                        </button>
+                        <div class="dropdown dropdown_nav_user">
+                            <!-- modal của giảng viên -->
+                            <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/assets/img/users/teacher.jpg" alt="">
                             </a>
-                            <div>
-                                <h6>Lê Trung Tín</h6>
-                                <p>duytt18897@gmail.com</p>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-menu-header">
+                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="/assets/img/users/teacher.jpg" alt="">
+                                    </a>
+                                    <div>
+                                        <h6>Lê Trung Tín</h6>
+                                        <p>duytt18897@gmail.com</p>
+                                    </div>
+                                </div>
+                                <ul class="dropdown-menu-mid">
+                                    <li><a href="" class="">Quá trình học tập của tôi</a></li>
+                                    <li><a href="" class="">Giỏ hàng của tôi</a></li>
+                                    <li><a href="" class="">Danh sách yêu thích</a></li>
+                                    <li><a href="" class="">Bảng điều khiển của giảng viên</a></li>
+                                </ul>
+                                <ul class="dropdown-menu-mid">
+                                    <li><a href="" class="">Cập nhập tài khoản</a></li>
+                                    <li><a href="" class="">Đổi mật khẩu</a></li>
+                                    <li><a href="" class="">Lịch sử mua</a></li>
+                                </ul>
+                                <div class="dropdown-menu-end">
+                                    <a href="" class="">Đăng xuất</a>
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                </div>
                             </div>
                         </div>
-                        <ul class="dropdown-menu-mid">
-                            <li><a href="" class="">Quá trình học tập của tôi</a></li>
-                            <li><a href="" class="">Giỏ hàng của tôi</a></li>
-                            <li><a href="" class="">Danh sách yêu thích</a></li>
-                            <li><a href="" class="">Bảng điều khiển của giảng viên</a></li>
-                        </ul>
-                        <ul class="dropdown-menu-mid">
-                            <li><a href="" class="">Cập nhập tài khoản</a></li>
-                            <li><a href="" class="">Đổi mật khẩu</a></li>
-                            <li><a href="" class="">Lịch sử mua</a></li>
-                        </ul>
-                        <div class="dropdown-menu-end">
-                            <a href="" class="">Đăng xuất</a>
-                            <i class="fa-solid fa-right-from-bracket"></i>
+                    </div>
+                </nav>
+            </header>
+
+            <section class="content-qt content-qt-admin">
+                <div class="container container-qt">
+                    <div class="row">
+                        <div class="col-sm col-1">
+                            <div class="col-1-left">
+                                <h1>THỐNG KÊ KHÓA HỌC</h1>
+                            </div>
+
+                        </div>
+                        <div class="col-sm col-2">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">LOẠI KHÓA HỌC</th>
+                                        <th scope="col">SỐ LƯỢNG KHÓA HỌC</th>
+                                        <th scope="col">GIÁ THẤP NHẤT</th>
+                                        <th scope="col">GIÁ CAO NHẤT</th>
+                                        <th scope="col">GIÁ TRUNG BÌNH</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row" class="name-course">Font-end</td>
+                                        <td class="so-luong">17</td>
+                                        <td>950.000đ</td>
+                                        <td>3.500.000đ</td>
+                                        <td>2.270.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row" class="name-course">Back-end</td>
+                                        <td class="so-luong">7</td>
+                                        <td>950.000đ</td>
+                                        <td>3.500.000đ</td>
+                                        <td>2.270.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row" class="name-course">Java</td>
+                                        <td class="so-luong">22</td>
+                                        <td>950.000đ</td>
+                                        <td>3.500.000đ</td>
+                                        <td>2.270.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row" class="name-course">Mobile</td>
+                                        <td class="so-luong">9</td>
+                                        <td>950.000đ</td>
+                                        <td>3.500.000đ</td>
+                                        <td>2.270.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row" class="name-course">Python</td>
+                                        <td class="so-luong">11</td>
+                                        <td>950.000đ</td>
+                                        <td>3.500.000đ</td>
+                                        <td>2.270.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row" class="name-course">PHP</td>
+                                        <td class="so-luong">7</td>
+                                        <td>950.000đ</td>
+                                        <td>3.500.000đ</td>
+                                        <td>2.270.000đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row" class="name-course">SQL</td>
+                                        <td class="so-luong">7</td>
+                                        <td>950.000đ</td>
+                                        <td>3.500.000đ</td>
+                                        <td>2.270.000đ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <section class="sidebar sidebar-qt-admin">
-        <div class="container container-sidebar">
-            <div class="row">
-                <div class="col-sm siderbar-logo">
-                    <img src="./img/logo-white.png" alt="">
-                </div>
-                <div class="col-sm siderbar-heading">
-                    <img src="./img/adminStatistical/admin.png" alt="">
-                    <h1>TRANG QUẢN TRỊ</h1>
-                </div>
-                <div class="col-sm sidebar-content">
-                    <ul>
-                        <li>
-                            <div class="txt-sidebar">
-                                <img src="./img/adminStatistical/icon1.png" alt="">
-                                <a href="">Thống kê</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="txt-sidebar">
-                                <img src="./img/adminStatistical/icon2.png" alt="">
-                                <a href="">Loại khóa học</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="txt-sidebar">
-                                <img src="./img/adminStatistical/icon3.png" alt="">
-                                <a href="">Khóa học</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="txt-sidebar">
-                                <img src="./img/adminStatistical/icon4.png" alt="">
-                                <a href="">Tài khoản</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="txt-sidebar">
-                                <img src="./img/adminStatistical/icon5.png" alt="">
-                                <a href="">Bài viết</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="txt-sidebar">
-                                <img src="./img/adminStatistical/icon6.png" alt="">
-                                <a href="">Đơn hàng</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="txt-sidebar">
-                                <img src="./img/adminStatistical/icon7.png" alt="">
-                                <a href="">Bình luận</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="txt-sidebar">
-                                <img src="./img/adminStatistical/icon8.png" alt="">
-                                <a href="">Đánh giá</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <button>Quay lại trang chủ</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="content-qt content-qt-admin">
-        <div class="container container-qt">
-            <div class="row">
-                <div class="col-sm col-1">
-                    <div class="col-1-left">
-                        <h1>THỐNG KÊ KHÓA HỌC</h1>
-                    </div>
+            </section>
+            <section class="chart-admin-Sta">
+                <canvas id="myChart"></canvas>
+            </section>
 
-                </div>
-                <div class="col-sm col-2">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">LOẠI KHÓA HỌC</th>
-                                <th scope="col">SỐ LƯỢNG KHÓA HỌC</th>
-                                <th scope="col">GIÁ THẤP NHẤT</th>
-                                <th scope="col">GIÁ CAO NHẤT</th>
-                                <th scope="col">GIÁ TRUNG BÌNH</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="row" class="name-course">Font-end</td>
-                                <td class="so-luong">17</td>
-                                <td>950.000đ</td>
-                                <td>3.500.000đ</td>
-                                <td>2.270.000đ</td>
-                            </tr>
-                            <tr>
-                                <td scope="row" class="name-course">Back-end</td>
-                                <td class="so-luong">7</td>
-                                <td>950.000đ</td>
-                                <td>3.500.000đ</td>
-                                <td>2.270.000đ</td>
-                            </tr>
-                            <tr>
-                                <td scope="row" class="name-course">Java</td>
-                                <td class="so-luong">22</td>
-                                <td>950.000đ</td>
-                                <td>3.500.000đ</td>
-                                <td>2.270.000đ</td>
-                            </tr>
-                            <tr>
-                                <td scope="row" class="name-course">Mobile</td>
-                                <td class="so-luong">9</td>
-                                <td>950.000đ</td>
-                                <td>3.500.000đ</td>
-                                <td>2.270.000đ</td>
-                            </tr>
-                            <tr>
-                                <td scope="row" class="name-course">Python</td>
-                                <td class="so-luong">11</td>
-                                <td>950.000đ</td>
-                                <td>3.500.000đ</td>
-                                <td>2.270.000đ</td>
-                            </tr>
-                            <tr>
-                                <td scope="row" class="name-course">PHP</td>
-                                <td class="so-luong">7</td>
-                                <td>950.000đ</td>
-                                <td>3.500.000đ</td>
-                                <td>2.270.000đ</td>
-                            </tr>
-                            <tr>
-                                <td scope="row" class="name-course">SQL</td>
-                                <td class="so-luong">7</td>
-                                <td>950.000đ</td>
-                                <td>3.500.000đ</td>
-                                <td>2.270.000đ</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="chart-admin-Sta">
-        <canvas id="myChart" width="300" height="400"></canvas>
-    </section>
-
-    <section class="next-revious next-revious-admin">
+            <!-- <section class="next-revious next-revious-admin">
         <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <li class="page-item">
@@ -247,18 +252,22 @@
                 </li>
             </ul>
         </nav>
-    </section>
+    </section> -->
 
-    <footer class="footer-admin">
-        <div class="footer_content">
-            <div class="ft-logo">
-                <img src="./img/logo-white.png" alt="">
-            </div>
-            <div class="text-content">
-                <p>@ 2023 T-Demy, Inc</p>
-            </div>
+            <footer class="footer-admin">
+                <div class="footer-content">
+                    <div class="ft-logo">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                    <div class="text-content">
+                        <p>@ 2023 T-Demy, Inc</p>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </footer>
+
+    </div>
+
 
 
     <!-- JQuery -->
@@ -277,15 +286,7 @@
 <!--  -->
 <!--  -->
 <!-- CODE GÁN CHIỀU CAO CHO SIDEBAR -->
-<script>
-    /// Lấy phần tử <html> của trang web
-    const htmlElement = document.documentElement;
 
-    // Lấy tổng chiều cao của trang web (tổng chiều cao của tài liệu)
-    const totalHeight = htmlElement.scrollHeight;
-    // Gán chiều cao của website cho siderbar
-    document.querySelector('.sidebar').style.height = totalHeight + 'px';
-</script>
 <!--  -->
 <!--  -->
 <!--  -->

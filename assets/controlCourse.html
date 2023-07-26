@@ -24,9 +24,44 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header class="header-sideHead">
-        <!-- <nav class="navbar navbar-expand-lg nav-slidebar">
+    <div class="container-all">
+        <div class="col-left">
+            <section class="sidebar sidebar-controlCourse">
+                <div class="container container-sidebar">
+                    <div class="row">
+                        <div class="col-sm siderbar-logo">
+                            <img src="./img/logo-white.png" alt="">
+                        </div>
+                        <div class="col-sm sidebar-content">
+                            <ul>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/controlCourses/icon1.png" alt="">
+                                        <a href="">Khóa học</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/controlCourses/icon2.png" alt="">
+                                        <a href="">Đánh giá</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/controlCourses/icon3.png" alt="">
+                                        <a href="">Thống kê</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-right">
+            <!-- HEADER -->
+            <header class="header-sideHead">
+                <!-- <nav class="navbar navbar-expand-lg nav-slidebar">
             <div class="slidebar-logo">
                 <img src="./img/logo-white.png" alt="">
             </div>
@@ -34,269 +69,240 @@
 
             </div>
         </nav> -->
-        <nav class="navbar navbar-expand-lg nav_header">
-            <div class="container_header">
-                <div class="nav-item header_teaching">
-                    <a class="nav-link" aria-current="page" href="#">Học viên</a>
-                </div>
+                <nav class="navbar navbar-expand-lg nav_header">
+                    <div class="container_header">
+                        <div class="nav-item header_teaching">
+                            <a class="nav-link" aria-current="page" href="#">Học viên</a>
+                        </div>
 
-                <button class="header_dark">
-                    <i class="fa-regular fa-moon"></i>
-                </button>
-                <div class="dropdown dropdown_nav_user">
-                    <!-- modal của giảng viên -->
-                    <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="/assets/img/users/teacher.jpg" alt="">
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="dropdown-menu-header">
-                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                        <button class="header_dark">
+                            <i class="fa-regular fa-moon"></i>
+                        </button>
+                        <div class="dropdown dropdown_nav_user">
+                            <!-- modal của giảng viên -->
+                            <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/assets/img/users/teacher.jpg" alt="">
                             </a>
-                            <div>
-                                <h6>Lê Trung Tín</h6>
-                                <p>duytt18897@gmail.com</p>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-menu-header">
+                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="/assets/img/users/teacher.jpg" alt="">
+                                    </a>
+                                    <div>
+                                        <h6>Lê Trung Tín</h6>
+                                        <p>duytt18897@gmail.com</p>
+                                    </div>
+                                </div>
+                                <ul class="dropdown-menu-mid">
+                                    <li><a href="" class="">Quá trình học tập của tôi</a></li>
+                                    <li><a href="" class="">Giỏ hàng của tôi</a></li>
+                                    <li><a href="" class="">Danh sách yêu thích</a></li>
+                                    <li><a href="" class="">Bảng điều khiển của giảng viên</a></li>
+                                </ul>
+                                <ul class="dropdown-menu-mid">
+                                    <li><a href="" class="">Cập nhập tài khoản</a></li>
+                                    <li><a href="" class="">Đổi mật khẩu</a></li>
+                                    <li><a href="" class="">Lịch sử mua</a></li>
+                                </ul>
+                                <div class="dropdown-menu-end">
+                                    <a href="" class="">Đăng xuất</a>
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                </div>
                             </div>
                         </div>
-                        <ul class="dropdown-menu-mid">
-                            <li><a href="" class="">Quá trình học tập của tôi</a></li>
-                            <li><a href="" class="">Giỏ hàng của tôi</a></li>
-                            <li><a href="" class="">Danh sách yêu thích</a></li>
-                            <li><a href="" class="">Bảng điều khiển của giảng viên</a></li>
-                        </ul>
-                        <ul class="dropdown-menu-mid">
-                            <li><a href="" class="">Cập nhập tài khoản</a></li>
-                            <li><a href="" class="">Đổi mật khẩu</a></li>
-                            <li><a href="" class="">Lịch sử mua</a></li>
-                        </ul>
-                        <div class="dropdown-menu-end">
-                            <a href="" class="">Đăng xuất</a>
-                            <i class="fa-solid fa-right-from-bracket"></i>
+                    </div>
+                </nav>
+            </header>
+
+            <section class="content-qt control-controlCourse">
+                <div class="container container-qt">
+                    <div class="row">
+                        <div class="col-sm col-1">
+                            <div class="col-1-left">
+                                <h1>QUẢN LÝ KHÓA HỌC CỦA BẠN</h1>
+                                <form action="" class="form-search-ctr">
+                                    <input type="text" class="input-ctr-search" name="" placeholder="Tìm kiếm khóa học"
+                                        id="">
+                                    <button type="submit"><img src="./img/controlCourses/icon4.png" alt=""></button>
+                                </form>
+                                <form action="" class="form-filter-ctr">
+                                    <select>
+                                        <option>Mới nhất</option>
+                                        <option>Cũ nhất</option>
+                                        <option>Xem nhiều nhất</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="col-1-right">
+                                <a type="button" class="btn btn-success">+ Thêm khóa học</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <section class="sidebar sidebar-controlCourse">
-        <div class="container container-sidebar">
-            <div class="row">
-                <div class="col-sm siderbar-logo">
-                    <img src="./img/logo-white.png" alt="">
-                </div>
-                <div class="col-sm sidebar-content">
-                    <ul>
-                        <li>
-                            <div class="txt-sidebar">
-                                <img src="./img/controlCourses/icon1.png" alt="">
-                                <a href="">Khóa học</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="txt-sidebar">
-                                <img src="./img/controlCourses/icon2.png" alt="">
-                                <a href="">Đánh giá</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="txt-sidebar">
-                                <img src="./img/controlCourses/icon3.png" alt="">
-                                <a href="">Thống kê</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="content-qt control-controlCourse">
-        <div class="container container-qt">
-            <div class="row">
-                <div class="col-sm col-1">
-                    <div class="col-1-left">
-                        <h1>QUẢN LÝ KHÓA HỌC CỦA BẠN</h1>
-                        <form action="" class="form-search-ctr">
-                            <input type="text" class="input-ctr-search" name="" placeholder="Tìm kiếm khóa học" id="">
-                            <button type="submit"><img src="./img/controlCourses/icon4.png" alt=""></button>
-                        </form>
-                        <form action="" class="form-filter-ctr">
-                            <select>
-                                <option>Mới nhất</option>
-                                <option>Cũ nhất</option>
-                                <option>Xem nhiều nhất</option>
-                            </select>
-                        </form>
-                    </div>
-                    <div class="col-1-right">
-                        <a type="button" class="btn btn-success">+ Thêm khóa học</a>
-                    </div>
-                </div>
-                <div class="col-sm col-2">
+                        <div class="col-sm col-2">
 
-                    <section class="header-infor td-container">
-                        <div class="header-infor-cart">
+                            <section class="header-infor td-container">
+                                <div class="header-infor-cart">
 
-                            <h2 class="cart-filters">Bạn đã đăng <span>4</span> khóa học</h2>
-                        </div>
-                        <div class="all-body-cart">
-                            <div class="body-info-cart">
-                                <div class="cart-info">
-                                    <div class="cart-info-img">
-                                        <img src="/assets/img/courses/python5.jpg" alt="">
-                                    </div>
-                                    <div class="cart-info-details">
-                                        <h1 class="cart-info-name">TypeScript cơ bản cho người mới</h1>
-                                        <p class="cart-info-author">Hỏi dân IY với Erik</p>
-                                        <div class="cart-info-rate">
-                                            <span class="button-best-seller">Bán chạy nhất</span>
-                                            <span class="detail__rate">5,0</span>
-                                            <span class="detail__icon">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                            <span class="detail__evaluate">(17.000 đánh giá)</span>
-                                        </div>
-                                        <ul class="cart-info-course">
-                                            <li class="course time">Tổng số 2 giờ</li>
-                                            <li class="course lessons">12 bài giảng</li>
-                                            <li class="course level">Tất cả trình độ</li>
-                                        </ul>
-                                    </div>
-                                    <div class="cart-info-price">
-
-                                        <span class="price">2.499.000 <span class="vnd">đ</span></span>
-                                        <span class="sale">1.490.000 <span class="vnd">đ</span><i
-                                                class="fa-solid fa-tag"></i></span>
-                                        <span class="date">17/07/2023</span>
-                                    </div>
-                                    <div class="cart-info-control">
-                                        <button type="button" class="btn btn-success">Chi tiết khóa học</button>
-                                        <button type="button" class="btn btn-warning">Sửa khóa học</button>
-                                        <button type="button" class="btn btn-danger">Xóa khóa học</button>
-                                    </div>
+                                    <h2 class="cart-filters">Bạn đã đăng <span>4</span> khóa học</h2>
                                 </div>
+                                <div class="all-body-cart">
+                                    <div class="body-info-cart">
+                                        <div class="cart-info">
+                                            <div class="cart-info-img">
+                                                <img src="/assets/img/courses/python5.jpg" alt="">
+                                            </div>
+                                            <div class="cart-info-details">
+                                                <h1 class="cart-info-name">TypeScript cơ bản cho người mới</h1>
+                                                <p class="cart-info-author">Hỏi dân IY với Erik</p>
+                                                <div class="cart-info-rate">
+                                                    <span class="button-best-seller">Bán chạy nhất</span>
+                                                    <span class="detail__rate">5,0</span>
+                                                    <span class="detail__icon">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </span>
+                                                    <span class="detail__evaluate">(17.000 đánh giá)</span>
+                                                </div>
+                                                <ul class="cart-info-course">
+                                                    <li class="course time">Tổng số 2 giờ</li>
+                                                    <li class="course lessons">12 bài giảng</li>
+                                                    <li class="course level">Tất cả trình độ</li>
+                                                </ul>
+                                            </div>
+                                            <div class="cart-info-price">
 
-                                <div class="cart-info">
-                                    <div class="cart-info-img">
-                                        <img src="/assets/img/courses/fe5.jpg" alt="">
-                                    </div>
-                                    <div class="cart-info-details">
-                                        <h1 class="cart-info-name">TypeScript cơ bản cho người mới</h1>
-                                        <p class="cart-info-author">Hỏi dân IY với Erik</p>
-                                        <div class="cart-info-rate">
-                                            <span class="button-best-seller">Bán chạy nhất</span>
-                                            <span class="detail__rate">5,0</span>
-                                            <span class="detail__icon">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                            <span class="detail__evaluate">(17.000 đánh giá)</span>
+                                                <span class="price">2.499.000 <span class="vnd">đ</span></span>
+                                                <span class="sale">1.490.000 <span class="vnd">đ</span><i
+                                                        class="fa-solid fa-tag"></i></span>
+                                                <span class="date">17/07/2023</span>
+                                            </div>
+                                            <div class="cart-info-control">
+                                                <button type="button" class="btn btn-success">Chi tiết khóa học</button>
+                                                <button type="button" class="btn btn-warning">Sửa khóa học</button>
+                                                <button type="button" class="btn btn-danger">Xóa khóa học</button>
+                                            </div>
                                         </div>
-                                        <ul class="cart-info-course">
-                                            <li class="course time">Tổng số 2 giờ</li>
-                                            <li class="course lessons">12 bài giảng</li>
-                                            <li class="course level">Tất cả trình độ</li>
-                                        </ul>
-                                    </div>
-                                    <div class="cart-info-price">
 
-                                        <span class="price">2.499.000 <span class="vnd">đ</span></span>
-                                        <span class="sale">1.490.000 <span class="vnd">đ</span><i
-                                                class="fa-solid fa-tag"></i></span>
-                                        <span class="date">17/07/2023</span>
-                                    </div>
-                                    <div class="cart-info-control">
-                                        <button type="button" class="btn btn-success">Chi tiết khóa học</button>
-                                        <button type="button" class="btn btn-warning">Sửa khóa học</button>
-                                        <button type="button" class="btn btn-danger">Xóa khóa học</button>
-                                    </div>
-                                </div>
-                                <div class="cart-info">
-                                    <div class="cart-info-img">
-                                        <img src="/assets/img/courses/mongodb5.jpg" alt="">
-                                    </div>
-                                    <div class="cart-info-details">
-                                        <h1 class="cart-info-name">TypeScript cơ bản cho người mới</h1>
-                                        <p class="cart-info-author">Hỏi dân IY với Erik</p>
-                                        <div class="cart-info-rate">
-                                            <span class="detail__rate">5,0</span>
-                                            <span class="detail__icon">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                            <span class="detail__evaluate">(17.000 đánh giá)</span>
+                                        <div class="cart-info">
+                                            <div class="cart-info-img">
+                                                <img src="/assets/img/courses/fe5.jpg" alt="">
+                                            </div>
+                                            <div class="cart-info-details">
+                                                <h1 class="cart-info-name">TypeScript cơ bản cho người mới</h1>
+                                                <p class="cart-info-author">Hỏi dân IY với Erik</p>
+                                                <div class="cart-info-rate">
+                                                    <span class="button-best-seller">Bán chạy nhất</span>
+                                                    <span class="detail__rate">5,0</span>
+                                                    <span class="detail__icon">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </span>
+                                                    <span class="detail__evaluate">(17.000 đánh giá)</span>
+                                                </div>
+                                                <ul class="cart-info-course">
+                                                    <li class="course time">Tổng số 2 giờ</li>
+                                                    <li class="course lessons">12 bài giảng</li>
+                                                    <li class="course level">Tất cả trình độ</li>
+                                                </ul>
+                                            </div>
+                                            <div class="cart-info-price">
+
+                                                <span class="price">2.499.000 <span class="vnd">đ</span></span>
+                                                <span class="sale">1.490.000 <span class="vnd">đ</span><i
+                                                        class="fa-solid fa-tag"></i></span>
+                                                <span class="date">17/07/2023</span>
+                                            </div>
+                                            <div class="cart-info-control">
+                                                <button type="button" class="btn btn-success">Chi tiết khóa học</button>
+                                                <button type="button" class="btn btn-warning">Sửa khóa học</button>
+                                                <button type="button" class="btn btn-danger">Xóa khóa học</button>
+                                            </div>
                                         </div>
-                                        <ul class="cart-info-course">
-                                            <li class="course time">Tổng số 2 giờ</li>
-                                            <li class="course lessons">12 bài giảng</li>
-                                            <li class="course level">Tất cả trình độ</li>
-                                        </ul>
-                                    </div>
-                                    <div class="cart-info-price">
+                                        <div class="cart-info">
+                                            <div class="cart-info-img">
+                                                <img src="/assets/img/courses/mongodb5.jpg" alt="">
+                                            </div>
+                                            <div class="cart-info-details">
+                                                <h1 class="cart-info-name">TypeScript cơ bản cho người mới</h1>
+                                                <p class="cart-info-author">Hỏi dân IY với Erik</p>
+                                                <div class="cart-info-rate">
+                                                    <span class="detail__rate">5,0</span>
+                                                    <span class="detail__icon">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </span>
+                                                    <span class="detail__evaluate">(17.000 đánh giá)</span>
+                                                </div>
+                                                <ul class="cart-info-course">
+                                                    <li class="course time">Tổng số 2 giờ</li>
+                                                    <li class="course lessons">12 bài giảng</li>
+                                                    <li class="course level">Tất cả trình độ</li>
+                                                </ul>
+                                            </div>
+                                            <div class="cart-info-price">
 
-                                        <span class="price">2.499.000 <span class="vnd">đ</span></span>
-                                        <span class="sale">1.490.000 <span class="vnd">đ</span><i
-                                                class="fa-solid fa-tag"></i></span>
-                                        <span class="date">17/07/2023</span>
-                                    </div>
-                                    <div class="cart-info-control">
-                                        <button type="button" class="btn btn-success">Chi tiết khóa học</button>
-                                        <button type="button" class="btn btn-warning">Sửa khóa học</button>
-                                        <button type="button" class="btn btn-danger">Xóa khóa học</button>
-                                    </div>
-                                </div>
-                                <div class="cart-info">
-                                    <div class="cart-info-img">
-                                        <img src="/assets/img/courses/be5.jpg" alt="">
-                                    </div>
-                                    <div class="cart-info-details">
-                                        <h1 class="cart-info-name">TypeScript cơ bản cho người mới</h1>
-                                        <p class="cart-info-author">Hỏi dân IY với Erik</p>
-                                        <div class="cart-info-rate">
-                                            <span class="detail__rate">5,0</span>
-                                            <span class="detail__icon">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                            <span class="detail__evaluate">(17.000 đánh giá)</span>
+                                                <span class="price">2.499.000 <span class="vnd">đ</span></span>
+                                                <span class="sale">1.490.000 <span class="vnd">đ</span><i
+                                                        class="fa-solid fa-tag"></i></span>
+                                                <span class="date">17/07/2023</span>
+                                            </div>
+                                            <div class="cart-info-control">
+                                                <button type="button" class="btn btn-success">Chi tiết khóa học</button>
+                                                <button type="button" class="btn btn-warning">Sửa khóa học</button>
+                                                <button type="button" class="btn btn-danger">Xóa khóa học</button>
+                                            </div>
                                         </div>
-                                        <ul class="cart-info-course">
-                                            <li class="course time">Tổng số 2 giờ</li>
-                                            <li class="course lessons">12 bài giảng</li>
-                                            <li class="course level">Tất cả trình độ</li>
-                                        </ul>
-                                    </div>
-                                    <div class="cart-info-price">
+                                        <div class="cart-info">
+                                            <div class="cart-info-img">
+                                                <img src="/assets/img/courses/be5.jpg" alt="">
+                                            </div>
+                                            <div class="cart-info-details">
+                                                <h1 class="cart-info-name">TypeScript cơ bản cho người mới</h1>
+                                                <p class="cart-info-author">Hỏi dân IY với Erik</p>
+                                                <div class="cart-info-rate">
+                                                    <span class="detail__rate">5,0</span>
+                                                    <span class="detail__icon">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </span>
+                                                    <span class="detail__evaluate">(17.000 đánh giá)</span>
+                                                </div>
+                                                <ul class="cart-info-course">
+                                                    <li class="course time">Tổng số 2 giờ</li>
+                                                    <li class="course lessons">12 bài giảng</li>
+                                                    <li class="course level">Tất cả trình độ</li>
+                                                </ul>
+                                            </div>
+                                            <div class="cart-info-price">
 
-                                        <span class="price">2.499.000 <span class="vnd">đ</span></span>
-                                        <span class="sale">1.490.000 <span class="vnd">đ</span><i
-                                                class="fa-solid fa-tag"></i></span>
-                                        <span class="date">17/07/2023</span>
-                                    </div>
-                                    <div class="cart-info-control">
-                                        <button type="button" class="btn btn-success">Chi tiết khóa học</button>
-                                        <button type="button" class="btn btn-warning">Sửa khóa học</button>
-                                        <button type="button" class="btn btn-danger">Xóa khóa học</button>
-                                    </div>
-                                </div>
-                                
+                                                <span class="price">2.499.000 <span class="vnd">đ</span></span>
+                                                <span class="sale">1.490.000 <span class="vnd">đ</span><i
+                                                        class="fa-solid fa-tag"></i></span>
+                                                <span class="date">17/07/2023</span>
+                                            </div>
+                                            <div class="cart-info-control">
+                                                <button type="button" class="btn btn-success">Chi tiết khóa học</button>
+                                                <button type="button" class="btn btn-warning">Sửa khóa học</button>
+                                                <button type="button" class="btn btn-danger">Xóa khóa học</button>
+                                            </div>
+                                        </div>
 
-                            </div>
-                            <!-- <div class="cart-price">
+
+                                    </div>
+                                    <!-- <div class="cart-price">
                                 <h1>Tổng:</h1>
                                 <div class="total-price">
                                     <h2 class="discount-price">3.799.000 <span>đ</span></h2>
@@ -304,123 +310,127 @@
                                 </div>
                                 <button class="button-purple-large">Thanh toán</button>
                             </div> -->
+                                </div>
+                            </section>
                         </div>
-                    </section>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="next-revious next-revious-controlCourse">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
+            </section>
+            <section class="next-revious next-revious-controlCourse">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
 
-    <div class="clear"></div>
-    <footer class="footer-controlCourse">
-        <div class="footer_content">
-            <div class="footer_content_header row">
-                <p class="footer_content_header-text col-5">Các công ty hàng đầu lựa chọn <a href="#">T-demy
-                        Business</a> để xây dựng kỹ năng nghề nghiệp theo yêu cầu</p>
-                <ul class="footer_content_header-logo col-7">
-                    <li class="footer_content_header-logo-item">
-                        <img src="https://s.udemycdn.com/partner-logos/v4/nasdaq-light.svg" alt=""
-                            class="footer_content_header-logo-img">
-                    </li>
-                    <li class="footer_content_header-logo-item">
-                        <img src="https://s.udemycdn.com/partner-logos/v4/volkswagen-light.svg" alt=""
-                            class="footer_content_header-logo-img">
-                    </li>
-                    <li class="footer_content_header-logo-item">
-                        <img src="https://s.udemycdn.com/partner-logos/v4/box-light.svg" alt=""
-                            class="footer_content_header-logo-img">
-                    </li>
-                    <li class="footer_content_header-logo-item">
-                        <img src="https://s.udemycdn.com/partner-logos/v4/netapp-light.svg" alt=""
-                            class="footer_content_header-logo-img">
-                    </li>
-                    <li class="footer_content_header-logo-item">
-                        <img src="https://s.udemycdn.com/partner-logos/v4/eventbrite-light.svg" alt=""
-                            class="footer_content_header-logo-img">
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer_content_container">
-                <ul class="footer_content_container-list">
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">T-demy bussiness</a>
-                    </li>
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Giảng dạy trên T-demy</a>
-                    </li>
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Tải ứng dụng</a>
-                    </li>
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Giới thiệu</a>
-                    </li>
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Hãy liên hệ với chúng tôi</a>
-                    </li>
-                </ul>
-                <ul class="footer_content_container-list">
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Nghề nghiệp</a>
-                    </li>
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Blog</a>
-                    </li>
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Trợ giúp và hỗ trợ</a>
-                    </li>
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Đơn vị liên kết</a>
-                    </li>
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Nhà đầu tư</a>
-                    </li>
-                </ul>
-                <ul class="footer_content_container-list">
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Điều khoản</a>
-                    </li>
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Chính sách và quyền riêng tư</a>
-                    </li>
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Cài đặt cookie</a>
-                    </li>
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Sơ đồ trang web</a>
-                    </li>
-                    <li class="footer_content_container-item">
-                        <a href="" class="footer_content_container-link">Tuyên bố và khả năng tiếp cận</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer_content_end">
-                <img src="/assets/img/logo-white.png" alt="" class="footer_content_end-img">
-                <p class="footer_content_end-text">@2023.T-Demy, Inc.</p>
-            </div>
+            <div class="clear"></div>
+            
         </div>
-    </footer>
+        <footer class="footer-controlCourse">
+                <div class="footer_content">
+                    <div class="footer_content_header row">
+                        <p class="footer_content_header-text col-5">Các công ty hàng đầu lựa chọn <a href="#">T-demy
+                                Business</a> để xây dựng kỹ năng nghề nghiệp theo yêu cầu</p>
+                        <ul class="footer_content_header-logo col-7">
+                            <li class="footer_content_header-logo-item">
+                                <img src="https://s.udemycdn.com/partner-logos/v4/nasdaq-light.svg" alt=""
+                                    class="footer_content_header-logo-img">
+                            </li>
+                            <li class="footer_content_header-logo-item">
+                                <img src="https://s.udemycdn.com/partner-logos/v4/volkswagen-light.svg" alt=""
+                                    class="footer_content_header-logo-img">
+                            </li>
+                            <li class="footer_content_header-logo-item">
+                                <img src="https://s.udemycdn.com/partner-logos/v4/box-light.svg" alt=""
+                                    class="footer_content_header-logo-img">
+                            </li>
+                            <li class="footer_content_header-logo-item">
+                                <img src="https://s.udemycdn.com/partner-logos/v4/netapp-light.svg" alt=""
+                                    class="footer_content_header-logo-img">
+                            </li>
+                            <li class="footer_content_header-logo-item">
+                                <img src="https://s.udemycdn.com/partner-logos/v4/eventbrite-light.svg" alt=""
+                                    class="footer_content_header-logo-img">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer_content_container">
+                        <ul class="footer_content_container-list">
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">T-demy bussiness</a>
+                            </li>
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Giảng dạy trên T-demy</a>
+                            </li>
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Tải ứng dụng</a>
+                            </li>
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Giới thiệu</a>
+                            </li>
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Hãy liên hệ với chúng tôi</a>
+                            </li>
+                        </ul>
+                        <ul class="footer_content_container-list">
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Nghề nghiệp</a>
+                            </li>
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Blog</a>
+                            </li>
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Trợ giúp và hỗ trợ</a>
+                            </li>
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Đơn vị liên kết</a>
+                            </li>
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Nhà đầu tư</a>
+                            </li>
+                        </ul>
+                        <ul class="footer_content_container-list">
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Điều khoản</a>
+                            </li>
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Chính sách và quyền riêng tư</a>
+                            </li>
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Cài đặt cookie</a>
+                            </li>
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Sơ đồ trang web</a>
+                            </li>
+                            <li class="footer_content_container-item">
+                                <a href="" class="footer_content_container-link">Tuyên bố và khả năng tiếp cận</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_content_end">
+                        <img src="/assets/img/logo-white.png" alt="" class="footer_content_end-img">
+                        <p class="footer_content_end-text">@2023.T-Demy, Inc.</p>
+                    </div>
+                </div>
+            </footer>
+    </div>
+
 
 
 
