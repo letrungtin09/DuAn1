@@ -157,102 +157,43 @@
                     <div class="row">
                         <div class="col-sm col-1">
                             <div class="col-1-left">
-                                <h1>THỐNG KÊ KHÓA HỌC</h1>
+                                <h1>QUẢN LÝ LOẠI KHÓA HỌC</h1>
                             </div>
-
+                            <div class="col-1-right">
+                                <a type="button" class="btn btn-success">+ Thêm loại khóa học</a>
+                            </div>
                         </div>
                         <div class="col-sm col-2">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">LOẠI KHÓA HỌC</th>
-                                        <th scope="col">SỐ LƯỢNG KHÓA HỌC</th>
-                                        <th scope="col">GIÁ THẤP NHẤT</th>
-                                        <th scope="col">GIÁ CAO NHẤT</th>
-                                        <th scope="col">GIÁ TRUNG BÌNH</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td scope="row" class="name-course">Font-end</td>
-                                        <td class="so-luong">17</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row" class="name-course">Back-end</td>
-                                        <td class="so-luong">7</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row" class="name-course">Java</td>
-                                        <td class="so-luong">22</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row" class="name-course">Mobile</td>
-                                        <td class="so-luong">9</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row" class="name-course">Python</td>
-                                        <td class="so-luong">11</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row" class="name-course">PHP</td>
-                                        <td class="so-luong">7</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row" class="name-course">SQL</td>
-                                        <td class="so-luong">7</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <form action="">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><input type="checkbox" id="masterCheckbox" value=""></th>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">TÊN LOẠI KHÓA HỌC</th>
+                                            <th scope="col">THAO TÁC</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row" class="name-course"><input type="checkbox" class="subCheckbox" value=""></td>
+                                            <td class="so-luong">17</td>
+                                            <td>FONT-END</td>
+                                            <td class="btn-thao-tac">
+                                                <button type="button" class="btn btn-warning">Sửa</button>
+                                                <button type="button" class="btn btn-danger">Xóa</button>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </form>
+
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="chart-admin-Sta">
-                <canvas id="myChart"></canvas>
-            </section>
-
-            <!-- <section class="next-revious next-revious-admin">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section> -->
 
             <footer class="footer-admin">
                 <div class="footer-content">
@@ -326,4 +267,12 @@
             }]
         },
     });
+
+    // CODE THAO TÁC VỚI CHECK BOX
+    var masterCheckbox = document.getElementById('masterCheckbox');
+    var subCheckbox = document.querySelectorAll('.subCheckbox');
+
+    function xuLyCheckbox(){
+        
+    }
 </script>

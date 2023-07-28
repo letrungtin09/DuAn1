@@ -3427,12 +3427,12 @@ body {
 }
 
 .control-controlCourse .container-qt .row .col-1 .col-1-right {
-  width: 10%;
+  width: 12%;
 }
 
 .control-controlCourse .container-qt .row .col-1 .col-1-right .btn-success {
   width: 100%;
-  padding: 9% 0;
+  padding: 5% 0;
   font-size: 1.3rem;
   font-weight: bold;
 }
@@ -5227,6 +5227,7 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
 .container-all .col-right .content-qt {
   width: 100%;
   margin: 0;
+  min-height: 100vh;
 }
 
 .container-all .col-right .content-qt .container-qt .row {
@@ -5682,5 +5683,30 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 0.8rem;
+}
+
+.container-all .col-right .content-qt-admin .row .col-1 .col-1-right {
+  width: 12%;
+}
+
+.container-all .col-right .content-qt-admin .row .col-1 .col-1-right .btn-success {
+  width: 100%;
+  padding: 5% 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.container-all .col-right .content-qt-admin .row .col-2 form .table-hover tbody tr .btn-thao-tac button {
+  color: white;
+  font-weight: bold;
+  padding: 2% 8%;
+  font-size: 1.3rem;
+  background: #2980B9;
+  border: none;
+  border-radius: 6px;
+}
+
+.container-all .col-right .content-qt-admin .row .col-2 form .table-hover tbody tr .btn-thao-tac .btn-danger {
+  background: #C0392B !important;
 }
 /*# sourceMappingURL=main.css.map */
