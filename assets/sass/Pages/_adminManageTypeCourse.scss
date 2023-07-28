@@ -1,0 +1,45 @@
+.container-all {
+    .col-right {
+        .content-qt-admin {
+            .row {
+                .col-1 {
+                    .col-1-right {
+                        width: 12%;
+
+                        .btn-success {
+                            width: 100%;
+                            padding: 5% 0;
+                            font-size: 1.3rem;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .col-2 {
+                    form {
+                        .table-hover {
+                            tbody {
+                                tr {
+                                    .btn-thao-tac {
+                                        button {
+                                            color: white;
+                                            font-weight: bold;
+                                            padding: 2% 8%;
+                                            font-size: 1.3rem;
+                                            background: #2980B9;
+                                            border: none;
+                                            border-radius: 6px;
+                                        }
+                                        .btn-danger {
+                                            background: #C0392B!important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
