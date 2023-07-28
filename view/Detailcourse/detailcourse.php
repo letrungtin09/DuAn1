@@ -8,11 +8,17 @@
                     </div>
                     <div class="detail__sidebarInfo">
                         <div class="info-price">
+                        <?php if($courseSlectbyid['sale'] == null){ ?>
+                            <div class="price-sale">
+                                <span class="sale-detail" style="margin-bottom: 12px;"><?=number_format($courseSlectbyid['price'])?> <span class="cur-vnd">đ</span></span>               
+                            </div>
+                        <?php } else { ?>
                             <div class="price-sale">
                                 <span class="sale-detail"><?=number_format($courseSlectbyid['price'] - ($courseSlectbyid['price'] *($courseSlectbyid['sale']/100)))?> <span class="cur-vnd">đ</span></span>
                                 <span class="price-detail"><?=number_format($courseSlectbyid['price'])?> <span class="cur-vnd">đ</span></span>
                             </div>
                             <p class="sale-rating">Giảm <?=$courseSlectbyid['sale']?>%</p>
+                        <?php } ?>
                         </div>
                         <div class="info-btn">
                             
@@ -57,7 +63,7 @@
                         <span class="detail__total"><a href="#">(17915 đánh giá)</a></span>
                         <span class="detail__student">20.000 học viên</span>
                     </div>
-                    <p>Được tạo bởi <a href="#"><?=$user['fullName']?></a></p>
+                    <p>Được tạo bởi <a href="#teacher"><?=$user['fullName']?></a></p>
                     <div class="detail__date">
                         <i class="fa-solid fa-square-pen"></i>
                         <span>Khóa học đăng ngày <?=$courseSlectbyid['date']?></span>
@@ -107,11 +113,11 @@
                                             </span>
                                         </button>
                                     </h2>
-                                    <?php
-                                    $lesson = detailChapter_select_by_idchapter($chapterId);
-                                    foreach ($lesson as $les){
-                                        extract($les);?>
                                         <div id="panelsStayOpen-collapse<?=$numberOrder?>" class="accordion-collapse collapse">
+                                        <?php
+                                        $lesson = detailChapter_select_by_idchapter($chapterId);
+                                        foreach ($lesson as $les){
+                                            extract($les);?>
                                             <div class="accordion-body">
                                                 <div class="detail__source">    
                                                     <div class="detail__doc">
@@ -121,11 +127,10 @@
                                                     <span><?=$timeLesson?></span>
                                                 </div>
                                             </div>
+                                        <?php
+                                            }
+                                        ?>
                                         </div>
-                                    <?php
-                                    }
-                                    ?>
-                                    
                                 </div>
                             <?php
                             }
@@ -136,13 +141,13 @@
                 </div>
                 <div class="detail__des">
                     <h2>Mô tả</h2>
-                    <p><?=$courseSlectbyid['content']?>
-                    </p>
+                    <pre><?=$courseSlectbyid['content']?>
+                    </pre>
                 </div>
                 <div class="detail__kind">
                     <h2>Khóa học cùng loại</h2>
                     <div class="detail__sameKind">
-                        <?php foreach($twoCourseSameType as $CourseSameType){?>
+                        <?php foreach($fiveCourseSameType as $CourseSameType){?>
                             <div class="detail__item">
                                 <div class="kind-img">
                                     <img src="./assets/img/courses/<?=$CourseSameType['image']?>" alt="">
@@ -181,7 +186,7 @@
                 </div>
                 <div class="detail__teacher">
                     <h2>Giảng viên</h2>
-                    <div class="detail__info">
+                    <div class="detail__info" id="teacher">
                         <a href="#"><?=$user['fullName']?></a>
                         <p class="detail__career"><?=$user['career']?></p>
                         <div class="detail__avatar">
@@ -206,7 +211,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <p><?=$user['information']?></p>
+                        <pre><?=$user['information']?></pre>
                     </div>
                 </div>
                 <div class="detail__evaluate">
