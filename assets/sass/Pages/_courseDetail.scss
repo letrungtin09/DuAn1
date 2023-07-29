@@ -1,58 +1,59 @@
 .detail__content {
     .detail__sidebar {
-        .detail__sidebarMain{
+        .detail__sidebarMain {
             margin-left: 79.6rem;
             position: absolute;
             top: 10.2rem;
-            .detail__sidebarContent{
+            .detail__sidebarContent {
                 width: 34rem;
                 box-shadow: $box-shadow-1;
-                .detail__sidebarImg{
-                    img{
+                .detail__sidebarImg {
+                    img {
                         width: 100%;
                         border: 1px solid $color-gray-2;
                     }
                 }
-                .detail__sidebarInfo{
+                .detail__sidebarInfo {
                     background-color: $color-white-0;
                     padding: $pd-0;
-                    .price-sale{
+                    .price-sale {
                         display: flex;
                         align-items: center;
-                        .cur-vnd{
+                        .cur-vnd {
                             text-decoration: underline;
                         }
-                        .sale-detail{
+                        .sale-detail {
                             font-size: $fs-1;
                             font-weight: $fw-4;
                             margin-right: $mg-2;
                         }
-                        .price-detail{
+                        .price-detail {
                             font-size: $fs-3;
                             color: $color-gray-0;
                             text-decoration: line-through;
                         }
                     }
-                    .sale-rating{
+                    .sale-rating {
                         margin-bottom: $mg-0;
                     }
-                    .info-btn{
+                    .info-btn {
                         display: flex;
                         justify-content: space-between;
                         margin-bottom: $mg-1;
-                        .add-to-cart{
-                            @include styleButton($color-white-0, $color-green-0, $color-green-0, $fs-2, 4.5rem, $pd-1);
+                        .add-to-cart {
+                            @include styleButton($color-white-0, $color-green-1, $color-green-1, $fs-2, 4.5rem, $pd-1);
+                            text-decoration: none;
                         }
-                        .add-wishlist{
+                        .add-wishlist {
                             padding: $pd-1 $pd-7;
                             background-color: $color-white-0;
                             border: 1px solid $color-black-1;
-                            i{
+                            i {
                                 font-size: $fs-3 + 0.2;
                             }
                         }
                     }
-                    .buy-now{
+                    .buy-now {
                         width: 100%;
                         padding: $pd-1 0;
                         font-weight: $fw-4;
@@ -60,25 +61,25 @@
                         border: 1px solid $color-black-1;
                         margin-bottom: $mg-2;
                     }
-                    .info-detail{
-                        h3{
+                    .info-detail {
+                        h3 {
                             font-size: $fs-2;
                             font-weight: $fw-4;
                         }
-                        ul{
+                        ul {
                             list-style: none;
                             padding: 0;
                             margin: 0;
-                            li{
+                            li {
                                 padding: $pd-2 0;
                                 display: flex;
                                 align-items: center;
-                                i{
+                                i {
                                     font-size: $fs-0;
                                     width: 23px;
                                     text-align: center;
                                 }
-                                span{
+                                span {
                                     margin-left: $mg-0;
                                     font-size: $fs-0;
                                 }
@@ -99,133 +100,133 @@
             .detail__cate {
                 display: flex;
                 margin-bottom: $mg-0;
-                a{
+                a {
                     font-size: $fs-0;
                     font-weight: $fw-4;
                     text-decoration: none;
                     color: $color-green-2;
                 }
             }
-            h1{
+            h1 {
                 font-size: $fs-1;
                 margin-bottom: $mg-1;
                 font-weight: $fw-4;
                 letter-spacing: $letter-spacing-0 * (-1);
             }
-            h3{
+            h3 {
                 font-size: $fs-3;
                 font-weight: $fw-1;
                 margin-bottom: $mg-2;
             }
-            .detail__sub{
+            .detail__sub {
                 margin-bottom: $mg-1 + 0.2;
                 font-size: $fs-0;
-                .button-best-seller{
+                .button-best-seller {
                     margin-right: $mg-1 - 0.2;
                 }
-                .detail__rate{
+                .detail__rate {
                     color: $color-yellow-3;
                     margin-right: $mg-4;
                     font-weight: $fw-4;
                 }
-                .detail__icon{
+                .detail__icon {
                     letter-spacing: -0.1rem;
                     margin-right: $mg-4;
-                    i{
+                    i {
                         font-size: $fs-5;
                         color: $color-yellow-3;
                     }
                 }
-                .detail__total{
+                .detail__total {
                     margin-right: $mg-4;
-                    a{
+                    a {
                         color: $color-green-2;
                     }
                 }
             }
-            p{
+            p {
                 font-size: $fs-0;
                 margin-bottom: $mg-1;
-                a{
+                a {
                     color: $color-green-2;
                 }
             }
-            .detail__date{
+            .detail__date {
                 font-size: $fs-0;
-                i{
+                i {
                     margin-right: $mg-1;
                 }
             }
         }
     }
-    .detail__bottom{
+    .detail__bottom {
         padding: $pd-5 0;
-        .detail__bottom-content{
+        .detail__bottom-content {
             max-width: 70rem;
             margin: 0 4.8rem;
-            h2{
+            h2 {
                 margin-bottom: $mg-2;
                 font-size: $fs-4;
                 font-weight: $fw-4;
             }
-            .detai__companies{
+            .detai__companies {
                 padding: $pd-7;
                 border: 1px solid $color-gray-2;
-                h5{
+                h5 {
                     font-size: $fs-2;
                     font-weight: $fw-4;
                     margin-bottom: $mg-4;
                 }
-                p{
+                p {
                     font-size: $fs-0;
                     color: $color-gray-0;
                     margin-bottom: 0;
                 }
-                .detail__img{
+                .detail__img {
                     margin-top: $mg-5;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    img{
+                    img {
                         height: 38px;
                     }
                 }
             }
-            .detail__chapter{
+            .detail__chapter {
                 margin-top: $mg-5;
-                .detail__statistic{
+                .detail__statistic {
                     margin-bottom: $mg-1;
-                    span{
+                    span {
                         font-size: $fs-0;
                     }
                 }
-                .detail__lesson{
-                    .accordion{
+                .detail__lesson {
+                    .accordion {
                         --bs-accordion-color: $color-black-1;
                         --bs-accordion-border-radius: 0;
                         --bs-accordion-inner-border-radius: 0;
                         --bs-accordion-btn-focus-border-color: $color-gray-2;
                         --bs-accordion-btn-focus-box-shadow: none;
-                        --bs-accordion-btn-color:$color-black-1;
-                        --bs-accordion-active-color:$color-black-1;
-                        .accordion-header{
+                        --bs-accordion-btn-color: $color-black-1;
+                        --bs-accordion-active-color: $color-black-1;
+                        .accordion-header {
                             background-color: $color-green-2;
                             border-bottom: 1px solid $color-gray-2;
                             margin-bottom: 0;
-                            .accordion-button{
-                                &:not(.collapsed){
+                            .accordion-button {
+                                &:not(.collapsed) {
                                     box-shadow: none;
                                 }
                                 background-color: $color-white-1;
                                 padding: $pd-7 $pd-0;
-                                .detail__title{
+                                .detail__title {
                                     width: 100%;
                                     display: flex;
                                     justify-content: space-between;
                                     align-items: center;
                                     padding-right: $pd-1;
                                     font-size: $fs-0;
-                                    .title-chapter{
+                                    .title-chapter {
                                         font-size: $fs-2;
                                         font-weight: $fw-4;
                                         flex: 1;
@@ -233,23 +234,26 @@
                                 }
                             }
                         }
-                        .accordion-body{
+                        .accordion-collapse {
                             padding: $pd-7 $pd-0;
-                            .detail__source{
+                            .accordion-body {
+                                padding: 0;
+                            }
+                            .detail__source {
                                 display: flex;
                                 justify-content: space-between;
                                 padding: $pd-4 0;
                                 font-size: $fs-0;
-                                .detail__doc{
+                                .detail__doc {
                                     flex: 1;
                                     display: flex;
-                                    justify-content:flex-start;
+                                    justify-content: flex-start;
                                     align-items: center;
-                                    i{
+                                    i {
                                         width: 3%;
                                         text-align: center;
                                     }
-                                    a{
+                                    a {
                                         color: $color-green-1;
                                         margin-left: $mg-2;
                                     }
@@ -259,125 +263,127 @@
                     }
                 }
             }
-            .detail__des{
+            .detail__des {
                 margin-top: $mg-5;
-                p{
+                pre {
                     font-size: $fs-0;
+                    font-family: "Roboto", sans-serif;
+                    text-wrap: wrap;
                 }
             }
-            .detail__kind{
+            .detail__kind {
                 margin-top: $mg-5;
-                h2{
+                h2 {
                     margin-bottom: 0;
                 }
-                .detail__sameKind{
-                    .detail__item{
+                .detail__sameKind {
+                    .detail__item {
                         border-bottom: 1px solid $color-gray-2;
                         display: flex;
                         flex-direction: row;
                         padding: $pd-7 0;
-                        .kind-img{
+                        .kind-img {
                             height: 100%;
-                            img{
+                            img {
                                 border: 1px solid $color-gray-2;
                                 width: 6.24rem;
                                 height: 6.24rem;
                                 object-fit: cover;
                             }
                         }
-                        .kind-content{
+                        .kind-content {
                             flex: 4;
                             display: flex;
                             flex-direction: column;
                             height: 100%;
                             min-width: 18rem;
                             margin-left: $mg-1;
-                            a{
+                            a {
                                 font-size: $fs-2;
                                 font-weight: $fw-4;
                                 color: $color-black-1;
                                 text-decoration: none;
                                 line-height: 1.2;
                             }
-                            .kind-bottom{
+                            .kind-bottom {
                                 margin-top: $mg-1;
                                 display: flex;
-                                span{
+                                span {
                                     font-size: $fs-0;
-                                    &:last-child{
+                                    &:last-child {
                                         margin-left: $mg-4;
                                     }
                                 }
-                                .kind-sell{
+                                .kind-sell {
                                     display: flex;
                                     align-items: center;
                                     margin-right: $mg-1;
                                 }
-                                .kind-time{
+                                .kind-time {
                                     color: $color-green-1;
                                     font-weight: $fw-4;
                                     margin-right: $mg-4;
                                 }
                             }
                         }
-                        .kind-number{
+                        .kind-number {
                             flex: 3;
                             display: flex;
                             justify-content: space-between;
-                            align-items:flex-start;
+                            align-items: flex-start;
                             font-size: $fs-0;
-                            span{
-                                i{
+                            span {
+                                i {
                                     font-size: $fs-5;
                                 }
                             }
-                            .kind-rate{
+                            .kind-rate {
                                 margin-right: $mg-1;
-                                span{
-                                    &:first-child{
+                                span {
+                                    &:first-child {
                                         font-weight: $fw-4;
                                         color: $color-orange-0;
                                     }
-                                    i{
+                                    i {
                                         color: $color-yellow-0;
                                     }
                                 }
                             }
-                            .kind-price{
+                            .kind-price {
                                 display: flex;
                                 flex-direction: column;
                                 text-align: right;
                                 letter-spacing: $letter-spacing-1;
-                                p{
+                                p {
                                     margin-bottom: 0;
                                     font-weight: $fw-4;
-                                    span{
+                                    span {
                                         text-decoration: underline;
                                         font-size: $fs-5 + 0.1;
                                         font-weight: $fw-2;
                                     }
                                 }
-                                .kind-sale{
+                                .kind-sale {
                                     font-size: $fs-5;
                                     font-weight: $fw-1;
                                     color: $color-gray-0;
                                     text-decoration: line-through;
-                                    span{
+                                    span {
                                         font-weight: $fw-1;
                                     }
                                 }
                             }
                         }
-                        .kind-button{
+                        .kind-button {
                             margin-left: $mg-2;
-                            button{
+                            button {
                                 width: 40px;
                                 height: 40px;
                                 line-height: 40px;
                                 border-radius: 50%;
                                 border: 1px solid $color-gray-0;
                                 background-color: $color-white-0;
-                                &:hover{
+                                &:hover {
                                     background-color: $color-black-2;
                                 }
                             }
@@ -385,47 +391,47 @@
                     }
                 }
             }
-            .detail__teacher{
+            .detail__teacher {
                 margin-top: $mg-5;
-                .detail__info{
-                    a{
+                .detail__info {
+                    a {
                         display: inline-block;
                         font-size: $fs-3;
                         color: $color-green-1;
                         font-weight: $fw-4;
                         margin-bottom: $mg-4;
-                        text-underline-offset: 0.4rem;
+                        text-decoration: none;
                     }
-                    p{
-                        &:last-child{
-                            margin-top: $mg-2;
-                            margin-bottom: 0;
-                            font-size: $fs-0;
-                        }
+                    pre {
+                        font-family: 'Roboto', sans-serif;
+                        text-wrap: wrap;
+                        margin-top: $mg-2;
+                        margin-bottom: 0;
+                        font-size: $fs-0;
                     }
-                    .detail__career{
+                    .detail__career {
                         color: $color-gray-0;
                         margin-bottom: $mg-1;
                     }
-                    .detail__avatar{
+                    .detail__avatar {
                         display: flex;
-                        img{
+                        img {
                             width: 11.2rem;
                             height: 11.2rem;
                             border-radius: 50%;
                             border: 1px solid $color-gray-2;
                             margin-right: $mg-2;
                         }
-                        ul{
+                        ul {
                             list-style: none;
                             margin: 0;
                             padding: 0;
-                            li{
+                            li {
                                 padding: $pd-2 - 0.1 0;
-                                i{
+                                i {
                                     font-size: $fs-5;
                                 }
-                                span{
+                                span {
                                     font-size: $fs-0;
                                     margin-left: $mg-0;
                                 }
@@ -434,33 +440,33 @@
                     }
                 }
             }
-            .detail__evaluate{
+            .detail__evaluate {
                 margin-top: $mg-7;
-                h2{
+                h2 {
                     margin-bottom: $mg-5;
-                    i{
+                    i {
                         color: $color-yellow-0;
                         font-size: $fs-3;
                     }
                 }
-                .detail__allEvaluate{
+                .detail__allEvaluate {
                     display: flex;
                     flex-wrap: wrap;
-                    .item-odd{
+                    .item-odd {
                         margin-right: $mg-2;
                     }
-                    .item-even{
+                    .item-even {
                         margin-left: $mg-2;
                     }
-                    .detail__itemEvaluate{
+                    .detail__itemEvaluate {
                         width: 33.4rem;
                         padding: $pd-0 0 $pd-5 0;
                         border-top: 1px solid $color-gray-2;
-                        .detail__user{
+                        .detail__user {
                             display: flex;
                             justify-content: flex-start;
                             margin-bottom: $mg-2;
-                            img{
+                            img {
                                 width: 4rem;
                                 height: 4rem;
                                 object-fit: cover;
@@ -468,83 +474,85 @@
                                 border-radius: 50%;
                                 margin-right: $mg-2;
                             }
-                            .detail__name{
+                            .detail__name {
                                 display: flex;
                                 flex-direction: column;
-                                p{
+                                p {
                                     margin-bottom: 0;
                                     font-weight: $fw-4;
                                 }
-                                .detail__stars{
+                                .detail__stars {
                                     display: flex;
                                     align-items: center;
                                     font-size: $fs-5;
                                     margin-top: $mg-4;
-                                    .stars-rating{
+                                    .stars-rating {
                                         letter-spacing: $letter-spacing-0;
                                         margin-right: $mg-1;
-                                        i{
+                                        i {
                                             color: $color-yellow-0;
                                         }
                                     }
-                                    .date-rating{
+                                    .date-rating {
                                         font-weight: $fw-4;
                                         color: $color-gray-0;
                                     }
                                 }
                             }
                         }
-                        .detail__contentEvaluate{
-                            p{
+                        .detail__contentEvaluate {
+                            p {
                                 margin-bottom: $mg-2;
                             }
                         }
-                        .detail__review{
+                        .detail__review {
                             display: flex;
                             align-items: center;
-                            span{
+                            span {
                                 color: $color-gray-0;
                                 font-size: $fs-5;
                                 margin-right: $mg-1;
                             }
-                            i{
+                            i {
                                 font-size: $fs-3;
                             }
-                            .up, .up-like{
+                            .up,
+                            .up-like {
                                 margin-right: $mg-2;
                             }
-                            .up-like, .down-like{
+                            .up-like,
+                            .down-like {
                                 display: none;
                             }
                         }
                     }
                 }
             }
-            .detail__courseTeacher{
+            .detail__courseTeacher {
                 margin: $mg-2 0;
-                h2{
-                    a{
+                h2 {
+                    a {
                         text-decoration: none;
                         color: $color-green-1;
                     }
                 }
-                .detail__allCourse{
+                .detail__allCourse {
                     display: flex;
                     justify-content: space-between;
-                    .card{
+                    .card {
                         width: 31.5%;
                         overflow: visible;
-                        img{
+                        img {
                             width: 100%;
                         }
                     }
-                    .card-time{
+                    .card-time {
                         margin-bottom: $mg-4;
                         display: flex;
                         font-size: $fs-5;
                         align-items: center;
                         color: $color-gray-0;
-                        .card-dot{
+                        .card-dot {
                             margin: 0 $mg-4;
                         }
                     }

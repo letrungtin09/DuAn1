@@ -24,12 +24,12 @@ foreach($chapter as $chap){
     $countAllDetailChapter += $countSession;
 }
 // Lấy 2 khóa học cùng loại
-$twoCourseSameType = two_course_select_idcate($courseSlectbyid['cateId']);
+$fiveCourseSameType = five_course_select_idcate($courseSlectbyid['cateId']);
 // Đếm số khóa học theo mã giảng viên
 $countCourseByTeacher = course_count_userId($courseSlectbyid['userId']);
 // Truy vấn đánh giá theo idcourse
 $eluavateSelectByIdcourse = evaluate_select_courseId($courseSlectbyid['courseId']);
 // Truy vấn 3 khóa học cùng giảng viên
-$courseSelectByTeacher = two_course_select_by_userId($courseSlectbyid['userId']);
+$courseSelectByTeacher = three_course_select_by_userId($courseSlectbyid['userId']);
 include_once("view/Detailcourse/detailcourse.php");
 ?>

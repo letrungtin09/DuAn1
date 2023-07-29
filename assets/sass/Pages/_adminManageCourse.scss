@@ -1,0 +1,24 @@
+.content-qt-admin {
+    .table-hover {
+        tbody {
+            .tieu-de {
+                width: 13%;
+                text-align: left;
+                p{
+                    line-height: 25px;
+                    margin: 10% 0;
+                }
+            }
+            .image-course{
+                width: 10%;
+            }
+            .btn-thao-tac-column{
+                display: flex;
+                flex-direction: column;
+                button{
+                    margin: 4% 0;
+                }
+            }
+        }
+    }
+}

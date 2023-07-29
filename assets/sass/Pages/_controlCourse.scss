@@ -10,11 +10,11 @@
             flex-direction: column;
             .col-1 {
                 .col-1-right {
-                    width: 10%;
+                    width: 12%;
 
                     .btn-success {
                         width: 100%;
-                        padding: 9% 0;
+                        padding: 5% 0;
                         font-size: 1.3rem;
                         font-weight: bold;
                     }
@@ -107,5 +107,13 @@
             }
         }
     }
+}
+.next-revious-controlCourse{
+    top: 165% !important;
+}
+.footer-controlCourse{
+    width: 100%;
+    position: absolute;
+    top: 183%;
 }
 
