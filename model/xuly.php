@@ -1,0 +1,118 @@
+<?php
+require_once 'evaluate.php';
+
+function EluavateRate($eluavateCourse){
+    $sum = 0;
+    $count = 0;
+    if(evaluate_exist($eluavateCourse)){
+        $coursesElua = evaluate_select_courseId($eluavateCourse);
+        foreach($coursesElua as $course){
+            $sum += $course['evaluateRate'];
+            $count++;
+        }
+        $everage = $sum / $count;
+        return $everage;
+    }else{
+        return 0;
+    }
+}
+$connect = new PDO("mysql:host=localhost;dbname=tdemy;charset=utf8", "root", "");
+
+if(isset($_POST["action"])){
+    $query = "
+		SELECT * FROM courses WHERE product_status = '1'
+	";
+    if(isset($_POST["minimum_price"], $_POST["maximum_price"]) && !empty($_POST["minimum_price"]) && !empty($_POST["maximum_price"])){
+		$query .= "
+		 AND price BETWEEN '".$_POST["minimum_price"]."' AND '".$_POST["maximum_price"]."'
+		";
+	}
+    if(isset($_POST["type"])){
+        $type_filter = implode("','", $_POST["type"]);
+		$query .= "
+		 AND cateId IN('".$type_filter."')
+		";
+    }
+    if(isset($_POST["level"])){
+        $level_filter = implode("','", $_POST["level"]);
+		$query .= "
+		 AND level IN('".$level_filter."')
+		";
+    }
+    if(isset($_POST["teacher"])){
+        $teacher_filter = implode("','", $_POST["teacher"]);
+		$query .= "
+		 AND userId IN('".$teacher_filter."')
+		";
+    }
+    $statement = $connect->prepare($query);
+	$statement->execute();
+	$result = $statement->fetchAll();
+	$total_row = $statement->rowCount();
+	$output = '';
+    if($total_row > 0){
+        foreach($result as $row){
+            require_once 'user.php';
+            $nameUserSearch = user_select_by_id($row['userId']);
+            require_once 'chapter.php';
+            require_once 'detailChapter.php';
+            $chaptersearch = chapter_select_idcourse($row['courseId']);
+            $countAllDetailsearch = 0;
+            foreach($chaptersearch as $chap){
+                $countSession = detailChapter_count_chapterId($chap['chapterId']);
+                $countAllDetailsearch += $countSession;
+            }
+            $output .= '
+            <div class="searchCourse_content-product-div card">
+                <a href="#" class="searchCourse_content-product-cart card-body">
+                    <img src="./assets/img/courses/'.$row['image'].'" alt="" class="">
+                    <div class="searchCourse_content-product-cart-infor">
+                        <h3 class="">'.$row['title'].'</h3>
+                        <p class="">'.$row['description'].'</p>
+                        <div class="searchCourse_content-product-cart-infor-nameuser">'.$nameUserSearch['fullName'].'</div>
+                        <div class="searchCourse_content-product-cart-infor-rate">
+                            <span class="searchCourse_content-product-cart-infor-point">'.EluavateRate($row['courseId']).'</span>
+                            <div class="classification">
+                                <div class="cover">
+                                    <img src="./assets/img/courses/eluavation/cEQfe.png" alt="" class="">
+                                </div>
+                                <div class="progress" style="width: '.EluavateRate($row['courseId'])*20 .'%;">
+                                    <img src="./assets/img/courses/eluavation/â.png" alt="" class="">
+                                </div>
+                            </div>
+                            <span class="searchCourse_content-product-cart-infor-quantity">(42)</span>
+                        </div>
+                        <div class="searchCourse_content-product-cart-infor-lever">
+                            <ul class="">
+                                <span>Tổng số giờ '.$row['allTime'].'</span>
+                                <li class="">'.$countAllDetailsearch.' bài giảng</li>
+                                <li class="">'.$row['level'].'</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="searchCourse_content-product-cart-infor-price">
+                        &#8363;
+                        <span class="searchCourse_content-product-cart-infor-d">'.number_format($row['price']).'</span>
+                    </span>
+                </a>
+                <div class="card-popover" style=z-index:200>
+                    <a href="#">
+                        <h3>Những kiến thức bạn sẽ học</h3>
+                    </a>
+                    <p>'.$row['description'].'</p>
+                    <div class="card-btn row">
+                        <a href="http://localhost/duan1/?mod=bill&act=addBill&course='.$row['courseId'].'" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                        <button class="add-like col-2">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+			';
+        }
+    }else{
+        $output = '<h3>No Data Found</h3>';
+    }
+    echo $output;
+}
+?>

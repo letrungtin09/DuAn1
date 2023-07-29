@@ -17,7 +17,7 @@
                     hoặc <a href="" class="">Quên mật khẩu</a>
                 </div>
                 <div class="login_content-move-register">
-                    Không có tài khoản? <a href="" class="">Đăng ký</a>
+                    Không có tài khoản? <a href="<?=$base_url?>?mod=user&act=signup" class="">Đăng ký</a>
                 </div>
             </div>
             <h5 class='login_content-error'><?=$MESSAGE?></h5>

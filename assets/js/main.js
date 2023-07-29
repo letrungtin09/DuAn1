@@ -76,3 +76,51 @@ function hienthem(){
     }
     
 }
+$('.select_fillter_controller').change(function(){
+    var value = $(this).find(':selected').val();
+    window.location.replace(value);
+})
+$(document).ready(function(){
+    filter_data();
+    function filter_data(){
+        $('.filter_data').html('<div id="searchCourse_content-product" style="" ></div>');
+        var action = 'fetch_data';
+        var minimum_price = $('#hidden_minimum_price').val();
+        var maximum_price = $('#hidden_maximum_price').val();
+        var type = get_filter('searchCourse_content-filter-checkbox_class_type');
+        var level = get_filter('searchCourse_content-filter-checkbox_class_level');
+        var teacher = get_filter('searchCourse_content-filter-checkbox_class_teacher');
+        $.ajax({
+            url:"model/xuly.php",
+            method:"POST",
+            data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, type:type, level:level, teacher:teacher},
+            success:function(data){
+                $('.filter_data').html(data);
+            }
+        });
+    }
+    function get_filter(class_name){
+        var filter = [];
+        $('.'+class_name+':checked').each(function(){
+            filter.push($(this).val());
+        });
+        return filter;
+    }
+    $('.common_selector').click(function(){
+        filter_data();
+    });
+    $('#price_range').slider({
+        range:true,
+        min:0,
+        max:5000000,
+        values:[1000, 5000000],
+        step:500,
+        stop:function(event, ui)
+        {
+            $('#price_show').html(ui.values[0] + ' - ' + ui.values[1]);
+            $('#hidden_minimum_price').val(ui.values[0]);
+            $('#hidden_maximum_price').val(ui.values[1]);
+            filter_data();
+        }
+    });
+});

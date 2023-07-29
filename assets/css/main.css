@@ -2699,6 +2699,8 @@ body {
   border: none;
   border-bottom: 1px solid #d1d7dc;
   border-top: 1px solid #d1d7dc;
+  margin-bottom: 20px;
+  padding-top: 20px;
 }
 .searchCourse_container .searchCourse_content .searchCourse_content-filter .searchCourse_content-filter-item .accordion .accordion-item #panelsStayOpen-collapseOne .accordion-body {
   padding: 0;
@@ -2764,52 +2766,52 @@ body {
   margin-left: 0.4rem;
   color: #6a6f7c;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product {
+.searchCourse_container .searchCourse_content #searchCourse_content-product {
   flex: 1;
   display: block;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div {
   border-bottom: 1px solid #d1d7dc;
   padding-bottom: 2rem;
   margin-bottom: 20px;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart {
   display: flex;
   text-decoration: none;
   color: #252525;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart img {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart img {
   width: 250px;
   height: 150px;
   margin-right: 2rem;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor {
   flex: 1;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor h3 {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor h3 {
   width: 574px;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor p {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor p {
   width: 574px;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-nameuser {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-nameuser {
   font-size: 1rem;
   color: #6a6f7c;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate {
   display: flex;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .searchCourse_content-product-cart-infor-point {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .searchCourse_content-product-cart-infor-point {
   font-weight: 600;
   color: #c9852b;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification {
   position: relative;
   width: 46px;
   height: 18px;
   margin: 0 0.6rem;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification .cover {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification .cover {
   position: absolute;
   display: block;
   top: 0px;
@@ -2818,13 +2820,13 @@ body {
   height: 17px;
   z-index: 101;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification .cover img {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification .cover img {
   width: 46px;
   height: 12px;
   background-color: white;
   margin: 0;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification .progress {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification .progress {
   position: absolute;
   display: block;
   top: 6px;
@@ -2833,34 +2835,34 @@ body {
   z-index: 102;
   background-color: white;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification .progress img {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .classification .progress img {
   width: 46px;
   height: 12px;
   background-color: white;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .searchCourse_content-product-cart-infor-quantity {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-rate .searchCourse_content-product-cart-infor-quantity {
   font-size: 1rem;
   display: flex;
   align-items: center;
   color: #6a6f7c;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-lever ul {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-lever ul {
   display: flex;
   padding: 0;
   font-size: 1rem;
   color: #6a6f7c;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-lever ul span {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-lever ul span {
   margin-right: 1.8rem;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-lever ul li {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor .searchCourse_content-product-cart-infor-lever ul li {
   margin-right: 1.8rem;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor-price {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor-price {
   font-size: 1rem;
   font-weight: 600;
 }
-.searchCourse_container .searchCourse_content .searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor-price .searchCourse_content-product-cart-infor-d {
+.searchCourse_container .searchCourse_content #searchCourse_content-product .searchCourse_content-product-div .searchCourse_content-product-cart .searchCourse_content-product-cart-infor-price .searchCourse_content-product-cart-infor-d {
   font-size: 1.4rem;
 }
 

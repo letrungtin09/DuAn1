@@ -62,6 +62,8 @@
                             border: none;
                             border-bottom: 1px solid $color-gray-2;
                             border-top: 1px solid $color-gray-2;
+                            margin-bottom: 20px;
+                            padding-top: 20px;
                         }
                         #panelsStayOpen-collapseOne{
                             .accordion-body{
@@ -135,7 +137,7 @@
                 }
             }
         }
-        .searchCourse_content-product{
+        #searchCourse_content-product{
             flex: 1;
             display: block;
             .searchCourse_content-product-div{
