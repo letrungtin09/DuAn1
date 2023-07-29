@@ -77,10 +77,6 @@ function hienthem(){
     }
     
 }
-$('.select_fillter_controller').change(function(){
-    var value = $(this).find(':selected').val();
-    window.location.replace(value);
-})
 $(document).ready(function(){
     filter_data();
     function filter_data(){
@@ -91,10 +87,11 @@ $(document).ready(function(){
         var type = get_filter('searchCourse_content-filter-checkbox_class_type');
         var level = get_filter('searchCourse_content-filter-checkbox_class_level');
         var teacher = get_filter('searchCourse_content-filter-checkbox_class_teacher');
+        var arrange = get_arrange('select_fillter_controller');
         $.ajax({
             url:"model/xuly.php",
             method:"POST",
-            data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, type:type, level:level, teacher:teacher},
+            data:{action:action, minimum_price:minimum_price, arrange:arrange, maximum_price:maximum_price, type:type, level:level, teacher:teacher},
             success:function(data){
                 $('.filter_data').html(data);
             }
@@ -107,9 +104,18 @@ $(document).ready(function(){
         });
         return filter;
     }
+    function get_arrange(class_name){
+        var arrange = $('.'+class_name).find(':selected').val();
+        return arrange;
+    }
     $('.common_selector').click(function(){
         filter_data();
     });
+
+    $('.select_fillter_controller').change(function(){
+        filter_data();
+    })
+
     $('#price_range').slider({
         range:true,
         min:0,

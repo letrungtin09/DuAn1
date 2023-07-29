@@ -8,12 +8,11 @@
                     Bộ lọc
                 </button>
                 <select class="form-select select_fillter_controller" id='select_fillter_controller' aria-label="Default select example">
-
-                    <option value="<?=$base_url?>?mod=search&act=showSearch&search=back&arrange=0">-- Tất cả khóa học --</option>    
-                    <option <?php if(isset($_GET['arrange']) && $_GET['arrange'] == 1) echo'selected';?> value="<?=$base_url?>?mod=search&act=showSearch&search=back&arrange=1">Lượt mua nhiều nhất</option>    
-                    <option <?php if(isset($_GET['arrange']) && $_GET['arrange'] == 2) echo'selected';?> value="<?=$base_url?>?mod=search&act=showSearch&search=back&arrange=2">Giá thấp nhất</option>
-                    <option <?php if(isset($_GET['arrange']) && $_GET['arrange'] == 3) echo'selected';?> value="<?=$base_url?>?mod=search&act=showSearch&search=back&arrange=3">Cập nhập mới nhất</option>
-                    <option <?php if(isset($_GET['arrange']) && $_GET['arrange'] == 4) echo'selected';?> value="<?=$base_url?>?mod=search&act=showSearch&search=back&arrange=4">Số giờ học nhiều nhất</option>
+                    <option value="0">-- Tất cả khóa học --</option>    
+                    <option value="1">Lượt mua nhiều nhất</option>    
+                    <option value="2">Giá thấp nhất</option>
+                    <option value="3">Cập nhập mới nhất</option>
+                    <option value="4">Số giờ học nhiều nhất</option>
                 </select>
             </div>
             <span class="searchCourse_header-infor-quantity"><p class=""><?=$quantityCountSearch?> kết quả</p></span>
