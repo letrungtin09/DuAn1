@@ -27,6 +27,14 @@
                     background-color: #E7E7E7!important;
                     color: $color-gray-0!important;
                 }
+                .formInsertEdit__check{
+                    border: 1px solid $color-black-1;
+                    padding: $pd-4;
+                    background-color: $color-white-1;
+                    .unpaid{
+                        margin-right: $mg-0;
+                    }
+                }
                 .formInsertEdit__input{
                     &:focus{
                         outline: none;
@@ -35,6 +43,9 @@
                     padding: $pd-4;
                     border: 1px solid $color-black-1;
                     background-color: $color-white-1;
+                }
+                .formInsertEdit__radio{
+                    width: auto;
                 }
                 .formInsertEdit__select{
                     &:focus{
@@ -85,6 +96,14 @@
                 }
                 .btn-list{
                     background-color: $color-black-1;
+                }
+                .btn-update{
+                    background-color: $color-blue-2;
+                    margin-right: $mg-1;
+                }
+                .btn-delete{
+                    background-color: $color-red-0;
+                    margin-right: $mg-1;
                 }
             }
         }

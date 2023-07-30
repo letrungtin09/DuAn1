@@ -1013,6 +1013,14 @@ body {
   background-color: #E7E7E7 !important;
   color: #6a6f73 !important;
 }
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__check {
+  border: 1px solid #1c1d1f;
+  padding: 0.8rem;
+  background-color: #f7f9fa;
+}
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__check .unpaid {
+  margin-right: 1.2rem;
+}
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__input {
   width: 100%;
   padding: 0.8rem;
@@ -1021,6 +1029,9 @@ body {
 }
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__input:focus {
   outline: none;
+}
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__radio {
+  width: auto;
 }
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__select {
   padding: 0.8rem 0.4rem;
@@ -1072,13 +1083,15 @@ body {
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__btn .btn-list {
   background-color: #1c1d1f;
 }
-
-.login_container {
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__btn .btn-update {
+  background-color: #2980B9;
+  margin-right: 0.8rem;
 }
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__btn .btn-delete {
+  background-color: #C0392B;
+  margin-right: 0.8rem;
+}
+
 .login_container {
   height: 500px;
   display: flex;
