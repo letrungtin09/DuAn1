@@ -1079,6 +1079,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+.login_container {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .login_container .login_content {
   width: 350px;
 }

@@ -45,6 +45,19 @@ if(isset($_POST["action"])){
 		 AND userId IN('".$teacher_filter."')
 		";
     }
+    if(isset($_POST["arrange"])){
+        if($_POST["arrange"] == 1){
+            $query .= 'ORDER BY purchase DESC';   
+        }elseif($_POST["arrange"] == 2) {
+            $query .= 'ORDER BY price ASC';
+        }elseif($_POST["arrange"] == 3){
+            $query .= 'ORDER BY date DESC';
+        }elseif($_POST["arrange"] == 4){
+            $query .= 'ORDER BY allTime DESC';
+        }else{
+            $query .= '';
+        }
+    }
     $statement = $connect->prepare($query);
 	$statement->execute();
 	$result = $statement->fetchAll();
