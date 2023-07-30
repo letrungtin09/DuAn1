@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Demy</title>
+    <!-- BS5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- GG FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Canvas -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div class="container-all">
+        <div class="col-left">
+            <section class="sidebar sidebar-qt-admin">
+                <div class="container container-sidebar">
+                    <div class="row">
+                        <div class="col-sm siderbar-logo">
+                            <img src="./img/logo-white.png" alt="">
+                        </div>
+                        <div class="col-sm siderbar-heading">
+                            <img src="./img/adminStatistical/admin.png" alt="">
+                            <h1>TRANG QUẢN TRỊ</h1>
+                        </div>
+                        <div class="col-sm sidebar-content">
+                            <ul>
+                                <li>
+                                    <div class="txt-sidebar" >
+                                        <img  src="./img/adminStatistical/icon1.png" alt="">
+                                        <a href="" >Thống kê</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar" >
+                                        <img  src="./img/adminStatistical/icon2.png" alt="">
+                                        <a  href="">Loại khóa học</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar" style="border-left: 4px solid #15ad7d;">
+                                        <img style="opacity: 1;" src="./img/adminStatistical/icon3.png" alt="">
+                                        <a style="opacity: 1;" href="">Khóa học</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon4.png" alt="">
+                                        <a href="">Tài khoản</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon5.png" alt="">
+                                        <a href="">Bài viết</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon6.png" alt="">
+                                        <a href="">Đơn hàng</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon7.png" alt="">
+                                        <a href="">Bình luận</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt-sidebar">
+                                        <img src="./img/adminStatistical/icon8.png" alt="">
+                                        <a href="">Đánh giá</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button>Quay lại trang chủ</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-right">
+            <!-- HEADER -->
+            <header class="header-sideHead header-sideHead-admin">
+                <nav class="navbar navbar-expand-lg nav-slidebar">
+                    <div class="header_search">
+                        <form class="d-flex" role="search">
+                            <button class="btn btn-outline-success header_search_btn" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input class="header_search_input me-2" placeholder="Tìm kiếm nội dung bất kì">
+                        </form>
+                    </div>
+                </nav>
+                <nav class="navbar navbar-expand-lg nav_header">
+                    <div class="container_header">
+                        <button class="header_dark">
+                            <i class="fa-regular fa-moon"></i>
+                        </button>
+                        <div class="dropdown dropdown_nav_user">
+                            <!-- modal của giảng viên -->
+                            <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/assets/img/users/teacher.jpg" alt="">
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-menu-header">
+                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="/assets/img/users/teacher.jpg" alt="">
+                                    </a>
+                                    <div>
+                                        <h6>Lê Trung Tín</h6>
+                                        <p>duytt18897@gmail.com</p>
+                                    </div>
+                                </div>
+                                <ul class="dropdown-menu-mid">
+                                    <li><a href="" class="">Quá trình học tập của tôi</a></li>
+                                    <li><a href="" class="">Giỏ hàng của tôi</a></li>
+                                    <li><a href="" class="">Danh sách yêu thích</a></li>
+                                    <li><a href="" class="">Bảng điều khiển của giảng viên</a></li>
+                                </ul>
+                                <ul class="dropdown-menu-mid">
+                                    <li><a href="" class="">Cập nhập tài khoản</a></li>
+                                    <li><a href="" class="">Đổi mật khẩu</a></li>
+                                    <li><a href="" class="">Lịch sử mua</a></li>
+                                </ul>
+                                <div class="dropdown-menu-end">
+                                    <a href="" class="">Đăng xuất</a>
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- FORM THÊM KHÓA HỌC -->
+            <section class="formInsertEdit">
+                <div class="formInsertEdit__title">
+                    <h1>THÊM KHÓA HỌC</h1>
+                </div>
+                <div class="formInsertEdit__space"></div>
+                <div class="formInsertEdit__content">
+                    <form>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="courseId">Mã khóa học</label><br>
+                            <input class="formInsertEdit__input input-readonly" type="text" name="courseId" value="Auto number" readonly>
+                        </div>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="title">Tiêu đề</label><br>
+                            <input class="formInsertEdit__input" type="text" name="title">
+                        </div>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="image">Hình ảnh</label><br>
+                            <input class="formInsertEdit__input" type="file" name="image">
+                            <input type="hidden" name="image" value="">
+                        </div>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="price">Đơn giá</label><br>
+                            <input class="formInsertEdit__input" type="text" name="price">
+                        </div>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="sale">Mức giảm giá</label><br>
+                            <input class="formInsertEdit__input" type="text" name="sale">
+                        </div>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="purchase">Lượt mua</label><br>
+                            <input class="formInsertEdit__input input-readonly" type="text" name="purchase" value="0" readonly>
+                        </div>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="date">Ngày đăng</label><br>
+                            <input class="formInsertEdit__input input-readonly" type="date" name="date" readonly>
+                        </div>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="userId">Giảng viên</label><br>
+                            <select class="formInsertEdit__select" id="userId">
+                                <option value="0">Chọn giảng viên</option>
+                                <option value="10">10 - Lê Hoàng Dũng</option>
+                                <option value="11">11 - Travis Brad</option>
+                            </select>
+                        </div>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="level">Cấp độ</label><br>
+                            <select class="formInsertEdit__select" id="level">
+                                <option value="0">Chọn cấp độ</option>
+                                <option value="Tất cả trình độ">Tất cả trình độ</option>
+                                <option value="Sơ cấp">Sơ cấp</option>
+                                <option value="Trung cấp">Trung cấp</option>
+                                <option value="Chuyên gia">Chuyên gia</option>
+                            </select>
+                        </div>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="cateId">Loại khóa học</label><br>
+                            <select class="formInsertEdit__select" id="cateId">
+                                <option value="0">Chọn loại khóa học</option>
+                                <option value="1">1 - Front-end</option>
+                                <option value="2">2 - Back-end</option>
+                                <option value="3">3 - Java</option>
+                                <option value="4">4 - Mobile</option>
+                                <option value="5">5 - PHP</option>
+                                <option value="6">6 - Python</option>
+                                <option value="7">7 - SQL</option>
+                                <option value="8">8 - MongoDB</option>
+                            </select>
+                        </div>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="allTime">Tổng thời gian</label><br>
+                            <input class="formInsertEdit__input" type="text" name="allTime">
+                        </div>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="description">Mô tả</label><br>
+                            <textarea class="formInsertEdit__textarea" name="description" id="description" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="formInsertEdit__item">
+                            <label class="formInsertEdit__label" for="content">Nội dung</label><br>
+                            <textarea class="formInsertEdit__textarea" name="content" id="content" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="formInsertEdit__item formInsertEdit__btn">
+                            <button name="btn-insert" class="btn-insert">Thêm mới</button>
+                            <button type="reset" class="btn-reset">Nhập lại</button>
+                            <a href="#" class="btn-list">Danh sách</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <footer class="footer-admin">
+                <div class="footer-content">
+                    <div class="ft-logo">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                    <div class="text-content">
+                        <p>@ 2023 T-Demy, Inc</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- BS5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- OWL CAROUSEL JS -->
+    <script src="./js/owl.carousel.min.js"></script>
+    <!-- MAIN JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
