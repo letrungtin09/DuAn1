@@ -1,5 +1,5 @@
 <div class="login_container">
-        <form action="<?=$base_url?>?mod=user&act=login" method="post">
+        <form action="<?=$SITE_URL?>?mod=user&act=login" method="post">
             <div class="login_content">
                 <h3 class="login_content-title">ĐĂNG NHẬP VÀO T-DEMY</h3>
                 <div class="login_content-login">
@@ -17,7 +17,7 @@
                     hoặc <a href="" class="">Quên mật khẩu</a>
                 </div>
                 <div class="login_content-move-register">
-                    Không có tài khoản? <a href="<?=$base_url?>?mod=user&act=signup" class="">Đăng ký</a>
+                    Không có tài khoản? <a href="<?=$SITE_URL?>?mod=user&act=signup" class="">Đăng ký</a>
                 </div>
             </div>
             <h5 class='login_content-error'><?=$MESSAGE?></h5>

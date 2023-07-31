@@ -7,7 +7,7 @@
                     <p>Xem lý do các tổ chức hàng đầu chọn học với T-Demy.</p>
                     <button class="button-black-large">Xem các khóa học trên T-Demy</button>
                 </div>
-                <img src="/duan1/assets/img/s2.jpg" class="d-block w-100" alt="slide 1">
+                <img src="<?=$IMAGE_DIR?>/s2.jpg" class="d-block w-100" alt="slide 1">
             </div>
             <div class="carousel-item">
                 <div class="carousel__text">
@@ -15,7 +15,7 @@
                     <p>Xem lý do các tổ chức hàng đầu chọn học với T-Demy.</p>
                     <button class="button-black-large">Xem các khóa học trên T-Demy</button>
                 </div>
-                <img src="./assets/img/s1.jpg" class="d-block w-100" alt="slide 2">
+                <img src="<?=$IMAGE_DIR?>/s1.jpg" class="d-block w-100" alt="slide 2">
             </div>
             <div class="carousel-item">
                 <div class="carousel__text">
@@ -23,7 +23,7 @@
                     <p>Xem lý do các tổ chức hàng đầu chọn học với T-Demy.</p>
                     <button class="button-black-large">Xem các khóa học trên T-Demy</button>
                 </div>
-                <img src="./assets/img/s3.png" class="d-block w-100" alt="slide 3">
+                <img src="<?=$IMAGE_DIR?>/s3.png" class="d-block w-100" alt="slide 3">
             </div>
             <div class="carousel-item">
                 <div class="carousel__text">
@@ -31,7 +31,7 @@
                     <p>Xem lý do các tổ chức hàng đầu chọn học với T-Demy.</p>
                     <button class="button-black-large">Xem các khóa học trên T-Demy</button>
                 </div>
-                <img src="./assets/img/s4.jpg" class="d-block w-100" alt="slide 4">
+                <img src="<?=$IMAGE_DIR?>/s4.jpg" class="d-block w-100" alt="slide 4">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselTdemy" data-bs-slide="prev">
@@ -96,9 +96,9 @@
                         foreach ($Courses as $courseal){
                         ?>
                         <div class="card">
-                            <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseal['courseId']?>"><img src="./assets/img/courses/<?=$courseal['image']?>" alt="..."></a>
+                            <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$courseal['courseId']?>"><img src="<?=$IMAGE_DIR?>/courses/<?=$courseal['image']?>" alt="..."></a>
                             <div class="card-body">
-                                <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseal['courseId']?>">
+                                <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$courseal['courseId']?>">
                                     <h5 class="card-title"><?=$courseal['title']?></h5>
                                 </a>
                                 <?php
@@ -165,13 +165,13 @@
                                         <?php
                                         } else{
                                             if($checkBuy == 1){?>
-                                                <a href="<?=$base_url?>?mod=bill&act=cartBill" id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
+                                                <a href="<?=$SITE_URL?>?mod=bill&act=cartBill" id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
                                                 <button class="add-like col-2">
                                                     <i class="fa-regular fa-heart"></i>
                                                 </button>
                                             <?php
                                             } else{?>
-                                                <a href="<?=$base_url?>?mod=bill&act=addBill&course=<?=$courseal['courseId']?>" class="add-cart col-9 card-btn_addbill">Thêm vào giỏ hàng</a>
+                                                <a href="<?=$SITE_URL?>?mod=bill&act=addBill&course=<?=$courseal['courseId']?>" class="add-cart col-9 card-btn_addbill">Thêm vào giỏ hàng</a>
                                                 <button class="add-like col-2">
                                                     <i class="fa-regular fa-heart"></i>
                                                 </button>
@@ -179,7 +179,7 @@
                                             }
                                         }
                                     }else{?>
-                                    <a href="<?=$base_url?>?mod=user&act=login" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                                    <a href="<?=$SITE_URL?>?mod=user&act=login" class="add-cart col-9">Thêm vào giỏ hàng</a>
                                     <button class="add-like col-2">
                                         <i class="fa-regular fa-heart"></i>
                                     </button>
@@ -212,9 +212,9 @@
                             foreach ($allCourses as $courseall){
                             ?>
                             <div class="card">
-                                <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseall['courseId']?>"><img src="./assets/img/courses/<?=$courseall['image']?>" alt="..."></a>
+                                <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$courseall['courseId']?>"><img src="<?=$IMAGE_DIR?>/courses/<?=$courseall['image']?>" alt="..."></a>
                                 <div class="card-body">
-                                    <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseall['courseId']?>">
+                                    <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$courseall['courseId']?>">
                                         <h5 class="card-title"><?=$courseall['title']?></h5>
                                     </a>
                                     <p class="card-teacher"><?=$courseall['userId']?></p>
@@ -250,7 +250,7 @@
                                     </div>
                                     <p><?=$courseall['content']?></p>
                                     <div class="card-btn row">
-                                        <a href="<?=$base_url?>?mod=bill&act=addBill&course=<?=$courseall['courseId']?>" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                                        <a href="<?=$SITE_URL?>?mod=bill&act=addBill&course=<?=$courseall['courseId']?>" class="add-cart col-9">Thêm vào giỏ hàng</a>
                                         <button class="add-like col-2">
                                             <i class="fa-regular fa-heart"></i>
                                         </button>
@@ -288,7 +288,7 @@
                         <?php
                         $userid = user_select_by_id($evaluate['userId']);
                         ?>
-                        <img src="./assets/img/users/<?=$userid['avatar']?>" alt="" class="">
+                        <img src="<?=$IMAGE_DIR?>/users/<?=$userid['avatar']?>" alt="" class="">
                         <p><?=$userid['fullName']?></p>
                     </div>
                     <div class="feedback_carousel-list-end">
@@ -320,7 +320,7 @@
                 foreach ($allCourseTop10 as $courseTop10) {
                 ?>
                 <div class="card">
-                    <a href="#"><img src="./assets/img/courses/<?=$courseTop10['image']?>" alt="..."></a>
+                    <a href="#"><img src="<?=$IMAGE_DIR?>/courses/<?=$courseTop10['image']?>" alt="..."></a>
                     <div class="card-body">
                         <a href="#">
                             <h5 class="card-title"><?=$courseTop10['title']?></h5>
@@ -386,13 +386,13 @@
                                 <?php
                                 } else{
                                     if($checkBuytop10 == 1){?>
-                                        <a href="<?=$base_url?>?mod=bill&act=cartBill" id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
+                                        <a href="<?=$SITE_URL?>?mod=bill&act=cartBill" id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
                                         <button class="add-like col-2">
                                             <i class="fa-regular fa-heart"></i>
                                         </button>
                                     <?php
                                     } else{?>
-                                        <a href="<?=$base_url?>?mod=bill&act=addBill&course=<?=$courseTop10['courseId']?>" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                                        <a href="<?=$SITE_URL?>?mod=bill&act=addBill&course=<?=$courseTop10['courseId']?>" class="add-cart col-9">Thêm vào giỏ hàng</a>
                                         <button class="add-like col-2">
                                             <i class="fa-regular fa-heart"></i>
                                         </button>
@@ -400,7 +400,7 @@
                                     }
                                 }
                             }else{?>
-                            <a href="<?=$base_url?>?mod=user&act=login" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                            <a href="<?=$SITE_URL?>?mod=user&act=login" class="add-cart col-9">Thêm vào giỏ hàng</a>
                             <button class="add-like col-2">
                                 <i class="fa-regular fa-heart"></i>
                             </button>
@@ -429,7 +429,7 @@
                 <div class="col-3">
                     <div class="card">
                         <div class="card-img">
-                            <a href="#"><img src="./assets/img/categories/<?=$khall['nameCate']?>.jpg" class="card-img-top" alt="..."> </a>
+                            <a href="#"><img src="<?=$IMAGE_DIR?>/categories/<?=$khall['nameCate']?>.jpg" class="card-img-top" alt="..."> </a>
                         </div>
                         <div class="card-body">
                             <h3 class="card-title"><?=$khall['nameCate']?></h3>
@@ -454,7 +454,7 @@
                     <li class="posts_content-item col-3">
                         <a href="" class="posts_content-link">
                             <div class="posts_content-link-img">
-                                <img src="./assets/img/post/<?=$new['image']?>" alt="" class="">
+                                <img src="<?=$IMAGE_DIR?>/post/<?=$new['image']?>" alt="" class="">
                             </div>
                             <div class="posts_content-link-title">
                                 <p><?=$new['title']?></p>
@@ -486,12 +486,12 @@
                     luôn mới mẻ.</p>
             </div>
             <div class="col-img">
-                <img src="./assets/img/companies/img1.svg" alt="">
-                <img src="./assets/img/companies/img2.svg" alt="">
-                <img src="./assets/img/companies/img3.svg" alt="">
-                <img src="./assets/img/companies/img4.svg" alt="">
-                <img src="./assets/img/companies/img5.svg" alt="">
-                <img src="./assets/img/companies/img6.svg" alt="">
+                <img src="<?=$IMAGE_DIR?>/companies/img1.svg" alt="">
+                <img src="<?=$IMAGE_DIR?>/companies/img2.svg" alt="">
+                <img src="<?=$IMAGE_DIR?>/companies/img3.svg" alt="">
+                <img src="<?=$IMAGE_DIR?>/companies/img4.svg" alt="">
+                <img src="<?=$IMAGE_DIR?>/companies/img5.svg" alt="">
+                <img src="<?=$IMAGE_DIR?>/companies/img6.svg" alt="">
             </div>
 
         </div>
@@ -502,7 +502,7 @@
     <div class="teaching_container td-container">
         <div class="row">
             <div class="col-sm col-left">
-            <img src="./assets/img/teaching/instructor-1x-v3.jpg" alt="">
+            <img src="<?=$IMAGE_DIR?>/teaching/instructor-1x-v3.jpg" alt="">
             </div>
             <div class="col-sm col-right">
             <h1>Trở thành giảng viên</h1>

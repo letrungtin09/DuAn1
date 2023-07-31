@@ -1,5 +1,5 @@
 <div class="register_container">
-        <form action="<?=$base_url?>?mod=user&act=signup" method="post">
+        <form action="<?=$SITE_URL?>?mod=user&act=signup" method="post">
             <div class="register_content">
                 <h3 class="register_content-title">ĐĂNG KÝ VÀ BẮT ĐẦU HỌC</h3>
                 <div class="register_content-login">
@@ -14,7 +14,7 @@
                     bạn đồng ý với<a href="" class="">Điều khỏan sử dụng</a> và <a href="" class="">Chính sách về quyền riêng tư</a>
                 </div>
                 <div class="register_content-move-register">
-                    Bạn đã có tài khoản? <a href="<?=$base_url?>?mod=user&act=login" class="">Đăng nhập</a>
+                    Bạn đã có tài khoản? <a href="<?=$SITE_URL?>?mod=user&act=login" class="">Đăng nhập</a>
                 </div>
             </div>
             <h5 class='login_content-error'><?=$MESSAGE?></h5>
