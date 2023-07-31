@@ -81,7 +81,7 @@
             </ul>
         </div>
         <div class="footer_content_end">
-            <img src="./assets/img/logo-white.png" alt="" class="footer_content_end-img">
+            <img src="<?=$IMAGE_DIR?>/logo-white.png" alt="" class="footer_content_end-img">
             <p class="footer_content_end-text">@2023.T-Demy, Inc.</p>
         </div>
     </div>
@@ -92,9 +92,9 @@
     <!-- BS5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- OWL CAROUSEL JS -->
-    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="<?=$ASSETS_URL?>/js/owl.carousel.min.js"></script>
     <!-- MAIN JS -->
-    <script src="./assets/js/main.js"></script>
+    <script src="<?=$ASSETS_URL?>/js/main.js"></script>
     <script>
     </script>
     

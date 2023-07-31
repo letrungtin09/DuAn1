@@ -20,3 +20,4 @@
         $courseRegisted = student_courses_select_by_userId($_SESSION['user']['userId']);
     }
     include_once("view/Home/view.php");
+?>

@@ -15,16 +15,16 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
 
-    <script src="./assets/js/jquery-1.10.2.min.js"></script>
-    <script src="./assets/js/jquery-ui.js"></script>
+    <script src="<?=$ASSETS_URL?>/js/jquery-1.10.2.min.js"></script>
+    <script src="<?=$ASSETS_URL?>/js/jquery-ui.js"></script>
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- OWL CAROUSEL CSS -->
-    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?=$ASSETS_URL?>/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?=$ASSETS_URL?>/css/owl.theme.default.min.css">
     <!-- MAIN CSS -->
-    <link href = "./assets/css/jquery-ui.css" rel = "stylesheet">
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link href = "<?=$ASSETS_URL?>/css/jquery-ui.css" rel = "stylesheet">
+    <link rel="stylesheet" href="<?=$ASSETS_URL?>/css/main.css">
 </head>
 
 <body>
@@ -35,8 +35,8 @@
     if(isset($_SESSION['user'])){ ?>
         <nav class="navbar navbar-expand-lg nav_header">
             <div class="container_header">
-                <a class="navbar-brand" href="<?=$base_url?>">
-                    <img class="logo_img" src="./assets/img/logo.png" alt="">
+                <a class="navbar-brand" href="<?=$SITE_URL?>">
+                    <img class="logo_img" src="<?=$IMAGE_DIR?>/logo.png" alt="">
                 </a>
                 <div class="nav-item dropdown kind_menu">
                     <a class="nav-link" href="#" role="button">
@@ -56,7 +56,7 @@
                     </ul>
                 </div>
                 <div class="header_search">
-                    <form  action="<?=$base_url?>?mod=search&act=showSearch" method="get">
+                    <form  action="<?=$SITE_URL?>?mod=search&act=showSearch" method="get">
                     <div class="form_header_search" style="display:flex;height:100%;">
                         <button class="btn btn-outline-success header_search_btn" type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -93,7 +93,7 @@
                                 $tongSale += ($course['price'] - ($course['price'] *($course['sale']/100)));?>
                                 <li>
                                     <a href="" class="header_cart_bill-purchar-link">
-                                        <img src="./assets/img/courses/<?=$course['image']?>">
+                                        <img src="<?=$IMAGE_DIR?>/courses/<?=$course['image']?>">
                                         <div>
                                             <div class="header_cart_bill-title"><?=$course['title']?></div>
                                             <?php
@@ -119,7 +119,7 @@
                             <span><?=number_format($tong)?> đ</span>
                         </div>
                         <div class="header_cart_bill-submit">
-                            <a href="<?=$base_url?>?mod=bill&act=cartBill">Đến giỏ hàng</a>
+                            <a href="<?=$SITE_URL?>?mod=bill&act=cartBill">Đến giỏ hàng</a>
                         </div>
                         <?php
                         }
@@ -134,7 +134,7 @@
                     <ul class="dropdown-menu header_favorite_bill-purchar">
                         <li>
                             <a href="#" class="header_favorite_bill-tem">
-                                <img src="./assets/img/courses/be5.jpg">
+                                <img src="<?=$IMAGE_DIR?>/courses/be5.jpg">
                                 <div>
                                     <div class="header_favorite_bill-title">Khoá học cơ bản với HTML/ CSS dành cho người mới học lập trình</div>
                                     <p>Tường duy</p>
@@ -149,7 +149,7 @@
                         </li>
                         <li>
                             <a href="#" class="header_favorite_bill-tem">
-                                <img src="./assets/img/courses/be5.jpg">
+                                <img src="<?=$IMAGE_DIR?>/courses/be5.jpg">
                                 <div>
                                     <div class="header_favorite_bill-title">Khoá học cơ bản với HTML/ CSS dành cho người mới học lập trình</div>
                                     <p>Tường duy</p>
@@ -164,7 +164,7 @@
                         </li>
                         <li>
                             <a href="#" class="header_favorite_bill-tem">
-                                <img src="./assets/img/courses/be5.jpg">
+                                <img src="<?=$IMAGE_DIR?>/courses/be5.jpg">
                                 <div>
                                     <div class="header_favorite_bill-title">Khoá học cơ bản với HTML/ CSS dành cho người mới học lập trình</div>
                                     <p>Tường duy</p>
@@ -189,12 +189,12 @@
                     <!-- modal của admin -->
                     <?php if($_SESSION["user"]["role"] == "admin"){ ?>
                         <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="./assets/img/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
+                            <img src="<?=$IMAGE_DIR?>/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
                         </a>
                         <div class="dropdown-menu">
                             <div class="dropdown-menu-header">
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="./assets/img/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
+                                    <img src="<?=$IMAGE_DIR?>/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
                                 </a>
                                 <div>
                                     <h6><?=$_SESSION["user"]["fullName"]?></h6>
@@ -207,19 +207,19 @@
                                 <li><a href="" class="">Quản trị website</a></li>
                             </ul>
                             <div class="dropdown-menu-end">
-                                <a href="<?=$base_url?>?mod=user&act=logoff" class="">Đăng xuất</a>
+                                <a href="<?=$SITE_URL?>?mod=user&act=logoff" class="">Đăng xuất</a>
                                 <i class="fa-solid fa-right-from-bracket"></i>
                             </div>
                         </div>
                         <!-- modal của teacher -->
                     <?php } elseif ($_SESSION["user"]["role"] == "teacher") { ?>
                         <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="./assets/img/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
+                            <img src="<?=$IMAGE_DIR?>/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
                         </a>
                         <div class="dropdown-menu">
                             <div class="dropdown-menu-header">
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="./assets/img/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
+                                    <img src="<?=$IMAGE_DIR?>/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
                                 </a>
                                 <div>
                                     <h6><?=$_SESSION["user"]["fullName"]?></h6>
@@ -238,19 +238,19 @@
                                 <li><a href="" class="">Lịch sử mua</a></li>
                             </ul>
                             <div class="dropdown-menu-end">
-                                <a href="<?=$base_url?>?mod=user&act=logoff" class="">Đăng xuất</a>
+                                <a href="<?=$SITE_URL?>?mod=user&act=logoff" class="">Đăng xuất</a>
                                 <i class="fa-solid fa-right-from-bracket"></i>
                             </div>
                         </div>
                         <!-- modal của student -->
                     <?php } else { ?>
                         <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="./assets/img/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
+                            <img src="<?=$IMAGE_DIR?>/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
                         </a>
                         <div class="dropdown-menu">
                             <div class="dropdown-menu-header">
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="./assets/img/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
+                                    <img src="<?=$IMAGE_DIR?>/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
                                 </a>
                                 <div>
                                     <h6><?=$_SESSION["user"]["fullName"]?></h6>
@@ -268,7 +268,7 @@
                                 <li><a href="" class="">Lịch sử mua</a></li>
                             </ul>
                             <div class="dropdown-menu-end">
-                                <a href="<?=$base_url?>?mod=user&act=logoff" class="">Đăng xuất</a>
+                                <a href="<?=$SITE_URL?>?mod=user&act=logoff" class="">Đăng xuất</a>
                                 <i class="fa-solid fa-right-from-bracket"></i>
                             </div>
                         </div>
@@ -280,8 +280,8 @@
     <?php } else { ?>
         <nav class="navbar navbar-expand-lg nav_header">
             <div class="container_header">
-                <a class="navbar-brand" href="<?=$base_url?>">
-                    <img class="logo_img" src="./assets/img/logo.png" alt="">
+                <a class="navbar-brand" href="<?=$SITE_URL?>">
+                    <img class="logo_img" src="<?=$IMAGE_DIR?>/logo.png" alt="">
                 </a>
                 <div class="nav-item dropdown kind_menu">
                     <a class="nav-link" href="#" role="button">
@@ -300,7 +300,7 @@
                     </ul>
                 </div>
                 <div class="header_search">
-                    <form action="<?=$base_url?>?mod=search&act=showSearch" method="get">
+                    <form action="<?=$SITE_URL?>?mod=search&act=showSearch" method="get">
                         <button class="btn btn-outline-success header_search_btn" type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
@@ -319,10 +319,10 @@
                     </ul>
                 </div>
                 <div class="header_login">
-                    <a href="<?=$base_url?>?mod=user&act=login" class="button-white-medium ">Đăng nhập</a>
+                    <a href="<?=$SITE_URL?>?mod=user&act=login" class="button-white-medium ">Đăng nhập</a>
                 </div>
                 <div class="header_regis">
-                    <a href="<?=$base_url?>?mod=user&act=signup" class="button-black-medium">Đăng ký</a>
+                    <a href="<?=$SITE_URL?>?mod=user&act=signup" class="button-black-medium">Đăng ký</a>
                 </div>
                 <button class="header_dark">
                     <i class="fa-regular fa-moon"></i>
