@@ -7,7 +7,7 @@
                     <p>Xem lý do các tổ chức hàng đầu chọn học với T-Demy.</p>
                     <button class="button-black-large">Xem các khóa học trên T-Demy</button>
                 </div>
-                <img src="./assets/img/s2.jpg" class="d-block w-100" alt="slide 1">
+                <img src="/duan1/assets/img/s2.jpg" class="d-block w-100" alt="slide 1">
             </div>
             <div class="carousel-item">
                 <div class="carousel__text">
