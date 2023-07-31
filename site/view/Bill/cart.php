@@ -1,7 +1,7 @@
 <?php
 require_once 'controller/bill/cartBill.php';
 if(isset($_GET['course'])){?>
-echo '<meta http-equiv="refresh" content="0;url=<?=$base_url?>?mod=bill&act=addBill">';
+<meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=bill&act=addBill">
 <?php
 }
 ?>
@@ -22,7 +22,7 @@ echo '<meta http-equiv="refresh" content="0;url=<?=$base_url?>?mod=bill&act=addB
                     $totalBillSale += $courseinfo['price'] - ($courseinfo['price'] *($courseinfo['sale']/100))?>
                     <div class="cart-info">
                         <div class="cart-info-img">
-                            <img src="./assets/img/courses/<?=$courseinfo['image']?>" alt="">
+                            <img src="<?=$IMAGE_DIR?>/courses/<?=$courseinfo['image']?>" alt="">
                         </div>
                         <div class="cart-info-details">
                             <h1 class="cart-info-name"><?=$courseinfo['title']?></h1>
@@ -59,7 +59,7 @@ echo '<meta http-equiv="refresh" content="0;url=<?=$base_url?>?mod=bill&act=addB
                         </div>
                         <div class="cart-info-price">
                             <div>
-                                <a href="<?=$base_url?>?mod=bill&act=deleteCourseInBill&del=<?=$detail['idDetailBill']?>">Xóa</a>
+                                <a href="<?=$SITE_URL?>?mod=bill&act=deleteCourseInBill&del=<?=$detail['idDetailBill']?>">Xóa</a>
                                 <a href="#">Yêu thích</a>
                             </div>
                             <span class="price"><?=number_format($courseinfo['price'])?> <span class="vnd">đ</span></span>
@@ -78,7 +78,7 @@ echo '<meta http-equiv="refresh" content="0;url=<?=$base_url?>?mod=bill&act=addB
                 <h2 class="discount-price"><?=number_format($totalBill)?> <span>đ</span></h2>
                 <h2 class="discount-sale"><?=number_format($totalBillSale)?> <span>đ</span></h2>
             </div>
-            <a href="<?=$base_url?>?mod=bill&act=payBill&paybill=<?=$idBillByIdUser['idBill']?>"  class="button-purple-large">Thanh toán</a>
+            <a href="<?=$SITE_URL?>?mod=bill&act=payBill&paybill=<?=$idBillByIdUser['idBill']?>"  class="button-purple-large">Thanh toán</a>
         </div>
     </div>
 
@@ -90,9 +90,9 @@ echo '<meta http-equiv="refresh" content="0;url=<?=$base_url?>?mod=bill&act=addB
                 <?php
                 foreach($top10Course as $course10){?>
                     <div class="card">
-                        <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$course10['courseId']?>"><img src="./assets/img/courses/<?=$course10['image']?>" alt="..."></a>
+                        <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$course10['courseId']?>"><img src="<?=$IMAGE_DIR?>/courses/<?=$course10['image']?>" alt="..."></a>
                         <div class="card-body">
-                            <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$course10['courseId']?>">
+                            <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$course10['courseId']?>">
                                 <h5 class="card-title"><?=$course10['title']?></h5>
                             </a>
                             <?php
@@ -131,7 +131,7 @@ echo '<meta http-equiv="refresh" content="0;url=<?=$base_url?>?mod=bill&act=addB
                             </div>
                             <p><?=$course10['description']?></p>
                             <div class="card-btn row">
-                                <a href="<?=$base_url?>?mod=bill&act=addBill&course=<?=$course10['courseId']?>" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                                <a href="<?=$SITE_URL?>?mod=bill&act=addBill&course=<?=$course10['courseId']?>" class="add-cart col-9">Thêm vào giỏ hàng</a>
                                 <button class="add-like col-2">
                                     <i class="fa-regular fa-heart"></i>
                                 </button>

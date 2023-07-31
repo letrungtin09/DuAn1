@@ -4,7 +4,7 @@
             <div class="detail__sidebarMain">
                 <div class="detail__sidebarContent">
                     <div class="detail__sidebarImg">
-                        <img class="img-fluid" src="./assets/img/courses/<?=$courseSlectbyid['image']?>" alt="">
+                        <img class="img-fluid" src="<?=$IMAGE_DIR?>/courses/<?=$courseSlectbyid['image']?>" alt="">
                     </div>
                     <div class="detail__sidebarInfo">
                         <div class="info-price">
@@ -22,7 +22,7 @@
                         </div>
                         <div class="info-btn">
                             
-                            <a href="<?=$base_url?>?mod=detailcourse&act=addBill&course=<?=$courseSlectbyid['courseId']?>" class="add-to-cart">Thêm vào giỏ hàng</a>
+                            <a href="<?=$SITE_URL?>?mod=detailcourse&act=addBill&course=<?=$courseSlectbyid['courseId']?>" class="add-to-cart">Thêm vào giỏ hàng</a>
                             <button class="add-wishlist"><i class="fa-regular fa-heart"></i></button>
                         </div>
                         <div class="btn-buyNow">
@@ -78,11 +78,11 @@
                     <p>Chúng tôi lựa chọn khóa học này cho tuyển tập khóa học đầu bảng được các doanh nghiệp tin
                         dùng.</p>
                     <div class="detail__img">
-                        <img src="./assets/img/companies/img1.svg" alt="company 1">
-                        <img src="./assets/img/companies/img2.svg" alt="company 2">
-                        <img src="./assets/img/companies/img3.svg" alt="company 3">
-                        <img src="./assets/img/companies/img4.svg" alt="company 4">
-                        <img src="./assets/img/companies/img5.svg" alt="company 5">
+                        <img src="<?=$IMAGE_DIR?>/companies/img1.svg" alt="company 1">
+                        <img src="<?=$IMAGE_DIR?>/companies/img2.svg" alt="company 2">
+                        <img src="<?=$IMAGE_DIR?>/companies/img3.svg" alt="company 3">
+                        <img src="<?=$IMAGE_DIR?>/companies/img4.svg" alt="company 4">
+                        <img src="<?=$IMAGE_DIR?>/companies/img5.svg" alt="company 5">
                     </div>
                 </div>
                 <div class="detail__chapter">
@@ -150,10 +150,10 @@
                         <?php foreach($fiveCourseSameType as $CourseSameType){?>
                             <div class="detail__item">
                                 <div class="kind-img">
-                                    <img src="./assets/img/courses/<?=$CourseSameType['image']?>" alt="">
+                                    <img src="<?=$IMAGE_DIR?>/courses/<?=$CourseSameType['image']?>" alt="">
                                 </div>
                                 <div class="kind-content">
-                                    <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$CourseSameType['courseId']?>"><?=$courseSlectbyid['title']?></a>
+                                    <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$CourseSameType['courseId']?>"><?=$courseSlectbyid['title']?></a>
                                     <div class="kind-bottom">
                                         <span class="kind-time">Tổng số <?=$CourseSameType['allTime']?></span>
                                         <span>•</span>
@@ -190,7 +190,7 @@
                         <a href="#"><?=$user['fullName']?></a>
                         <p class="detail__career"><?=$user['career']?></p>
                         <div class="detail__avatar">
-                            <a href="#" class="mb-0"><img class="img-fluid" src="./assets/img/users/<?=$user['avatar']?>"
+                            <a href="#" class="mb-0"><img class="img-fluid" src="<?=$IMAGE_DIR?>/users/<?=$user['avatar']?>"
                                     alt=""></a>
                             <ul>
                                 <li>
@@ -223,7 +223,7 @@
                             ?>
                             <div class="detail__itemEvaluate item-odd">
                                 <div class="detail__user">
-                                    <img class="img-fluid" src="./assets/img/users/<?=$userEluavate['avatar']?>" alt="">
+                                    <img class="img-fluid" src="<?=$IMAGE_DIR?>/users/<?=$userEluavate['avatar']?>" alt="">
                                     <div class="detail__name">
                                         <p><?=$userEluavate['fullName']?></p>
                                         <div class="detail__stars">
@@ -261,9 +261,9 @@
                         <?php
                         foreach($courseSelectByTeacher as $courseSameTeacher){?>
                             <div class="card">
-                                <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseSameTeacher['courseId']?>"><img src="./assets/img/courses/<?=$courseSameTeacher['image']?>" alt="..."></a>
+                                <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$courseSameTeacher['courseId']?>"><img src="<?=$IMAGE_DIR?>/courses/<?=$courseSameTeacher['image']?>" alt="..."></a>
                                 <div class="card-body">
-                                    <a href="<?=$base_url?>?mod=detailcourse&act=showCourse&course=<?=$courseSameTeacher['courseId']?>">
+                                    <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$courseSameTeacher['courseId']?>">
                                         <h5 class="card-title"><?=$courseSameTeacher['title']?></h5>
                                     </a>
                                     <?php $user = user_select_by_id($courseSameTeacher['userId']); ?>

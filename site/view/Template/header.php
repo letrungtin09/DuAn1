@@ -57,12 +57,12 @@
                 </div>
                 <div class="header_search">
                     <form  action="<?=$SITE_URL?>?mod=search&act=showSearch" method="get">
-                    <div class="form_header_search" style="display:flex;height:100%;">
-                        <button class="btn btn-outline-success header_search_btn" type="submit">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                        <input name='searchInput' class="header_search_input me-2" placeholder="Tìm kiếm nội dung bất kì">
-                    </div>
+                        <div class="form_header_search" style="display:flex;height:100%;">
+                            <button class="btn btn-outline-success header_search_btn" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input name='searchInput' class="header_search_input me-2" placeholder="Tìm kiếm nội dung bất kì">
+                        </div>
                     </form>
                 </div>
                 <div class="nav-item header_teaching">

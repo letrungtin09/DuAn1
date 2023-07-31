@@ -20,7 +20,7 @@
 			include_once($inclFile);
 		}
 	}elseif(isset($_GET['searchInput'])){?>
-		<meta http-equiv="refresh" content="0;url=<?=$ROOT_URL?>?mod=search&act=showSearch&search=<?=$_GET['searchInput']?>">;
+		<meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=search&act=showSearch&search=<?=$_GET['searchInput']?>">;
 	<?php
 	}
     else{

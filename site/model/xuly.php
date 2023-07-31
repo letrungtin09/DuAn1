@@ -1,5 +1,6 @@
 <?php
 require_once 'evaluate.php';
+require "../../global.php";
 
 function EluavateRate($eluavateCourse){
     $sum = 0;
@@ -77,8 +78,8 @@ if(isset($_POST["action"])){
             }
             $output .= '
             <div class="searchCourse_content-product-div card">
-                <a href="#" class="searchCourse_content-product-cart card-body">
-                    <img src="./assets/img/courses/'.$row['image'].'" alt="" class="">
+                <a href="'.$SITE_URL.'?mod=detailcourse&act=showCourse&course='.$row['courseId'].'" class="searchCourse_content-product-cart card-body">
+                    <img src="'.$IMAGE_DIR.'/courses/'.$row["image"].'" alt="" class="">
                     <div class="searchCourse_content-product-cart-infor">
                         <h3 class="">'.$row['title'].'</h3>
                         <p class="">'.$row['description'].'</p>
@@ -87,10 +88,10 @@ if(isset($_POST["action"])){
                             <span class="searchCourse_content-product-cart-infor-point">'.EluavateRate($row['courseId']).'</span>
                             <div class="classification">
                                 <div class="cover">
-                                    <img src="./assets/img/courses/eluavation/cEQfe.png" alt="" class="">
+                                    <img src="'.$IMAGE_DIR.'/courses/eluavation/cEQfe.png" alt="" class="">
                                 </div>
                                 <div class="progress" style="width: '.EluavateRate($row['courseId'])*20 .'%;">
-                                    <img src="./assets/img/courses/eluavation/â.png" alt="" class="">
+                                    <img src="'.$IMAGE_DIR.'/courses/eluavation/â.png" alt="" class="">
                                 </div>
                             </div>
                             <span class="searchCourse_content-product-cart-infor-quantity">(42)</span>
@@ -114,7 +115,7 @@ if(isset($_POST["action"])){
                     </a>
                     <p>'.$row['description'].'</p>
                     <div class="card-btn row">
-                        <a href="http://localhost/duan1/?mod=bill&act=addBill&course='.$row['courseId'].'" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                        <a href="'.$SITE_URL.'?mod=bill&act=addBill&course='.$row['courseId'].'" class="add-cart col-9">Thêm vào giỏ hàng</a>
                         <button class="add-like col-2">
                             <i class="fa-regular fa-heart"></i>
                         </button>

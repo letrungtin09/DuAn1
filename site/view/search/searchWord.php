@@ -1,6 +1,6 @@
 <div class="searchCourse_container">
     <div class="searchCourse_header">
-        <h2 class="searchCourse_header-title"><?=$quantityCountSearch?> kết quả cho "<?=$_GET['search']?>"</h2>
+        <h2 class="searchCourse_header-title">kết quả cho "<?=$_GET['search']?>"</h2>
         <div class="searchCourse_header-infor">
             <div class="searchCourse_header-infor-team">
                 <button class="searchCourse_header-infor-filter" onclick="anhien()">
@@ -15,7 +15,7 @@
                     <option value="4">Số giờ học nhiều nhất</option>
                 </select>
             </div>
-            <span class="searchCourse_header-infor-quantity"><p class=""><?=$quantityCountSearch?> kết quả</p></span>
+            <span class="searchCourse_header-infor-quantity"><p class=""> kết quả</p></span>
         </div>
     </div>
     <div class="searchCourse_content row">
