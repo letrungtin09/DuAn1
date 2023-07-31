@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAGY,iBAHK,CACb,YAAY,CACR,KAAK,CACD,QAAQ,CAAC;EACL,KAAK,EAAE,GAAG;EACV,UAAU,EAAE,IAAI;CACnB;;AANb,AAOY,iBAPK,CACb,YAAY,CACR,KAAK,CAKD,aAAa,CAAA;EACT,KAAK,EAAE,GAAG;CACb",
-    "sources": [
-        "../assets/adminManageCourse.scss"
-    ],
-    "names": [],
-    "file": "adminManageCourse.css"
-}
