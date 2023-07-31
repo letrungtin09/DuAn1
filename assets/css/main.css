@@ -5895,4 +5895,15 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
 .content-qt-admin .table-hover tbody .btn-thao-tac-column-2 button {
   margin: 7% 0;
 }
+
+.btn-thao-tac-column-type .btn {
+  width: 17% !important;
+  height: 27px !important;
+  margin: 5px 42% !important;
+  padding: 0 !important;
+}
+
+.table-hover .line-height {
+  line-height: 94px !important;
+}
 /*# sourceMappingURL=main.css.map */
