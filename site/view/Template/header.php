@@ -204,7 +204,7 @@
                             <ul class="dropdown-menu-mid">
                                 <li><a href="" class="">Cập nhập tài khoản</a></li>
                                 <li><a href="" class="">Đổi mật khẩu</a></li>
-                                <li><a href="" class="">Quản trị website</a></li>
+                                <li><a href="<?=$ADMIN_URL?>index.php" class="">Quản trị website</a></li>
                             </ul>
                             <div class="dropdown-menu-end">
                                 <a href="<?=$SITE_URL?>?mod=user&act=logoff" class="">Đăng xuất</a>
