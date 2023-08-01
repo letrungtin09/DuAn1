@@ -1,7 +1,7 @@
 <footer class="footer-admin">
                 <div class="footer-content">
                     <div class="ft-logo">
-                        <img src="./img/logo.png" alt="">
+                        <img src="<?=$IMAGE_DIR?>/logo.png" alt="">
                     </div>
                     <div class="text-content">
                         <p>@ 2023 T-Demy, Inc</p>
@@ -19,9 +19,9 @@
     <!-- BS5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- OWL CAROUSEL JS -->
-    <script src="./js/owl.carousel.min.js"></script>
+    <script src="<?=$ASSETS_URL?>/js/owl.carousel.min.js"></script>
     <!-- MAIN JS -->
-    <script src="./js/main.js"></script>
+    <script src="<?=$ASSETS_URL?>/js/main.js"></script>
 </body>
 
 </html>

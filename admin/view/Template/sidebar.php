@@ -17,10 +17,10 @@
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- OWL CAROUSEL CSS -->
-    <link rel="stylesheet" href="./css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?=$ASSETS_URL?>/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?=$ASSETS_URL?>/css/owl.theme.default.min.css">
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="<?=$ASSETS_URL?>/css/main.css">
     <!-- Canvas -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -33,60 +33,60 @@
                 <div class="container container-sidebar">
                     <div class="row">
                         <div class="col-sm siderbar-logo">
-                            <img src="./img/logo-white.png" alt="">
+                            <img src="<?=$IMAGE_DIR?>/logo-white.png" alt="">
                         </div>
                         <div class="col-sm siderbar-heading">
-                            <img src="./img/adminStatistical/admin.png" alt="">
+                            <img src="<?=$IMAGE_DIR?>/adminStatistical/admin.png" alt="">
                             <h1>TRANG QUẢN TRỊ</h1>
                         </div>
                         <div class="col-sm sidebar-content">
                             <ul>
                                 <li>
                                     <div class="txt-sidebar" >
-                                        <img  src="./img/adminStatistical/icon1.png" alt="">
-                                        <a href="" >Thống kê</a>
+                                        <img  src="<?=$IMAGE_DIR?>/adminStatistical/icon1.png" alt="">
+                                        <a href="<?=$ADMIN_URL?>?mod=statistic&act=list">Thống kê</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="txt-sidebar" >
-                                        <img  src="./img/adminStatistical/icon2.png" alt="">
-                                        <a  href="">Loại khóa học</a>
+                                        <img  src="<?=$IMAGE_DIR?>/adminStatistical/icon2.png" alt="">
+                                        <a  href="<?=$ADMIN_URL?>?mod=category&act=list">Loại khóa học</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="txt-sidebar" style="border-left: 4px solid #15ad7d;">
-                                        <img style="opacity: 1;" src="./img/adminStatistical/icon3.png" alt="">
-                                        <a style="opacity: 1;" href="">Khóa học</a>
+                                        <img style="opacity: 1;" src="<?=$IMAGE_DIR?>/adminStatistical/icon3.png" alt="">
+                                        <a style="opacity: 1;" href="<?=$ADMIN_URL?>?mod=courses&act=list">Khóa học</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="txt-sidebar">
-                                        <img src="./img/adminStatistical/icon4.png" alt="">
-                                        <a href="">Tài khoản</a>
+                                        <img src="<?=$IMAGE_DIR?>/adminStatistical/icon4.png" alt="">
+                                        <a href="<?=$ADMIN_URL?>?mod=user&act=list">Tài khoản</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="txt-sidebar">
-                                        <img src="./img/adminStatistical/icon5.png" alt="">
-                                        <a href="">Bài viết</a>
+                                        <img src="<?=$IMAGE_DIR?>/adminStatistical/icon5.png" alt="">
+                                        <a href="<?=$ADMIN_URL?>?mod=news&act=list">Bài viết</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="txt-sidebar">
-                                        <img src="./img/adminStatistical/icon6.png" alt="">
-                                        <a href="">Đơn hàng</a>
+                                        <img src="<?=$IMAGE_DIR?>/adminStatistical/icon6.png" alt="">
+                                        <a href="<?=$ADMIN_URL?>?mod=bill&act=list">Đơn hàng</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="txt-sidebar">
-                                        <img src="./img/adminStatistical/icon7.png" alt="">
-                                        <a href="">Bình luận</a>
+                                        <img src="<?=$IMAGE_DIR?>/adminStatistical/icon7.png" alt="">
+                                        <a href="<?=$ADMIN_URL?>?mod=comment&act=list">Bình luận</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="txt-sidebar">
-                                        <img src="./img/adminStatistical/icon8.png" alt="">
-                                        <a href="">Đánh giá</a>
+                                        <img src="<?=$IMAGE_DIR?>/adminStatistical/icon8.png" alt="">
+                                        <a href="<?=$ADMIN_URL?>?mod=evaluate&act=list">Đánh giá</a>
                                     </div>
                                 </li>
                             </ul>

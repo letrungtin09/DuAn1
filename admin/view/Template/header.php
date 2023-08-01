@@ -17,39 +17,33 @@
                             <i class="fa-regular fa-moon"></i>
                         </button>
                         <div class="dropdown dropdown_nav_user">
-                            <!-- modal của giảng viên -->
-                            <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="/assets/img/users/teacher.jpg" alt="">
-                            </a>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-menu-header">
-                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="/assets/img/users/teacher.jpg" alt="">
-                                    </a>
-                                    <div>
-                                        <h6>Lê Trung Tín</h6>
-                                        <p>duytt18897@gmail.com</p>
-                                    </div>
-                                </div>
-                                <ul class="dropdown-menu-mid">
-                                    <li><a href="" class="">Quá trình học tập của tôi</a></li>
-                                    <li><a href="" class="">Giỏ hàng của tôi</a></li>
-                                    <li><a href="" class="">Danh sách yêu thích</a></li>
-                                    <li><a href="" class="">Bảng điều khiển của giảng viên</a></li>
-                                </ul>
-                                <ul class="dropdown-menu-mid">
-                                    <li><a href="" class="">Cập nhập tài khoản</a></li>
-                                    <li><a href="" class="">Đổi mật khẩu</a></li>
-                                    <li><a href="" class="">Lịch sử mua</a></li>
-                                </ul>
-                                <div class="dropdown-menu-end">
-                                    <a href="" class="">Đăng xuất</a>
-                                    <i class="fa-solid fa-right-from-bracket"></i>
+                            <!-- modal của admin -->
+                    <?php if($_SESSION["user"]["role"] == "admin"){ ?>
+                        <a class="btn btn-secondary dropdown-toggle dropdown_nav_user-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="<?=$IMAGE_DIR?>/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-menu-header">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="<?=$IMAGE_DIR?>/users/<?=$_SESSION["user"]["avatar"]?>" alt="">
+                                </a>
+                                <div>
+                                    <h6><?=$_SESSION["user"]["fullName"]?></h6>
+                                    <p><?=$_SESSION["user"]["email"]?></p>
                                 </div>
                             </div>
+                            <ul class="dropdown-menu-mid">
+                                <li><a href="" class="">Cập nhập tài khoản</a></li>
+                                <li><a href="" class="">Đổi mật khẩu</a></li>
+                                <li><a href="" class="">Quản trị website</a></li>
+                            </ul>
+                            <div class="dropdown-menu-end">
+                                <a href="<?=$SITE_URL?>?mod=user&act=logoff" class="">Đăng xuất</a>
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                            </div>
+                        </div>
                         </div>
                     </div>
+                    <?php } ?>
                 </nav>
             </header>
