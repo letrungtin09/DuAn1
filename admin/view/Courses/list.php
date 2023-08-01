@@ -46,7 +46,7 @@
                                         </p>
                                     </td>
                                     <td class="image-course"><img style="width:100%"
-                                            src="../../../assets/img/courses/<?= $image ?>" alt=""></td>
+                                            src="<?=$IMAGE_DIR?>/courses/<?= $image ?>" alt=""></td>
                                     <td>
                                         <p>
                                             <?= $price ?>đ
@@ -97,8 +97,7 @@
                                     <td class="btn-thao-tac btn-thao-tac-column">
                                         <button type="button" class="btn btn-warning">Sửa</button>
                                         <button type="button" class="btn btn-danger">Xóa</button>
-                                        <a href="<?=$ADMIN_URL?>?mod=chapter&act=list&courseId=<?=$courseId?>" class="btn btn-secondary">Chi
-                                            tiết</a>
+                                        <a href="<?=$ADMIN_URL?>?mod=chapter&act=list&courseId=<?=$courseId?>" class="btn btn-secondary">Chi tiết</a>
                                     </td>
                                 </tr>
                             <?php } ?>

@@ -22,73 +22,26 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php foreach ($listChapter as $list){
+                                extract($list);
+                            ?>
                             <tr>
                                 <td scope="row" class="name-course line-height"><input type="checkbox"
                                         class="subCheckbox" value=""></td>
-                                <td class="so-luong line-height">17</td>
+                                <td class="so-luong line-height"><?=$chapterId?></td>
                                 <td class="line-height">
-                                    <p>05</p>
+                                    <p><?=$numberOrder?></p>
                                 </td>
                                 <td class="tieu-de line-height" style="width: 30%;">
-                                    <p>Thiết kế Web cơ bản với HTML, CSS...</p>
+                                    <p><?=$title?></p>
                                 </td>
                                 <td class="line-height btn-thao-tac btn-thao-tac-column btn-thao-tac-column-type">
                                     <button type="button" class="btn btn-warning">Sửa</button>
                                     <button type="button" class="btn btn-danger">Xóa</button>
-                                    <a href="<?=$ADMIN_URL?>?mod=lesson&act=list" class="btn btn-secondary">Chi tiết</a>
+                                    <a href="<?=$ADMIN_URL?>?mod=lesson&act=list&chapterId=<?=$chapterId?>" class="btn btn-secondary">Chi tiết</a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td scope="row" class="name-course line-height"><input type="checkbox"
-                                        class="subCheckbox" value=""></td>
-                                <td class="so-luong line-height">17</td>
-                                <td class="line-height">
-                                    <p>05</p>
-                                </td>
-                                <td class="tieu-de line-height" style="width: 30%;">
-                                    <p>Thiết kế Web cơ bản với HTML, CSS...</p>
-                                </td>
-                                <td class="line-height btn-thao-tac btn-thao-tac-column btn-thao-tac-column-type">
-                                    <button type="button" class="btn btn-warning">Sửa</button>
-                                    <button type="button" class="btn btn-danger">Xóa</button>
-                                    <button type="button" class="btn btn-secondary" style="background-color: gray;">Chi
-                                        tiết</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td scope="row" class="name-course line-height"><input type="checkbox"
-                                        class="subCheckbox" value=""></td>
-                                <td class="so-luong line-height">17</td>
-                                <td class="line-height">
-                                    <p>05</p>
-                                </td>
-                                <td class="tieu-de line-height" style="width: 30%;">
-                                    <p>Thiết kế Web cơ bản với HTML, CSS...</p>
-                                </td>
-                                <td class="line-height btn-thao-tac btn-thao-tac-column btn-thao-tac-column-type">
-                                    <button type="button" class="btn btn-warning">Sửa</button>
-                                    <button type="button" class="btn btn-danger">Xóa</button>
-                                    <button type="button" class="btn btn-secondary" style="background-color: gray;">Chi
-                                        tiết</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td scope="row" class="name-course line-height"><input type="checkbox"
-                                        class="subCheckbox" value=""></td>
-                                <td class="so-luong line-height">17</td>
-                                <td class="line-height">
-                                    <p>05</p>
-                                </td>
-                                <td class="tieu-de line-height" style="width: 30%;">
-                                    <p>Thiết kế Web cơ bản với HTML, CSS...</p>
-                                </td>
-                                <td class="line-height btn-thao-tac btn-thao-tac-column btn-thao-tac-column-type">
-                                    <button type="button" class="btn btn-warning">Sửa</button>
-                                    <button type="button" class="btn btn-danger">Xóa</button>
-                                    <a href="<?=$ADMIN_URL?>?mod=lesson&act=list" class="btn btn-secondary">Chi
-                                        tiết</a>
-                                </td>
-                            </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </form>
