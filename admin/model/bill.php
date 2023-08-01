@@ -1,6 +1,11 @@
 <?php
 require_once 'pdo.php';
 
+// Truy vấn tất cả đơn hàng
+function select_all_bill(){
+    $sql = "SELECT * FROM bill";
+    return pdo_query($sql);
+}
 // Truy vấn đơn hàng chưa thanh toán theo userId
 function bill_select_by_userId($userId){
     $sql = "SELECT * FROM bill WHERE userId = ? and statusBill = 0";

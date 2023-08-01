@@ -1,6 +1,11 @@
 <?php
 require_once 'pdo.php';
 
+// Truy vấn tất cả bài viết
+function news_select_all(){
+    $sql = "SELECT * FROM news";
+    return pdo_query($sql);
+}
 // Truy vấn 8 bài viết lên trang chủ
 function news_select_pageHome(){
     $sql = "SELECT * FROM news LIMIT 0, 8";
