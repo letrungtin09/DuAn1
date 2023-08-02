@@ -1,84 +1,97 @@
-.formInsertEdit{
-    .formInsertEdit__title{
+.formInsertEdit {
+    .formInsertEdit__title {
         padding: 0 $pd-9;
         margin: $mg-5 0;
-        h1{
+        h1 {
             font-size: $fs-1;
             font-weight: $fw-4;
         }
     }
-    .formInsertEdit__space{
+    .formInsertEdit__space {
         height: 39px;
         background-color: $color-green-4;
-        .message{
+        .message {
             font-size: $fs-2;
             text-transform: uppercase;
-            font-weight: $fw-4;    
+            font-weight: $fw-4;
             padding-left: $pd-9;
             padding: 0 $pd-9;
             height: 100%;
             display: flex;
             align-items: center;
+            span {
+                color: red;
+                margin-right: 5px;
+                font-weight: 700;
+                font-size: 19px;
+            }
         }
     }
-    .formInsertEdit__content{
+    .formInsertEdit__content {
         padding: 0 $pd-9;
         margin: $mg-5 0;
-        form{
-            .formInsertEdit__item{
+        form {
+            .formInsertEdit__item {
                 margin-bottom: $mg-0;
-                .formInsertEdit__label{
+                .formInsertEdit__label {
                     font-size: $fs-2;
                     font-weight: $fw-4;
                     text-transform: uppercase;
                     margin-bottom: $mg-0-6;
                 }
-                .input-readonly{
-                    background-color: #E7E7E7!important;
-                    color: $color-gray-0!important;
+                .formInsertEdit__control {
+                    width: 100%;
+                    border: 1px solid $color-black-1;
+                    background-color: $color-white-1;
+                    .formInsertEdit__input {
+                        &:focus {
+                            outline: none;
+                        }
+                        padding: $pd-4;
+                        border: none;
+                        background-color: transparent;
+                    }
+                    .formInsertEdit__file{
+                        width: 110px;
+                    }
                 }
-                .formInsertEdit__check{
+                .input-readonly {
+                    background-color: #e7e7e7 !important;
+                    color: $color-gray-0 !important;
+                }
+                .formInsertEdit__check {
                     border: 1px solid $color-black-1;
                     padding: $pd-4;
                     background-color: $color-white-1;
-                    .unpaid{
+                    .unpaid {
                         margin-right: $mg-0;
                     }
                 }
-                .formInsertEdit__input{
-                    &:focus{
-                        outline: none;
-                    }
-                    width: 100%;
-                    padding: $pd-4;
-                    border: 1px solid $color-black-1;
-                    background-color: $color-white-1;
-                }
-                .formInsertEdit__radio{
+                .formInsertEdit__radio {
                     width: auto;
                 }
-                .formInsertEdit__select{
-                    &:focus{
+                .formInsertEdit__select {
+                    &:focus {
                         outline: none;
                     }
                     padding: $pd-4 $pd-2;
                     width: 100%;
                     background-color: $color-white-1;
                 }
-                .formInsertEdit__textarea{
+                .formInsertEdit__textarea {
                     width: 100%;
                     padding: $pd-4;
                     resize: none;
                     background-color: $color-white-1;
-                    &:focus{
+                    &:focus {
                         outline: none;
                     }
                 }
             }
-            .formInsertEdit__btn{
+            .formInsertEdit__btn {
                 margin-bottom: 0;
                 padding-top: $pd-4;
-                button{
+                button {
                     width: 120px;
                     padding: $pd-4 0;
                     font-size: $fs-2;
@@ -86,7 +99,7 @@
                     color: $color-white-0;
                     border: none;
                 }
-                a{
+                a {
                     display: inline-block;
                     width: 120px;
                     padding: $pd-4 0;
@@ -96,22 +109,22 @@
                     font-weight: $fw-4;
                     text-align: center;
                 }
-                .btn-insert{
+                .btn-insert {
                     background-color: $color-green-5;
                     margin-right: $mg-1;
                 }
-                .btn-reset{
+                .btn-reset {
                     background-color: $color-gray-0;
                     margin-right: $mg-1;
                 }
-                .btn-list{
+                .btn-list {
                     background-color: $color-black-1;
                 }
-                .btn-update{
+                .btn-update {
                     background-color: $color-blue-2;
                     margin-right: $mg-1;
                 }
-                .btn-delete{
+                .btn-delete {
                     background-color: $color-red-0;
                     margin-right: $mg-1;
                 }

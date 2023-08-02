@@ -1006,6 +1006,12 @@ body {
   display: flex;
   align-items: center;
 }
+.formInsertEdit .formInsertEdit__space .message span {
+  color: red;
+  margin-right: 5px;
+  font-weight: 700;
+  font-size: 19px;
+}
 .formInsertEdit .formInsertEdit__content {
   padding: 0 4rem;
   margin: 2.4rem 0;
@@ -1019,8 +1025,24 @@ body {
   text-transform: uppercase;
   margin-bottom: 0.6rem;
 }
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control {
+  width: 100%;
+  border: 1px solid #1c1d1f;
+  background-color: #f7f9fa;
+}
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control .formInsertEdit__input {
+  padding: 0.8rem;
+  border: none;
+  background-color: transparent;
+}
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control .formInsertEdit__input:focus {
+  outline: none;
+}
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control .formInsertEdit__file {
+  width: 110px;
+}
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .input-readonly {
-  background-color: #E7E7E7 !important;
+  background-color: #e7e7e7 !important;
   color: #6a6f73 !important;
 }
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__check {
@@ -1030,15 +1052,6 @@ body {
 }
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__check .unpaid {
   margin-right: 1.2rem;
-}
-.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__input {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #1c1d1f;
-  background-color: #f7f9fa;
-}
-.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__input:focus {
-  outline: none;
 }
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__radio {
   width: auto;
@@ -3865,9 +3878,6 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
   background: #15AD7D;
   color: white;
 }
-.container-all .col-left .sidebar-qt-admin .container-sidebar .row .sidebar-content button:hover {
-  margin-top: 7%;
-}
 .container-all .col-right {
   width: 85%;
   display: flex;
@@ -4000,14 +4010,36 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
   color: #6a6f73;
   font-weight: 700;
 }
-.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover a {
+.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar a::before {
+  content: "";
+  width: 4px;
+  height: 0%;
+  background-color: #15AD7D;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar .active {
+  color: #fff;
+}
+.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar .active img {
   opacity: 1;
+}
+.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar .active::before {
+  height: 100%;
+}
+.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover a {
+  color: #fff;
 }
 .container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover img {
   opacity: 1;
 }
 .container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover .txt-sidebar {
   cursor: pointer;
+}
+.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover .txt-sidebar a::before {
+  height: 100%;
 }
 .container-all .col-right {
   width: 85%;
