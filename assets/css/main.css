@@ -1102,6 +1102,10 @@ body {
   margin-right: 0.8rem;
 }
 
+.click-page {
+  background-color: beige;
+}
+
 .login_container {
   height: 500px;
   display: flex;
@@ -3861,6 +3865,9 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
   background: #15AD7D;
   color: white;
 }
+.container-all .col-left .sidebar-qt-admin .container-sidebar .row .sidebar-content button:hover {
+  margin-top: 7%;
+}
 .container-all .col-right {
   width: 85%;
   display: flex;
@@ -3993,36 +4000,14 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
   color: #6a6f73;
   font-weight: 700;
 }
-.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar a::before {
-  content: "";
-  width: 4px;
-  height: 0%;
-  background-color: #15AD7D;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: 0.3s;
-}
-.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar .active {
-  color: #fff;
-}
-.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar .active img {
-  opacity: 1;
-}
-.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar .active::before {
-  height: 100%;
-}
 .container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover a {
-  color: #fff;
+  opacity: 1;
 }
 .container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover img {
   opacity: 1;
 }
 .container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover .txt-sidebar {
   cursor: pointer;
-}
-.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover .txt-sidebar a::before {
-  height: 100%;
 }
 .container-all .col-right {
   width: 85%;

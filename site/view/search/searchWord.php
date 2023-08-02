@@ -109,7 +109,12 @@
             </div>
         </div>
         <div id="searchCourse_content-product" class="filter_data col-9">
-
         </div>
+        <nav aria-label="..." id="pagination_nav" style="display: flex;justify-content: center;">
+            <ul class="pagination pagination_data pagination-lg">
+            </ul>
+        </nav>
     </div>
 </div>
+<script>
+</script>
