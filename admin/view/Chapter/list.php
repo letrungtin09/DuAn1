@@ -3,7 +3,10 @@
         <div class="row">
             <div class="col-sm col-1">
                 <div class="col-1-left">
-                    <h1>CHI TIẾT KHÓA HỌC "Thiết kế Web với HTML, CSS..."</h1>
+                    <h1>CHI TIẾT KHÓA HỌC: <br>"<?php
+                       $name = course_select_by_id($idCourse);
+                       echo $name['title'];
+                    ?>"</h1>
                 </div>
                 <div class="col-1-right">
                     <a type="button" class="btn btn-success">+ Thêm chương</a>
@@ -16,7 +19,7 @@
                             <tr>
                                 <th scope="col"><input type="checkbox" id="masterCheckbox" value=""></th>
                                 <th scope="col">ID</th>
-                                <th scope="col">STT</th>
+                                <th scope="col">CHƯƠNG</th>
                                 <th scope="col">TIÊU ĐỀ CHƯƠNG</th>
                                 <th scope="col">THAO TÁC</th>
                             </tr>
