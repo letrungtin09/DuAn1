@@ -102,7 +102,6 @@ if(isset($_POST["action"])){
             $nameUserSearch = user_select_by_id($row['userId']);
             $output .= '
             <div class="searchCourse_content-product-div card">
-            '.$query.'
                 <a href="'.$SITE_URL.'?mod=detailcourse&act=showCourse&course='.$row['courseId'].'" class="searchCourse_content-product-cart card-body">
                     <img src="'.$IMAGE_DIR.'/courses/'.$row["image"].'" alt="" class="">
                     <div class="searchCourse_content-product-cart-infor">

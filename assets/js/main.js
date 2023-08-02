@@ -127,11 +127,6 @@ function hienthem(){
     $('.select_fillter_controller').change(function(){
         filter_data();
     })
-    $('.page-item').click(function(){
-        $(this).siblings().removeClass("active");
-        $(this).addClass("active");
-        filter_data();
-    });
     $('#price_range').slider({
         range:true,
         min:1000,
