@@ -8,8 +8,18 @@
         }
     }
     .formInsertEdit__space{
-        height: 30px;
-        background-color: $color-gray-2;
+        height: 39px;
+        background-color: $color-green-4;
+        .message{
+            font-size: $fs-2;
+            text-transform: uppercase;
+            font-weight: $fw-4;    
+            padding-left: $pd-9;
+            padding: 0 $pd-9;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
     }
     .formInsertEdit__content{
         padding: 0 $pd-9;

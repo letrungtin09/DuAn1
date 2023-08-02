@@ -40,9 +40,9 @@
                                     <td class="so-luong">
                                         <?= $courseId ?>
                                     </td>
-                                    <td class="tieu-de">
+                                    <td class="tieu-de tieu-de-limited" style="line-height: 25px;">
                                         <p>
-                                            <?= $title ?>
+                                            <?=$title?>
                                         </p>
                                     </td>
                                     <td class="image-course"><img style="width:100%"

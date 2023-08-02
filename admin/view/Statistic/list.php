@@ -19,55 +19,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php foreach ($listStatistic as $list) {
+                                        extract($list);
+                                     ?>
                                     <tr>
-                                        <td scope="row" class="name-course">Font-end</td>
-                                        <td class="so-luong">17</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
+                                        <td scope="row" class="name-course"><?=$nameCate?></td>
+                                        <td class="so-luong"><?=$quantity?></td>
+                                        <td><?=number_format($price_min)?>đ</td>
+                                        <td><?=number_format($price_max)?>đ</td>
+                                        <td><?=number_format($price_avg)?>đ</td>
                                     </tr>
-                                    <tr>
-                                        <td scope="row" class="name-course">Back-end</td>
-                                        <td class="so-luong">7</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row" class="name-course">Java</td>
-                                        <td class="so-luong">22</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row" class="name-course">Mobile</td>
-                                        <td class="so-luong">9</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row" class="name-course">Python</td>
-                                        <td class="so-luong">11</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row" class="name-course">PHP</td>
-                                        <td class="so-luong">7</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row" class="name-course">SQL</td>
-                                        <td class="so-luong">7</td>
-                                        <td>950.000đ</td>
-                                        <td>3.500.000đ</td>
-                                        <td>2.270.000đ</td>
-                                    </tr>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>

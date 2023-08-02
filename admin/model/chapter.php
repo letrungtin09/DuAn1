@@ -15,4 +15,3 @@ function chapter_select_idcourse($courseId){
     $sql = "SELECT * FROM chapter_courses WHERE courseId=?";
     return pdo_query($sql, $courseId);
 }
-?>
