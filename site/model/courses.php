@@ -62,26 +62,6 @@ function course_select_keyword($keywords){
     $sql = "SELECT * FROM courses cou "." JOIN category cate ON cate.cateId = cou.cateId "." WHERE title LIKE ? OR nameCate LIKE ?";
     return pdo_query($sql, '%'.$keywords.'%', '%'.$keywords.'%');
 }
-// Tìm kiếm khóa học sắp xếp theo lượt mua nhiều nhất
-function course_select_keyword_arrange_by_purchar_increase($keywords){
-    $sql = "SELECT * FROM courses cou "." JOIN category cate ON cate.cateId = cou.cateId "." WHERE title LIKE ? OR nameCate LIKE ? ORDER BY purchase DESC";
-    return pdo_query($sql, '%'.$keywords.'%', '%'.$keywords.'%');
-}
-// Tìm kiếm khóa học sắp xếp theo giá thấp nhất
-function course_select_keyword_arrange_by_price_decrease($keywords){
-    $sql = "SELECT * FROM courses cou "." JOIN category cate ON cate.cateId = cou.cateId "." WHERE title LIKE ? OR nameCate LIKE ? ORDER BY price ASC";
-    return pdo_query($sql, '%'.$keywords.'%', '%'.$keywords.'%');
-}
-// Tìm kiếm khóa học sắp xếp thời gian cập nhập mới nhất
-function course_select_keyword_arrange_by_date_decrease($keywords){
-    $sql = "SELECT * FROM courses cou "." JOIN category cate ON cate.cateId = cou.cateId "." WHERE title LIKE ? OR nameCate LIKE ? ORDER BY date DESC";
-    return pdo_query($sql, '%'.$keywords.'%', '%'.$keywords.'%');
-}
-// Tìm kiếm khóa học sắp xếp giờ học nhiều nhất
-function course_select_keyword_arrange_by_alltime_decrease($keywords){
-    $sql = "SELECT * FROM courses cou "." JOIN category cate ON cate.cateId = cou.cateId "." WHERE title LIKE ? OR nameCate LIKE ? ORDER BY allTime DESC";
-    return pdo_query($sql, '%'.$keywords.'%', '%'.$keywords.'%');
-}
 
 // Top 10 khóa học bán chạy nhất
 function course_select_top10_best_seller(){

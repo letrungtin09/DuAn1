@@ -1,6 +1,6 @@
 <div class="searchCourse_container">
     <div class="searchCourse_header">
-        <h2 class="searchCourse_header-title">kết quả cho "<?=$_GET['search']?>"</h2>
+        <h2 class="searchCourse_header-title" id="searchCourse_header-title-id"><?=$_GET['search']?></h2>
         <div class="searchCourse_header-infor">
             <div class="searchCourse_header-infor-team">
                 <button class="searchCourse_header-infor-filter" onclick="anhien()">
@@ -112,6 +112,7 @@
         </div>
         <nav aria-label="..." id="pagination_nav" style="display: flex;justify-content: center;">
             <ul class="pagination pagination_data pagination-lg">
+
             </ul>
         </nav>
     </div>
