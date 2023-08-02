@@ -1,6 +1,9 @@
 <?php
 require_once 'evaluate.php';
 require "../../global.php";
+require_once 'chapter.php';
+require_once 'detailChapter.php';
+require_once 'user.php';
 
 function EluavateRate($eluavateCourse){
     $sum = 0;
@@ -16,6 +19,15 @@ function EluavateRate($eluavateCourse){
     }else{
         return 0;
     }
+}
+function chapterSearch($courseId){
+    $chaptersearch = chapter_select_idcourse($courseId);
+    $countAllDetailsearch = 0;
+    foreach($chaptersearch as $chap){
+        $countSession = detailChapter_count_chapterId($chap['chapterId']);
+        $countAllDetailsearch += $countSession;
+    }
+    return $countAllDetailsearch;
 }
 $connect = new PDO("mysql:host=localhost;dbname=tdemy;charset=utf8", "root", "");
 
@@ -62,22 +74,35 @@ if(isset($_POST["action"])){
     $statement = $connect->prepare($query);
 	$statement->execute();
 	$result = $statement->fetchAll();
+    // TỔNG SỐ RECORDS
 	$total_row = $statement->rowCount();
+    // TÌM LIMIT VÀ CURRENT_PAGE
+    $current_page = isset($_POST['pages']) ? $_POST['pages'] : 1;
+    $limit = 6;
+    // TÍNH TOÁN TOTAL_PAGE VÀ START
+    // tổng số trang
+    $total_page = ceil($total_row / $limit);
+    // Giới hạn current_page trong khoảng 1 đến total_page
+    if ($current_page > $total_page){
+        $current_page = $total_page;
+    }
+    else if ($current_page < 1){
+        $current_page = 1;
+    }
+    // Tìm Start
+    $start = ($current_page - 1) * $limit;
+    $query .= " LIMIT $start, $limit";
+    $sta = $connect->prepare($query);
+	$sta->execute();
+	$re = $sta->fetchAll();
+    $totald = $sta->rowCount();
 	$output = '';
-    if($total_row > 0){
-        foreach($result as $row){
-            require_once 'user.php';
+    if($totald > 0){
+        foreach($re as $row){
             $nameUserSearch = user_select_by_id($row['userId']);
-            require_once 'chapter.php';
-            require_once 'detailChapter.php';
-            $chaptersearch = chapter_select_idcourse($row['courseId']);
-            $countAllDetailsearch = 0;
-            foreach($chaptersearch as $chap){
-                $countSession = detailChapter_count_chapterId($chap['chapterId']);
-                $countAllDetailsearch += $countSession;
-            }
             $output .= '
             <div class="searchCourse_content-product-div card">
+            '.$query.'
                 <a href="'.$SITE_URL.'?mod=detailcourse&act=showCourse&course='.$row['courseId'].'" class="searchCourse_content-product-cart card-body">
                     <img src="'.$IMAGE_DIR.'/courses/'.$row["image"].'" alt="" class="">
                     <div class="searchCourse_content-product-cart-infor">
@@ -99,7 +124,7 @@ if(isset($_POST["action"])){
                         <div class="searchCourse_content-product-cart-infor-lever">
                             <ul class="">
                                 <span>Tổng số giờ '.$row['allTime'].'</span>
-                                <li class="">'.$countAllDetailsearch.' bài giảng</li>
+                                <li class="">'.chapterSearch($row['courseId']).' bài giảng</li>
                                 <li class="">'.$row['level'].'</li>
                             </ul>
                         </div>

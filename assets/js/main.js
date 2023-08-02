@@ -77,7 +77,6 @@ function hienthem(){
     }
     
 }
-$(document).ready(function(){
     filter_data();
     function filter_data(){
         $('.filter_data').html('<div id="searchCourse_content-product" style="" ></div>');
@@ -88,12 +87,21 @@ $(document).ready(function(){
         var level = get_filter('searchCourse_content-filter-checkbox_class_level');
         var teacher = get_filter('searchCourse_content-filter-checkbox_class_teacher');
         var arrange = get_arrange('select_fillter_controller');
+        var pages = get_page('pagination_data');
         $.ajax({
             url:"model/xuly.php",
             method:"POST",
-            data:{action:action, minimum_price:minimum_price, arrange:arrange, maximum_price:maximum_price, type:type, level:level, teacher:teacher},
+            data:{action:action, pages:pages, minimum_price:minimum_price, arrange:arrange, maximum_price:maximum_price, type:type, level:level, teacher:teacher},
             success:function(data){
                 $('.filter_data').html(data);
+            }
+        });
+        $.ajax({
+            url:"model/xulypagination.php",
+            method:"POST",
+            data:{action:action, pages:pages, minimum_price:minimum_price, arrange:arrange, maximum_price:maximum_price, type:type, level:level, teacher:teacher},
+            success:function(data){
+                $('.pagination_data').html(data);
             }
         });
     }
@@ -108,6 +116,10 @@ $(document).ready(function(){
         var arrange = $('.'+class_name).find(':selected').val();
         return arrange;
     }
+    function get_page(class_name){
+        var page = $('.'+class_name).find('.active').val();
+        return page;
+    }
     $('.common_selector').click(function(){
         filter_data();
     });
@@ -115,10 +127,14 @@ $(document).ready(function(){
     $('.select_fillter_controller').change(function(){
         filter_data();
     })
-
+    $('.page-item').click(function(){
+        $(this).siblings().removeClass("active");
+        $(this).addClass("active");
+        filter_data();
+    });
     $('#price_range').slider({
         range:true,
-        min:0,
+        min:1000,
         max:5000000,
         values:[1000, 5000000],
         step:500,
@@ -130,7 +146,10 @@ $(document).ready(function(){
             filter_data();
         }
     });
-});
+function myFunction(element) {
+    element.classList.add("active");
+    filter_data();
+}
 
 // PAY COURSE
 function checkedInput1(){
