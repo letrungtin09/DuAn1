@@ -220,3 +220,12 @@ function truncateString(str, num){
         }
     }
     masterCheckbox.addEventListener('change', handleMasterCheckboxChange);
+
+// Giới hạn từ xuất hiện
+    var textElements  = document.querySelectorAll('.tieu-de-limited');
+    for(var textElement of textElements ){
+        var originalText = textElement.textContent;
+        var trimmedText = originalText.trim().slice(0,33)+'...';
+        textElement.textContent = trimmedText;
+    }
+
