@@ -33,60 +33,52 @@
                 <div class="container container-sidebar">
                     <div class="row">
                         <div class="col-sm siderbar-logo">
-                            <img src="<?=$IMAGE_DIR?>/logo-white.png" alt="">
+                            <a href="<?= $ADMIN_URL ?>index.php"><img src="<?=$IMAGE_DIR?>/logo-white.png" alt=""></a>
                         </div>
                         <div class="col-sm siderbar-heading">
                             <img src="<?=$IMAGE_DIR?>/adminStatistical/admin.png" alt="">
                             <h1>TRANG QUẢN TRỊ</h1>
                         </div>
                         <div class="col-sm sidebar-content">
-                            <ul>
+                            <ul id="adminNav">
                                 <li>
                                     <div class="txt-sidebar" >
-                                        <img  src="<?=$IMAGE_DIR?>/adminStatistical/icon1.png" alt="">
-                                        <a href="<?=$ADMIN_URL?>?mod=statistic&act=list">Thống kê</a>
+                                        <a class="active" href="<?=$ADMIN_URL?>?mod=statistic&act=list"><img  src="<?=$IMAGE_DIR?>/adminStatistical/icon1.png" alt="">Thống kê</a>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="txt-sidebar" >
-                                        <img  src="<?=$IMAGE_DIR?>/adminStatistical/icon2.png" alt="">
-                                        <a  href="<?=$ADMIN_URL?>?mod=category&act=list">Loại khóa học</a>
+                                        <a href="<?=$ADMIN_URL?>?mod=category&act=list"><img  src="<?=$IMAGE_DIR?>/adminStatistical/icon2.png" alt="">Loại khóa học</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="txt-sidebar" style="border-left: 4px solid #15ad7d;">
-                                        <img style="opacity: 1;" src="<?=$IMAGE_DIR?>/adminStatistical/icon3.png" alt="">
-                                        <a style="opacity: 1;" href="<?=$ADMIN_URL?>?mod=courses&act=list">Khóa học</a>
+                                    <div class="txt-sidebar">                                      
+                                        <a href="<?=$ADMIN_URL?>?mod=courses&act=list"><img src="<?=$IMAGE_DIR?>/adminStatistical/icon3.png" alt="">Khóa học</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="txt-sidebar">
-                                        <img src="<?=$IMAGE_DIR?>/adminStatistical/icon4.png" alt="">
-                                        <a href="<?=$ADMIN_URL?>?mod=user&act=list">Tài khoản</a>
+                                    <div class="txt-sidebar">                                       
+                                        <a href="<?=$ADMIN_URL?>?mod=user&act=list"><img src="<?=$IMAGE_DIR?>/adminStatistical/icon4.png" alt="">Tài khoản</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="txt-sidebar">
-                                        <img src="<?=$IMAGE_DIR?>/adminStatistical/icon5.png" alt="">
-                                        <a href="<?=$ADMIN_URL?>?mod=news&act=list">Bài viết</a>
+                                    <div class="txt-sidebar">                                       
+                                        <a href="<?=$ADMIN_URL?>?mod=news&act=list"><img src="<?=$IMAGE_DIR?>/adminStatistical/icon5.png" alt="">Bài viết</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="txt-sidebar">
-                                        <img src="<?=$IMAGE_DIR?>/adminStatistical/icon6.png" alt="">
-                                        <a href="<?=$ADMIN_URL?>?mod=bill&act=list">Đơn hàng</a>
+                                    <div class="txt-sidebar">                                      
+                                        <a href="<?=$ADMIN_URL?>?mod=bill&act=list"><img src="<?=$IMAGE_DIR?>/adminStatistical/icon6.png" alt="">Đơn hàng</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="txt-sidebar">
-                                        <img src="<?=$IMAGE_DIR?>/adminStatistical/icon7.png" alt="">
-                                        <a href="<?=$ADMIN_URL?>?mod=comment&act=list">Bình luận</a>
+                                    <div class="txt-sidebar">                                       
+                                        <a href="<?=$ADMIN_URL?>?mod=comment&act=list"><img src="<?=$IMAGE_DIR?>/adminStatistical/icon7.png" alt="">Bình luận</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="txt-sidebar">
-                                        <img src="<?=$IMAGE_DIR?>/adminStatistical/icon8.png" alt="">
-                                        <a href="<?=$ADMIN_URL?>?mod=evaluate&act=list">Đánh giá</a>
+                                    <div class="txt-sidebar">                                     
+                                        <a href="<?=$ADMIN_URL?>?mod=evaluate&act=list"><img src="<?=$IMAGE_DIR?>/adminStatistical/icon8.png" alt="">Đánh giá</a>
                                     </div>
                                 </li>
                             </ul>

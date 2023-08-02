@@ -220,3 +220,15 @@ function truncateString(str, num){
         }
     }
     masterCheckbox.addEventListener('change', handleMasterCheckboxChange);
+
+// active sidebar admin
+var mainNav = document.getElementById("adminNav");
+var listNav = mainNav.getElementsByTagName("a");
+for (var i = 0; i < listNav.length; i++) {
+    listNav[i].addEventListener("click", function () {
+        var current = document.querySelector("#adminNav .txt-sidebar .active");
+        current.className = current.className.replace("active", "");
+        // Cộng thêm class active cho thẻ li được click
+        this.className += "active";
+    });
+}

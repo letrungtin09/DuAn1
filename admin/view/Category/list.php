@@ -6,7 +6,7 @@
                     <h1>QUẢN LÝ LOẠI KHÓA HỌC</h1>
                 </div>
                 <div class="col-1-right">
-                    <a type="button" class="btn btn-success">+ Thêm loại khóa học</a>
+                    <a href="<?=$ADMIN_URL?>?mod=category&act=add" class="btn btn-success">+ Thêm loại khóa học</a>
                 </div>
             </div>
             <div class="col-sm col-2">
@@ -31,8 +31,8 @@
                                 <td class="so-luong"><?=$cateId?></td>
                                 <td><?=$nameCate?></td>
                                 <td class="btn-thao-tac">
-                                    <button type="button" class="btn btn-warning">Sửa</button>
-                                    <button type="button" class="btn btn-danger">Xóa</button>
+                                    <a href="<?=$ADMIN_URL?>?mod=category&act=edit&btn_edit&cateId=<?=$cateId?>" class="btn btn-warning">Sửa</a>
+                                    <a href="<?=$ADMIN_URL?>?mod=category&act=list&btn_delete&cateId=<?=$cateId?>" class="btn btn-danger">Xóa</a>
                                 </td>
                             </tr>
                             <?php } ?>

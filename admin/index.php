@@ -22,7 +22,7 @@
 		}
 	}
     else{
-		include_once("index.php");
+		include_once("controller/statistic/list.php");
 	}
 	
 	include_once 'view/Template/footer.php';

@@ -1,4 +1,5 @@
 <?php
+    require_once "./../global.php";
     require_once 'model/user.php';
     extract($_REQUEST);
     if(exist_param("btn_login")){
