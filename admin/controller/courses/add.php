@@ -12,7 +12,7 @@ if(exist_param("btn_insert")){
         $MESSAGE = "Thêm mới thất bại. Vui lòng điền đầy đủ thông tin khóa học !";
         include_once("view/Courses/add.php");
     }
-    else if(is_numeric($price) == false || is_numeric($sale) == false || $price <= 0 || ($sale >= 100 || $sale <= 0)){
+    else if(is_numeric($price) == false || is_numeric($sale) == false || $price <= 0 || ($sale >= 100 || $sale < 0)){
         $MESSAGE = "Thêm mới thất bại. Vui lòng nhập chữ số cho giá hoặc giảm giá !";
         include_once("view/Courses/add.php");
     }

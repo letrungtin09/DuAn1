@@ -1041,6 +1041,9 @@ body {
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control .formInsertEdit__file {
   width: 110px;
 }
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control .formInsertEdit__date {
+  width: 100%;
+}
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .input-readonly {
   background-color: #e7e7e7 !important;
   color: #6a6f73 !important;

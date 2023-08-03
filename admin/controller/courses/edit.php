@@ -8,19 +8,25 @@ require_once 'model/category.php';
 extract($_REQUEST);
 
 if (exist_param("btn_update")) {
+
     $file_name = save_file("upload_image","$IMAGE_DIR/courses/");
     $image = $file_name ? $file_name : $image;
-    if($title == "" || $price == "" || $allTime == "" || $description == "" || $content == ""){
-        $MESSAGE = "Cập nhật thất bại. Vui lòng nhập đầy đủ thông tin khóa học !";
-        include_once("view/Courses/edit.php");
-    }
-    else if(is_numeric($price) == false || is_numeric($sale) == false || $price <= 0 || ($sale >= 100 || $sale <= 0)){
-        $MESSAGE = "Cập nhật thất bại. Vui lòng nhập chữ số cho giá hoặc giảm giá !";
+
+    if($title != "" || $price != "" || $allTime != "" || $description != "" || $content != "" || is_numeric($price) || is_numeric($sale) || $price > 0 || ($sale < 100 && $sale >= 0)){
+        course_update($courseId, $title, $image, $price, $sale, $userId, $purchase, $date, $level, $description, $cateId, $content, $allTime);
+        //Lấy tất cả user có vai trò là teacher
+        $getTeacher = user_select_by_role("teacher");
+        //Lấy tất cả loại khóa học
+        $getCate = category_select_all();
+        $MESSAGE = "Cập nhật khóa học thành công !";
         include_once("view/Courses/edit.php");
     }
     else{
-        course_update($courseId, $title, $image, $price, $sale, $userId, $purchase, $date, $level, $description, $cateId, $content, $allTime);
-        $MESSAGE = "Cập nhật khóa học mới thành công !";
+        //Lấy tất cả user có vai trò là teacher
+        $getTeacher = user_select_by_role("teacher");
+        //Lấy tất cả loại khóa học
+        $getCate = category_select_all();
+        $MESSAGE = "Cập nhật thất bại. Vui lòng nhập lại thông tin khóa học !";
         include_once("view/Courses/edit.php");
     }
     include_once("view/Courses/edit.php");

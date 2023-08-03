@@ -4,12 +4,12 @@
             <div class="col-sm col-1">
                 <div class="col-1-left">
                     <h1>CHI TIẾT KHÓA HỌC: <br>"<?php
-                       $name = course_select_by_id($idCourse);
+                       $name = course_select_by_id($_GET['courseId']);
                        echo $name['title'];
                     ?>"</h1>
                 </div>
                 <div class="col-1-right">
-                    <a type="button" class="btn btn-success">+ Thêm chương</a>
+                    <a href="<?=$ADMIN_URL?>?mod=chapter&act=add&courseId=<?=$_GET['courseId']?>" class="btn btn-success">+ Thêm chương</a>
                 </div>
             </div>
             <div class="col-sm col-2">
@@ -39,8 +39,8 @@
                                     <p><?=$title?></p>
                                 </td>
                                 <td class="line-height btn-thao-tac btn-thao-tac-column btn-thao-tac-column-type">
-                                    <button type="button" class="btn btn-warning">Sửa</button>
-                                    <button type="button" class="btn btn-danger">Xóa</button>
+                                    <a href="<?=$ADMIN_URL?>?mod=chapter&act=edit&btn_edit&courseId=<?=$_GET['courseId']?>&chapterId=<?=$chapterId?>&numberOrder=<?=$numberOrder?>&title=<?=$title?>"class="btn btn-warning">Sửa</a>
+                                    <a href="<?=$ADMIN_URL?>?mod=chapter&act=list&btn_delete&courseId=<?=$_GET['courseId']?>&chapterId=<?=$chapterId?>" class="btn btn-danger">Xóa</a>
                                     <a href="<?=$ADMIN_URL?>?mod=lesson&act=list&chapterId=<?=$chapterId?>" class="btn btn-secondary">Chi tiết</a>
                                 </td>
                             </tr>

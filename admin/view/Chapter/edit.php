@@ -1,6 +1,6 @@
 <section class="formInsertEdit">
     <div class="formInsertEdit__title">
-        <h1>THÊM CHƯƠNG HỌC CHO KHÓA HỌC<br/><?=$nameCourse['title']?></h1>
+        <h1>CHỈNH SỬA CHƯƠNG HỌC CHO KHÓA HỌC<br/><?=$nameCourse['title']?></h1>
     </div>
     <div class="formInsertEdit__space">
         <h5 class="message">
@@ -12,7 +12,7 @@
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="chapterId">Mã chương học</label><br>
                 <div class="formInsertEdit__control input-readonly">
-                    <input class="formInsertEdit__input" type="text" name="chapterId" value="Auto number" readonly>
+                    <input class="formInsertEdit__input" type="text" name="chapterId" value="<?=$chapterId?>" readonly>
                 </div>
             </div>
             <div class="formInsertEdit__item">
@@ -24,17 +24,18 @@
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="numberOrder">Số thứ tự chương</label><br>
                 <div class="formInsertEdit__control input-readonly">
-                    <input class="formInsertEdit__input" type="text" name="numberOrder" value="<?=$newNumberOrder + 1?>" readonly>
+                    <input class="formInsertEdit__input" type="text" name="numberOrder" value="<?=$numberOrder?>" readonly>
                 </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="title">Tiêu đề chương</label><br>
                 <div class="formInsertEdit__control">
-                    <input class="formInsertEdit__input" type="text" name="title">
+                    <input class="formInsertEdit__input" type="text" name="title" value="<?=$title?>">
                 </div>
             </div>
             <div class="formInsertEdit__item formInsertEdit__btn">
-                <button name="btn_insert" class="btn-insert">Thêm mới</button>
+                <button name="btn_update" class="btn-update">Cập nhật</button>
+                <a href="<?=$ADMIN_URL?>?mod=chapter&act=add&courseId=<?=$_GET['courseId']?>" class="btn-insert">Thêm mới</a>
                 <button type="reset" class="btn-reset">Nhập lại</button>
                 <a href="<?=$ADMIN_URL?>?mod=chapter&act=list&courseId=<?=$_GET['courseId']?>" class="btn-list">Danh sách</a>
             </div>
