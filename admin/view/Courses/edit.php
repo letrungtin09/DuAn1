@@ -8,7 +8,7 @@
         </h5>
     </div>
     <div class="formInsertEdit__content">
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="courseId">Mã khóa học</label><br>
                 <div class="formInsertEdit__control input-readonly">
@@ -49,7 +49,7 @@
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="date">Ngày đăng</label><br>
                 <div class="formInsertEdit__control">
-                    <input class="formInsertEdit__input" type="date" name="date" value="<?=$date?>">
+                    <input class="formInsertEdit__input formInsertEdit__date" type="date" name="date" value="<?=$date?>">
                 </div>
             </div>
             <div class="formInsertEdit__item">
@@ -120,7 +120,8 @@
                 <textarea class="formInsertEdit__textarea" name="content" id="content" cols="30" rows="10"><?=$content?></textarea>
             </div>
             <div class="formInsertEdit__item formInsertEdit__btn">
-                <button name="btn_insert" class="btn-insert">Thêm mới</button>
+                <button name="btn_update" class="btn-update">Cập nhật</button>
+                <a href="<?= $ADMIN_URL ?>?mod=courses&act=add" class="btn-insert">Thêm mới</a>
                 <button type="reset" class="btn-reset">Nhập lại</button>
                 <a href="<?= $ADMIN_URL ?>?mod=courses&act=list" class="btn-list">Danh sách</a>
             </div>

@@ -11,32 +11,45 @@
         <form method="POST">
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="courseId">Mã khóa học</label><br>
-                <input class="formInsertEdit__input input-readonly" type="text" name="courseId" value="Auto number"
-                    readonly>
+                <div class="formInsertEdit__control input-readonly">
+                    <input class="formInsertEdit__input" type="text" name="courseId" value="Auto number" readonly>
+                </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="title">Tiêu đề</label><br>
-                <input class="formInsertEdit__input" type="text" name="title">
+                <div class="formInsertEdit__control">
+                    <input class="formInsertEdit__input" type="text" name="title">
+                </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="image">Hình ảnh</label><br>
-                <input class="formInsertEdit__input" type="file" name="image">
+                <div class="formInsertEdit__control">
+                    <input class="formInsertEdit__input" type="file" name="image">
+                </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="price">Đơn giá</label><br>
-                <input class="formInsertEdit__input" type="text" name="price">
+                <div class="formInsertEdit__control">
+                    <input class="formInsertEdit__input" type="text" name="price">
+                </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="sale">Mức giảm giá</label><br>
-                <input class="formInsertEdit__input" type="text" name="sale">
+                <div class="formInsertEdit__control">
+                    <input class="formInsertEdit__input" type="text" name="sale">
+                </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="purchase">Lượt mua</label><br>
-                <input class="formInsertEdit__input input-readonly" type="text" name="purchase" value="0" readonly>
+                <div class="formInsertEdit__control input-readonly">
+                    <input class="formInsertEdit__input" type="text" name="purchase" value="0" readonly>
+                </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="date">Ngày đăng</label><br>
-                <input class="formInsertEdit__input input-readonly" type="date" name="date" value="<?=date("Y-m-d")?>" readonly>
+                <div class="formInsertEdit__control input-readonly">
+                    <input class="formInsertEdit__input" type="date" name="date" value="<?=date("Y-m-d")?>" readonly>
+                </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="userId">Giảng viên</label><br>
@@ -72,7 +85,9 @@
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="allTime">Tổng thời gian</label><br>
-                <input class="formInsertEdit__input" type="text" name="allTime">
+                <div class="formInsertEdit__control">
+                    <input class="formInsertEdit__input" type="text" name="allTime">
+                </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="description">Mô tả</label><br>

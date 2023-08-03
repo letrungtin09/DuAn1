@@ -54,9 +54,9 @@
                                                     ?>
                                                 </p>
                                             </td>
-                                            <td class="btn-thao-tac btn-thao-tac-column btn-thao-tac-column-2">
-                                                <button type="button" class="btn btn-warning">Sửa</button>
-                                                <button type="button" class="btn btn-danger">Xóa</button>
+                                            <td>
+                                                <a type="button" class="btn-edit-admin">Sửa</a>
+                                                <a type="button" class="btn-delete-admin">Xóa</a>
                                             </td>
                                         </tr>                            
                                         <?php } ?>

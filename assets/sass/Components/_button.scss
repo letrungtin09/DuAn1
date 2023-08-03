@@ -64,3 +64,24 @@
 .button-best-seller{
     @include styleButton($color-yellow-2, $color-yellow-1, $color-yellow-1, $fs-5!important, $pd-4, $pd-2);
 }
+
+.btn-edit-admin{
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 8px 0;
+    @include styleButton($color-white-0, $color-blue-2, $color-blue-2, $fs-0, $pd-1, $pd-2 + 0.2);
+}
+
+.btn-delete-admin{
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    @include styleButton($color-white-0, $color-red-0, $color-red-0, $fs-0, $pd-1, $pd-2 + 0.2);
+}
+
+.btn-detail-admin{
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    @include styleButton($color-white-0, $color-gray-0, $color-gray-0, $fs-0, $pd-1, $pd-2 + 0.2);
+}

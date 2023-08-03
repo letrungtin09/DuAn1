@@ -10,7 +10,25 @@ function user_insert($fullname, $email, $password){
     $sql = "INSERT INTO user(fullName, email, password) VALUES (?, ?, ?)";
     pdo_execute($sql, $fullname, $email, $password);
 }
-
+// Thêm tài khoản phía admin
+function user_insert_admin($email, $fullname, $phoneNumber, $password, $information, $career, $avatar, $role){
+    $sql = "INSERT INTO user(email, fullName, phoneNumber , password, information, career, avatar, role) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    pdo_execute($sql, $email, $fullname, $phoneNumber, $password, $information, $career, $avatar, $role);
+}
+// Cập nhật tài khoản
+function user_update($userId, $email, $fullname, $phoneNumber, $password, $information, $career, $avatar, $role){
+    $sql = "UPDATE user SET email=?, fullname=?, phoneNumber=?, password=?, information=?, career=?, avatar=?, role=? WHERE userId = ?";
+    pdo_execute($sql, $email, $fullname, $phoneNumber, $password, $information, $career, $avatar, $role, $userId);
+}
+// Xóa tài khoản
+function user_delete($userId){
+    $sql = "DELETE FROM user WHERE userId=?";
+    if(is_array($userId)){
+        foreach ($userId as $user) pdo_execute($sql, $user);
+    } else {
+        pdo_execute($sql, $userId);
+    }
+}
 // Truy vấn tất cả tài khoản
 function user_select_all(){
     $sql = "SELECT * FROM user";

@@ -50,16 +50,15 @@
                                 <td class="so-luong line-height"><?= $video ?></td>
                                 <td class="so-luong line-height"><?= $document ?></td>
                                 <td class="so-luong line-height"><?= $timeLesson ?></td>
-                                <td class="line-height btn-thao-tac btn-thao-tac-column ">
-                                    <button style="margin: 11% 0;" type="button" class="btn btn-warning">Sửa</button>
-                                    <button style="margin: 11% 0;" type="button" class="btn btn-danger">Xóa</button>
-
+                                <td class="d-flex flex-column">
+                                    <a href="" class="btn-edit-admin">Sửa</a>
+                                    <a href="" class="btn-delete-admin">Xóa</a>
                                 </td>
                             </tr>
                             <?php } ?>
                         </tbody>
                     </table>
-                
+
                 </form>
 
             </div>

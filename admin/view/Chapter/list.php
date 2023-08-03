@@ -3,15 +3,13 @@
         <div class="row">
             <div class="col-sm col-1">
                 <div class="col-1-left">
-                    <h1>CHI TIẾT KHÓA HỌC: <br>"
-                        <?php
-                        $name = course_select_by_id($idCourse);
-                        echo $name['title'];
-                        ?>"
-                    </h1>
+                    <h1>CHI TIẾT KHÓA HỌC: <br>"<?php
+                       $name = course_select_by_id($_GET['courseId']);
+                       echo $name['title'];
+                    ?>"</h1>
                 </div>
                 <div class="col-1-right">
-                    <a type="button" class="btn btn-success">+ Thêm chương</a>
+                    <a href="<?=$ADMIN_URL?>?mod=chapter&act=add&courseId=<?=$_GET['courseId']?>" class="btn btn-success">+ Thêm chương</a>
                 </div>
             </div>
             <div class="col-sm col-2">
@@ -29,30 +27,23 @@
                         <tbody>
                             <?php foreach ($listChapter as $list) {
                                 extract($list);
-                                ?>
-                                <tr>
-                                    <td scope="row" class="name-course line-height"><input type="checkbox"
-                                            class="subCheckbox" value=""></td>
-                                    <td class="so-luong line-height">
-                                        <?= $chapterId ?>
-                                    </td>
-                                    <td class="line-height">
-                                        <p>
-                                            <?= $numberOrder ?>
-                                        </p>
-                                    </td>
-                                    <td class="tieu-de line-height" style="width: 30%;">
-                                        <p>
-                                            <?= $title ?>
-                                        </p>
-                                    </td>
-                                    <td class="line-height btn-thao-tac btn-thao-tac-column btn-thao-tac-column-type">
-                                        <a href="" class="btn btn-warning">Sửa</a>
-                                        <a href="" class="btn btn-danger">Xóa</a>
-                                        <a href="<?= $ADMIN_URL ?>?mod=lesson&act=list&chapterId=<?= $chapterId ?>"
-                                            class="btn btn-secondary">Chi tiết</a>
-                                    </td>
-                                </tr>
+                            ?>
+                            <tr>
+                                <td scope="row" class="name-course line-height"><input type="checkbox"
+                                        class="subCheckbox" value=""></td>
+                                <td class="so-luong line-height"><?=$chapterId?></td>
+                                <td class="line-height">
+                                    <p><?=$numberOrder?></p>
+                                </td>
+                                <td class="tieu-de line-height" style="width: 30%;">
+                                    <p><?=$title?></p>
+                                </td>
+                                <td class="d-flex flex-column">
+                                    <a href="<?=$ADMIN_URL?>?mod=chapter&act=edit&btn_edit&courseId=<?=$_GET['courseId']?>&chapterId=<?=$chapterId?>&numberOrder=<?=$numberOrder?>&title=<?=$title?>"class="btn-edit-admin">Sửa</a>
+                                    <a href="<?=$ADMIN_URL?>?mod=chapter&act=list&btn_delete&courseId=<?=$_GET['courseId']?>&chapterId=<?=$chapterId?>" class="btn-delete-admin">Xóa</a>
+                                    <a href="<?=$ADMIN_URL?>?mod=lesson&act=list&chapterId=<?=$chapterId?>" class="btn-detail-admin">Chi tiết</a>
+                                </td>
+                            </tr>
                             <?php } ?>
                         </tbody>
                     </table>
