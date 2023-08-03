@@ -26,7 +26,7 @@
 		<meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=bill&act=payVNpay&payBill=<?=$_GET['payBill']?>&total=<?=$_GET['total']?>">;
 	<?php
 	}elseif(isset($_GET['vnp_ResponseCode']) && $_GET['vnp_ResponseCode'] == 00){?>
-		<meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=bill&act=payBill&payBill">;
+		<meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=bill&act=payBill&total=<?=$_GET['vnp_Amount']?>&typepay=<?=$_GET['vnp_CardType']?>">;
 	<?php
 	}else{
 		include_once("controller/home/view.php");
