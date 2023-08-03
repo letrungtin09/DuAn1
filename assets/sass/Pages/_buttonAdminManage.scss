@@ -1,0 +1,38 @@
+// Css cho thẻ có 2 nút
+.btn-thao-tac {
+    .btn {
+        padding: 1% 10%;
+        color: white;
+        font-weight: bold;
+        font-size: 1.3rem;
+        box-shadow: 1px 2px 1px gray;
+        margin: 0 1%;
+
+        &:hover {
+            box-shadow: 1px 1px 4px 0px red;
+
+        }
+    }
+}
+
+// Css cho thẻ có 2 nút
+.btn-thao-tac-column {
+    .btn {
+        padding: 4% 10%;
+        margin: 9% 1%;
+        font-size: 1.2rem;
+    }
+
+    .btn-secondary {
+        background-color: black;
+    }
+}
+
+// Btn chi tiết khóa học (chapter)
+.btn-thao-tac-column-type {
+    .btn {
+        margin: 2% auto;
+        width: 30%;
+        padding: 2%;
+    }
+}

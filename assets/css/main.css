@@ -1262,6 +1262,7 @@ body {
   font-weight: 700;
   font-size: 19px;
 }
+
 .formInsertEdit .formInsertEdit__content {
   padding: 0 4rem;
   margin: 2.4rem 0;
@@ -1283,17 +1284,21 @@ body {
   border: 1px solid #1c1d1f;
   background-color: #f7f9fa;
 }
+
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control .formInsertEdit__input {
   padding: 0.8rem;
   border: none;
   background-color: transparent;
 }
+
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control .formInsertEdit__input:focus {
   outline: none;
 }
+
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control .formInsertEdit__file {
   width: 110px;
 }
+
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .input-readonly {
   background-color: #e7e7e7 !important;
   color: #6a6f73 !important;
@@ -1307,17 +1312,6 @@ body {
 
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__check .unpaid {
   margin-right: 1.2rem;
-}
-
-.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__input {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #1c1d1f;
-  background-color: #f7f9fa;
-}
-
-.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__input:focus {
-  outline: none;
 }
 
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__radio {
@@ -5238,6 +5232,8 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
 
 .container-all .col-right .content-qt-admin .container-qt .row .col-2 .table tbody tr td {
   line-height: 54px;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .container-all .col-right .chart-admin-Sta {
@@ -5392,20 +5388,6 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
   color: #fff;
 }
 
-  transition: 0.3s;
-}
-.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar .active {
-  color: #fff;
-}
-.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar .active img {
-  opacity: 1;
-}
-.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar .active::before {
-  height: 100%;
-}
-.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover a {
-  color: #fff;
-}
 .container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover img {
   opacity: 1;
 }
@@ -5418,9 +5400,6 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
   height: 100%;
 }
 
-.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover .txt-sidebar a::before {
-  height: 100%;
-}
 .container-all .col-right {
   width: 85%;
 }
@@ -5980,14 +5959,38 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
   margin: 7% 0;
 }
 
-.btn-thao-tac-column-type .btn {
-  width: 17% !important;
-  height: 27px !important;
-  margin: 5px 42% !important;
-  padding: 0 !important;
-}
-
 .table-hover .line-height {
   line-height: 94px !important;
+}
+
+.btn-thao-tac .btn {
+  padding: 1% 10%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  -webkit-box-shadow: 1px 2px 1px gray;
+          box-shadow: 1px 2px 1px gray;
+  margin: 0 1%;
+}
+
+.btn-thao-tac .btn:hover {
+  -webkit-box-shadow: 1px 1px 4px 0px red;
+          box-shadow: 1px 1px 4px 0px red;
+}
+
+.btn-thao-tac-column .btn {
+  padding: 4% 10%;
+  margin: 9% 1%;
+  font-size: 1.2rem;
+}
+
+.btn-thao-tac-column .btn-secondary {
+  background-color: black;
+}
+
+.btn-thao-tac-column-type .btn {
+  margin: 2% auto;
+  width: 30%;
+  padding: 2%;
 }
 /*# sourceMappingURL=main.css.map */
