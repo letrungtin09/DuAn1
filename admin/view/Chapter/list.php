@@ -25,7 +25,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($listChapter as $list){
+                            <?php foreach ($listChapter as $list) {
                                 extract($list);
                             ?>
                             <tr>

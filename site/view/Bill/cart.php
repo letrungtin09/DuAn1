@@ -78,7 +78,7 @@ if(isset($_GET['course'])){?>
                 <h2 class="discount-price"><?=number_format($totalBill)?> <span>đ</span></h2>
                 <h2 class="discount-sale"><?=number_format($totalBillSale)?> <span>đ</span></h2>
             </div>
-            <a href="<?=$SITE_URL?>?mod=bill&act=payBill&paybill=<?=$idBillByIdUser['idBill']?>"  class="button-purple-large">Thanh toán</a>
+            <a href="<?=$SITE_URL?>?mod=bill&act=payCourse&payBill=<?=$idBillByIdUser['idBill']?>"  class="button-purple-large">Thanh toán</a>
         </div>
     </div>
 

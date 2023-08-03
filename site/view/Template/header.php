@@ -56,7 +56,7 @@
                     </ul>
                 </div>
                 <div class="header_search">
-                    <form  action="<?=$SITE_URL?>?mod=search&act=showSearch" method="get">
+                    <form  action="<?=$SITE_URL?>" method="get">
                         <div class="form_header_search" style="display:flex;height:100%;">
                             <button class="btn btn-outline-success header_search_btn" type="submit">
                                 <i class="fa-solid fa-magnifying-glass"></i>

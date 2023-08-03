@@ -93,10 +93,17 @@ if(isset($_POST["action"])){
 	$output = '';
      // Lặp khoảng giữa
      for ($i = 1; $i <= $total_page; $i++){
-        $output .= '
-        <li class="page-item" onclick="myFunction(this)" value="'.$i.'">
-            <a class="page-link" href="#">'.$i.'</a>
-        </li>';
+        if($i == $current_page){
+            $output .= '
+                <li class="page-item" onclick="myFunction(this)" value="'.$i.'">
+                    <a class="page-link click-page" href="#">'.$i.'</a>
+                </li>';
+        }else{
+            $output .= '
+            <li class="page-item" onclick="myFunction(this)" value="'.$i.'">
+                <a class="page-link" href="#">'.$i.'</a>
+            </li>';
+        }
     }
     
     echo $output;

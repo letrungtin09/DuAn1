@@ -92,6 +92,7 @@ if(isset($_POST["action"])){
     }
     // Tìm Start
     $start = ($current_page - 1) * $limit;
+    $query .= " LIMIT $start, $limit";
     try {
     $sta = $connect->prepare($query);
 	$sta->execute();
@@ -100,7 +101,6 @@ if(isset($_POST["action"])){
     } catch(PDOException $e) {
     echo "Error: ";
     }
-    $query .= " LIMIT $start, $limit";
     $totald = $sta->rowCount();
 	$output = '';
     if($totald > 0){
