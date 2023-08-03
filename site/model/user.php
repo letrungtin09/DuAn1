@@ -40,5 +40,10 @@ function user_change_password($userId, $password_new){
     $sql = "UPDATE user SET password=? WHERE userId=?";
     pdo_execute($sql, $password_new, $userId);
 }
+// Cập nhật thông tin tài khoản
+function user_update_account($userId, $fullname, $phonenumber, $career, $img, $infor){
+    $sql = "UPDATE user SET fullName=?, phoneNumber=?, career=?, avatar=?, information=? WHERE userId=?";
+    pdo_execute($sql, $fullname, $phonenumber, $career, $img, $infor, $userId);
+}
 
 ?>

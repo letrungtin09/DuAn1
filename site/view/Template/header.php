@@ -175,10 +175,10 @@
                             </a>
                             <div class="header_cart_favorite_bill-submit">
                                 <button>Thêm vào giỏ hàng</button>
-                            </div>
+                            </div
                         </li>
                         <div class="header_favorite_bill-submit">
-                            <a >Xem danh sách yêu thích</a>
+                            <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&kind=like">Xem danh sách yêu thích</a>
                         </div>
                     </ul>
                 </div>
@@ -202,8 +202,8 @@
                                 </div>
                             </div>
                             <ul class="dropdown-menu-mid">
-                                <li><a href="" class="">Cập nhập tài khoản</a></li>
-                                <li><a href="" class="">Đổi mật khẩu</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=user&act=updateaccount" class="">Cập nhập tài khoản</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=user&act=changepass" class="">Đổi mật khẩu</a></li>
                                 <li><a href="<?=$ADMIN_URL?>index.php" class="">Quản trị website</a></li>
                             </ul>
                             <div class="dropdown-menu-end">
@@ -227,14 +227,14 @@
                                 </div>
                             </div>
                             <ul class="dropdown-menu-mid">
-                                <li><a href="" class="">Quá trình học tập của tôi</a></li>
-                                <li><a href="" class="">Giỏ hàng của tôi</a></li>
-                                <li><a href="" class="">Danh sách yêu thích</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&kind=all" class="">Quá trình học tập của tôi</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=bill&act=cartBill" class="">Giỏ hàng của tôi</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&kind=like" class="">Danh sách yêu thích</a></li>
                                 <li><a href='' class=''>Bảng điều khiển của giảng viên</a></li>
                             </ul>
                             <ul class="dropdown-menu-mid">
-                                <li><a href="" class="">Cập nhập tài khoản</a></li>
-                                <li><a href="" class="">Đổi mật khẩu</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=user&act=updateaccount" class="">Cập nhập tài khoản</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=user&act=changepass" class="">Đổi mật khẩu</a></li>
                                 <li><a href="" class="">Lịch sử mua</a></li>
                             </ul>
                             <div class="dropdown-menu-end">
@@ -258,13 +258,13 @@
                                 </div>
                             </div>
                             <ul class="dropdown-menu-mid">
-                                <li><a href="" class="">Quá trình học tập của tôi</a></li>
-                                <li><a href="" class="">Giỏ hàng của tôi</a></li>
-                                <li><a href="" class="">Danh sách yêu thích</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&kind=all" class="">Quá trình học tập của tôi</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=bill&act=cartBill" class="">Giỏ hàng của tôi</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&kind=like" class="">Danh sách yêu thích</a></li>
                             </ul>
                             <ul class="dropdown-menu-mid">
-                                <li><a href="" class="">Cập nhập tài khoản</a></li>
-                                <li><a href="" class="">Đổi mật khẩu</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=user&act=updateaccount" class="">Cập nhập tài khoản</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=user&act=changepass" class="">Đổi mật khẩu</a></li>
                                 <li><a href="" class="">Lịch sử mua</a></li>
                             </ul>
                             <div class="dropdown-menu-end">
