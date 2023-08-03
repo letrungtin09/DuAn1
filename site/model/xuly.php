@@ -92,6 +92,7 @@ if(isset($_POST["action"])){
     }
     // Tìm Start
     $start = ($current_page - 1) * $limit;
+    $query .= " LIMIT $start, $limit";
     try {
     $sta = $connect->prepare($query);
 	$sta->execute();
@@ -100,7 +101,6 @@ if(isset($_POST["action"])){
     } catch(PDOException $e) {
     echo "Error: ";
     }
-    $query .= " LIMIT $start, $limit";
     $totald = $sta->rowCount();
 	$output = '';
     if($totald > 0){
@@ -108,6 +108,7 @@ if(isset($_POST["action"])){
             $nameUserSearch = user_select_by_id($row['userId']);
             $output .= '
             <div class="searchCourse_content-product-div card">
+            '.$query.'
                 <a href="'.$SITE_URL.'?mod=detailcourse&act=showCourse&course='.$row['courseId'].'" class="searchCourse_content-product-cart card-body">
                     <img src="'.$IMAGE_DIR.'/courses/'.$row["image"].'" alt="" class="">
                     <div class="searchCourse_content-product-cart-infor">

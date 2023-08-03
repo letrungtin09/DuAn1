@@ -22,8 +22,13 @@
 	}elseif(isset($_GET['searchInput'])){?>
 		<meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=search&act=showSearch&search=<?=$_GET['searchInput']?>">;
 	<?php
-	}
-    else{
+	}elseif(isset($_GET['checkVNPay'])){?>
+		<meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=bill&act=payVNpay&payBill=<?=$_GET['payBill']?>&total=<?=$_GET['total']?>">;
+	<?php
+	}elseif(isset($_GET['vnp_ResponseCode']) && $_GET['vnp_ResponseCode'] == 00){?>
+		<meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=bill&act=payBill&payBill">;
+	<?php
+	}else{
 		include_once("controller/home/view.php");
 	}
 	
