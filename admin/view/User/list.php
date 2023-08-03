@@ -66,9 +66,9 @@
                                             <?= $role ?>
                                         </p>
                                     </td>
-                                    <td class="btn-thao-tac btn-thao-tac-column btn-thao-tac-column-2">
-                                        <a href="<?=$ADMIN_URL?>?mod=user&act=edit&btn_edit&userId=<?=$userId?>"class="btn btn-warning">Sửa</a>
-                                        <a href="<?=$ADMIN_URL?>?mod=user&act=list&btn_delete&userId=<?=$userId?>" class="btn btn-danger">Xóa</a>
+                                    <td class="d-flex flex-column">
+                                        <a href="<?=$ADMIN_URL?>?mod=user&act=edit&btn_edit&userId=<?=$userId?>"class="btn-edit-admin">Sửa</a>
+                                        <a href="<?=$ADMIN_URL?>?mod=user&act=list&btn_delete&userId=<?=$userId?>" class="btn-delete-admin">Xóa</a>
                                     </td>
                                 </tr>
                             <?php } ?>

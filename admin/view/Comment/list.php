@@ -58,9 +58,9 @@
                                                 </p>
                                             </td>
                                     
-                                            <td class="btn-thao-tac btn-thao-tac-column btn-thao-tac-column-2">
-                                                <button type="button" class="btn btn-warning" style="background-color: rgb(103, 101, 101);">Sửa</button>
-                                                <button type="button" class="btn btn-danger">Xóa</button>
+                                            <td class="d-flex flex-column">
+                                                <a href="" class="btn-edit-admin">Sửa</a>
+                                                <a href="" class="btn-delete-admin">Xóa</a>
                                             </td>
                                         </tr> 
                                         <?php

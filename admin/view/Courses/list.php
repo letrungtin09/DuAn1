@@ -94,10 +94,10 @@
                                             ?>
                                         </p>
                                     </td>
-                                    <td class="btn-thao-tac btn-thao-tac-column">
-                                        <a href="<?=$ADMIN_URL?>?mod=courses&act=edit&btn_edit&courseId=<?=$courseId?>"class="btn btn-warning">Sửa</a>
-                                        <a href="<?=$ADMIN_URL?>?mod=courses&act=list&btn_delete&courseId=<?=$courseId?>" class="btn btn-danger">Xóa</a>
-                                        <a href="<?=$ADMIN_URL?>?mod=chapter&act=list&courseId=<?=$courseId?>" class="btn btn-secondary">Chi tiết</a>
+                                    <td class="d-flex flex-column">
+                                        <a href="<?=$ADMIN_URL?>?mod=courses&act=edit&btn_edit&courseId=<?=$courseId?>"class="btn-edit-admin">Sửa</a>
+                                        <a href="<?=$ADMIN_URL?>?mod=courses&act=list&btn_delete&courseId=<?=$courseId?>" class="btn-delete-admin">Xóa</a>
+                                        <a href="<?=$ADMIN_URL?>?mod=chapter&act=list&courseId=<?=$courseId?>" class="btn-detail-admin">Chi tiết</a>
                                     </td>
                                 </tr>
                             <?php } ?>

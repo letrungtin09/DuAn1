@@ -38,10 +38,10 @@
                                 <td class="tieu-de line-height" style="width: 30%;">
                                     <p><?=$title?></p>
                                 </td>
-                                <td class="line-height btn-thao-tac btn-thao-tac-column btn-thao-tac-column-type">
-                                    <a href="<?=$ADMIN_URL?>?mod=chapter&act=edit&btn_edit&courseId=<?=$_GET['courseId']?>&chapterId=<?=$chapterId?>&numberOrder=<?=$numberOrder?>&title=<?=$title?>"class="btn btn-warning">Sửa</a>
-                                    <a href="<?=$ADMIN_URL?>?mod=chapter&act=list&btn_delete&courseId=<?=$_GET['courseId']?>&chapterId=<?=$chapterId?>" class="btn btn-danger">Xóa</a>
-                                    <a href="<?=$ADMIN_URL?>?mod=lesson&act=list&chapterId=<?=$chapterId?>" class="btn btn-secondary">Chi tiết</a>
+                                <td class="d-flex flex-column">
+                                    <a href="<?=$ADMIN_URL?>?mod=chapter&act=edit&btn_edit&courseId=<?=$_GET['courseId']?>&chapterId=<?=$chapterId?>&numberOrder=<?=$numberOrder?>&title=<?=$title?>"class="btn-edit-admin">Sửa</a>
+                                    <a href="<?=$ADMIN_URL?>?mod=chapter&act=list&btn_delete&courseId=<?=$_GET['courseId']?>&chapterId=<?=$chapterId?>" class="btn-delete-admin">Xóa</a>
+                                    <a href="<?=$ADMIN_URL?>?mod=lesson&act=list&chapterId=<?=$chapterId?>" class="btn-detail-admin">Chi tiết</a>
                                 </td>
                             </tr>
                             <?php } ?>

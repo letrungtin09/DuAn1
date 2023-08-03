@@ -95,9 +95,7 @@
     <script src="<?=$ASSETS_URL?>/js/owl.carousel.min.js"></script>
     <!-- MAIN JS -->
     <script src="<?=$ASSETS_URL?>/js/main.js"></script>
+    <!-- FILTER JS -->
     <script src="<?=$ASSETS_URL?>/js/filter_data.js"></script>
-    <script>
-    </script>
-    
 </body>
 </html>
