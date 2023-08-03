@@ -31,7 +31,7 @@
                                 <td class="so-luong"><?=$cateId?></td>
                                 <td><?=$nameCate?></td>
                                 <td class="btn-thao-tac">
-                                    <a href="<?=$ADMIN_URL?>?mod=category&act=edit&btn_edit&cateId=<?=$cateId?>" class="btn btn-warning">Sửa</a>
+                                    <a href="<?=$ADMIN_URL?>?mod=category&act=edit&btn_edit&cateId=<?=$cateId?>"class="btn btn-warning">Sửa</a>
                                     <a href="<?=$ADMIN_URL?>?mod=category&act=list&btn_delete&cateId=<?=$cateId?>" class="btn btn-danger">Xóa</a>
                                 </td>
                             </tr>

@@ -6,7 +6,7 @@
                     <h1>QUẢN LÝ KHÓA HỌC</h1>
                 </div>
                 <div class="col-1-right">
-                    <a type="button" class="btn btn-success">+ Thêm loại khóa học</a>
+                    <a href="<?=$ADMIN_URL?>?mod=courses&act=add" class="btn btn-success">+ Thêm khóa học</a>
                 </div>
             </div>
             <div class="col-sm col-2">
@@ -95,8 +95,8 @@
                                         </p>
                                     </td>
                                     <td class="btn-thao-tac btn-thao-tac-column">
-                                        <button type="button" class="btn btn-warning">Sửa</button>
-                                        <button type="button" class="btn btn-danger">Xóa</button>
+                                        <a href="<?=$ADMIN_URL?>?mod=courses&act=edit&btn_edit&courseId=<?=$courseId?>"class="btn btn-warning">Sửa</a>
+                                        <a href="<?=$ADMIN_URL?>?mod=courses&act=list&btn_delete&courseId=<?=$courseId?>" class="btn btn-danger">Xóa</a>
                                         <a href="<?=$ADMIN_URL?>?mod=chapter&act=list&courseId=<?=$courseId?>" class="btn btn-secondary">Chi tiết</a>
                                     </td>
                                 </tr>

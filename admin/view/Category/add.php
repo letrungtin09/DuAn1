@@ -2,7 +2,7 @@
     <div class="formInsertEdit__title">
         <h1>THÊM LOẠI KHÓA HỌC</h1>
     </div>
-    <div class="formInsertEdit__space"><h5 class="message"><?=$MESSAGE?></h5></div>
+    <div class="formInsertEdit__space"><h5 class="message"><span>*</span> <?=$MESSAGE?></h5></div>
     <div class="formInsertEdit__content">
         <form method="POST">
             <div class="formInsertEdit__item">
