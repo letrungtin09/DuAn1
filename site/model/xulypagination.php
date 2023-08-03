@@ -32,8 +32,9 @@ function chapterSearch($courseId){
 $connect = new PDO("mysql:host=localhost;dbname=tdemy;charset=utf8", "root", "");
 
 if(isset($_POST["action"])){
+    $keyWord = $_POST["wordsearch"];
     $query = "
-		SELECT * FROM courses WHERE product_status = '1'
+        SELECT * FROM courses WHERE title LIKE '%".$keyWord."%'
 	";
     if(isset($_POST["minimum_price"], $_POST["maximum_price"]) && !empty($_POST["minimum_price"]) && !empty($_POST["maximum_price"])){
 		$query .= "

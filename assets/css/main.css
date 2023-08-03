@@ -1256,6 +1256,12 @@ body {
           align-items: center;
 }
 
+.formInsertEdit .formInsertEdit__space .message span {
+  color: red;
+  margin-right: 5px;
+  font-weight: 700;
+  font-size: 19px;
+}
 .formInsertEdit .formInsertEdit__content {
   padding: 0 4rem;
   margin: 2.4rem 0;
@@ -1272,8 +1278,24 @@ body {
   margin-bottom: 0.6rem;
 }
 
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control {
+  width: 100%;
+  border: 1px solid #1c1d1f;
+  background-color: #f7f9fa;
+}
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control .formInsertEdit__input {
+  padding: 0.8rem;
+  border: none;
+  background-color: transparent;
+}
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control .formInsertEdit__input:focus {
+  outline: none;
+}
+.formInsertEdit .formInsertEdit__content form .formInsertEdit__item .formInsertEdit__control .formInsertEdit__file {
+  width: 110px;
+}
 .formInsertEdit .formInsertEdit__content form .formInsertEdit__item .input-readonly {
-  background-color: #E7E7E7 !important;
+  background-color: #e7e7e7 !important;
   color: #6a6f73 !important;
 }
 
@@ -5370,6 +5392,20 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
   color: #fff;
 }
 
+  transition: 0.3s;
+}
+.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar .active {
+  color: #fff;
+}
+.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar .active img {
+  opacity: 1;
+}
+.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li .txt-sidebar .active::before {
+  height: 100%;
+}
+.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover a {
+  color: #fff;
+}
 .container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover img {
   opacity: 1;
 }
@@ -5382,6 +5418,9 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
   height: 100%;
 }
 
+.container-all .col-left .sidebar .container-sidebar .row .col-sm.sidebar-content ul li:hover .txt-sidebar a::before {
+  height: 100%;
+}
 .container-all .col-right {
   width: 85%;
 }

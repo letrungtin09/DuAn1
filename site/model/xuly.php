@@ -32,8 +32,9 @@ function chapterSearch($courseId){
 $connect = new PDO("mysql:host=localhost;dbname=tdemy;charset=utf8", "root", "");
 
 if(isset($_POST["action"])){
+    $keyWord = $_POST["wordsearch"];
     $query = "
-		SELECT * FROM courses WHERE product_status = '1'
+		SELECT * FROM courses WHERE title LIKE '%".$keyWord."%'
 	";
     if(isset($_POST["minimum_price"], $_POST["maximum_price"]) && !empty($_POST["minimum_price"]) && !empty($_POST["maximum_price"])){
 		$query .= "
@@ -91,10 +92,15 @@ if(isset($_POST["action"])){
     }
     // Tìm Start
     $start = ($current_page - 1) * $limit;
-    $query .= " LIMIT $start, $limit";
+    try {
     $sta = $connect->prepare($query);
 	$sta->execute();
 	$re = $sta->fetchAll();
+
+    } catch(PDOException $e) {
+    echo "Error: ";
+    }
+    $query .= " LIMIT $start, $limit";
     $totald = $sta->rowCount();
 	$output = '';
     if($totald > 0){

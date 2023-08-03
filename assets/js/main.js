@@ -127,10 +127,11 @@ function hienthem(){
         var teacher = get_filter('searchCourse_content-filter-checkbox_class_teacher');
         var arrange = get_arrange('select_fillter_controller');
         var pages = get_page('pagination_data');
+        var wordsearch = get_keyword();
         $.ajax({
             url:"model/xuly.php",
             method:"POST",
-            data:{action:action, pages:pages, minimum_price:minimum_price, arrange:arrange, maximum_price:maximum_price, type:type, level:level, teacher:teacher},
+            data:{action:action, wordsearch:wordsearch, pages:pages, minimum_price:minimum_price, arrange:arrange, maximum_price:maximum_price, type:type, level:level, teacher:teacher},
             success:function(data){
                 $('.filter_data').html(data);
             }
@@ -138,7 +139,7 @@ function hienthem(){
         $.ajax({
             url:"model/xulypagination.php",
             method:"POST",
-            data:{action:action, pages:pages, minimum_price:minimum_price, arrange:arrange, maximum_price:maximum_price, type:type, level:level, teacher:teacher},
+            data:{action:action, wordsearch:wordsearch, pages:pages, minimum_price:minimum_price, arrange:arrange, maximum_price:maximum_price, type:type, level:level, teacher:teacher},
             success:function(data){
                 $('.pagination_data').html(data);
             }
@@ -150,6 +151,10 @@ function hienthem(){
             filter.push($(this).val());
         });
         return filter;
+    }
+    function get_keyword(){
+        var keyWord = document.getElementById("searchCourse_header-title-id").innerText;
+        return keyWord;
     }
     function get_arrange(class_name){
         var arrange = $('.'+class_name).find(':selected').val();

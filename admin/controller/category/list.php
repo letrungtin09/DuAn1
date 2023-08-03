@@ -6,6 +6,8 @@ if(exist_param("btn_edit")){
     include_once("view/Category/edit.php");
 }else if(exist_param("btn_delete")){
     category_delete($cateId);
+    $listCate = category_select_all();
+    $MESSAGE = "Xóa thành công !";
     include_once("view/Category/list.php");
 }
 else{

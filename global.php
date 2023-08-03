@@ -8,8 +8,7 @@ $SITE_URL = "$ROOT_URL/site/"; //đường dẫn vào phần site
 // đường dẫn chứa hình khi upload
 $IMAGE_DIR = "$ROOT_URL/assets/img";
 
-// 2 biến toàn cục để chia sẻ giữa controller và view
-$VIEW_NAME = "index.php";
+// biến lưu các thông báo
 $MESSAGE = "";
 
 //Kiểm tra sự tồn tại của 1 tham số trong request, trả về true nếu tồn tại
