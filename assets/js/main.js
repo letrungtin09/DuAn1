@@ -246,3 +246,10 @@ for (var i = 0; i < listNav.length; i++) {
         this.className += "active";
     });
 }
+// Code giới hạn từ cho title
+var textElements = document.querySelectorAll('.tieu-de-limited');
+for(var textElement of textElements){
+    var originalText = textElement.textContent;
+    var trimmedText = originalText.trim().slice(0,34) + '...';
+    textElement.textContent = trimmedText;
+}
