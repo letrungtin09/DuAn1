@@ -44,12 +44,13 @@
                     border: 1px solid $color-black-1;
                     background-color: $color-white-1;
                     .formInsertEdit__input {
-                        &:focus {
-                            outline: none;
-                        }
+                        width: 100%;
                         padding: $pd-4;
                         border: none;
                         background-color: transparent;
+                        &:focus {
+                            outline: none;
+                        }
                     }
                     .formInsertEdit__file{
                         width: 110px;

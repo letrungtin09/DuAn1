@@ -19,7 +19,7 @@
                             <tr>
                                 <th scope="col"><input type="checkbox" id="masterCheckbox" value=""></th>
                                 <th scope="col">ID</th>
-                                <th scope="col">CHƯƠNG</th>
+                                <th scope="col">SỐ THỨ TỰ CHƯƠNG</th>
                                 <th scope="col">TIÊU ĐỀ CHƯƠNG</th>
                                 <th scope="col">THAO TÁC</th>
                             </tr>

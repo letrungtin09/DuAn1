@@ -8,10 +8,10 @@ if (exist_param("btn_edit")) {
 } else if (exist_param("btn_delete")) {
     chapter_delete($chapterId);
     $MESSAGE = "Xóa thành công !";
-    $listChapter = chapter_select_idcourse($_GET['courseId']);
+    $listChapter = chapter_select_idcourse_order($_GET['courseId']);
     include_once("view/Chapter/list.php");
 } else {
-    $listChapter = chapter_select_idcourse($_GET['courseId']);
+    $listChapter = chapter_select_idcourse_order($_GET['courseId']);
     include_once("view/Chapter/list.php");
 }
 

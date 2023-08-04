@@ -34,6 +34,11 @@ function chapter_select_idcourse($courseId){
     $sql = "SELECT * FROM chapter_courses WHERE courseId=?";
     return pdo_query($sql, $courseId);
 }
+// Truy vấn số thứ tự chapter theo course
+function chapter_select_idcourse_order($courseId){
+    $sql = "SELECT * FROM chapter_courses WHERE courseId=? ORDER BY numberOrder ASC";
+    return pdo_query($sql, $courseId);
+}
 // Truy vấn chapter theo id
 function chapter_select_by_id($chapterId){
     $sql = "SELECT * FROM chapter_courses WHERE chapterId=?";
