@@ -13,9 +13,9 @@
                                     <tr>
                                         <th scope="col">LOẠI KHÓA HỌC</th>
                                         <th scope="col">SỐ LƯỢNG KHÓA HỌC</th>
-                                        <th scope="col">GIÁ THẤP NHẤT</th>
-                                        <th scope="col">GIÁ CAO NHẤT</th>
-                                        <th scope="col">GIÁ TRUNG BÌNH</th>
+                                        <th scope="col">SỐ LƯỢNG ĐƠN</th>
+                                        <th scope="col">CHIẾC KHẤU</th>
+                                        <th scope="col">DOANH THU</th>
                                     </tr>
                                 </thead>
                                 <tbody>

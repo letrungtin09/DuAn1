@@ -44,7 +44,7 @@
                                             <?= $fullName ?>
                                         </p>
                                     </td>
-                                    <td class="image-course"><img style="width:100%" src="../../../assets/img/users/Tin.jpg"
+                                    <td class="image-course"><img style="width:100%" src="<?=$IMAGE_DIR?>/users/<?= $avatar ?>"
                                             alt=""></td>
                                     <td>
                                         <p>
