@@ -48,8 +48,8 @@
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="date">Ngày đăng</label><br>
-                <div class="formInsertEdit__control">
-                    <input class="formInsertEdit__input formInsertEdit__date" type="date" name="date" value="<?=$date?>">
+                <div class="formInsertEdit__control input-readonly">
+                    <input class="formInsertEdit__input formInsertEdit__date" type="date" name="date" value="<?=date("Y-m-d")?>" readonly>
                 </div>
             </div>
             <div class="formInsertEdit__item">
