@@ -49,18 +49,18 @@
                                             src="<?=$IMAGE_DIR?>/courses/<?= $image ?>" alt=""></td>
                                     <td>
                                         <p>
-                                            <?= $price ?>đ
+                                            <?= number_format($price) ?>đ
                                         </p>
                                     </td>
                                     <td>
                                         <p>
                                             <?php
                                             if ($sale == null) {
-                                                echo 0;
+                                                echo "";
                                             } else {
-                                                echo $sale;
+                                                echo $sale."%";
                                             }
-                                            ?>%
+                                            ?>
                                         </p>
                                     </td>
                                     <td>
