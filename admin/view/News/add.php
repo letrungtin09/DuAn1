@@ -2,7 +2,11 @@
     <div class="formInsertEdit__title">
         <h1>THÊM BÀI VIẾT</h1>
     </div>
-    <div class="formInsertEdit__space"></div>
+    <div class="formInsertEdit__space">
+        <h5 class="message">
+            <span>*</span> <?= $MESSAGE ?>
+        </h5>
+    </div>
     <div class="formInsertEdit__content">
         <form method="post">
             <div class="formInsertEdit__item">
@@ -19,27 +23,30 @@
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="image">Hình ảnh</label><br>
-                <input type="hidden" name="image" value="">
                 <div class="formInsertEdit__control">
-                    <input class="formInsertEdit__input" type="file" name="upload_image">
+                    <input class="formInsertEdit__input" type="file" name="image">
                 </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="date">Ngày đăng</label><br>
                 <div class="formInsertEdit__control input-readonly">
-                    <input class="formInsertEdit__input" type="date" name="date" readonly>
+                    <input class="formInsertEdit__input" type="date" name="date" value="<?=date("Y-m-d")?>" readonly>
                 </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="userId">Người đăng</label><br>
-                <div class="formInsertEdit__control">
-                    <input class="formInsertEdit__input input-readonly" type="text" name="userId" value="Trung Tín" readonly>
-                </div>
+                <select class="formInsertEdit__select" name="userId" id="userId">
+                    <option value="0">Chọn người đăng</option>
+                    <?php foreach ($getAllUser as $user) {
+                        extract($user);
+                        ?>
+                        <option value="<?= $userId ?>"><?= $userId ?> - <?= $fullName ?></option>
+                    <?php } ?>
+                </select>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="description">Mô tả ngắn</label><br>
-                <textarea class="formInsertEdit__textarea" name="description" id="description" cols="30"
-                    rows="5"></textarea>
+                <textarea class="formInsertEdit__textarea" name="description" id="description" cols="30" rows="5"></textarea>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="content">Nội dung bài viết</label><br>

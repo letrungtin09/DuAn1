@@ -40,7 +40,7 @@
                                     <td class="so-luong">
                                         <?= $courseId ?>
                                     </td>
-                                    <td class="tieu-de tieu-de-limited" style="line-height: 25px;">
+                                    <td style="line-height: 25px; width: 15%; padding: 0 10px; text-align: left;">
                                         <p>
                                             <?=$title?>
                                         </p>
@@ -86,7 +86,7 @@
                                             ?>
                                         </p>
                                     </td>
-                                    <td>
+                                    <td style="width: 10%;">
                                         <p>
                                             <?php
                                             $name_teacher = user_select_by_id($userId);
@@ -94,10 +94,12 @@
                                             ?>
                                         </p>
                                     </td>
-                                    <td class="d-flex flex-column">
-                                        <a href="<?=$ADMIN_URL?>?mod=courses&act=edit&btn_edit&courseId=<?=$courseId?>"class="btn-edit-admin">Sửa</a>
-                                        <a href="<?=$ADMIN_URL?>?mod=courses&act=list&btn_delete&courseId=<?=$courseId?>" class="btn-delete-admin">Xóa</a>
-                                        <a href="<?=$ADMIN_URL?>?mod=chapter&act=list&courseId=<?=$courseId?>" class="btn-detail-admin">Chi tiết</a>
+                                    <td>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <a href="<?=$ADMIN_URL?>?mod=courses&act=edit&btn_edit&courseId=<?=$courseId?>"class="btn-edit-admin">Sửa</a>
+                                            <a href="<?=$ADMIN_URL?>?mod=courses&act=list&btn_delete&courseId=<?=$courseId?>" class="btn-delete-admin">Xóa</a>
+                                            <a href="<?=$ADMIN_URL?>?mod=chapter&act=list&courseId=<?=$courseId?>" class="btn-detail-admin">Chi tiết</a>
+                                        </div>
                                     </td>
                                 </tr>
                             <?php } ?>

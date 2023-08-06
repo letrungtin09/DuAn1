@@ -18,9 +18,9 @@
                                 <th scope="col">ID</th>
                                 <th scope="col">TIÊU ĐỀ</th>
                                 <th scope="col">HÌNH ẢNH</th>
-                                <th scope="col">MÔ TẢ</th>
                                 <th scope="col">NGÀY ĐĂNG</th>
                                 <th scope="col">NGƯỜI ĐĂNG</th>
+                                <th scope="col">TRẠNG THÁI</th>
                                 <th scope="col">THAO TÁC</th>
 
 
@@ -39,24 +39,19 @@
                                     <td class="so-luong">
                                         <?= $newsId ?>
                                     </td>
-                                    <td class="tieu-de tieu-de-ac">
+                                    <td style="width: 25%; padding-left: 15px;">
                                         <p style="text-align: left; line-height: 30px; margin: 0;">
                                             <?= $title ?>
                                         </p>
                                     </td>
-                                    <td class="image-course"><img style="width:100%"
+                                    <td style="width: 12%;"><img style="width:115px; height: 65px; object-fit:cover;"
                                             src="<?= $IMAGE_DIR ?>/post/<?= $image ?>" alt=""></td>
-                                    <td class="description" style="width: 20%; text-align: left; line-height: 30px;">
-                                        <p>
-                                            <?= $description ?>
-                                        </p>
-                                    </td>
                                     <td>
                                         <p>
                                             <?= $date ?>
                                         </p>
                                     </td>
-                                    <td>
+                                    <td style="width: 15%;">
                                         <p>
                                             <?php
                                             $nameUser = user_select_by_id($userId);
@@ -64,10 +59,22 @@
                                             ?>
                                         </p>
                                     </td>
-
-                                    <td class="d-flex flex-column">
-                                        <a href="<?= $ADMIN_URL ?>?mod=news&act=edit&btn_edit&newsId=<?=$newsId?>" class="btn-edit-admin">Sửa</a>
-                                        <a href="<?= $ADMIN_URL ?>?mod=news&act=list&btn_delete&&newsId=<?=$newsId?>" class="btn-delete-admin">Xóa</a>
+                                    <td style="width: 15%;">
+                                        <p>
+                                            <?php if ($status == 1) {
+                                                echo "<p style='color: #177e5e; font-weight: 500;'>Đã duyệt</p>";
+                                            } else {
+                                                echo "<p style='color: #cc301f; font-weight: 500;'>Chưa duyệt</p>";
+                                            } ?>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <a href="<?= $ADMIN_URL ?>?mod=news&act=edit&btn_edit&newsId=<?= $newsId ?>"
+                                                class="btn-edit-admin">Sửa</a>
+                                            <a href="<?= $ADMIN_URL ?>?mod=news&act=list&btn_delete&&newsId=<?= $newsId ?>"
+                                                class="btn-delete-admin">Xóa</a>
+                                        </div>
                                     </td>
                                 </tr>
                             <?php } ?>
