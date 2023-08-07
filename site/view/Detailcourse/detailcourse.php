@@ -23,7 +23,16 @@
                         <div class="info-btn">
                             
                             <a href="<?=$SITE_URL?>?mod=detailcourse&act=addBill&course=<?=$courseSlectbyid['courseId']?>" class="add-to-cart">Thêm vào giỏ hàng</a>
-                            <button class="add-wishlist"><i class="fa-regular fa-heart"></i></button>
+                            <?php
+                                if(get_course_favourite($_SESSION['user']['userId'], $_GET['course']) == 0){?>
+                                    <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$_GET['course']?>" class="add-wishlist"><i class="fa-regular fa-heart"></i></a>
+                                <?php
+                                }else{?>
+                                    <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&delcourse=<?=$_GET['course']?>" class="add-wishlist"><i class="fa-solid fa-heart" style="color: #e00b27;"></i></a>
+                                <?php
+                                }
+                            ?>
+                            
                         </div>
                         <div class="btn-buyNow">
                             <button class="buy-now">Mua ngay</button>
@@ -175,7 +184,7 @@
                                     </div>
                                 </div>
                                 <div class="kind-button">
-                                    <button><i class="fa-regular fa-heart"></i></button>
+                                    <a><i class="fa-regular fa-heart"></i></a>
                                 </div>
                             </div>
                         <?php

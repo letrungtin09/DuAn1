@@ -2392,20 +2392,18 @@ body {
 .header_favorite .header_favorite_bill-purchar li .header_favorite_bill-tem div p {
   margin-top: 0.4rem;
 }
-.header_favorite .header_favorite_bill-purchar li .header_cart_favorite_bill-submit {
-  padding: 1rem 1rem;
+.header_favorite .header_favorite_bill-purchar li .header_cart_favorite_bill-submit a {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #0f9026;
+  color: white;
+  padding: 10px;
+  margin: 0 10px;
 }
-.header_favorite .header_favorite_bill-purchar li .header_cart_favorite_bill-submit button {
-  width: 100%;
-  height: 46px;
-  border: 1px solid #252525;
-  background-color: #f7f9fa;
-  font-size: 1.6rem;
-  color: #1c1d1f;
-  font-weight: 500;
-}
-.header_favorite .header_favorite_bill-purchar li .header_cart_favorite_bill-submit button:hover {
-  background-color: #fff;
+.header_favorite .header_favorite_bill-purchar li .header_cart_favorite_bill-submit a:hover {
+  background-color: #12b530;
 }
 .header_favorite .header_favorite_bill-submit {
   padding: 1rem 1rem;

@@ -10,9 +10,4 @@ function student_courses_select_by_userId($userId){
     $sql = "SELECT * FROM student_courses WHERE userId = ?";
     return pdo_query($sql, $userId);
 }
-// Truy vấn khóa học ưa thích
-function student_courses_like_select_by_userId($userId){
-    $sql = "SELECT * FROM student_courses WHERE userId = ? and favourite = 1";
-    return pdo_query($sql, $userId);
-}
 ?>

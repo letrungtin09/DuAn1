@@ -1,17 +1,18 @@
 <?php
     require_once 'model/student_course.php';
     require_once 'model/courses.php';
+    require_once 'model/favourite.php';
     // tất cả khóa học sinh viên đã đăng ký
     $studentinCourse = student_courses_select_by_userId($_SESSION['user']['userId']);
     // khóa học sinh viên đã thích
     $studentlikeinCourse = student_courses_like_select_by_userId($_SESSION['user']['userId']);
     // Hàm lấy tên giảng viên
-    function get_name_teacher($userID){
-        require_once 'model/user.php';
-        $user = user_select_by_id($userID);
-        $name = $user['fullName'];
-        return $name;
-    }
+    // function get_name_teacher($userID){
+    //     require_once 'model/user.php';
+    //     $user = user_select_by_id($userID);
+    //     $name = $user['fullName'];
+    //     return $name;
+    // }
     // Hàm lấy Số chap ter
     function chapterSearch($courseId){
         require_once 'model/chapter.php';
@@ -45,6 +46,16 @@
         }else{
             return 0;
         }
+    }
+    if(isset($_GET['course'])){
+        favourite_insert($_SESSION['user']['userId'], $_GET['course']);?>
+        <meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=mylearning&act=mylearn">
+    <?php
+    }
+    if(isset($_GET['delcourse'])){
+        favourite_delete($_SESSION['user']['userId'], $_GET['delcourse']);?>
+        <meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=mylearning&act=mylearn">
+    <?php
     }
     include_once("view/mylearning/allmylearn.php");
 ?>

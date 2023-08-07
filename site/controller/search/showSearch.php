@@ -2,6 +2,7 @@
 require_once 'model/evaluate.php';
 require_once 'model/category.php';
 require_once 'model/user.php';
+require_once 'model/courses.php';
 // Truy vấn tất cả level
 $allLevel = level_course_select_all();
 // Lấy tất cả mã khóa học có tồn tại
