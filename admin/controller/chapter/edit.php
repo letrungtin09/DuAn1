@@ -13,7 +13,7 @@ if (exist_param("btn_update")) {
         $nameCourse = course_select_by_id($_GET['courseId']);
         include_once("view/Chapter/edit.php");
     } else {
-        chapter_insert($title, $numberOrder, $courseId);
+        chapter_update($chapterId, $title, $numberOrder, $courseId);
         $MESSAGE = "Cập nhật thành công!";
         $newNumberOrder = chapter_numberOrder_new($_GET['courseId']);
         $nameCourse = course_select_by_id($_GET['courseId']);

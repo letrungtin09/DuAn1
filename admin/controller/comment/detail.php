@@ -9,10 +9,13 @@ extract($_REQUEST);
 if (exist_param("btn_delete")) {
     comment_delete($idComment);
     $list_comment = comment_select_all();
-    @include_once("view/Comment/list.php");
-} else {
-    $list_comment = comment_select_all();
-    @include_once("view/Comment/list.php");
+    include_once("view/Comment/list.php");
 }
-
+else{
+    $getComment = comment_select_by_id($idComment);
+    extract($getComment);
+    $getUser = user_select_by_id($userId);
+    $getNews = news_select_by_id($newsId);
+    include_once("view/Comment/detail.php");
+}
 ?>

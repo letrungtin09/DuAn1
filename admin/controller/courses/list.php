@@ -13,7 +13,7 @@ if (exist_param("btn_edit")) {
     include_once("view/Courses/list.php");
 } else {
     $list_courses = course_select_all();
-    @include_once("view/Courses/list.php");
+    include_once("view/Courses/list.php");
 }
 
 ?>
