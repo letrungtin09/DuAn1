@@ -69,7 +69,7 @@
                     <a class="nav-link" aria-current="page" href="#">Giảng dạy trên T-demy</a>
                 </div>
                 <div class="nav-item header_teaching">
-                    <a class="nav-link" aria-current="page" href="#">Khóa học của tôi</a>
+                    <a class="nav-link" aria-current="page" href="<?=$SITE_URL?>?mod=mylearning&act=mylearn">Khóa học của tôi</a>
                 </div>
                 <div class="nav-item dropdown header_cart">
                     <a class="nav-link header_cart_link" href="#" role="button">
@@ -132,53 +132,31 @@
                     </a>
                 
                     <ul class="dropdown-menu header_favorite_bill-purchar">
-                        <li>
-                            <a href="#" class="header_favorite_bill-tem">
-                                <img src="<?=$IMAGE_DIR?>/courses/be5.jpg">
-                                <div>
-                                    <div class="header_favorite_bill-title">Khoá học cơ bản với HTML/ CSS dành cho người mới học lập trình</div>
-                                    <p>Tường duy</p>
-                                    <div class="header_favorite_bill-price">
-                                        <h5>499.000đ</h5>
+                        <?php
+                        foreach($studentlikeinCourse as $studentlike){
+                            $courseinfolike = course_select_by_id($studentlike['courseId']);
+                        ?>
+                            <li>
+                                <a href="#" class="header_favorite_bill-tem">
+                                    <img src="<?=$IMAGE_DIR?>/courses/<?=$courseinfolike['image']?>">
+                                    <div>
+                                        <div class="header_favorite_bill-title"><?=$courseinfolike['title']?></div>
+                                        <p><?=get_name_teacher($courseinfolike['userId'])?></p>
+                                        <div class="header_favorite_bill-price">
+                                            <h5><?=number_format($courseinfolike['price'])?>đ</h5>
+                                        </div>
                                     </div>
+                                </a>
+                                <div class="header_cart_favorite_bill-submit">
+                                    <a href="<?=$SITE_URL?>?mod=bill&act=addBill&course=<?=$courseinfolike['courseId']?>">Thêm vào giỏ hàng</a>
                                 </div>
-                            </a>
-                            <div class="header_cart_favorite_bill-submit">
-                                <button>Thêm vào giỏ hàng</button>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" class="header_favorite_bill-tem">
-                                <img src="<?=$IMAGE_DIR?>/courses/be5.jpg">
-                                <div>
-                                    <div class="header_favorite_bill-title">Khoá học cơ bản với HTML/ CSS dành cho người mới học lập trình</div>
-                                    <p>Tường duy</p>
-                                    <div class="header_favorite_bill-price">
-                                        <h5>499.000đ</h5>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="header_cart_favorite_bill-submit">
-                                <button>Thêm vào giỏ hàng</button>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" class="header_favorite_bill-tem">
-                                <img src="<?=$IMAGE_DIR?>/courses/be5.jpg">
-                                <div>
-                                    <div class="header_favorite_bill-title">Khoá học cơ bản với HTML/ CSS dành cho người mới học lập trình</div>
-                                    <p>Tường duy</p>
-                                    <div class="header_favorite_bill-price">
-                                        <h5>499.000đ</h5>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="header_cart_favorite_bill-submit">
-                                <button>Thêm vào giỏ hàng</button>
-                            </div
-                        </li>
+                            </li>
+                        <?php
+                        }
+                        ?>
+                        
                         <div class="header_favorite_bill-submit">
-                            <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&kind=like">Xem danh sách yêu thích</a>
+                            <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn">Xem danh sách yêu thích</a>
                         </div>
                     </ul>
                 </div>
@@ -227,9 +205,9 @@
                                 </div>
                             </div>
                             <ul class="dropdown-menu-mid">
-                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&kind=all" class="">Quá trình học tập của tôi</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn" class="">Quá trình học tập của tôi</a></li>
                                 <li><a href="<?=$SITE_URL?>?mod=bill&act=cartBill" class="">Giỏ hàng của tôi</a></li>
-                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&kind=like" class="">Danh sách yêu thích</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn" class="">Danh sách yêu thích</a></li>
                                 <li><a href='' class=''>Bảng điều khiển của giảng viên</a></li>
                             </ul>
                             <ul class="dropdown-menu-mid">
@@ -258,9 +236,9 @@
                                 </div>
                             </div>
                             <ul class="dropdown-menu-mid">
-                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&kind=all" class="">Quá trình học tập của tôi</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn" class="">Quá trình học tập của tôi</a></li>
                                 <li><a href="<?=$SITE_URL?>?mod=bill&act=cartBill" class="">Giỏ hàng của tôi</a></li>
-                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&kind=like" class="">Danh sách yêu thích</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn" class="">Danh sách yêu thích</a></li>
                             </ul>
                             <ul class="dropdown-menu-mid">
                                 <li><a href="<?=$SITE_URL?>?mod=user&act=updateaccount" class="">Cập nhập tài khoản</a></li>

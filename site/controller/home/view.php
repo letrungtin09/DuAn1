@@ -15,6 +15,11 @@
     $allCourseTop10 = course_select_top10_best_seller();
     // Truy vấn 8 bài viết
     $eightNew = news_select_pageHome();
+    // kiểm tra khóa học yêu thích 
+    function get_course_favourite($userId, $courseId){
+        require_once 'model/favourite.php';
+        return favourite_exist($userId, $courseId);
+    }
     // Truy vấn các học sinh trong lớp
     if(isset($_SESSION['user'])){
         $courseRegisted = student_courses_select_by_userId($_SESSION['user']['userId']);

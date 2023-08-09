@@ -5,6 +5,7 @@ require_once 'model/user.php';
 require_once 'model/chapter.php';
 require_once 'model/detailChapter.php';
 require_once 'model/evaluate.php';
+require_once 'model/favourite.php';
 // Lấy thông tin khóa học theo Idcourse
 $courseid = $_GET['course'];
 $courseSlectbyid = course_select_by_id($courseid);
@@ -31,5 +32,10 @@ $countCourseByTeacher = course_count_userId($courseSlectbyid['userId']);
 $eluavateSelectByIdcourse = evaluate_select_courseId($courseSlectbyid['courseId']);
 // Truy vấn 3 khóa học cùng giảng viên
 $courseSelectByTeacher = three_course_select_by_userId($courseSlectbyid['userId']);
+// kiểm tra khóa học yêu thích 
+function get_course_favourite($userId, $courseId){
+    require_once 'model/favourite.php';
+    return favourite_exist($userId, $courseId);
+}
 include_once("view/Detailcourse/detailcourse.php");
 ?>

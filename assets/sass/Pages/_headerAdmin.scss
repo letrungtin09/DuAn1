@@ -163,17 +163,17 @@
             }
            
             .header_cart_favorite_bill-submit{
-                padding: $pd-3 $pd-3 ;
-                button{
-                    width: 100%;
-                    height: 46px;
-                    border: 1px solid $color-black-3;
-                    background-color: $color-white-1;
-                    font-size: $fs-2;
-                    color: $color-black-1;
-                    font-weight: $fw-2;
+                a{
+                    display: block;
+                    font-size: 16px;
+                    text-align: center;
+                    text-decoration: none;
+                    background-color: #0f9026;
+                    color: white;
+                    padding: 10px;
+                    margin: 0 10px;
                     &:hover{
-                        background-color: $color-white-0;
+                        background-color: #12b530;
                     }
                 }
             }
