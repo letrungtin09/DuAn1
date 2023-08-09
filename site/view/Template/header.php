@@ -48,7 +48,7 @@
                         foreach ($allKind as $kh) {
                             extract($kh); 
                         ?>
-                        <li><a class="dropdown-item" href="#"><?=$nameCate?></a></li>
+                        <li><a class="dropdown-item" href="<?=$SITE_URL?>?mod=typecourse&act=typecourses&cate=<?=$kh['cateId']?>"><?=$nameCate?></a></li>
                     <?php
                     }
                     ?>
@@ -66,7 +66,7 @@
                     </form>
                 </div>
                 <div class="nav-item header_teaching">
-                    <a class="nav-link" aria-current="page" href="#">Giảng dạy trên T-demy</a>
+                    <a class="nav-link" aria-current="page" href="<?=$SITE_URL?>?mod=registerteacher&act=register">Giảng dạy trên T-demy</a>
                 </div>
                 <div class="nav-item header_teaching">
                     <a class="nav-link" aria-current="page" href="<?=$SITE_URL?>?mod=mylearning&act=mylearn">Khóa học của tôi</a>
@@ -271,7 +271,7 @@
                         foreach ($allKind as $kh) {
                             extract($kh); 
                         ?>
-                        <li><a class="dropdown-item" href="#"><?=$nameCate?></a></li>
+                        <li><a class="dropdown-item" href="<?=$SITE_URL?>?mod=typecourse&act=typecourses&cate=<?=$kh['cateId']?>"><?=$nameCate?></a></li>
                     <?php
                     }
                     ?>
@@ -286,7 +286,7 @@
                     </form>
                 </div>
                 <div class="nav-item header_teaching">
-                    <a class="nav-link" aria-current="page" href="#">Giảng dạy trên T-demy</a>
+                    <a class="nav-link" aria-current="page" href="<?=$SITE_URL?>?mod=registerteacher&act=register">Giảng dạy trên T-demy</a>
                 </div>
                 <div class="nav-item dropdown header_cart">
                     <a class="nav-link header_cart_link" href="#" role="button">

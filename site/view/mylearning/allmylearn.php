@@ -28,7 +28,7 @@
                                     <a href="#"><i class="fa-solid fa-xmark"></i></a>
                                 </div>
                                 <div class="overlay__play">
-                                    <a href="#"><i class="fa-solid fa-play"></i></a>
+                                    <a href="<?=$SITE_URL?>?mod=lesson&act=lessonDetail&course=<?=$student['courseId']?>"><i class="fa-solid fa-play"></i></a>
                                 </div>
                             </div>
                             <a href="#"><img src="<?=$IMAGE_DIR?>/courses/<?=$courseinfo['image']?>" alt="..."></a>

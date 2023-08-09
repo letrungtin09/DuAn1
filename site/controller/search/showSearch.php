@@ -13,6 +13,7 @@ function nameKind($idcate){
 }
 // Lấy tất cả giang vien tồn tại
 $allTeacher = iduser_course_select_all();
+// Truy vấn tên giảng viên
 function nameTeacher($iduser){
     return user_select_by_id($iduser);
 }

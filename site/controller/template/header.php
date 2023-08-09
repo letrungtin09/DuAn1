@@ -12,4 +12,18 @@ function get_name_teacher($userID){
     $name = $user['fullName'];
     return $name;
 }
+// Lấy chức vụ
+function get_occupation_teacher($userID){
+    require_once 'model/user.php';
+    $user = user_select_by_id($userID);
+    $occupation = $user['career'];
+    return $occupation;
+}
+// Lấy ảnh
+function get_avatar_user($userID){
+    require_once 'model/user.php';
+    $user = user_select_by_id($userID);
+    $avatar = $user['avatar'];
+    return $avatar;
+}
 ?>

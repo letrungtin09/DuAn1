@@ -101,12 +101,9 @@
                                 <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$courseal['courseId']?>">
                                     <h5 class="card-title"><?=$courseal['title']?></h5>
                                 </a>
-                                <?php
-                                $nameTeacher = user_select_by_id($courseal['userId']);
-                                ?>
-                                <p class="card-teacher"><?=$nameTeacher['fullName']?></p>
+                                <p class="card-teacher"><?=get_name_teacher($courseal['userId'])?></p>
                                 <div class="card-stars">
-                                    <span class="card-rate">4.5</span>
+                                    <span class="card-rate"><?=EluavateRate($courseal['userId'])?></span>
                                     <span class="card-icon">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -114,7 +111,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                     </span>
-                                    <span class="card-total">(17,915)</span>
+                                    <span class="card-total">(<?=eluavate_count($courseal['courseId'])?>)</span>
                                 </div>
                                 <div class="card-price">
                                     <span><?=number_format($courseal['price'] - ($courseal['price'] * ($courseal['sale']/100)))?><span class="vnd">đ</span></span>
@@ -261,9 +258,9 @@
                                     <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$courseall['courseId']?>">
                                         <h5 class="card-title"><?=$courseall['title']?></h5>
                                     </a>
-                                    <p class="card-teacher"><?=$courseall['userId']?></p>
+                                    <p class="card-teacher"><?=get_name_teacher($courseall['userId'])?></p>
                                     <div class="card-stars">
-                                        <span class="card-rate">4.5</span>
+                                        <span class="card-rate"><?=EluavateRate($courseall['userId'])?></span>
                                         <span class="card-icon">
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
@@ -271,7 +268,7 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </span>
-                                        <span class="card-total">(17,915)</span>
+                                        <span class="card-total">(<?=eluavate_count($courseal['courseId'])?>)</span>
                                     </div>
                                     <div class="card-price">
                                         <span><?=number_format($courseall['price'] - ($courseall['price'] * ($courseall['sale']/100)))?><span class="vnd">đ</span></span>
@@ -380,9 +377,9 @@
                         <a href="#">
                             <h5 class="card-title"><?=$courseTop10['title']?></h5>
                         </a>
-                        <p class="card-teacher"><?=$courseTop10['userId']?></p>
+                        <p class="card-teacher"><?=get_name_teacher($courseTop10['userId'])?></p>
                         <div class="card-stars">
-                            <span class="card-rate">4.5</span>
+                            <span class="card-rate"><?=EluavateRate($courseTop10['userId'])?></span>
                             <span class="card-icon">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -390,7 +387,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </span>
-                            <span class="card-total">(17,915)</span>
+                            <span class="card-total">(<?=eluavate_count($courseTop10['courseId'])?>)</span>
                         </div>
                         <div class="card-price">
                             <span><?=number_format($courseTop10['price'] - ($courseTop10['price'] * ($courseTop10['sale']/100)))?><span class="vnd">đ</span></span>
@@ -472,7 +469,7 @@
                 <div class="col-3">
                     <div class="card">
                         <div class="card-img">
-                            <a href="#"><img src="<?=$IMAGE_DIR?>/categories/<?=$khall['nameCate']?>.jpg" class="card-img-top" alt="..."> </a>
+                            <a href="<?=$SITE_URL?>?mod=typecourse&act=typecourses&cate=<?=$khall['cateId']?>"><img src="<?=$IMAGE_DIR?>/categories/<?=$khall['nameCate']?>.jpg" class="card-img-top" alt="..."> </a>
                         </div>
                         <div class="card-body">
                             <h3 class="card-title"><?=$khall['nameCate']?></h3>
@@ -495,7 +492,7 @@
                 foreach ($eightNew as $new) {
                 ?>
                     <li class="posts_content-item col-3">
-                        <a href="" class="posts_content-link">
+                        <a href="<?=$SITE_URL?>?mod=news&act=newpost&post=<?=$new['newsId']?>" class="posts_content-link">
                             <div class="posts_content-link-img">
                                 <img src="<?=$IMAGE_DIR?>/post/<?=$new['image']?>" alt="" class="">
                             </div>
@@ -554,7 +551,7 @@
                     Chúng tôi cung cấp các công cụ và kỹ năng </br>
                     để dạy những gì bạn yêu thích.
             </p>
-            <button class="button-black-large">Bắt đầu dạy học ngay hôm nay</button>
+            <a class="button-black-large" style="text-decoration: none;" href="<?=$SITE_URL?>?mod=registerteacher&act=register">Bắt đầu dạy học ngay hôm nay</a>
             </div>
         </div>
     </div>

@@ -44,7 +44,16 @@ function course_select_idcate($cateId){
     $sql = "SELECT * FROM courses WHERE cateId=?";
     return pdo_query($sql, $cateId);
 }
-
+// Truy vấn tất cả khóa học theo loại sắp xếp theo ngày update
+function course_select_idcate_arrange_date($cateId){
+    $sql = "SELECT * FROM courses WHERE cateId=? ORDER BY date DESC";
+    return pdo_query($sql, $cateId);
+}
+// Truy vấn tất cả khóa học theo loại sắp xếp theo lượt mua
+function course_select_idcate_arrange_purchase($cateId){
+    $sql = "SELECT * FROM courses WHERE cateId=? ORDER BY purchase DESC";
+    return pdo_query($sql, $cateId);
+}
 // Kiểm tra sự tồn tại của khóa học
 function course_exist($courseId){
     $sql = "SELECT count(*) FROM courses WHERE courseId=?";
@@ -54,7 +63,7 @@ function course_exist($courseId){
 // Tăng lượt mua lên 1
 function course_to_increase_purchases($courseId){
     $sql = "UPDATE courses SET purchase = purchase + 1 where courseId = ?";
-    pdo_execute($sql, $courseId);
+    return pdo_execute($sql, $courseId);
 }
 
 // Tìm kiếm khóa học
@@ -68,7 +77,7 @@ function course_select_top10_best_seller(){
     $sql = "SELECT * FROM courses WHERE purchase > 0 ORDER BY purchase DESC LIMIT 0, 10";
     return pdo_query($sql);
 }
-// Truy vấn 2 tất cả khóa học theo loại
+// Truy vấn 2 khóa học theo loại
 function five_course_select_idcate($cateId){
     $sql = "SELECT * FROM courses WHERE cateId=? limit 5";
     return pdo_query($sql, $cateId);
@@ -93,4 +102,5 @@ function iduser_course_select_all(){
     $sql = "SELECT DISTINCT userId FROM courses;";
     return pdo_query($sql);
 }
+
 ?>

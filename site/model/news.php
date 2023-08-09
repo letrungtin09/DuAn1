@@ -22,10 +22,14 @@ function news_delete($newsId){
 }
 // Truy vấn 8 bài viết lên trang chủ
 function news_select_pageHome(){
-    $sql = "SELECT * FROM news WHERE status = 1 LIMIT 0, 8";
+    $sql = "SELECT * FROM news WHERE status = 1 ORDER BY view DESC LIMIT 0, 8";
     return pdo_query($sql);
 }
-
+// Truy vấn bài viết 3 theo userId
+function news_select_three_by_userId($userId){
+    $sql = "SELECT * FROM news WHERE userId = ?  LIMIT 3";
+    return pdo_query($sql, $userId);
+}
 // Truy vấn bài viết theo userId
 function news_select_by_userId($userId){
     $sql = "SELECT * FROM news WHERE userId = ?";

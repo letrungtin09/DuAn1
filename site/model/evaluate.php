@@ -21,4 +21,9 @@ function evaluate_exist($courseId){
     $sql = "SELECT count(*) FROM evaluate WHERE courseId=?";
     return pdo_query_value($sql, $courseId) > 0;
 }
+// đếm số đánhg ía theo courseid
+function evaluate_count_courseid($courseId){
+    $sql = "SELECT count(courseId) FROM evaluate WHERE courseId=?";
+    return pdo_query_value($sql, $courseId);
+}
 ?>

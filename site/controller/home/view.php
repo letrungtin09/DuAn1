@@ -24,5 +24,29 @@
     if(isset($_SESSION['user'])){
         $courseRegisted = student_courses_select_by_userId($_SESSION['user']['userId']);
     }
+    // Đếm số đánh giá
+    function eluavate_count($courseId){
+        require_once 'model/evaluate.php';
+        $elua = evaluate_count_courseid($courseId);
+        return $elua;
+
+    }
+    // Tính số sao
+    function EluavateRate($eluavateCourse){
+        require_once 'model/evaluate.php';
+        $sum = 0;
+        $count = 0;
+        if(evaluate_exist($eluavateCourse)){
+            $coursesElua = evaluate_select_courseId($eluavateCourse);
+            foreach($coursesElua as $course){
+                $sum += $course['evaluateRate'];
+                $count++;
+            }
+            $everage = $sum / $count;
+            return $everage;
+        }else{
+            return 0;
+        }
+    }
     include_once("view/Home/view.php");
 ?>

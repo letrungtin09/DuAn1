@@ -3,7 +3,12 @@
 	session_start();
 	date_default_timezone_set("Asia/Ho_Chi_Minh");
 	require "../global.php";
-	include_once 'view/Template/header.php';
+	if(isset($_GET['mod']) && $_GET['mod'] == 'lesson' && isset($_GET['act']) && $_GET['act'] == 'lessonDetail'){
+		include_once 'view/Template/headerLesson.php';
+
+	}else{
+		include_once 'view/Template/header.php';
+	}
 
 	if(isset($_GET['mod'])){
 		$inclFile = "";
