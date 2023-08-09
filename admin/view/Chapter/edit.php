@@ -1,6 +1,6 @@
 <section class="formInsertEdit">
     <div class="formInsertEdit__title">
-        <h1>CHỈNH SỬA CHƯƠNG HỌC CHO KHÓA HỌC<br/><?=$nameCourse['title']?></h1>
+        <h1>CHỈNH SỬA CHƯƠNG <?=$numberOrder?> CỦA KHÓA HỌC<br/><?=$nameCourse['title']?></h1>
     </div>
     <div class="formInsertEdit__space">
         <h5 class="message">

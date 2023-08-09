@@ -17,7 +17,6 @@
                                             <th scope="col"><input type="checkbox" id="masterCheckbox" value=""></th>
                                             <th scope="col">ID</th>
                                             <th scope="col">NGƯỜI ĐĂNG</th>
-                                            <th scope="col">NỘI DUNG</th>
                                             <th scope="col">NGÀY BÌNH LUẬN</th>
                                             <th scope="col">BÀI VIẾT</th>
                                             <th scope="col">THAO TÁC</th>
@@ -34,7 +33,7 @@
                                             <td class="so-luong">
                                             <?= $idComment; ?>
                                             </td>
-                                            <td class="tieu-de tieu-de-ac" style="text-align: left;">
+                                            <td class="tieu-de tieu-de-ac" style="text-align: center;">
                                                 <p> 
                                                     <?php 
                                                         $name_user = user_select_by_id($userId);
@@ -42,14 +41,10 @@
                                                     ?>
                                                 </p>
                                             </td>
-                                            <td style="text-align: left; width: 20%; line-height: 30px;">
-                                                <p>
-                                                    <?= $content;?>                                                </p>
-                                            </td>
                                             <td>
                                                 <p><?= $date ?></p>
                                             </td>
-                                            <td style="text-align: left; line-height: 30px; width: 25%">
+                                            <td style="text-align: center; line-height: 30px; width: 30%">
                                                 <p>
                                                      <?php
                                                       $name_news = news_select_by_id($newsId);
@@ -58,9 +53,13 @@
                                                 </p>
                                             </td>
                                     
-                                            <td class="d-flex flex-column">
-                                                <a href="" class="btn-edit-admin">Sửa</a>
-                                                <a href="" class="btn-delete-admin">Xóa</a>
+                                            <td>
+                                                <div class="d-flex flex-column align-items-center">
+                                                    <a href="<?= $ADMIN_URL ?>?mod=comment&act=detail&idComment=<?= $idComment ?>&userId=<?=$userId?>&newsId=<?=$newsId?>"
+                                                    class="btn-detail-admin">Chi tiết</a>
+                                                    <a href="<?=$ADMIN_URL?>?mod=comment&act=list&btn_delete&idComment=<?=$idComment?>"
+                                                    class="btn-delete-admin">Xóa</a>
+                                                </div>
                                             </td>
                                         </tr> 
                                         <?php

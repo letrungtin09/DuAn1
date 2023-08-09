@@ -42,7 +42,7 @@ function chapter_select_idcourse_order($courseId){
 // Truy vấn chapter theo id
 function chapter_select_by_id($chapterId){
     $sql = "SELECT * FROM chapter_courses WHERE chapterId=?";
-    return pdo_query($sql, $chapterId);
+    return pdo_query_one($sql, $chapterId);
 }
 // Truy vấn số thứ tự chương mới nhất của 1 khóa học
 function chapter_numberOrder_new($courseId){

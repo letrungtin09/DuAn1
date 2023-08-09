@@ -44,7 +44,7 @@
                                             <?= $fullName ?>
                                         </p>
                                     </td>
-                                    <td class="image-course"><img style="width:100%" src="<?=$IMAGE_DIR?>/users/<?= $avatar ?>"
+                                    <td class="image-course"><img style="width:75px; height:75px; object-fit:cover; object-position: 0px 0px;" src="<?=$IMAGE_DIR?>/users/<?= $avatar ?>"
                                             alt=""></td>
                                     <td>
                                         <p>
@@ -56,7 +56,7 @@
                                             <?= $phoneNumber ?>
                                         </p>
                                     </td>
-                                    <td style="width: 25%;">
+                                    <td style="width: 20%;">
                                         <p>
                                             <?= $career ?>
                                         </p>
@@ -66,9 +66,11 @@
                                             <?= $role ?>
                                         </p>
                                     </td>
-                                    <td class="d-flex flex-column">
-                                        <a href="<?=$ADMIN_URL?>?mod=user&act=edit&btn_edit&userId=<?=$userId?>"class="btn-edit-admin">Sửa</a>
-                                        <a href="<?=$ADMIN_URL?>?mod=user&act=list&btn_delete&userId=<?=$userId?>" class="btn-delete-admin">Xóa</a>
+                                    <td>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <a href="<?=$ADMIN_URL?>?mod=user&act=edit&btn_edit&userId=<?=$userId?>"class="btn-edit-admin">Sửa</a>
+                                            <a href="<?=$ADMIN_URL?>?mod=user&act=list&btn_delete&userId=<?=$userId?>" class="btn-delete-admin">Xóa</a>
+                                        </div>                
                                     </td>
                                 </tr>
                             <?php } ?>
