@@ -43,7 +43,8 @@
                             <ul id="adminNav">
                                 <li>
                                     <div class="txt-sidebar" >
-                                        <a class="active" href="<?=$ADMIN_URL?>?mod=statistic&act=list"><img  src="<?=$IMAGE_DIR?>/adminStatistical/icon1.png" alt="">Thống kê</a>
+                                        <a class="active" href="<?=$ADMIN_URL?>?mod=statistic&act=list"><img  src="<?=$IMAGE_DIR?>/adminStatistical/icon1.png" alt="">Thống kê
+                                    </a>
                                     </div>
                                 </li>
                                 <li>

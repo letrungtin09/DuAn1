@@ -113,4 +113,10 @@ function iduser_course_select_all(){
     $sql = "SELECT DISTINCT userId FROM courses;";
     return pdo_query($sql);
 }
+// Tính tổng lượt mua theo cateId
+function sum_purchase_select_all($cateId){
+    $sql = "SELECT sum(purchase) FROM courses WHERE cateId=? limit 5";
+    return pdo_query($sql, $cateId);
+}
+
 ?>
