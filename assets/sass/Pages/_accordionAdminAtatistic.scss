@@ -1,0 +1,24 @@
+.accordion-admin-statistic {
+    margin-top: 17px;
+    .accordion-item {
+        .accordion-button {
+            h1 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-left: 2%;
+                margin-bottom: 0%;
+                
+            }
+
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #03f8a926;
+            color: black;
+            h1{
+                font-size: 2.5rem;
+                
+            }
+        }
+    }
+}
