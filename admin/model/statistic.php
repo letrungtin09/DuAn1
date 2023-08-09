@@ -46,4 +46,41 @@ function statistic_course_count_userId($userId){
     $sql = "SELECT count(*) as sl_kh FROM courses WHERE userId=?";
     return pdo_query_value($sql, $userId);
 }
+
+// Thống kê thu nhập theo ngày
+function statistic_income_day(){
+    $sql = "SELECT SUM(total_money) FROM info_purchase GROUP BY DAY(date)";
+    return pdo_query($sql);
+}
+
+// Thống kê thu nhập theo tháng
+function statistic_income_month(){
+    $sql = "SELECT SUM(total_money) FROM info_purchase GROUP BY MONTH(date)";
+    return pdo_query($sql);
+}
+
+// Thống kê thu nhập theo năm
+function statistic_income_year(){
+    $sql = "SELECT SUM(total_money) FROM info_purchase GROUP BY YEAR(date)";
+    return pdo_query($sql);
+}
+
+// Đếm số lượng đơn hàng trong 1 ngày
+function statistic_count_bill_day(){
+    $sql = "SELECT COUNT(idInfo) FROM info_purchase GROUP BY DAY(date)";
+    return pdo_query($sql);
+}
+
+// Đếm số lượng đơn hàng trong 1 tháng
+function statistic_count_bill_month(){
+    $sql = "SELECT COUNT(idInfo) FROM info_purchase GROUP BY MONTH(date)";
+    return pdo_query($sql);
+}
+
+// Đếm số lượng đơn hàng trong 1 năm
+function statistic_count_bill_year(){
+    $sql = "SELECT COUNT(idInfo) FROM info_purchase GROUP BY YEAR(date)";
+    return pdo_query($sql);
+}
+
 ?>
