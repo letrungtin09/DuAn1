@@ -34,6 +34,11 @@ function course_select_by_id($courseId){
     $sql = "SELECT * FROM courses WHERE courseId=?";
     return pdo_query_one($sql, $courseId);
 }
+// Truy vấn khóa học theo mã giảng viên
+function course_select_by_userId($userId){
+    $sql = "SELECT * FROM courses WHERE userId=?";
+    return pdo_query($sql, $userId);
+}
 // Truy vấn 2 khóa học theo mã giảng viên
 function three_course_select_by_userId($userId){
     $sql = "SELECT * FROM courses WHERE userId=? limit 3";

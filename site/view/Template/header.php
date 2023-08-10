@@ -207,8 +207,8 @@
                             <ul class="dropdown-menu-mid">
                                 <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn" class="">Quá trình học tập của tôi</a></li>
                                 <li><a href="<?=$SITE_URL?>?mod=bill&act=cartBill" class="">Giỏ hàng của tôi</a></li>
-                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn" class="">Danh sách yêu thích</a></li>
-                                <li><a href='' class=''>Bảng điều khiển của giảng viên</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=news&act=list" class="">Bài viết</a></li>
+                                <li><a href='<?=$SITE_URL?>?mod=managecourse&act=listCourse&userId=<?=$_SESSION["user"]["userId"]?>' class=''>Bảng điều khiển của giảng viên</a></li>
                             </ul>
                             <ul class="dropdown-menu-mid">
                                 <li><a href="<?=$SITE_URL?>?mod=user&act=updateaccount" class="">Cập nhập tài khoản</a></li>
@@ -238,7 +238,7 @@
                             <ul class="dropdown-menu-mid">
                                 <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn" class="">Quá trình học tập của tôi</a></li>
                                 <li><a href="<?=$SITE_URL?>?mod=bill&act=cartBill" class="">Giỏ hàng của tôi</a></li>
-                                <li><a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn" class="">Danh sách yêu thích</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=news&act=list" class="">Bài viết</a></li>
                             </ul>
                             <ul class="dropdown-menu-mid">
                                 <li><a href="<?=$SITE_URL?>?mod=user&act=updateaccount" class="">Cập nhập tài khoản</a></li>

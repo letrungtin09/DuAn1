@@ -3,10 +3,15 @@
 	session_start();
 	date_default_timezone_set("Asia/Ho_Chi_Minh");
 	require "../global.php";
+	
 	if(isset($_GET['mod']) && $_GET['mod'] == 'lesson' && isset($_GET['act']) && $_GET['act'] == 'lessonDetail'){
 		include_once 'view/Template/headerLesson.php';
 
-	}else{
+	}
+	else if(isset($_GET['mod']) && $_GET['mod'] == 'managecourse' && isset($_GET['act']) && ($_GET['act'] == 'listCourse' || $_GET['act'] == 'addCourse' || $_GET['act'] == 'editCourse')){
+		include_once 'view/Template/headerTeacher.php';
+	}
+	else{
 		include_once 'view/Template/header.php';
 	}
 
