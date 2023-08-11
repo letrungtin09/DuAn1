@@ -13,7 +13,7 @@
                     </h1>
                 </div>
                 <div class="col-1-right">
-                    <a href="<?= $ADMIN_URL ?>?mod=lesson&act=add&chapterId=<?= $_GET['chapterId'] ?>"
+                    <a href="<?= $SITE_URL ?>?mod=managelesson&act=addLesson&userId=<?=$_GET['userId']?>&chapterId=<?= $_GET['chapterId'] ?>"
                         class="btn btn-success">+ Thêm bài học</a>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                         </thead>
                         <tbody>
                             <?php
-                            $count = lesson_count_chapter($_GET['chapterId']);
+                            $count = detailChapter_count_chapter($_GET['chapterId']);
                             if ($count == 0) {
                                 echo "<tr>
                                             <td colspan='9'>Chưa có bài học</td>
@@ -59,7 +59,7 @@
                                         <td class="so-luong line-height">
                                             <?= $numberOrderLesson ?>
                                         </td>
-                                        <td class="line-height" style="width: 30%;">
+                                        <td class="line-height" style="width: 15%;">
                                             <p>
                                                 <?= $title ?>
                                             </p>
@@ -81,11 +81,13 @@
                                         <td class="so-luong line-height">
                                             <?= $timeLesson ?>
                                         </td>
-                                        <td class="d-flex flex-column">
-                                            <a href="<?= $ADMIN_URL ?>?mod=lesson&act=edit&chapterId=<?= $chapterId ?>&detailChapterId=<?=$detailChapterId?>&numberOrderLesson=<?=$numberOrderLesson?>&title=<?=$title?>&video=<?=$video?>&document=<?=$document?>&timeLesson=<?=$timeLesson?>"
-                                                class="btn-edit-admin">Sửa</a>
-                                            <a href="<?= $ADMIN_URL ?>?mod=lesson&act=list&btn_delete&chapterId=<?= $chapterId ?>&detailChapterId=<?=$detailChapterId?>"
-                                                class="btn-delete-admin">Xóa</a>
+                                        <td>
+                                            <div class="d-flex flex-column align-items-center">
+                                                <a href="<?= $SITE_URL ?>?mod=managelesson&act=editLesson&userId=<?=$_GET['userId']?>&chapterId=<?= $chapterId ?>&detailChapterId=<?=$detailChapterId?>&numberOrderLesson=<?=$numberOrderLesson?>&title=<?=$title?>&video=<?=$video?>&document=<?=$document?>&timeLesson=<?=$timeLesson?>"
+                                                    class="btn-edit-admin">Sửa</a>
+                                                <a href="<?= $SITE_URL ?>?mod=managelesson&act=listLesson&btn_delete&userId=<?=$_GET['userId']?>&chapterId=<?= $chapterId ?>&detailChapterId=<?=$detailChapterId?>"
+                                                    class="btn-delete-admin">Xóa</a>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -99,3 +101,6 @@
         </div>
     </div>
 </section>
+
+</div>
+</div>

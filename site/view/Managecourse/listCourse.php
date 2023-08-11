@@ -17,7 +17,7 @@
                     </form>
                 </div>
                 <div class="col-1-right">
-                    <a href="" class="btn btn-success">+ Thêm khóa học</a>
+                    <a href="<?=$SITE_URL?>?mod=managecourse&act=addCourse&userId=<?=$_GET['userId']?>" class="btn btn-success">+ Thêm khóa học</a>
                 </div>
             </div>
             <div class="col-sm col-2">
@@ -70,9 +70,9 @@
                                         <span class="date"><?=$date?></span>
                                     </div>
                                     <div class="cart-info-control">
-                                        <button type="button" class="btn-detail-admin">Chi tiết khóa học</button>
-                                        <button type="button" class="btn-edit-admin">Sửa khóa học</button>
-                                        <button type="button" class="btn-delete-admin">Xóa khóa học</button>
+                                        <a href="<?=$SITE_URL?>?mod=managechapter&act=listChapter&userId=<?=$_GET["userId"]?>&courseId=<?=$courseId?>" class="btn-detail-admin">Chi tiết khóa học</a>
+                                        <a href="<?=$SITE_URL?>?mod=managecourse&act=editCourse&userId=<?=$_GET["userId"]?>&courseId=<?=$courseId?>" class="btn-edit-admin">Sửa khóa học</a>
+                                        <a href="<?=$SITE_URL?>?mod=managecourse&act=listCourse&btn_delete&userId=<?=$_GET["userId"]?>&courseId=<?=$courseId?>" class="btn-delete-admin">Xóa khóa học</a>
                                     </div>
                                 </div>
                             <?php } ?>
