@@ -53,8 +53,10 @@
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="userId">Giảng viên</label><br>
+                <?php $getTeacher = user_select_by_id($_GET['userId']); ?>
+                <input type="hidden" name="userId" value="<?=$getTeacher['userId']?>">
                 <div class="formInsertEdit__control input-readonly">
-                    <input class="formInsertEdit__input" type="userId" name="date" value="<?=$getTeacher['fullName']?>" readonly>
+                    <input class="formInsertEdit__input" type="text" name="nameUser" value="<?=$getTeacher['fullName']?>" readonly>
                 </div>
             </div>
             <div class="formInsertEdit__item">
@@ -71,7 +73,9 @@
                 <label class="formInsertEdit__label" for="cateId">Loại khóa học</label><br>
                 <select class="formInsertEdit__select" name="cateId" id="cateId">
                     <option value="0">Chọn loại khóa học</option>
-                    <?php foreach ($getAllCate as $cate) {
+                    <?php
+                        $getAllCate = category_select_all();
+                     foreach ($getAllCate as $cate) {
                         extract($cate);
                         ?>
                         <option value="<?= $cateId ?>"><?= $cateId ?> - <?= $nameCate ?></option>

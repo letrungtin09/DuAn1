@@ -54,13 +54,15 @@
                                                 <?= $title ?>
                                             </p>
                                         </td>
-                                        <td class="d-flex flex-column">
-                                            <a href="<?= $ADMIN_URL ?>?mod=chapter&act=edit&courseId=<?= $_GET['courseId'] ?>&chapterId=<?= $chapterId ?>&numberOrder=<?= $numberOrder ?>&title=<?= $title ?>"
-                                                class="btn-edit-admin">Sửa</a>
-                                            <a href="<?= $ADMIN_URL ?>?mod=chapter&act=list&btn_delete&courseId=<?= $_GET['courseId'] ?>&chapterId=<?= $chapterId ?>"
-                                                class="btn-delete-admin">Xóa</a>
-                                            <a href="<?= $ADMIN_URL ?>?mod=lesson&act=list&chapterId=<?= $chapterId ?>"
-                                                class="btn-detail-admin">Chi tiết</a>
+                                        <td>
+                                            <div class="d-flex flex-column align-items-center">
+                                                <a href="<?= $ADMIN_URL ?>?mod=chapter&act=edit&courseId=<?= $_GET['courseId'] ?>&chapterId=<?= $chapterId ?>&numberOrder=<?= $numberOrder ?>&title=<?= $title ?>"
+                                                    class="btn-edit-admin">Sửa</a>
+                                                <a href="<?= $ADMIN_URL ?>?mod=chapter&act=list&btn_delete&courseId=<?= $_GET['courseId'] ?>&chapterId=<?= $chapterId ?>"
+                                                    class="btn-delete-admin">Xóa</a>
+                                                <a href="<?= $ADMIN_URL ?>?mod=lesson&act=list&chapterId=<?= $chapterId ?>"
+                                                    class="btn-detail-admin">Chi tiết</a>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php } ?>

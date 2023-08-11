@@ -816,6 +816,20 @@ body {
   padding: 0.4rem 0.8rem;
 }
 
+.btn-add-admin {
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  transition: all 0.3s;
+  color: #fff;
+  background-color: #177e5e;
+  border: 1px solid #177e5e;
+  font-size: 1.4rem;
+  padding: 0.8rem 2rem;
+}
+
 .btn-edit-admin {
   width: 100px;
   text-decoration: none;
@@ -2863,6 +2877,44 @@ body {
   font-weight: bold !important;
 }
 
+.manageNews__content {
+  padding: 3rem;
+  margin-bottom: 2.4rem;
+}
+.manageNews__content .manageNews__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.manageNews__content .manageNews__top .manageNews__title h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+.manageNews__content .manageNews__bottom table {
+  width: 100%;
+  text-align: center;
+}
+.manageNews__content .manageNews__bottom table thead tr {
+  background-color: #ebebeb;
+}
+.manageNews__content .manageNews__bottom table thead tr th {
+  padding: 5px;
+  height: 54px;
+}
+.manageNews__content .manageNews__bottom table tbody tr {
+  border-bottom: 1px solid #d1d7dc;
+}
+.manageNews__content .manageNews__bottom table tbody tr td {
+  height: 30px;
+  padding: 10px 5px;
+}
+.manageNews__content .manageNews__bottom table tbody tr td img {
+  width: 115px;
+  height: 65px;
+  object-fit: cover;
+}
+
 .searchCourse_container {
   margin: 6.4rem;
 }
@@ -3938,13 +3990,14 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
 .container-all .col-left .sidebar-qt-admin .container-sidebar .row .sidebar-content ul li {
   margin: 10% 0;
 }
-.container-all .col-left .sidebar-qt-admin .container-sidebar .row .sidebar-content button {
+.container-all .col-left .sidebar-qt-admin .container-sidebar .row .sidebar-content .btn-home {
+  text-align: center;
+  text-decoration: none;
+  margin-top: 12px;
   padding: 3% 0;
   width: 80%;
-  border-radius: 7px;
+  border-radius: 5px;
   border: none;
-  margin-left: 11%;
-  margin-top: 8%;
   font-weight: bold;
   background: #15AD7D;
   color: white;
@@ -4147,6 +4200,8 @@ body .coursecontent_container-menu .detail__lesson .coursecontent_container-menu
 .container-all .col-right .content-qt .container-qt .row .col-1 {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
 }
 .container-all .col-right .content-qt .container-qt .row .col-1 .col-1-left h1 {
   color: black;

@@ -9,17 +9,9 @@ extract($_REQUEST);
 
 if (exist_param("btn_insert")) {
     if ($title == "" || $price == "" || $userId == 0 || $level == 0 || $cateId == 0 || $allTime == "" || $description == "" || $content == "") {
-        //Lấy teacher
-        $getTeacher = user_select_by_id($_GET['userId']);
-        //Lấy tất cả loại khóa học
-        $getAllCate = category_select_all();
         $MESSAGE = "Thêm mới thất bại. Vui lòng điền đầy đủ thông tin khóa học !";
         include_once("view/Managecourse/addCourse.php");
     } else if (is_numeric($price) == false || $price <= 0) {
-        //Lấy teacher
-        $getTeacher = user_select_by_id($_GET['userId']);
-        //Lấy tất cả loại khóa học
-        $getAllCate = category_select_all();
         $MESSAGE = "Thêm mới thất bại. Vui lòng nhập chữ số cho giá hoặc giảm giá !";
         include_once("view/Managecourse/addCourse.php");
     } else {
@@ -30,10 +22,6 @@ if (exist_param("btn_insert")) {
     }
     include_once("view/Managecourse/addCourse.php");
 } else {
-    //Lấy teacher
-    $getTeacher = user_select_by_id($_GET['userId']);
-    //Lấy tất cả loại khóa học
-    $getAllCate = category_select_all();
     include_once("view/Managecourse/addCourse.php");
 }
 ?>

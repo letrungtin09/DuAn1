@@ -20,6 +20,11 @@ function news_delete($newsId){
         foreach ($newsId as $news) pdo_execute($sql, $news); 
     } else pdo_execute($sql, $newsId);
 }
+// Truy vấn tất cả bài viết
+function news_select_all(){
+    $sql = "SELECT * FROM news";
+    return pdo_query($sql);
+}
 // Truy vấn 8 bài viết lên trang chủ
 function news_select_pageHome(){
     $sql = "SELECT * FROM news WHERE status = 1 ORDER BY view DESC LIMIT 0, 8";
@@ -33,7 +38,7 @@ function news_select_three_by_userId($userId){
 // Truy vấn bài viết theo userId
 function news_select_by_userId($userId){
     $sql = "SELECT * FROM news WHERE userId = ?";
-    return pdo_query_one($sql, $userId);
+    return pdo_query($sql, $userId);
 }
 
 // Truy vấn bài viết theo newsId

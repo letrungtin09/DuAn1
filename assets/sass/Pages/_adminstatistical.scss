@@ -37,13 +37,14 @@
                             }
                         }
 
-                        button {
+                        .btn-home {
+                            text-align: center;
+                            text-decoration: none;
+                            margin-top: 12px;
                             padding: 3% 0;
                             width: 80%;
-                            border-radius: 7px;
+                            border-radius: 5px;
                             border: none;
-                            margin-left: 11%;
-                            margin-top: 8%;
                             font-weight: bold;
                             background: #15AD7D;
                             color: white;
