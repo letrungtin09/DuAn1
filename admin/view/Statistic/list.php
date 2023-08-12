@@ -4,7 +4,7 @@
             <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                     aria-expanded="true" aria-controls="collapseOne">
-                    <h1>THỐNG KÊ THU NHẬP</h1>
+                    <h1>THU NHẬP LOẠI</h1>
                 </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
@@ -125,7 +125,9 @@
                                             <th scope="col">TÊN GIẢNG VIÊN</th>
                                             <th scope="col">SỐ LƯỢNG KHÓA HỌC</th>
                                             <th scope="col">SỐ LƯỢT MUA</th>
-                                            <th scope="col">THU NHẬP</th>
+                                            <th scope="col">THU NHẬP NGÀY</th>
+                                            <th scope="col">THU NHẬP THÁNG</th>
+                                            <th scope="col">THU NHẬP NĂM</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -149,13 +151,37 @@
                                                     ?>
                                                 </td>
                                                 <td>
-                                                    <?= number_format($price_min) ?>đ
+                                                    <?php
+                                                    $sum_buy_course = statistic_buy_all_course_userId($userId);
+                                                    echo $sum_buy_course;
+                                                    ?>
                                                 </td>
                                                 <td>
-                                                    <?= number_format($price_max) ?>đ
+                                                    <?php
+                                                    $income_buy_date = statistic_income_date_user($userId);
+                                                    foreach ($income_buy_date as $list_buy_date) {
+                                                        $list_buy_date['income_date'] = $list_buy_date['income_date'] - ($list_buy_date['income_date'] * 0.3);
+                                                        echo number_format($list_buy_date['income_date']);
+                                                    }
+                                                    ?>đ
                                                 </td>
                                                 <td>
-                                                    <?= number_format($price_avg) ?>đ
+                                                    <?php
+                                                    $income_buy_month = statistic_income_month_user($userId);
+                                                    foreach ($income_buy_month as $list_buy_month) {
+                                                        $list_buy_month['income_month'] = $list_buy_month['income_month'] - ($list_buy_month['income_month'] * 0.3);
+                                                        echo number_format($list_buy_month['income_month']);
+                                                    }
+                                                    ?>đ
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $income_buy_year = statistic_income_year_user($userId);
+                                                    foreach ($income_buy_year as $list_buy_year) {
+                                                        $list_buy_year['income_year'] = $list_buy_year['income_year'] - ($list_buy_year['income_year'] * 0.3);
+                                                        echo number_format($list_buy_year['income_year']);
+                                                    }
+                                                    ?>đ
                                                 </td>
                                             </tr>
                                         <?php } ?>
@@ -189,32 +215,58 @@
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <th scope="col">LOẠI KHÓA HỌC</th>
-                                            <th scope="col">SỐ LƯỢNG KHÓA HỌC</th>
-                                            <th scope="col">SỐ LƯỢNG ĐƠN</th>
-                                            <th scope="col">CHIẾC KHẤU</th>
-                                            <th scope="col">DOANH THU</th>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">TÊN NGƯỜI DÙNG</th>
+                                            <th scope="col">SL KHÓA HỌC ĐÃ MUA</th>
+                                            <th scope="col">CT TRONG NGÀY</th>
+                                            <th scope="col">CT TRONG THÁNG</th>
+                                            <th scope="col">CT TRONG NĂM</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach ($listStatistic as $list) {
-                                            extract($list);
+                                        <?php
+                                        $list_users = statistic_select_all_user();
+                                        foreach ($list_users as $users_list) {
+                                            extract($users_list);
                                             ?>
                                             <tr>
                                                 <td scope="row" class="name-course">
-                                                    <?= $nameCate ?>
+                                                    <?= $userId ?>
                                                 </td>
                                                 <td class="so-luong">
-                                                    <?= $quantity ?>
+                                                    <?= $fullName ?>
                                                 </td>
                                                 <td>
-                                                    <?= number_format($price_min) ?>đ
+                                                    <?php
+                                                    $list_courses_users = statistic_all_courses_users($userId);
+                                                    foreach ($list_courses_users as $list) {
+                                                        echo $list['sl_kh'];
+                                                    }
+                                                    ?>
                                                 </td>
                                                 <td>
-                                                    <?= number_format($price_max) ?>đ
+                                                    <?php
+                                                    $spending_buy_date = statistic_spending_date_user($userId);
+                                                    foreach ($spending_buy_date as $list_spen_date) {
+                                                        echo number_format($list_spen_date['sum_spen']);
+                                                    }
+                                                    ?>đ
                                                 </td>
                                                 <td>
-                                                    <?= number_format($price_avg) ?>đ
+                                                    <?php
+                                                    $spending_buy_month = statistic_spending_month_user($userId);
+                                                    foreach ($spending_buy_month as $list_spen_month) {
+                                                        echo number_format($list_spen_month['sum_spen_month']);
+                                                    }
+                                                    ?>đ
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $spending_buy_year = statistic_spending_year_user($userId);
+                                                    foreach ($spending_buy_year as $list_spen_year) {
+                                                        echo number_format($list_spen_year['sum_spen_year']);
+                                                    }
+                                                    ?>đ
                                                 </td>
                                             </tr>
                                         <?php } ?>
