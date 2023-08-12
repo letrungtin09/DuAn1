@@ -83,7 +83,9 @@
                                     </div>
                                 </li>
                             </ul>
-                            <button>Quay lại trang chủ</button>
+                            <div class="d-flex justify-content-center">
+                                <a href="<?=$SITE_URL?>" class="btn-home">Quay lại trang chủ</a>
+                            </div>
                         </div>
                     </div>
                 </div>

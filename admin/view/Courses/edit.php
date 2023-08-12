@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="formInsertEdit__item">
-                <label class="formInsertEdit__label" for="sale">Mức giảm giá</label><br>
+                <label class="formInsertEdit__label" for="sale">Mức giảm giá (%)</label><br>
                 <div class="formInsertEdit__control">
                     <input class="formInsertEdit__input" type="text" name="sale" value="<?=$sale?>">
                 </div>
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="formInsertEdit__item">
-                <label class="formInsertEdit__label" for="date">Ngày đăng</label><br>
+                <label class="formInsertEdit__label" for="date">Ngày chỉnh sửa</label><br>
                 <div class="formInsertEdit__control input-readonly">
                     <input class="formInsertEdit__input formInsertEdit__date" type="date" name="date" value="<?=date("Y-m-d")?>" readonly>
                 </div>

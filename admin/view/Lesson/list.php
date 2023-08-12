@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-1-right">
                     <a href="<?= $ADMIN_URL ?>?mod=lesson&act=add&chapterId=<?= $_GET['chapterId'] ?>"
-                        class="btn btn-success">+ Thêm chương</a>
+                        class="btn btn-success">+ Thêm bài học</a>
                 </div>
             </div>
             <div class="col-sm col-2">
@@ -59,7 +59,7 @@
                                         <td class="so-luong line-height">
                                             <?= $numberOrderLesson ?>
                                         </td>
-                                        <td class="line-height" style="width: 30%;">
+                                        <td class="line-height" style="width: 15%;">
                                             <p>
                                                 <?= $title ?>
                                             </p>
@@ -81,11 +81,13 @@
                                         <td class="so-luong line-height">
                                             <?= $timeLesson ?>
                                         </td>
-                                        <td class="d-flex flex-column">
-                                            <a href="<?= $ADMIN_URL ?>?mod=lesson&act=edit&chapterId=<?= $chapterId ?>&detailChapterId=<?=$detailChapterId?>&numberOrderLesson=<?=$numberOrderLesson?>&title=<?=$title?>&video=<?=$video?>&document=<?=$document?>&timeLesson=<?=$timeLesson?>"
-                                                class="btn-edit-admin">Sửa</a>
-                                            <a href="<?= $ADMIN_URL ?>?mod=lesson&act=list&btn_delete&chapterId=<?= $chapterId ?>&detailChapterId=<?=$detailChapterId?>"
-                                                class="btn-delete-admin">Xóa</a>
+                                        <td>
+                                            <div class="d-flex flex-column align-items-center">
+                                                <a href="<?= $ADMIN_URL ?>?mod=lesson&act=edit&chapterId=<?= $chapterId ?>&detailChapterId=<?=$detailChapterId?>&numberOrderLesson=<?=$numberOrderLesson?>&title=<?=$title?>&video=<?=$video?>&document=<?=$document?>&timeLesson=<?=$timeLesson?>"
+                                                    class="btn-edit-admin">Sửa</a>
+                                                <a href="<?= $ADMIN_URL ?>?mod=lesson&act=list&btn_delete&chapterId=<?= $chapterId ?>&detailChapterId=<?=$detailChapterId?>"
+                                                    class="btn-delete-admin">Xóa</a>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php } ?>
