@@ -1,4 +1,4 @@
 <?php
 
-    include_once("view/registerteacher/register.php");
+    include_once("view/Registerteacher/register.php");
 ?>

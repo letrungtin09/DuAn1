@@ -10,7 +10,11 @@ function user_insert($fullname, $email, $password){
     $sql = "INSERT INTO user(fullName, email, password) VALUES (?, ?, ?)";
     pdo_execute($sql, $fullname, $email, $password);
 }
-
+// Cập nhật tài khoản
+function user_update($userId, $email, $fullname, $phoneNumber, $password, $information, $career, $avatar, $role){
+    $sql = "UPDATE user SET email=?, fullname=?, phoneNumber=?, password=?, information=?, career=?, avatar=?, role=? WHERE userId = ?";
+    pdo_execute($sql, $email, $fullname, $phoneNumber, $password, $information, $career, $avatar, $role, $userId);
+}
 // Truy vấn tất cả tài khoản
 function user_select_all(){
     $sql = "SELECT * FROM user";

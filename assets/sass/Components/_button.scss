@@ -65,6 +65,12 @@
     @include styleButton($color-yellow-2, $color-yellow-1, $color-yellow-1, $fs-5!important, $pd-4, $pd-2);
 }
 
+.btn-add-admin{
+    text-decoration: none;
+    border-radius: 5px;
+    @include styleButton($color-white-0, $color-green-1, $color-green-1, $fs-0, $pd-10, $pd-2 + 0.4);
+}
+
 .btn-edit-admin{
     width: 100px;
     text-decoration: none;

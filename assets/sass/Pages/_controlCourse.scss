@@ -1,10 +1,6 @@
-.clear {
-    clear: both;
-}
-
 .control-controlCourse {
     .container-qt {
-        padding: 2%;
+        padding: 30px 30px 48px;
         .row {
             display: flex;
             flex-direction: column;
@@ -66,21 +62,34 @@
 
                     .header-infor-cart {
                         padding: 0;
+                        .cart-filters{
+                            width: 100%;
+                            margin-bottom: 0;
+                            padding-bottom: 8px;
+                            border-bottom: 1px solid $color-gray-2;
+                        }
                     }
 
                     .all-body-cart {
                         padding: 0 !important;
 
                         .body-info-cart {
-                            width: 90%;
+                            width: 100%;
 
                             .cart-info {
+                                border-top: none;
+                                border-bottom: 1px solid $color-gray-2;
+                                justify-content: space-between;
                                 .cart-info-img {
-                                    width: 12%;
+                                    width: 11%;
+                                    margin: 0;
+                                    img{
+                                        width: 100%;
+                                    }
                                 }
 
                                 .cart-info-details {
-                                    width: 30%;
+                                    width: 32%;
                                 }
 
                                 .cart-info-price {
@@ -91,13 +100,25 @@
                                     width: 13%;
                                     display: flex;
                                     flex-direction: column;
-                                    margin: 0 3%;
-
+                                    margin-left: 50px;
+                                    .btn-detail-admin{
+                                        margin-bottom: 0;
+                                    }
+                                    .btn-delete-admin{
+                                        margin-bottom: 0;
+                                    }
                                     button {
-                                        margin: 5% 0;
-                                        padding: 7% 0 !important;
+                                        font-size: 14px!important;
+                                        width: 100%;
+                                        padding: 8px 0;
                                         font-weight: bold !important;
-                                        font-size: 1.2rem !important;
+                                    }
+                                    a{
+                                        text-align: center;
+                                        font-size: 14px!important;
+                                        width: 100%;
+                                        padding: 8px 0;
+                                        font-weight: bold !important;
                                     }
                                 }
                             }
@@ -107,13 +128,5 @@
             }
         }
     }
-}
-.next-revious-controlCourse{
-    top: 165% !important;
-}
-.footer-controlCourse{
-    width: 100%;
-    position: absolute;
-    top: 183%;
 }
 

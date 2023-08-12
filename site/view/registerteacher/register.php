@@ -6,7 +6,7 @@
                     <h1>Hãy đến giảng dạy với chúng tôi</h1>
                     <p>Trở thành giảng viên và thay đổi cuộc sống của mọi người, bao gồm cả cuộc sống của chính bạn.
                     </p>
-                    <button class="button-black-large">Bắt đầu</button>
+                    <a href="<?=$SITE_URL?>?mod=registerteacher&act=formRegister&userId=<?=$_SESSION['user']['userId']?>" class="button-black-large">Bắt đầu ngay</a>
                 </div>
             </div>
         </div>
@@ -261,7 +261,7 @@
         <div class="col">
             <h1>Trở thành giảng viên ngay hôm nay</h1>
             <p>Tham gia ngay một trong những thị trường học tập trực tuyến <br> lớn nhất thế giới</p>
-            <button class="button-black-large">Bắt đầu ngay</button>
+            <a href="" class="button-black-large">Đăng ký ngay</a>
         </div>
     </div>
 </section>
