@@ -1,8 +1,7 @@
 <footer>
     <div class="footer_content">
         <div class="footer_content_header row">
-            <p class="footer_content_header-text col-5">Các công ty hàng đầu lựa chọn <a href="#">T-demy
-                    Business</a> để xây dựng kỹ năng nghề nghiệp theo yêu cầu</p>
+            <p class="footer_content_header-text col-5">Các công ty hàng đầu lựa chọn để xây dựng kỹ năng nghề nghiệp theo yêu cầu</p>
             <ul class="footer_content_header-logo col-7">
                 <li class="footer_content_header-logo-item">
                     <img src="https://s.udemycdn.com/partner-logos/v4/nasdaq-light.svg" alt=""

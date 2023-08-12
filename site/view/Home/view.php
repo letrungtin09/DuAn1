@@ -51,8 +51,8 @@
 <section class="courses">
     <div class="courses__content td-container">
         <div class="courses__text">
-            <h2>A broad selection of courses</h2>
-            <p>Choose from over 210,000 online video courses with new additions published every month</p>
+            <h2>Nhiều sự lựa chọn cho các khóa học</h2>
+            <p>Chọn từ hơn 200 khóa học video trực tuyến với các bổ sung mới được xuất bản hàng tháng</p>
         </div>
         <div class="courses__list">
             <ul class="nav nav-tabs" id="tdTab" role="tablist">
@@ -79,11 +79,7 @@
                     tabindex="0">
                     <div class="courses__des">
                         <h3>Tất cả khóa học</h3>
-                        <p>Take one of Udemy's range of Python courses and learn how to code using this incredibly
-                            useful language. Its simple syntax and readability makes Python perfect for Flask,
-                            Django, data science, and machine learning. You'll learn how to build everything from
-                            games to sites to apps. Choose from a range of courses that will appeal to</p>
-                        <button class="button-white-medium">Tìm hiểu thêm</button>
+                        <p>Thế giới phát triển web rộng lớn như chính internet. Phần lớn đời sống xã hội và nghề nghiệp của chúng ta diễn ra trên internet, điều này thúc đẩy các ngành công nghiệp mới nhằm tạo, quản lý và gỡ lỗi các trang web và ứng dụng mà chúng ta ngày càng phụ thuộc vào.</p>
                     </div>
                     <div class="owl-carousel owl-theme courses__item">
                     <?php
@@ -114,14 +110,17 @@
                                     <span class="card-total">(<?=eluavate_count($courseal['courseId'])?>)</span>
                                 </div>
                                 <div class="card-price">
-                                    <span><?=number_format($courseal['price'] - ($courseal['price'] * ($courseal['sale']/100)))?><span class="vnd">đ</span></span>
-                                    <span class="sale"><?=number_format($courseal['price'])?><span class="vnd">đ</span></span>
+                                    <?php if($courseal['sale'] == null){ ?>
+                                        <span><?=number_format($courseal['price'])?><span class="vnd">đ</span></span>
+                                    <?php } else { ?>
+                                        <span><?=number_format($courseal['price'] - ($courseal['price'] * ($courseal['sale']/100)))?><span class="vnd">đ</span></span>
+                                        <span class="sale"><?=number_format($courseal['price'])?><span class="vnd">đ</span></span>
+                                    <?php } ?>
                                 </div>
-                                <span class="card-sell">Bán chạy nhất</span>
                             </div>
                             <div class="card-popover">
                                 <a href="#">
-                                    <h3><?=$courseal['title']?></h3>
+                                    <h3 class="popover-title"><?=$courseal['title']?></h3>
                                 </a>
                                 <div class="section-first">
                                     <span class="best-seller">Bán chạy nhất</span>
@@ -132,7 +131,7 @@
                                     <span class="dot"></span>
                                     <span><?=$courseal['level']?></span>
                                 </div>
-                                <p><?=$courseal['description']?></p>
+                                <p class="description-text"><?=$courseal['description']?></p>
                                 <div class="card-btn row">
                                     <?php
                                     $checkBuy = "";
@@ -155,7 +154,7 @@
                                     }
                                     if(isset($_SESSION['user'])){
                                         if($checkRegister == 1){?>
-                                            <a id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đang học</a>
+                                            <a id="" class="add-cart col-9" style="background-color:black;"><i class="fa-solid fa-check"></i> Đang học</a>
                                             <?php
                                                 if(get_course_favourite($_SESSION['user']['userId'], $courseal['courseId']) == 0){?>
                                                     <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$courseal['courseId']?>" class="add-like col-2">
@@ -173,7 +172,7 @@
                                         <?php
                                         } else{
                                             if($checkBuy == 1){?>
-                                                <a href="<?=$SITE_URL?>?mod=bill&act=cartBill" id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
+                                                <a href="<?=$SITE_URL?>?mod=bill&act=cartBill" class="add-cart col-9 card-btn_addbill"><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
                                                 <?php
                                                     if(get_course_favourite($_SESSION['user']['userId'], $courseal['courseId']) == 0){?>
                                                         <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$courseal['courseId']?>" class="add-like col-2">
@@ -241,11 +240,7 @@
                     <div class="tab-pane fade" id="<?=$khal['nameCate']?>-tab-pane" role="tabpanel" aria-labelledby="<?=$khal['nameCate']?>-tab" tabindex="0">
                         <div class="courses__des">
                             <h3>Khóa học <?=$khal['nameCate']?></h3>
-                            <p>Take one of Udemy's range of Python courses and learn how to code using this incredibly
-                                useful language. Its simple syntax and readability makes Python perfect for Flask,
-                                Django, data science, and machine learning. You'll learn how to build everything from
-                                games to sites to apps. Choose from a range of courses that will appeal to</p>
-                                <button class="button-white-medium">Tìm hiểu thêm</button>
+                            <p>Thế giới phát triển web rộng lớn như chính internet. Phần lớn đời sống xã hội và nghề nghiệp của chúng ta diễn ra trên internet, điều này thúc đẩy các ngành công nghiệp mới nhằm tạo, quản lý và gỡ lỗi các trang web và ứng dụng mà chúng ta ngày càng phụ thuộc vào.</p>
                         </div>
                         <div class="owl-carousel owl-theme courses__item">
                             <?php 
@@ -271,14 +266,17 @@
                                         <span class="card-total">(<?=eluavate_count($courseal['courseId'])?>)</span>
                                     </div>
                                     <div class="card-price">
-                                        <span><?=number_format($courseall['price'] - ($courseall['price'] * ($courseall['sale']/100)))?><span class="vnd">đ</span></span>
-                                        <span class="sale"><?=number_format($courseall['price'])?><span class="vnd">đ</span></span>
+                                        <?php if($courseall['sale'] == null){ ?>
+                                            <span><?=number_format($courseall['price'])?><span class="vnd">đ</span></span>
+                                        <?php } else { ?>
+                                            <span><?=number_format($courseall['price'] - ($courseall['price'] * ($courseall['sale']/100)))?><span class="vnd">đ</span></span>
+                                            <span class="sale"><?=number_format($courseall['price'])?><span class="vnd">đ</span></span>
+                                        <?php } ?>
                                     </div>
-                                    <span class="card-sell">Bán chạy nhất</span>
                                 </div>
                                 <div class="card-popover">
                                     <a href="#">
-                                        <h3><?=$courseall['title']?></h3>
+                                        <h3 class="popover-title"><?=$courseall['title']?></h3>
                                     </a>
                                     <div class="section-first">
                                         <span class="best-seller">Bán chạy nhất</span>
@@ -289,7 +287,7 @@
                                         <span class="dot"></span>
                                         <span><?=$courseall['level']?></span>
                                     </div>
-                                    <p><?=$courseall['content']?></p>
+                                    <p class="description-text"><?=$courseall['description']?></p>
                                     <div class="card-btn row">
                                         <a href="<?=$SITE_URL?>?mod=bill&act=addBill&course=<?=$courseall['courseId']?>" class="add-cart col-9">Thêm vào giỏ hàng</a>
                                         <?php
@@ -372,9 +370,9 @@
                 foreach ($allCourseTop10 as $courseTop10) {
                 ?>
                 <div class="card">
-                    <a href="#"><img src="<?=$IMAGE_DIR?>/courses/<?=$courseTop10['image']?>" alt="..."></a>
+                    <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$courseTop10['courseId']?>"><img src="<?=$IMAGE_DIR?>/courses/<?=$courseTop10['image']?>" alt="..."></a>
                     <div class="card-body">
-                        <a href="#">
+                        <a href="<?=$SITE_URL?>?mod=detailcourse&act=showCourse&course=<?=$courseTop10['courseId']?>">
                             <h5 class="card-title"><?=$courseTop10['title']?></h5>
                         </a>
                         <p class="card-teacher"><?=get_name_teacher($courseTop10['userId'])?></p>
@@ -390,14 +388,18 @@
                             <span class="card-total">(<?=eluavate_count($courseTop10['courseId'])?>)</span>
                         </div>
                         <div class="card-price">
-                            <span><?=number_format($courseTop10['price'] - ($courseTop10['price'] * ($courseTop10['sale']/100)))?><span class="vnd">đ</span></span>
-                            <span class="sale"><?=number_format($courseTop10['price'])?><span class="vnd">đ</span></span>
+                            <?php if($courseall['sale'] == null){ ?>
+                                <span><?=number_format($courseTop10['price'])?><span class="vnd">đ</span></span>
+                            <?php } else { ?>
+                                <span><?=number_format($courseTop10['price'] - ($courseTop10['price'] * ($courseTop10['sale']/100)))?><span class="vnd">đ</span></span>
+                                <span class="sale"><?=number_format($courseTop10['price'])?><span class="vnd">đ</span></span>
+                            <?php } ?>
                         </div>
                         <span class="card-sell">Bán chạy nhất</span>
                     </div>
                     <div class="card-popover">
                         <a href="#">
-                            <h3><?=$courseTop10['title']?></h3>
+                            <h3 class="popover-title"><?=$courseTop10['title']?></h3>
                         </a>
                         <div class="section-first">
                             <span class="best-seller">Bán chạy nhất</span>
@@ -408,7 +410,7 @@
                             <span class="dot"></span>
                             <span><?=$courseTop10['level']?></span>
                         </div>
-                        <p><?=$courseTop10['description']?></p>
+                        <p class="description-text"><?=$courseTop10['description']?></p>
                         <div class="card-btn row">
                         <?php
                             $checkBuytop10 = "";
@@ -431,19 +433,75 @@
                             }
                             if(isset($_SESSION['user'])){
                                 if($checkRegistertop10 == 1){?>
-                                    <a id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đang học</a>
+                                    <a id="" class="add-cart col-9" style="background-color: black;"><i class="fa-solid fa-check"></i> Đang học</a>
+                                    <?php
+                                                if(get_course_favourite($_SESSION['user']['userId'], $courseTop10['courseId']) == 0){?>
+                                                    <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$courseTop10['courseId']?>" class="add-like col-2">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                    </a>
+                                                <?php
+                                                }else{?>
+                                                    <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&delcourse=<?=$courseTop10['courseId']?>" class="add-like col-2">
+                                                        <i class="fa-solid fa-heart" style="color: #e00b27;"></i>
+                                                    </a>
+                                                    
+                                                <?php
+                                                }
+                                    ?>
                                 <?php
                                 } else{
                                     if($checkBuytop10 == 1){?>
-                                        <a href="<?=$SITE_URL?>?mod=bill&act=cartBill" id="" class="col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
+                                        <a href="<?=$SITE_URL?>?mod=bill&act=cartBill" id="" class="add-cart col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
+                                        <?php
+                                                    if(get_course_favourite($_SESSION['user']['userId'], $courseTop10['courseId']) == 0){?>
+                                                        <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$courseTop10['courseId']?>" class="add-like col-2">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </a>
+                                                    <?php
+                                                    }else{?>
+                                                        <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&delcourse=<?=$courseTop10['courseId']?>" class="add-like col-2">
+                                                            <i class="fa-solid fa-heart" style="color: #e00b27;"></i>
+                                                        </a>
+                                                        
+                                                    <?php
+                                                    }
+                                        ?>
                                     <?php
                                     } else{?>
                                         <a href="<?=$SITE_URL?>?mod=bill&act=addBill&course=<?=$courseTop10['courseId']?>" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                                        <?php
+                                                    if(get_course_favourite($_SESSION['user']['userId'], $courseTop10['courseId']) == 0){?>
+                                                        <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$courseTop10['courseId']?>" class="add-like col-2">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </a>
+                                                    <?php
+                                                    }else{?>
+                                                        <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&delcourse=<?=$courseTop10['courseId']?>" class="add-like col-2">
+                                                            <i class="fa-solid fa-heart" style="color: #e00b27;"></i>
+                                                        </a>
+                                                        
+                                                    <?php
+                                                    }
+                                        ?>
                                     <?php
                                     }
                                 }
                             }else{?>
-                            <a href="<?=$SITE_URL?>?mod=user&act=login" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                                <a href="<?=$SITE_URL?>?mod=user&act=login" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                                <?php
+                                                    if(get_course_favourite($_SESSION['user']['userId'], $courseTop10['courseId']) == 0){?>
+                                                        <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$courseTop10['courseId']?>" class="add-like col-2">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </a>
+                                                    <?php
+                                                    }else{?>
+                                                        <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&delcourse=<?=$courseTop10['courseId']?>" class="add-like col-2">
+                                                            <i class="fa-solid fa-heart" style="color: #e00b27;"></i>
+                                                        </a>
+                                                        
+                                                    <?php
+                                                    }
+                                ?>
                             <?php
                             }
                             ?>  
@@ -551,7 +609,7 @@
                     Chúng tôi cung cấp các công cụ và kỹ năng </br>
                     để dạy những gì bạn yêu thích.
             </p>
-            <a class="button-black-large" style="text-decoration: none;" href="<?=$SITE_URL?>?mod=registerteacher&act=register">Bắt đầu dạy học ngay hôm nay</a>
+            <a class="button-black-large" style="display: inline-block; text-decoration: none; margin-top: 10px;" href="<?=$SITE_URL?>?mod=registerteacher&act=register">Bắt đầu dạy học ngay hôm nay</a>
             </div>
         </div>
     </div>

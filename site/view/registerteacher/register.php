@@ -246,7 +246,7 @@
                 trong khi <b>Trung tâm giảng dạy </b>của chúng tôi cung cấp cho bạn nhiều tài nguyên để giúp bạn trong suốt quá trình. 
                 Ngoài ra, hãy nhận sự hỗ trợ của những người hướng dẫn có kinh nghiệm trong <b> cộng đồng trực tuyến</b> của chúng tôi.
             </p>
-            <a href="#">Trở thành giảng viên ngay !</a>
+            <a href="<?=$SITE_URL?>?mod=registerteacher&act=formRegister&userId=<?=$_SESSION['user']['userId']?>">Trở thành giảng viên ngay !</a>
             </div>
             <div class="col-sm col-3">
             <img src="<?=$IMAGE_DIR?>/regisrerTeaching/img12.jpg" alt="">

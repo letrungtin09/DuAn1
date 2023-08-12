@@ -3,7 +3,7 @@
             <div class="login_content">
                 <h3 class="login_content-title">ĐĂNG NHẬP VÀO T-DEMY</h3>
                 <div class="login_content-login">
-                    <input type="email" name="email" placeholder="email">
+                    <input type="email" name="email" placeholder="Email">
                     <input type="password"  name="password" placeholder="Mật khẩu">
                 </div>
                 <div class="login_content-remember">

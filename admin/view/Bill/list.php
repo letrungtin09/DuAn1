@@ -15,11 +15,11 @@
                         <thead>
                             <tr>
                                 <th scope="col"><input type="checkbox" id="masterCheckbox" value=""></th>
-                                <th scope="col">ID</th>
+                                <th scope="col">MÃ HĐ</th>
                                 <th scope="col">NGƯỜI MUA</th>
-                                <th scope="col">SỐ LƯỢNG</th>
-                                <th scope="col">TỔNG TIỀN</th>
-                                <th scope="col">TRẠNG THÁI</th>
+                                <th scope="col">NGÀY MUA HÀNG</th>
+                                <th scope="col">TỔNG TIỀN HĐ</th>
+                                <th scope="col">TRẠNG THÁI HĐ</th>
                                 <th scope="col">THAO TÁC</th>
                             </tr>
                         </thead>
@@ -28,44 +28,50 @@
                             foreach ($list_bill as $list) {
                                 extract($list);
                                 ?>
-                            <tr>
-                                <td scope="row" class="name-course"><input type="checkbox" class="subCheckbox" value="">
-                                </td>
-                                <td class="so-luong">
-                                    <?= $idBill ?>
-                                </td>
-                                <td class="tieu-de tieu-de-ac">
-                                    <p>
-                                        <?php
+                                <tr>
+                                    <td scope="row" class="name-course"><input type="checkbox" class="subCheckbox" value="">
+                                    </td>
+                                    <td class="so-luong">
+                                        <?= $idBill ?>
+                                    </td>
+                                    <td class="tieu-de tieu-de-ac">
+                                        <p>
+                                            <?php
                                             $nameUser = user_select_by_id($userId);
                                             echo $nameUser['fullName'];
                                             ?>
-                                    </p>
-                                </td>
-                                <td>
-                                    <p></p>
-                                </td>
-                                <td>
-                                    <p>
-                                        <?= $total ?>
-                                    </p>
-                                </td>
-                                <td>
-                                    <?php
-                                        if ($statusBill == 0) {
-                                            echo "<p style='color: #cc301f; font-weight: 500;'>Chưa thanh toán</p>";
-                                        } else {
-                                            echo "<p style='color: #177e5e; font-weight: 500;'>Đã thanh toán</p>";
-                                        }
-                                        ?>
-                                </td>
-                                <td>
-                                    <div class="d-flex flex-column align-items-center">
-                                        <a type="button" class="btn-edit-admin">Sửa</a>
-                                        <a type="button" class="btn-delete-admin">Xóa</a>
-                                    </div>
-                                </td>
-                            </tr>
+                                        </p>
+                                    </td>
+                                    <?php if ($statusBill == 0) { ?>
+                                        <td>
+                                            <p></p>
+                                        </td>
+                                        <td>
+                                            <p></p>
+                                        </td>
+                                        <td>
+                                            <p style='color: #cc301f; font-weight: 500;'>Chưa thanh toán</p>
+                                        </td>
+                                    <?php } else { 
+                                        $getBill = select_info_purchase($idBill);
+                                    ?>
+                                        <td>
+                                            <p><?=$getBill['date']?></p>
+                                        </td>
+                                        <td>
+                                            <p><?=number_format($getBill['total_money'])?>đ</p>
+                                        </td>
+                                        <td>
+                                            <p style='color: #177e5e; font-weight: 500;'>Đã thanh toán</p>
+                                        </td>
+                                    <?php } ?>
+                                    <td>
+                                        <div class="d-flex flex-column align-items-center">
+                                            <a href="<?=$ADMIN_URL?>?mod=bill&act=detail&idBill=<?=$idBill?>&userId=<?=$userId?>" class="btn-detail-admin" class="btn-detail-admin">Chi tiết</a>
+                                            <a href="<?=$ADMIN_URL?>?mod=bill&act=list&btn_delete&idBill=<?=$idBill?>" class="btn-delete-admin" class="btn-delete-admin">Xóa</a>
+                                        </div>
+                                    </td>
+                                </tr>
                             <?php } ?>
                         </tbody>
                     </table>

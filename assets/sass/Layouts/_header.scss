@@ -51,8 +51,9 @@
             flex: 1;
             border-radius: 24px;
             form{
+                display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
                 height: 100%;
                 .header_search_btn{
                     border: none;

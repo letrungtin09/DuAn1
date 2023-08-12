@@ -4,7 +4,7 @@
                 <h3 class="register_content-title">ĐĂNG KÝ VÀ BẮT ĐẦU HỌC</h3>
                 <div class="register_content-login">
                     <input type="text" placeholder="Họ và tên" name="nameuser">
-                    <input type="email" placeholder="email" name="email">
+                    <input type="email" placeholder="Email" name="email">
                     <input type="password" placeholder="Mật khẩu" name="password">
                 </div>
                 <div class="register_content-submit">

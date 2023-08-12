@@ -86,14 +86,14 @@
                             </button>
                         </h2>
                         <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <ul>
+                            <div class="accordion-body" style="margin:16px 0; padding:0;">
+                                <ul style="list-style: none; margin:0; padding:0;">
                                     <?php
                                     foreach($allTeacher as $teacher){
                                         $nameTeacher = nameTeacher($teacher['userId']);
                                     ?>
-                                        <li class="">
-                                            <input type="checkbox" class='common_selector searchCourse_content-filter-checkbox_class_teacher' value="<?=$teacher['userId']?>" id="searchCourse_content-filter-checkbox-teacher<?=$teacher['userId']?>" name="searchCourse_content-filter-checkbox">
+                                        <li class="" style="margin-bottom: 10px;">
+                                            <input type="checkbox" class='common_selector searchCourse_content-filter-checkbox_class_teacher' value="<?=$teacher['userId']?>" id="searchCourse_content-filter-checkbox-teacher<?=$teacher['userId']?>" name="searchCourse_content-filter-checkbox" style="width:18px; height:18px; margin-right: 6px;">
                                             <label for="searchCourse_content-filter-checkbox-teacher<?=$teacher['userId']?>">
                                                 <span class="searchCourse_content-filter-star"><?=$nameTeacher['fullName']?></span><span class="searchCourse_content-filter-quantity"></span>
                                             </label>
