@@ -388,7 +388,7 @@
                             <span class="card-total">(<?=eluavate_count($courseTop10['courseId'])?>)</span>
                         </div>
                         <div class="card-price">
-                            <?php if($courseall['sale'] == null){ ?>
+                            <?php if($courseTop10['sale'] == null){ ?>
                                 <span><?=number_format($courseTop10['price'])?><span class="vnd">đ</span></span>
                             <?php } else { ?>
                                 <span><?=number_format($courseTop10['price'] - ($courseTop10['price'] * ($courseTop10['sale']/100)))?><span class="vnd">đ</span></span>
