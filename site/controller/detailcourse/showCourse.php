@@ -37,5 +37,25 @@ function get_course_favourite($userId, $courseId){
     require_once 'model/favourite.php';
     return favourite_exist($userId, $courseId);
 }
+// Kiểm tra course 
+function get_course_in_bill($userId, $courseId){
+    require_once 'model/bill.php';
+    require_once 'model/detailBill.php';
+    require_once 'model/student_course.php';
+    $billByUserId = bill_select_by_userId($userId);
+    $detailBillByIdBill = detailBill_select_by_idBill($billByUserId['idBill']);
+    $courseRegisted = student_courses_select_by_userId($userId);
+    foreach($courseRegisted as $courseRegis){
+        if($courseRegis['courseId'] == $courseId){
+            return 0;
+        }
+    }
+    foreach($detailBillByIdBill as $coursebuied){
+        if($coursebuied['courseId'] == $courseId){
+            return 1;
+        }
+    }
+    return 2;
+}
 include_once("view/Detailcourse/detailcourse.php");
 ?>

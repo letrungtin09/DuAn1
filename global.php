@@ -49,15 +49,36 @@ function get_cookie($name){
  */
 function check_login(){
     global $SITE_URL;
-    if(isset($_SESSION['user'])){
-        if($_SESSION['user']['role'] == student || $_SESSION['user']['role'] == teacher){
-            return;
-        }
-        if(strpos($_SERVER["REQUEST_URI"], '/admin/') == FALSE){
-            return;
+    if(!isset($_SESSION['user'])){?>
+        <meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=user&act=login">
+    <?php
+        exit;
+    }
+}
+function check_teacher(){
+    global $SITE_URL;
+    if(!isset($_SESSION['user'])){?>
+        <meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=user&act=login">
+    <?php
+        exit;
+    }else{
+        if($_SESSION['user']['role'] != 'teacher'){?>
+            <meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=registerteacher&act=register">
+        <?php
         }
     }
-    $_SESSION['request_uri'] = $_SERVER["REQUEST_URI"];
-    header("location: controller/user/login.php");
+}
+function check_admin(){
+    global $SITE_URL;
+    if(!isset($_SESSION['user'])){?>
+        <meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=user&act=login">
+    <?php
+        exit;
+    }else{
+        if($_SESSION['user']['role'] != 'admin'){?>
+            <meta http-equiv="refresh" content="0;url=<?=$SITE_URL?>?mod=user&act=login">
+        <?php
+        }
+    }
 }
 ?>

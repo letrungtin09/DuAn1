@@ -74,7 +74,7 @@
                 <div class="nav-item dropdown header_cart">
                     <a class="nav-link header_cart_link" href="#" role="button">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        <div><span class="">3</span></div>
+                        <div><span class=""><?=get_count_course_in_bill($_SESSION['user']['userId'])?></span></div>
                     </a>
                     <ul class="dropdown-menu header_cart_bill-purchar">
                         <?php

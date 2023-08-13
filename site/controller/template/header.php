@@ -26,4 +26,12 @@ function get_avatar_user($userID){
     $avatar = $user['avatar'];
     return $avatar;
 }
+// đếm số khóa học trong bill
+function get_count_course_in_bill($userID){
+    require_once 'model/bill.php';
+    require_once 'model/detailBill.php';
+    $bill = bill_select_by_userId($userID);
+    $lesson = detailBill_count_billId($bill['idBill']);
+    return $lesson;
+}
 ?>

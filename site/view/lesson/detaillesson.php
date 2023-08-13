@@ -1,3 +1,4 @@
+<?php check_login(); ?>
 <header>
     <nav class="navbar navbar-expand-lg nav_header nav_coursecontent">
         <div class="container_header">

@@ -21,8 +21,19 @@
                         <?php } ?>
                         </div>
                         <div class="info-btn">
-                            
-                            <a href="<?=$SITE_URL?>?mod=detailcourse&act=addBill&course=<?=$courseSlectbyid['courseId']?>" class="add-to-cart">Thêm vào giỏ hàng</a>
+                            <?php 
+                            $check_course = get_course_in_bill($_SESSION['user']['userId'], $courseSlectbyid['courseId']);
+                            if($check_course == 0){?>
+                                <a href="<?=$SITE_URL?>?mod=lesson&act=lessonDetail&course=<?=$courseSlectbyid['courseId']?>" class="add-cart col-9" style="background-color:black;"><i class="fa-solid fa-check"></i> Đang học</a>
+                            <?php
+                            }elseif($check_course == 1){?>
+                                <a style="background-color: #adb8b8;" href="<?=$SITE_URL?>?mod=bill&act=cartBill" class="add-cart col-9 card-btn_addbill"><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
+                            <?php
+                            }else{?>
+                                <a href="<?=$SITE_URL?>?mod=detailcourse&act=addBill&course=<?=$courseSlectbyid['courseId']?>" class="add-to-cart">Thêm vào giỏ hàng</a>
+                            <?php
+                            }
+                            ?>
                             <?php
                                 if(get_course_favourite($_SESSION['user']['userId'], $_GET['course']) == 0){?>
                                     <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$_GET['course']?>" class="add-wishlist"><i class="fa-regular fa-heart"></i></a>
@@ -32,7 +43,6 @@
                                 <?php
                                 }
                             ?>
-                            
                         </div>
                         <div class="btn-buyNow">
                             <button class="buy-now">Mua ngay</button>

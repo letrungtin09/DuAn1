@@ -1,3 +1,4 @@
+<?php check_login(); ?>
 <?php
 require_once 'controller/bill/cartBill.php';
 if(isset($_GET['course'])){?>
@@ -130,11 +131,29 @@ if(isset($_GET['course'])){?>
                                 <span><?=$course10['level']?></span>
                             </div>
                             <p><?=$course10['description']?></p>
-                            <div class="card-btn row">
-                                <a href="<?=$SITE_URL?>?mod=bill&act=addBill&course=<?=$course10['courseId']?>" class="add-cart col-9">Thêm vào giỏ hàng</a>
-                                <button class="add-like col-2">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
+                            <div class="card-btn">
+                                <?php 
+                                $check_course = get_course_in_bill($_SESSION['user']['userId'], $course10['courseId']);
+                                if($check_course == 0){?>
+                                    <a href="<?=$SITE_URL?>?mod=lesson&act=lessonDetail&course=<?=$course10['courseId']?>" class="add-cart col-9" style="background-color:black;"><i class="fa-solid fa-check"></i> Đang học</a>
+                                <?php
+                                }elseif($check_course == 1){?>
+                                    <a style="background-color: #adb8b8;" href="<?=$SITE_URL?>?mod=bill&act=cartBill" class="add-cart col-9 card-btn_addbill"><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
+                                <?php
+                                }else{?>
+                                    <a href="<?=$SITE_URL?>?mod=bill&act=addBill&course=<?=$course10['courseId']?>" class="add-cart col-9">Thêm vào giỏ hàng</a>
+                                <?php
+                                }
+                                ?>
+                                <?php
+                                    if(get_course_favourite($_SESSION['user']['userId'], $course10['courseId']) == 0){?>
+                                        <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$course10['courseId']?>" class="add-wishlist"><i class="fa-regular fa-heart"></i></a>
+                                    <?php
+                                    }else{?>
+                                        <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&delcourse=<?=$course10['courseId']?>" class="add-wishlist"><i class="fa-solid fa-heart" style="color: #e00b27;"></i></a>
+                                    <?php
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>

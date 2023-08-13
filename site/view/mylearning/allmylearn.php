@@ -1,3 +1,4 @@
+<?php check_login(); ?>
 <section class="myLearning">
     <div class="myLearning__title td-container">
         <h1>Quá trình học tập của tôi</h1>

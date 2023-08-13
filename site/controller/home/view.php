@@ -20,6 +20,13 @@
         require_once 'model/favourite.php';
         return favourite_exist($userId, $courseId);
     }
+    // lấy khóa học trong bill
+    function get_course_in_bill($userId){
+        require_once 'model/bill.php';
+        require_once 'model/detailBill.php';
+        $billByUserId = bill_select_by_userId($userId);
+        $detailBillByIdBill = detailBill_select_by_idBill($billByUserId['idBill']);
+    }
     // Truy vấn các học sinh trong lớp
     if(isset($_SESSION['user'])){
         $courseRegisted = student_courses_select_by_userId($_SESSION['user']['userId']);

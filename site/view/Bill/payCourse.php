@@ -1,3 +1,4 @@
+<?php check_login(); ?>
 <section class="payCourse">
     <div class="payCourse__container">
         <div class="payCourse__left">

@@ -154,7 +154,7 @@
                                     }
                                     if(isset($_SESSION['user'])){
                                         if($checkRegister == 1){?>
-                                            <a id="" class="add-cart col-9" style="background-color:black;"><i class="fa-solid fa-check"></i> Đang học</a>
+                                            <a href="<?=$SITE_URL?>?mod=lesson&act=lessonDetail&course=<?=$courseal['courseId']?>" class="add-cart col-9" style="background-color:black;"><i class="fa-solid fa-check"></i> Đang học</a>
                                             <?php
                                                 if(get_course_favourite($_SESSION['user']['userId'], $courseal['courseId']) == 0){?>
                                                     <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$courseal['courseId']?>" class="add-like col-2">
@@ -172,7 +172,7 @@
                                         <?php
                                         } else{
                                             if($checkBuy == 1){?>
-                                                <a href="<?=$SITE_URL?>?mod=bill&act=cartBill" class="add-cart col-9 card-btn_addbill"><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
+                                                <a style="background-color: #adb8b8;" href="<?=$SITE_URL?>?mod=bill&act=cartBill" class="add-cart col-9 card-btn_addbill"><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
                                                 <?php
                                                     if(get_course_favourite($_SESSION['user']['userId'], $courseal['courseId']) == 0){?>
                                                         <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$courseal['courseId']?>" class="add-like col-2">
@@ -433,7 +433,7 @@
                             }
                             if(isset($_SESSION['user'])){
                                 if($checkRegistertop10 == 1){?>
-                                    <a id="" class="add-cart col-9" style="background-color: black;"><i class="fa-solid fa-check"></i> Đang học</a>
+                                    <a href="<?=$SITE_URL?>?mod=lesson&act=lessonDetail&course=<?=$courseTop10['courseId']?>" class="add-cart col-9" style="background-color: black;"><i class="fa-solid fa-check"></i> Đang học</a>
                                     <?php
                                                 if(get_course_favourite($_SESSION['user']['userId'], $courseTop10['courseId']) == 0){?>
                                                     <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$courseTop10['courseId']?>" class="add-like col-2">
@@ -451,7 +451,7 @@
                                 <?php
                                 } else{
                                     if($checkBuytop10 == 1){?>
-                                        <a href="<?=$SITE_URL?>?mod=bill&act=cartBill" id="" class="add-cart col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
+                                        <a style="background-color: #adb8b8;" href="<?=$SITE_URL?>?mod=bill&act=cartBill" id="" class="add-cart col-9"style=""><i class="fa-solid fa-check"></i> Đã thêm vào giỏ hàng</a>
                                         <?php
                                                     if(get_course_favourite($_SESSION['user']['userId'], $courseTop10['courseId']) == 0){?>
                                                         <a href="<?=$SITE_URL?>?mod=mylearning&act=mylearn&course=<?=$courseTop10['courseId']?>" class="add-like col-2">

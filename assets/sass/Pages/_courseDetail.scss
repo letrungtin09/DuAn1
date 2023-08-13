@@ -40,6 +40,14 @@
                         display: flex;
                         justify-content: space-between;
                         margin-bottom: $mg-1;
+                        a{
+                            text-decoration: none;
+                            background-color: #adb8b8;
+                            color: #2a7306;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
                         .add-to-cart {
                             @include styleButton($color-white-0, $color-green-1, $color-green-1, $fs-2, 4.5rem, $pd-1);
                             text-decoration: none;

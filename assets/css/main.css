@@ -1523,6 +1523,14 @@ body {
   justify-content: space-between;
   margin-bottom: 0.8rem;
 }
+.detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .info-btn a {
+  text-decoration: none;
+  background-color: #adb8b8;
+  color: #2a7306;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .detail__content .detail__sidebar .detail__sidebarMain .detail__sidebarContent .detail__sidebarInfo .info-btn .add-to-cart {
   font-weight: 700;
   line-height: 1.2;

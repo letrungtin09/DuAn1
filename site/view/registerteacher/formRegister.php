@@ -1,3 +1,4 @@
+<?php check_login(); ?>
 <section class="formInsertEdit td-container">
     <div class="formInsertEdit__title">
         <h1>ĐĂNG KÝ DẠY HỌC</h1>
