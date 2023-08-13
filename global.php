@@ -1,7 +1,7 @@
 <?php 
 
 // Định nghĩa các url cần thiết được sử dụng trong website
-$ROOT_URL = "http://localhost/DuAn1"; //đường dẫn gốc của website
+$ROOT_URL = "/DuAn1"; //đường dẫn gốc của website
 $ASSETS_URL = "$ROOT_URL/assets"; //đường dẫn chứa tài nguyên tĩnh (img, css, js)
 $ADMIN_URL = "$ROOT_URL/admin/"; //đường dẫn vào phần quản trị
 $SITE_URL = "$ROOT_URL/site/"; //đường dẫn vào phần site

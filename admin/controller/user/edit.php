@@ -7,7 +7,8 @@ extract($_REQUEST);
 
 if(exist_param("btn_update")){
 
-    $file_name = save_file("upload_avatar","$IMAGE_DIR/user/");
+    $url = $_SERVER["DOCUMENT_ROOT"] . "$IMAGE_DIR/users/";
+    $file_name = save_file("upload_avatar", $url);
     $avatar = $file_name ? $file_name : $avatar;
 
     if($fullName == "" || $email == "" || $phoneNumber == "" || $password == "" || $role == 0 || is_numeric($phoneNumber) == false){

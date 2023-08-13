@@ -54,8 +54,9 @@
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="userId">Giảng viên</label><br>
+                <input type="hidden" name="userId" value="<?=$userId?>">
                 <div class="formInsertEdit__control input-readonly">
-                    <input class="formInsertEdit__input" type="text" name="userId" value="<?=$getTeacher['fullName']?>" readonly>
+                    <input class="formInsertEdit__input" type="text" name="nameUser" value="<?=$getTeacher['fullName']?>" readonly>
                 </div>
             </div>
             <div class="formInsertEdit__item">

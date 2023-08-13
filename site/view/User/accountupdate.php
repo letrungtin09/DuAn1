@@ -17,7 +17,7 @@
             </div>
             <div class="updateaccount_content-login">
                 <p>Ảnh đại diện</p>
-                <div><input type="file" name="image"></div>
+                <div><input type="file" name="image" style="width: 119px;"><span><?=$userAcc['avatar']?></span></div>
                 <p>Thông tin cá nhân</p>
                 <textarea name="infor" id="" cols="30" rows="10">
                     <?=$userAcc['information']?>

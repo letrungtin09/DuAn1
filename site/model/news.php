@@ -8,9 +8,9 @@ function news_insert($userId, $title, $description, $image, $date, $content){
 }
 
 //Cập nhật bài viết
-function news_update($newsId, $userId, $title, $description, $image, $date, $content){
-    $sql = "UPDATE news SET userId=?, title=? description=?, image=?, date=?, content=? WHERE newsId=?";
-    pdo_execute($sql, $userId, $title, $description, $image, $date, $content, $newsId);
+function news_update($newsId, $userId, $title, $description, $image, $date, $content, $status, $view){
+    $sql = "UPDATE news SET userId=?, title=?, description=?, image=?, date=?, content=?, status=?, view=? WHERE newsId=?";
+    pdo_execute($sql, $userId, $title, $description, $image, $date, $content, $status, $view, $newsId);
 }
 
 // Xóa một hoặc nhiều bài viết

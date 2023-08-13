@@ -8,7 +8,8 @@ extract($_REQUEST);
 
 if (exist_param("btn_update")) {
 
-    $file_name = save_file("upload_image","$IMAGE_DIR/post/");
+    $url = $_SERVER["DOCUMENT_ROOT"] . "$IMAGE_DIR/post/";
+    $file_name = save_file("upload_imgPost", $url);
     $image = $file_name ? $file_name : $image;
     
     if($title == "" || $description == "" || $content == ""){
@@ -18,7 +19,7 @@ if (exist_param("btn_update")) {
         include_once("view/Managenews/editNews.php");
     }
     else{
-        news_update($newsId, $userId, $title, $description, $image, $date, $content);
+        news_update($newsId, $userId, $title, $description, $image, $date, $content, $status, $view);
         $MESSAGE = "Cập nhật bài viết thành công !";
         $list_news = news_select_by_id($_GET['newsId']);
         extract($list_news);

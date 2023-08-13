@@ -8,11 +8,11 @@
         </h5>
     </div>
     <div class="formInsertEdit__content" style="margin-bottom: 48px;">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div class="formInsertEdit__item">
-                <label class="formInsertEdit__label" for="courseId">Mã bài viết</label><br>
+                <label class="formInsertEdit__label" for="newsId">Mã bài viết</label><br>
                 <div class="formInsertEdit__control input-readonly">
-                    <input class="formInsertEdit__input" type="text" name="courseId" value="<?=$newsId?>" readonly>
+                    <input class="formInsertEdit__input" type="text" name="newsId" value="<?=$newsId?>" readonly>
                 </div>
             </div>
             <div class="formInsertEdit__item">
@@ -25,7 +25,7 @@
                 <label class="formInsertEdit__label" for="image">Hình ảnh</label><br>
                 <input type="hidden" name="image" value="<?=$image?>">
                 <div class="formInsertEdit__control">
-                    <input class="formInsertEdit__input formInsertEdit__file" type="file" name="upload_image"><span style="color: black;"><?=$image?></span>
+                    <input class="formInsertEdit__input formInsertEdit__file" type="file" name="upload_imgPost"><span style="color: black;"><?=$image?></span>
                 </div>
             </div>
             <div class="formInsertEdit__item">
@@ -43,12 +43,19 @@
                 </div>
             </div>
             <div class="formInsertEdit__item">
+                <label class="formInsertEdit__label" for="view">Lượt xem</label><br>
+                <input type="hidden" name="status" value="<?=$status?>">
+                <div class="formInsertEdit__control input-readonly">
+                    <input class="formInsertEdit__input" type="text" name="view" value="<?=$view?>" readonly>
+                </div>
+            </div>
+            <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="description">Mô tả ngắn</label><br>
-                <textarea class="formInsertEdit__textarea" name="description" id="description" cols="30" rows="5"><?=$description?></textarea>
+                <textarea class="formInsertEdit__textarea" name="description" cols="30" rows="5"><?=$description?></textarea>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="content">Nội dung bài viết</label><br>
-                <textarea class="formInsertEdit__textarea" name="content" id="content" cols="30" rows="10"><?=$content?></textarea>
+                <textarea class="formInsertEdit__textarea" name="content" cols="30" rows="10"><?=$content?></textarea>
             </div>
             <div class="formInsertEdit__item formInsertEdit__btn">
                 <button name="btn_update" class="btn-update">Cập nhật</button>

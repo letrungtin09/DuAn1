@@ -61,10 +61,10 @@
                                         <?php if($sale == null){
 
                                         ?>
-                                            <span class="sale"><?=$price?> <span class="vnd">đ</span></span>
+                                            <span class="sale"><?=number_format($price)?> <span class="vnd">đ</span></span>
                                         <?php } else { ?>
-                                            <span class="price"><?=$price?> <span class="vnd">đ</span></span>
-                                            <span class="sale"><?=$price - (($sale/100)*$price)?> <span class="vnd">đ</span><i
+                                            <span class="price"><?=number_format($price)?> <span class="vnd">đ</span></span>
+                                            <span class="sale"><?=number_format($price - (($sale/100)*$price))?> <span class="vnd">đ</span><i
                                                     class="fa-solid fa-tag"></i></span>
                                         <?php } ?>
                                         <span class="date"><?=$date?></span>
