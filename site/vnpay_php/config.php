@@ -1,6 +1,6 @@
 
 <?php
-require_once "./../global.php";
+
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 /*
  * To change this license header, choose License Headers in Project Properties.

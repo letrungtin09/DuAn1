@@ -33,9 +33,8 @@
                                 </div>
                             </div>
                             <ul class="dropdown-menu-mid">
-                                <li><a href="" class="">Cập nhập tài khoản</a></li>
-                                <li><a href="" class="">Đổi mật khẩu</a></li>
-                                <li><a href="" class="">Quản trị website</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=user&act=updateaccount" class="">Cập nhập tài khoản</a></li>
+                                <li><a href="<?=$SITE_URL?>?mod=user&act=changepass" class="">Đổi mật khẩu</a></li>
                             </ul>
                             <div class="dropdown-menu-end">
                                 <a href="<?=$SITE_URL?>?mod=user&act=logoff" class="">Đăng xuất</a>

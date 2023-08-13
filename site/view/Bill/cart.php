@@ -63,8 +63,12 @@ if(isset($_GET['course'])){?>
                                 <a href="<?=$SITE_URL?>?mod=bill&act=deleteCourseInBill&del=<?=$detail['idDetailBill']?>">Xóa</a>
                                 <a href="#">Yêu thích</a>
                             </div>
-                            <span class="price"><?=number_format($courseinfo['price'])?> <span class="vnd">đ</span></span>
-                            <span class="sale"><?=number_format($courseinfo['price'] - ($courseinfo['price'] *($courseinfo['sale']/100)))?> <span class="vnd">đ</span> <i class="fa-solid fa-tag"></i></span>
+                            <?php if($courseinfo['sale'] != ""){ ?>
+                                <span class="price"><?=number_format($courseinfo['price'])?> <span class="vnd">đ</span></span>
+                                <span class="sale"><?=number_format($courseinfo['price'] - ($courseinfo['price'] *($courseinfo['sale']/100)))?> <span class="vnd">đ</span> <i class="fa-solid fa-tag"></i></span>
+                            <?php } else { ?>
+                                <span class="sale"><?=number_format($courseinfo['price'])?> <span class="vnd">đ</span></span>
+                            <?php } ?>
                         </div>
                     </div>
                 <?php
@@ -76,10 +80,14 @@ if(isset($_GET['course'])){?>
         <div class="cart-price">
             <h1>Tổng:</h1>
             <div class="total-price">
+            <?php if($courseinfo['sale'] != ""){ ?>
                 <h2 class="discount-price"><?=number_format($totalBill)?> <span>đ</span></h2>
                 <h2 class="discount-sale"><?=number_format($totalBillSale)?> <span>đ</span></h2>
+            <?php } else { ?>
+                <h2 class="discount-sale"><?=number_format($totalBillSale)?> <span>đ</span></h2>
+            <?php } ?>
             </div>
-            <a href="<?=$SITE_URL?>?mod=bill&act=payCourse&payBill=<?=$idBillByIdUser['idBill']?>"  class="button-purple-large">Thanh toán</a>
+            <a href="<?=$SITE_URL?>?mod=bill&act=payCourse&payBill=<?=$idBillByIdUser['idBill']?>"  class="button-purple-large" style="display:inline-block; text-decoration: none; margin-top: 8px;">Thanh toán</a>
         </div>
     </div>
 
@@ -112,8 +120,12 @@ if(isset($_GET['course'])){?>
                                 <span class="card-total">(17,915)</span>
                             </div>
                             <div class="card-price">
+                            <?php if($course10['sale'] != ""){ ?>
+                                <span><?=number_format($course10['price'] - ($course10['price'] *($course10['sale']/100)))?><span class="vnd">đ</span></span>
+                                <span class="sale"><?=number_format($course10['price'])?><span class="vnd">đ</span></span>
+                            <?php } else { ?>
                                 <span><?=number_format($course10['price'])?><span class="vnd">đ</span></span>
-                                <span class="sale"><?=number_format($course10['price'] - ($course10['price'] *($course10['sale']/100)))?><span class="vnd">đ</span></span>
+                            <?php } ?>
                             </div>
                             <span class="card-sell">Bán chạy nhất</span>
                         </div>

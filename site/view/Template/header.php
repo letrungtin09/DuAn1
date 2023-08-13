@@ -101,7 +101,11 @@
                                             ?>
                                             <p><?=$user['fullName']?></p>
                                             <div class="header_cart_bill-price">
+                                            <?php if($course['sale'] != ""){ ?>
                                                 <h5><?=number_format($course['price'] - ($course['price'] *($course['sale']/100)))?>đ</h5><span><?=number_format($course['price'])?>đ</span>
+                                            <?php } else { ?>
+                                                <h5><?=number_format($course['price'])?>đ</h5>
+                                            <?php } ?>
                                             </div>
                                         </div>
                                     </a>
@@ -109,14 +113,18 @@
                             <?php
                             }
                         }else{
-                            echo'Bạn chưa mua hàng';
+                            echo'<p>Bạn chưa mua hàng</p>';
                         }
                         ?>
                         <?php
                         if(bill_exist($_SESSION['user']['userId'])){?>
                         <div class="header_cart_bill-sum">
+                        <?php if($course['sale'] != ""){ ?>
                             <div class="">Tổng tiền: <?=number_format($tongSale)?> đ</div>
                             <span><?=number_format($tong)?> đ</span>
+                        <?php } else { ?>
+                            <div class="">Tổng tiền: <?=number_format($tongSale)?> đ</div>
+                        <?php } ?>
                         </div>
                         <div class="header_cart_bill-submit">
                             <a href="<?=$SITE_URL?>?mod=bill&act=cartBill">Đến giỏ hàng</a>

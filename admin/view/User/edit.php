@@ -17,33 +17,33 @@
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="fullName">Họ và tên</label><br>
-                <div class="formInsertEdit__control">
-                    <input class="formInsertEdit__input" type="text" name="fullName" value="<?=$fullName?>">
+                <div class="formInsertEdit__control input-readonly">
+                    <input class="formInsertEdit__input" type="text" name="fullName" value="<?=$fullName?>" readonly>
                 </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="avatar">Ảnh đại diện</label><br>
                 <input type="hidden" name="avatar" value="<?=$avatar?>">
-                <div class="formInsertEdit__control">
+                <div class="formInsertEdit__control input-readonly">
                     <input class="formInsertEdit__input formInsertEdit__file" type="file" name="upload_avatar"><span><?=$avatar?></span>
                 </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="email">Email</label><br>
-                <div class="formInsertEdit__control">
-                    <input class="formInsertEdit__input" type="email" name="email" value="<?=$email?>">
+                <div class="formInsertEdit__control input-readonly">
+                    <input class="formInsertEdit__input" type="email" name="email" value="<?=$email?>" readonly>
                 </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="phoneNumber">Số điện thoại</label><br>
-                <div class="formInsertEdit__control">
-                    <input class="formInsertEdit__input" type="text" name="phoneNumber" value="<?=$phoneNumber?>">
+                <div class="formInsertEdit__control input-readonly">
+                    <input class="formInsertEdit__input" type="text" name="phoneNumber" value="<?=$phoneNumber?>" readonly>
                 </div>
             </div>
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="password">Mật khẩu</label><br>
                 <div class="formInsertEdit__control input-readonly">
-                    <input class="formInsertEdit__input" type="text" name="password" value="<?=$password?>" readonly>
+                    <input class="formInsertEdit__input" type="password" name="password" value="<?=$password?>" readonly>
                 </div>
             </div>
             <div class="formInsertEdit__item">

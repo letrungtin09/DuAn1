@@ -20,7 +20,7 @@
             <p class=""><?=$detailchapet['document']?></p>
         <?php
         }else{?>
-            <iframe width="100%" height="600" src="<?php if(!isset($_GET['detailchapter'])) {echo 'https://www.youtube.com/embed/DHjqpvDnNGE';}else{echo $detailchapet['video'];} ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="100%" height="600" src="<?php if(!isset($_GET['detailchapter'])) {echo 'https://www.youtube.com/embed/r-GSGH2RxJs';}else{echo $detailchapet['video'];} ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <?php   
         }
         ?>

@@ -11,8 +11,11 @@
             if($user){
                 if($user['password'] == $password){
                     $_SESSION["user"] = $user;
-
-                    echo '<meta http-equiv="refresh" content="0;url=index.php">';
+                    if($user['role']=="admin"){
+                        echo '<meta http-equiv="refresh" content="0;url=/DuAn1/admin/index.php">';
+                    } else {
+                        echo '<meta http-equiv="refresh" content="0;url=index.php">';
+                    }                 
                 }
                 else{
                     $MESSAGE = "Sai mật khẩu!";

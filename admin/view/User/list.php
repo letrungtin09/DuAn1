@@ -66,10 +66,14 @@
                                             <?= $role ?>
                                         </p>
                                     </td>
-                                    <td>
+                                    <td>                                       
                                         <div class="d-flex flex-column align-items-center">
+                                        <?php if($role == "admin"){ ?>
+                                            <a href="<?=$ADMIN_URL?>?mod=user&act=edit&btn_edit&userId=<?=$userId?>"class="btn-edit-admin">Sửa</a>
+                                        <?php } else { ?>
                                             <a href="<?=$ADMIN_URL?>?mod=user&act=edit&btn_edit&userId=<?=$userId?>"class="btn-edit-admin">Sửa</a>
                                             <a href="<?=$ADMIN_URL?>?mod=user&act=list&btn_delete&userId=<?=$userId?>" class="btn-delete-admin">Xóa</a>
+                                        <?php } ?>
                                         </div>                
                                     </td>
                                 </tr>

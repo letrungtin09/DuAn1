@@ -62,6 +62,7 @@ body {
   position: absolute;
   top: 50px;
   left: 14px;
+  z-index: 9999;
   box-shadow: 0px 0px 9px 0px #a38e8e;
   border-radius: 0;
   border: none;

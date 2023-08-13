@@ -6,6 +6,8 @@
 	include_once 'view/Template/sidebar.php';
     include_once 'view/Template/header.php';
 
+	check_admin();
+
 	if(isset($_GET['mod'])){
 		$inclFile = "";
 		if(isset($_GET['act'])){
