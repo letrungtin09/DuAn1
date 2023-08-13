@@ -113,7 +113,8 @@
                             <?php
                             }
                         }else{
-                            echo'<p>Bạn chưa mua hàng</p>';
+                            require_once 'model/bill.php';
+                            bill_insert($_SESSION['user']['userId']);
                         }
                         ?>
                         <?php
