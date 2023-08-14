@@ -1,10 +1,286 @@
 <section class="content-qt content-qt-admin">
     <div class="accordion accordion-admin-statistic" id="accordionExample">
+    <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <h1>THU NHẬP NGÀY</h1>
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="container container-qt">
+                        <div class="row">
+                            <div class="col-sm col-1">
+                                <div class="col-1-left">
+                                    <!-- <h1>THỐNG KÊ KHÓA HỌC</h1> -->
+                                </div>
+
+                            </div>
+                            <div class="col-sm col-2">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">MÃ LOẠI</th>
+                                            <th scope="col">LOẠI KHÓA HỌC</th>
+                                            <th scope="col">SL KHÓA HỌC</th>
+                                            <th scope="col">SỐ LƯỢT MUA</th>
+                                            <th scope="col">THU VỀ</th>
+                                            <th scope="col">CHIẾC KHẤU (70%)</th>
+                                            <th scope="col">DOANH THU</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($listStatistic as $list) {
+                                            extract($list);
+                                            ?>
+                                            <tr>
+                                                <td scope="row" class="name-course">
+                                                    <?= $cateId ?>
+                                                </td>
+                                                <td scope="row" class="name-course">
+                                                    <?= $nameCate ?>
+                                                </td>
+                                                <td class="so-luong">
+                                                    <?= $quantity ?>
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $statistic_buy_admin = statistic_buy_admin_date($cateId);
+                                                    foreach ($statistic_buy_admin as $list_statistic_buy_admin) {
+                                                        echo number_format($list_statistic_buy_admin['sl_ad_d']);
+                                                    }
+                                                    ?>
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $statistic_income_date_admin = statistic_income_admin_date($cateId);
+                                                    foreach ($statistic_income_date_admin as $list_statistic_income_date_admin) {
+                                                        echo number_format($list_statistic_income_date_admin['buy_ad_d']);
+                                                    }
+                                                    ?>đ
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $statistic_income_date_admin = statistic_income_admin_date($cateId);
+                                                    foreach ($statistic_income_date_admin as $list_statistic_income_date_admin) {
+                                                        $list_statistic_income_date_admin['buy_ad_d'] = $list_statistic_income_date_admin['buy_ad_d'] * 0.7;
+                                                        echo number_format($list_statistic_income_date_admin['buy_ad_d']);
+                                                    }
+                                                    ?>đ
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $statistic_income_date_admin = statistic_income_admin_date($cateId);
+                                                    foreach ($statistic_income_date_admin as $list_statistic_income_date_admin) {
+                                                        $list_statistic_income_date_admin['buy_ad_d'] = $list_statistic_income_date_admin['buy_ad_d'] - ($list_statistic_income_date_admin['buy_ad_d'] * 0.7);
+                                                        echo number_format($list_statistic_income_date_admin['buy_ad_d']);
+                                                    }
+                                                    ?>đ
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <h1>THU NHẬP THÁNG</h1>
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="container container-qt">
+                        <div class="row">
+                            <div class="col-sm col-1">
+                                <div class="col-1-left">
+                                    <!-- <h1>THỐNG KÊ KHÓA HỌC</h1> -->
+                                </div>
+
+                            </div>
+                            <div class="col-sm col-2">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">MÃ LOẠI</th>
+                                            <th scope="col">LOẠI KHÓA HỌC</th>
+                                            <th scope="col">SL KHÓA HỌC</th>
+                                            <th scope="col">SỐ LƯỢT MUA</th>
+                                            <th scope="col">THU VỀ</th>
+                                            <th scope="col">CHIẾC KHẤU (70%)</th>
+                                            <th scope="col">DOANH THU</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($listStatistic as $list) {
+                                            extract($list);
+                                            ?>
+                                            <tr>
+                                                <td scope="row" class="name-course">
+                                                    <?= $cateId ?>
+                                                </td>
+                                                <td scope="row" class="name-course">
+                                                    <?= $nameCate ?>
+                                                </td>
+                                                <td class="so-luong">
+                                                    <?= $quantity ?>
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $statistic_buy_month_admin = statistic_buy_admin_month($cateId);
+                                                    foreach ($statistic_buy_month_admin as $list_statistic_buy_month_admin) {
+                                                        echo number_format($list_statistic_buy_month_admin['sl_ad_m']);
+                                                    }
+                                                    ?>
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $statistic_income_month_admin = statistic_income_admin_month($cateId);
+                                                    foreach ($statistic_income_month_admin as $list_statistic_income_month_admin) {
+                                                        echo number_format($list_statistic_income_month_admin['buy_ad_m']);
+                                                    }
+                                                    ?>đ
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $statistic_income_month_admin = statistic_income_admin_month($cateId);
+                                                    foreach ($statistic_income_month_admin as $list_statistic_income_month_admin) {
+                                                        $list_statistic_income_month_admin['buy_ad_m'] = $list_statistic_income_month_admin['buy_ad_m'] * 0.7;
+                                                        echo number_format($list_statistic_income_month_admin['buy_ad_m']);
+                                                    }
+                                                    ?>đ
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $statistic_income_month_admin = statistic_income_admin_month($cateId);
+                                                    foreach ($statistic_income_month_admin as $list_statistic_income_month_admin) {
+                                                        $list_statistic_income_month_admin['buy_ad_m'] = $list_statistic_income_month_admin['buy_ad_m'] - ($list_statistic_income_month_admin['buy_ad_m'] * 0.7);
+                                                        echo number_format($list_statistic_income_month_admin['buy_ad_m']);
+                                                    }
+                                                    ?>đ
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <h1>THU NHẬP NĂM</h1>
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="container container-qt">
+                        <div class="row">
+                            <div class="col-sm col-1">
+                                <div class="col-1-left">
+                                    <!-- <h1>THỐNG KÊ KHÓA HỌC</h1> -->
+                                </div>
+
+                            </div>
+                            <div class="col-sm col-2">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">MÃ LOẠI</th>
+                                            <th scope="col">LOẠI KHÓA HỌC</th>
+                                            <th scope="col">SL KHÓA HỌC</th>
+                                            <th scope="col">SỐ LƯỢT MUA</th>
+                                            <th scope="col">THU VỀ</th>
+                                            <th scope="col">CHIẾC KHẤU (70%)</th>
+                                            <th scope="col">DOANH THU</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($listStatistic as $list) {
+                                            extract($list);
+                                            ?>
+                                            <tr>
+                                                <td scope="row" class="name-course">
+                                                    <?= $cateId ?>
+                                                </td>
+                                                <td scope="row" class="name-course">
+                                                    <?= $nameCate ?>
+                                                </td>
+                                                <td class="so-luong">
+                                                    <?= $quantity ?>
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $statistic_buy_year_admin = statistic_buy_admin_year($cateId);
+                                                    foreach ($statistic_buy_year_admin as $list_statistic_buy_year_admin) {
+                                                        echo number_format($list_statistic_buy_year_admin['sl_ad_y']);
+                                                    }
+                                                    ?>
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $statistic_income_year_admin = statistic_income_admin_year($cateId);
+                                                    foreach ($statistic_income_year_admin as $list_statistic_income_year_admin) {
+                                                        echo number_format($list_statistic_income_year_admin['buy_ad_y']);
+                                                    }
+                                                    ?>đ
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $statistic_income_year_admin = statistic_income_admin_year($cateId);
+                                                    foreach ($statistic_income_year_admin as $list_statistic_income_year_admin) {
+                                                        $list_statistic_income_year_admin['buy_ad_y'] = $list_statistic_income_year_admin['buy_ad_y'] * 0.7;
+                                                        echo number_format($list_statistic_income_year_admin['buy_ad_y']);
+                                                    }
+                                                    ?>đ
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $statistic_income_year_admin = statistic_income_admin_year($cateId);
+                                                    foreach ($statistic_income_year_admin as $list_statistic_income_year_admin) {
+                                                        $list_statistic_income_year_admin['buy_ad_y'] = $list_statistic_income_year_admin['buy_ad_y'] - ($list_statistic_income_year_admin['buy_ad_y'] * 0.7);
+                                                        echo number_format($list_statistic_income_year_admin['buy_ad_y']);
+                                                    }
+                                                    ?>đ
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                     aria-expanded="true" aria-controls="collapseOne">
-                    <h1>THU NHẬP LOẠI</h1>
+                    <h1>THU NHẬP LOẠI KHÓA HỌC</h1>
                 </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
@@ -98,7 +374,6 @@
 
 
         </div>
-
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"

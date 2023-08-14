@@ -108,7 +108,7 @@ function statistic_income_date_user($userId)
     FROM detail_bill
     INNER JOIN courses 
     ON detail_bill.courseId = courses.courseId
-    WHERE detail_bill.day_bill = CURDATE() and courses.userId = ?";
+    WHERE detail_bill.day_bill = CURDATE() and MONTH(detail_bill.day_bill) = MONTH(CURDATE()) AND YEAR(detail_bill.day_bill) = YEAR(CURDATE()) and courses.userId = ?";
     return pdo_query($sql, $userId);
 }
 // Truy vấn thu nhập theo tháng dựa vào userId
@@ -154,7 +154,7 @@ function statistic_spending_date_user($userId)
     ON bill.idBill = detail_bill.idBill
     INNER JOIN courses
     on detail_bill.courseId = courses.courseId
-    WHERE user.userId = ? AND detail_bill.day_bill = CURDATE()";
+    WHERE user.userId = ? AND detail_bill.day_bill = CURDATE() and MONTH(detail_bill.day_bill) = MONTH(CURDATE()) AND YEAR(detail_bill.day_bill) = YEAR(CURDATE())";
     return pdo_query($sql, $userId);
 }
 // Truy vấn chi tiêu trong tháng của user dựa vào userId
@@ -184,5 +184,60 @@ function statistic_spending_year_user($userId)
     on detail_bill.courseId = courses.courseId
     WHERE YEAR(detail_bill.day_bill) = YEAR(CURDATE()) AND bill.userId = ?";
     return pdo_query($sql, $userId);
+}
+// Truy vấn lượt mua admin trong ngày theo cateId
+function statistic_buy_admin_date($cateId)
+{
+    $sql = "SELECT COUNT(courses.courseId) as sl_ad_d FROM `detail_bill`
+    INNER JOIN courses
+    on detail_bill.courseId = courses.courseId
+    WHERE courses.cateId = ? and detail_bill.day_bill = CURDATE() and MONTH(detail_bill.day_bill) = MONTH(CURDATE()) and YEAR(detail_bill.day_bill) = YEAR(CURDATE())";
+    return pdo_query($sql, $cateId);
+}
+// Truy vấn lượt mua admin trong tháng theo cateId
+function statistic_buy_admin_month($cateId)
+{
+    $sql = "SELECT COUNT(courses.courseId) as sl_ad_m FROM `detail_bill`
+    INNER JOIN courses
+    ON detail_bill.courseId = courses.courseId
+    WHERE courses.cateId = ? AND MONTH(detail_bill.day_bill) = MONTH(CURDATE()) and YEAR(detail_bill.day_bill) = YEAR(CURDATE())";
+    return pdo_query($sql, $cateId);
+}
+// Truy vấn lượt mua trong năm theo cateId
+function statistic_buy_admin_year($cateId)
+{
+    $sql = "SELECT COUNT(courses.courseId) as sl_ad_y FROM `detail_bill`
+    INNER JOIN courses
+    ON detail_bill.courseId = courses.courseId
+    WHERE courses.cateId = ? and YEAR(detail_bill.day_bill) = YEAR(CURDATE())";
+    return pdo_query($sql, $cateId);
+}
+// Truy vấn thu nhập admin trong ngày theo cateId
+function statistic_income_admin_date($cateId)
+{
+    $sql = "SELECT sum(courses.price) as buy_ad_d FROM `detail_bill`
+    INNER JOIN courses
+    on detail_bill.courseId = courses.courseId
+    WHERE courses.cateId = ? and detail_bill.day_bill = CURDATE() and MONTH(detail_bill.day_bill) = MONTH(CURDATE()) and YEAR(detail_bill.day_bill) = YEAR(CURDATE())";
+    return pdo_query($sql, $cateId);
+}
+// Truy vấn thu nhập admin trong tháng theo cateId
+function statistic_income_admin_month($cateId)
+{
+    $sql = "SELECT sum(courses.price) as buy_ad_m FROM `detail_bill`
+    INNER JOIN courses
+    on detail_bill.courseId = courses.courseId
+    WHERE courses.cateId = ? and MONTH(detail_bill.day_bill) = MONTH(CURDATE()) and YEAR(detail_bill.day_bill) = YEAR(CURDATE())";
+    return pdo_query($sql, $cateId);
+}
+// Truy vấn thu nhập admin trong năm theo cateId
+function statistic_income_admin_year($cateId)
+{
+    $sql = "SELECT sum(courses.price) as buy_ad_y FROM `detail_bill`
+    INNER JOIN courses
+    on detail_bill.courseId = courses.courseId
+    WHERE courses.cateId = ? and YEAR(detail_bill.day_bill) = YEAR(CURDATE())";
+    return pdo_query($sql, $cateId);
+
 }
 ?>
