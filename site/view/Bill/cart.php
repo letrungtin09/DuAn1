@@ -80,12 +80,8 @@ if(isset($_GET['course'])){?>
         <div class="cart-price">
             <h1>Tổng:</h1>
             <div class="total-price">
-            <?php if($courseinfo['sale'] != ""){ ?>
                 <h2 class="discount-price"><?=number_format($totalBill)?> <span>đ</span></h2>
                 <h2 class="discount-sale"><?=number_format($totalBillSale)?> <span>đ</span></h2>
-            <?php } else { ?>
-                <h2 class="discount-sale"><?=number_format($totalBillSale)?> <span>đ</span></h2>
-            <?php } ?>
             </div>
             <a href="<?=$SITE_URL?>?mod=bill&act=payCourse&payBill=<?=$idBillByIdUser['idBill']?>"  class="button-purple-large" style="display:inline-block; text-decoration: none; margin-top: 8px;">Thanh toán</a>
         </div>

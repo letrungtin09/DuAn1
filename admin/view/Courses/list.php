@@ -55,7 +55,7 @@
                                     <td>
                                         <p>
                                             <?php
-                                            if ($sale == null) {
+                                            if ($sale == null || $sale == 0) {
                                                 echo "";
                                             } else {
                                                 echo $sale."%";

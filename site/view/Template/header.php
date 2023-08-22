@@ -120,12 +120,8 @@
                         <?php
                         if(bill_exist($_SESSION['user']['userId'])){?>
                         <div class="header_cart_bill-sum">
-                        <?php if($course['sale'] != ""){ ?>
                             <div class="">Tổng tiền: <?=number_format($tongSale)?> đ</div>
                             <span><?=number_format($tong)?> đ</span>
-                        <?php } else { ?>
-                            <div class="">Tổng tiền: <?=number_format($tongSale)?> đ</div>
-                        <?php } ?>
                         </div>
                         <div class="header_cart_bill-submit">
                             <a href="<?=$SITE_URL?>?mod=bill&act=cartBill">Đến giỏ hàng</a>

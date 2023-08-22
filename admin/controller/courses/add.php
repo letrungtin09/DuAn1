@@ -25,6 +25,10 @@ if (exist_param("btn_insert")) {
     } else {
         course_insert($title, $image, $price, $sale, $userId, $purchase, $date, $level, $description, $cateId, $content, $allTime);
         unset($title, $image, $price, $sale, $userId, $purchase, $date, $level, $description, $cateId, $content, $allTime);
+        //Lấy tất cả user có vai trò là teacher
+        $getAllTeacher = user_select_by_role("teacher");
+        //Lấy tất cả loại khóa học
+        $getAllCate = category_select_all();
         $MESSAGE = "Thêm mới khóa học thành công !";
         include_once("view/Courses/add.php");
     }

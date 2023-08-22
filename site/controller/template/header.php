@@ -31,7 +31,12 @@ function get_count_course_in_bill($userID){
     require_once 'model/bill.php';
     require_once 'model/detailBill.php';
     $bill = bill_select_by_userId($userID);
-    $lesson = detailBill_count_billId($bill['idBill']);
+    if(isset($bill)){
+        $lesson = detailBill_count_billId($bill['idBill']);
+    }else{
+        $lesson = 0;
+    }
+    
     return $lesson;
 }
 ?>

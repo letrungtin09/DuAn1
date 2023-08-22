@@ -37,7 +37,11 @@
             <div class="formInsertEdit__item">
                 <label class="formInsertEdit__label" for="sale">Mức giảm giá (%)</label><br>
                 <div class="formInsertEdit__control">
-                    <input class="formInsertEdit__input" type="text" name="sale" value="<?=$sale?>">
+                    <?php if ($sale == null){ ?>
+                        <input class="formInsertEdit__input" type="text" name="sale" value="">
+                    <?php } else { ?>
+                        <input class="formInsertEdit__input" type="text" name="sale" value="<?=$sale?>">
+                    <?php } ?>
                 </div>
             </div>
             <div class="formInsertEdit__item">

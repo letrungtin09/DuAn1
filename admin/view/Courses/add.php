@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="formInsertEdit__item">
-                <label class="formInsertEdit__label" for="sale">Mức giảm giá</label><br>
+                <label class="formInsertEdit__label" for="sale">Mức giảm giá (%)</label><br>
                 <div class="formInsertEdit__control">
                     <input class="formInsertEdit__input" type="text" name="sale">
                 </div>

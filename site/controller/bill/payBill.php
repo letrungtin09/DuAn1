@@ -12,6 +12,7 @@ $courseInBill = detailBill_select_by_idBill($findbill['idBill']);
 foreach($courseInBill as $courseAdd){
     student_course_insert($_SESSION['user']['userId'], $courseAdd['courseId']);
 }
-infor_purchase_insert($_SESSION['user']['userId'], $findbill['idBill'], $_GET['typepay'], $_GET['total']);
+$total = $_GET['total'] / 100;
+infor_purchase_insert($_SESSION['user']['userId'], $findbill['idBill'], $_GET['typepay'], $total);
 ?>
 <meta http-equiv="refresh" content="0;url=index.php">

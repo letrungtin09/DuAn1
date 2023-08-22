@@ -5,7 +5,7 @@
                 <div class="carousel__text">
                     <h1>Xây dựng các đội nhóm luôn sẵn sàng</h1>
                     <p>Xem lý do các tổ chức hàng đầu chọn học với T-Demy.</p>
-                    <button class="button-black-large">Xem các khóa học trên T-Demy</button>
+                    <button class="button-black-large">Tìm hiểu thêm thông tin về T-Demy</button>
                 </div>
                 <img src="<?=$IMAGE_DIR?>/s2.jpg" class="d-block w-100" alt="slide 1">
             </div>
@@ -13,7 +13,7 @@
                 <div class="carousel__text">
                     <h1>Xây dựng các đội nhóm luôn sẵn sàng</h1>
                     <p>Xem lý do các tổ chức hàng đầu chọn học với T-Demy.</p>
-                    <button class="button-black-large">Xem các khóa học trên T-Demy</button>
+                    <button class="button-black-large">Tìm hiểu thêm thông tin về T-Demy</button>
                 </div>
                 <img src="<?=$IMAGE_DIR?>/s1.jpg" class="d-block w-100" alt="slide 2">
             </div>
@@ -21,7 +21,7 @@
                 <div class="carousel__text">
                     <h1>Xây dựng các đội nhóm luôn sẵn sàng</h1>
                     <p>Xem lý do các tổ chức hàng đầu chọn học với T-Demy.</p>
-                    <button class="button-black-large">Xem các khóa học trên T-Demy</button>
+                    <button class="button-black-large">Tìm hiểu thêm thông tin về T-Demy</button>
                 </div>
                 <img src="<?=$IMAGE_DIR?>/s3.png" class="d-block w-100" alt="slide 3">
             </div>
@@ -29,7 +29,7 @@
                 <div class="carousel__text">
                     <h1>Xây dựng các đội nhóm luôn sẵn sàng</h1>
                     <p>Xem lý do các tổ chức hàng đầu chọn học với T-Demy.</p>
-                    <button class="button-black-large">Xem các khóa học trên T-Demy</button>
+                    <button class="button-black-large">Tìm hiểu thêm thông tin về T-Demy</button>
                 </div>
                 <img src="<?=$IMAGE_DIR?>/s4.jpg" class="d-block w-100" alt="slide 4">
             </div>
